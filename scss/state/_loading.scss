@@ -1,0 +1,45 @@
+.button.load-this {
+  .button__icon {
+    display: none;
+  }
+  .button__content {
+    padding-right: 48px;
+    position: relative;
+    &:before {
+      @extend .juicon;
+      @extend .juicon-loading;
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      padding: 6px 16px;
+      line-height: 1.5;
+      right: 0;
+      top: 0;
+      animation: spin-it 1s linear infinite;
+    }
+    &.default {
+      color: $color--gray;
+    }
+  }
+}
+.form-element.load-this {
+  .form-element__wrap {
+    &:before {
+      @extend .juicon;
+      @extend .juicon-loading;
+      color: $color--gray;
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      padding: 6px 16px;
+      line-height: 1.5;
+      right: 0;
+      top: 0;
+      animation: spin-it 1s linear infinite;
+      text-align: center;
+    }
+  }
+  .form-element__icon {
+    display: none;
+  }
+}

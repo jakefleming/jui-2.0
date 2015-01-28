@@ -1,0 +1,137 @@
+//mixins for flex grid can be found in the "mixins" scss file, since they might be used for things other than the main grid
+
+
+.flexbox { //this is a class put on HTML by Modernizr. Remove this scope if you don't care about IE
+  //grid definitions
+  .grid {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    &.has-gutters {
+      margin-left: -(px($base--num));
+    }
+    //define the width of grid blocks once on the grid itself
+    @for $i from 1 through $column-count {
+      &.holds-#{$i}-blocks {
+        > .grid__block {
+          @include flex(0 0 percentage(1 / $i));
+        }
+        &-on-xsmall {
+          > .grid__block {
+            @media (min-width: $brkpoint-xs) {
+              @include flex(0 0 percentage(1 / $i));
+            }
+          }
+        }
+        &-on-small {
+          > .grid__block {
+            @media (min-width: $brkpoint-sm) {
+              @include flex(0 0 percentage(1 / $i));
+            }
+          }
+        }
+        &-on-medium {
+          > .grid__block {
+            @media (min-width: $brkpoint-md) {
+              @include flex(0 0 percentage(1 / $i));
+            }
+          }
+        }
+        &-on-large {
+          > .grid__block {
+            @media (min-width: $brkpoint-lg) {
+              @include flex(0 0 percentage(1 / $i));
+            }
+          }
+        }
+      }
+    }
+    //switch to vertical on certain sizes
+    &.orient {
+      &--vertical {
+        @include flex-flow(column nowrap);
+        &-on-xsmall {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+            @include flex-flow(column nowrap);
+            > .grid__block {
+              @include flex(0 0 100%);
+            }
+          }
+        }
+        &-on-small {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+            @include flex-flow(column nowrap);
+            > .grid__block {
+              @include flex(0 0 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //grid block definitions
+  [class^="grid__"] {
+    position: relative;
+    @include flex();
+  }
+  .grid.has-gutters {
+    >[class^="grid__"] {
+      padding-left: px($base--num);
+    }
+  }
+  // Generate Column Classes
+  @for $i from 1 through $column-count {
+    .grid__block--#{$i}-on-xsmall {
+      @media (min-width: $brkpoint-xs) {
+        @include flex( 0 0 percentage($i / $column-count));
+      }
+    }
+    .grid__block--#{$i}-on-small {
+      @media (min-width: $brkpoint-sm) {
+        @include flex( 0 0 percentage($i / $column-count));
+      }
+    }
+    .grid__block--#{$i}-on-medium{
+      @media (min-width: $brkpoint-md) {
+        @include flex( 0 0 percentage($i / $column-count));
+      }
+    }
+    .grid__block--#{$i}-on-large {
+      @media (min-width: $brkpoint-lg) {
+        @include flex( 0 0 percentage($i / $column-count));
+      }
+    }
+  }
+  //special things rigid grid can't do
+  .pinned {
+    @include order(-1);
+    &-on-xsmall {
+      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+        @include order(-1);
+      }
+    }
+    &-on-small {
+      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+        @include order(-1);
+      }
+    }
+    &-on-medium {
+      @media (min-width: $brkpoint-md) {
+        @include order(-1);
+      }
+    }
+    &-on-large {
+      @media (min-width: $brkpoint-lg) {
+        @include order(-1);
+      }
+    }
+  }
+  .shrink {
+    flex: initial;
+  }
+}
+
+//handling items when flex is applied
+ul.grid {
+  list-style-type: none;
+}

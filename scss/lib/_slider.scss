@@ -1,0 +1,102 @@
+// Sliders
+
+.slider {
+  input.slider {
+    display: none!important;
+  }
+  &-tooltip {
+    font-family: $font--1;
+    font-size: 14px;
+    line-height: em(16, 14);
+    padding: em($base--num) em($base--num);
+    position: absolute;
+    background-color: $color--black;
+    color: $color--white;
+    border-radius: $base--radius;
+    margin-top: -10px;
+  }
+  .tooltip-arrow {
+    display: block;
+    text-align: center;
+    left: 50%;
+    z-index: -1;
+    border-left: 9px solid transparent !important;
+    border-right: 9px solid transparent !important;
+    border-top: 9px solid;
+    bottom: -7px;
+    border-color: $color--black;
+    position: absolute;
+    margin-left: -9px;
+  }
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  input {
+    display: none;
+  }
+  .tooltip-inner {
+    white-space: nowrap;
+  }
+  &__track {
+    border-radius: 100px;
+    position: absolute;
+    cursor: pointer;
+    background: $color--gray--x-light;
+  }
+  &__selection {
+    border-radius: 100px;
+    position: absolute;
+    background: $color--primary;
+  }
+  &__handle {
+    position: absolute;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background: $color--white;
+    box-shadow: 0 1px 3px transparentize($color--black, .6)
+  }
+  &--horizontal {
+    height: 16px;
+    width: 100% !important;
+    .slider__track {
+      height: 16px;
+      width: 100%;
+      margin-top: -8px;
+      top: 50%;
+      left: 0;
+      padding: 4px;
+    }
+    .slider__selection {
+      float: left;
+      height: 8px;
+      top: 4px;
+      bottom: 0;
+    }
+    .slider__handle {
+      margin-left: -10px;
+      margin-top: -10px;
+    }
+  }
+  &--vertical {
+    height: 160px;
+    width: 24px;
+    .slider__track {
+      width: 24px;
+      height: 100%;
+      margin-left: 8px;
+      left: 50%;
+      top: 0;
+    }
+    .slider__selection {
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+    .slider__handle {
+      margin-left: -8px;
+      margin-top: -24px
+    }
+  }
+}

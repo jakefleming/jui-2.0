@@ -1,0 +1,319 @@
+//Buttons are what the user will interact with to perform actions
+
+
+
+//attributes shared by all buttons
+%button-core {
+  background-image: none; // fixes salesforce button
+  background: transparent;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font--1;
+  font-size: px($base--num); // 16
+  font-weight: $font-weight--1;
+  margin: 0;
+  outline: none;
+  padding: 2px 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+}
+
+
+
+//attributes shared by all button contents
+%button__content-core {
+  border-radius: 3px;
+  display: inline-block;
+  line-height: em(36);
+  padding: 0 1em;
+  vertical-align: middle;
+  @include transition(background-color);
+}
+
+
+
+//extending core placeholders
+.button--flat, .button, a.button, button.button, a.button--flat {
+  @extend %button-core;
+}
+.button__content {
+  @extend %button__content-core;
+}
+
+
+
+//defining flat buttons
+.button--flat {
+  //what's inside the button
+  .button__content {
+    color: $color--gray--dark;
+    @each $theme, $color in $ui-colors {
+      &.#{$theme} {
+        color: $color;
+      }
+    }
+  }
+  //hover over button makes contents background change
+  &:hover {
+    .button__content {
+      background-color: transparentize($color--black, .9);
+    }
+  }
+}
+
+//defining default solid buttons
+.button {
+  .button__content.default {
+    background-color: $color--white;
+    box-shadow: inset 0 0 0 1px $component-border-color;
+    color: $color--gray--dark;
+  }
+  &:hover {
+    .button__content.default {
+      background-color: darken($color--white, $darken-p);
+    }
+  }
+}
+
+//defining colored solid buttons
+.button {
+  //what's inside the button
+  @each $theme, $color in $ui-colors {
+    .button__content {
+      color: $color--white;
+      &.#{$theme} {
+        background-color: $color;
+      }
+    }
+    //hover over button makes contents background change
+    &:hover {
+      .button__content {
+        &.#{$theme} {
+          background-color: darken($color, $darken-p);
+        }
+      }
+    }
+  }
+}
+
+//button width
+.button, .button--flat {
+  &.stretch {
+    width: 100%;
+    .button__content {
+      width: 100%;
+    }
+  }
+}
+
+
+//icons & text inside of buttons
+.button__text + .button__icon, .button__icon + .button__text {
+  margin-left: em(8);
+}
+.button__icon {
+  line-height: 1.5;
+  display: inline-block;
+  height: em(24);
+  width: em(24);
+}
+.button__content {
+  &.default {
+    .button__icon {
+      color: $color--gray;
+    }
+  }
+}
+
+//button groups
+.button-group {
+  position: relative;
+  display: inline-block;
+}
+
+//dropdown boxs
+.dropdown-box {
+  background: $color--white;
+  border-radius: $base--radius;
+  border: 1px solid $component-border-color;
+  list-style-type: none;
+  margin-top: 0px;
+  min-width: 100%;
+  max-width: em(240);
+  max-height: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: $trans-duration;
+  overflow: hidden;
+  z-index: 1;
+  li {
+    margin-left: 0;
+  }
+  &.active {
+    min-width: 100%;
+    margin-top: 2px;
+    max-height: em(300);
+    max-width: em(240);
+    min-height: 0;
+    opacity: 100;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    transition: $trans-duration;
+  }
+  &__item {
+    margin-top: -16px;
+    margin-left: 0;
+    color: $color--white;
+    cursor: pointer;
+    display: block;
+    font-family: $font--1;
+    font-size: px($base--num); // 16
+    outline: none;
+    line-height: em(40);
+    padding: 0 em(16);
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: $trans-duration;
+    &:hover {
+      color: $color--gray--dark;
+      background-color: darken($color--white, $darken-p);
+    }
+  }
+  &.active {
+    .dropdown-box__item {
+      color: $color--gray--dark;
+      margin-top: 0;
+      transition: $trans-duration;
+    }
+    .dropdown-box__content {
+      margin-top: 0;
+      line-height: 1.5;
+      transition: $trans-duration;
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+  &__item--static {
+    @extend .dropdown-box__item;
+    &:hover {
+      background: transparent;
+    }
+    input {
+      vertical-align: middle;
+    }
+    input[type="checkbox"], input[type="radio"] {
+      margin-right: em(4);
+      vertical-align: middle;
+    }
+  }
+  &__content {
+    margin-top: -16px;
+    padding: em(16);
+    color: $color--gray--dark;
+    font-family: $font--1;
+    transition: $trans-duration;
+    line-height: 0;
+    p {
+      line-height: 0;
+    }
+    .form-element {
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &__block {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .close-button + .dropdown-box__content {
+    margin-top: 16px;
+  }
+  .close-button {
+    color: $color--gray;
+  }
+  //close button for dropdowns
+  .close-button {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-image: none; // fixes salesforce button
+    background: transparent;
+    border-width: 0;
+    width: 56px;
+    height: 40px;
+    padding: 8px 16px;
+    outline: none;
+  }
+}
+
+//button groups
+.button-group {
+  .button {
+    margin-left: -5px;
+    .button__content {
+      border-radius: 0;
+    }
+    &:first-of-type {
+      margin-left: 0;
+      .button__content {
+        border-top-left-radius: $base--radius;
+        border-bottom-left-radius: $base--radius;
+      }
+    }
+    &:last-of-type {
+      .button__content {
+        border-top-right-radius: $base--radius;
+        border-bottom-right-radius: $base--radius;
+      }
+    }
+  }
+}
+@at-root {
+  .flexbox {
+    .button-group {
+      &.stretch {
+        @include flexbox();
+        .button {
+          @include flex();
+          .button__content {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .no-flexbox {
+    .button-group {
+      &.stretch {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: separate;
+        .button {
+          display: table-cell;
+          float: none;
+          width: 1%;
+          .button__content {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.close-button {
+  @extend %button-core;
+  font-family: $font--icon!important;
+}

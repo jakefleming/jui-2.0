@@ -1,0 +1,11 @@
+//functions contains all basic functions
+
+//converts numbers to em
+@function em($target, $context: $base--num) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+@function px($target) {
+  @return $target + px;
+}

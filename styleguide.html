@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Slate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/docs.css"/><!--takes place of styles.scss for docs-->
+    <script src="js/modernizr.js"></script><!--detect if browser supports stuff like flexbox-->
+    <!--<link rel="stylesheet" href="http://basehold.it/8">-->
+</head>
+<body>
+<div class="scope-container" id="docs">
+    <h1 class="section-heading">Type</h1>
+    <section id="type">
+        <article id="heading-examples">
+            <!--headings-->
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </article>
+        <article id="pairing-examples" class="big">
+            <!--headings paired with paragraphs-->
+            <h1>Heading 1</h1>
+            <p>
+                Both paragraphs and headings will line up on a vertical baseline. They will fall either directly on a line or in between two lines. All other elements, like buttons, should align to the grid too.
+            </p>
+            <p>
+                If your elements aren't aligning to the page correctly, check your math! Everything should have a cohesive vertical rhythm. If you break the rhythm users will be less engaged. To be on the safe side, make sure your calculations always equal a multiple of 8.
+            </p>
+
+        </article>
+    </section>
+    <h1 class="section-heading">Layout</h1>
+    <p>We utilize <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">flex</a> for layout purposes. <a href="http://modernizr.com/">Modernizr</a> will detect if flex is supported by the browser. If it isn't supported, the <code>grid</code> and <code>grid__block</code> selectors will fall back to the old float-based layout.</p>
+    <section id="layout">
+        <article id="grid-examples">
+            <div class="grid holds-2-blocks orient--vertical-on-small">
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+            </div>
+            <div class="grid holds-4-blocks orient--vertical-on-small">
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block pinned-on-small"></div>
+                <div class="grid__block"></div>
+            </div>
+            <div class="grid holds-12-blocks orient--vertical-on-small">
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+                <div class="grid__block"></div>
+            </div>
+        </article>
+    </section>
+    <h1 class="section-heading">Icons</h1>
+    <p>
+        We use a custom icon font called "Juicons" ( joo-ee-cons ) for all icons appearing in our apps and static sites.
+    </p>
+    <a href="css/fonts/juicons.zip" class="button docButton">
+        <span class="button__content default"><span class="button__text">Download Juicons</span><span class="button__icon juicon juicon-download"></span></span>
+    </a>
+    <section id="icons" class="vertical">
+        <article id="icon-examples--arrows">
+            <h2 class="article-heading">Arrows</h2>
+            <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                <!--arrows-->
+                <li class="grid__block">
+                    <span class="juicon juicon-up icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-right icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-down icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-left icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-upward icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-forward icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-downward icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-backward icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-expand icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-move icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-move-vertical icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-move-horizontal icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-flip icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-new-window icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-signout icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-upload icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-download icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-share icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-reply icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-refresh icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-chevron-left icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-chevron-right icon-example"></span>
+                </li>
+            </ul>
+        </article>
+        <article id="icon-examples--symbols">
+            <h2 class="article-heading">Symbols</h2>
+            <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                <!--symbols-->
+                <li class="grid__block">
+                    <span class="juicon juicon-x icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-x-circle icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-plus icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-plus-circle icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-minus icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-minus-circle icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-check icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-check-circle icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-question icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-question-circle icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-exclamation icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-exclamation-circle icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-info icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-info-circle icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-star icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-heart icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-dots icon-example"></span>
+                </li>
+            </ul>
+        </article>
+        <article id="icon-examples--feedback">
+            <h2 class="article-heading">Feedback &amp; Stats</h2>
+            <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                <!--feedback & stats-->
+                <li class="grid__block">
+                    <span class="juicon juicon-flag icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-like icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-dislike icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-chat icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-alert icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-asterisk icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-loading icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-ban icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-chart-bar icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-chart-pie icon-example"></span>
+                </li>
+            </ul>
+        </article>
+        <article id="icon-examples--layout">
+            <h2 class="article-heading">Layout &amp; Lists</h2>
+            <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                <!--layout & lists-->
+                <li class="grid__block">
+                    <span class="juicon juicon-grid icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-dashboard icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-blocks icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-list icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-menu icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-sort icon-example"></span>
+                </li>
+            </ul>
+        </article>
+        <article id="icon-examples--things">
+            <h2 class="article-heading">Things</h2>
+            <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                <!--things-->
+                <li class="grid__block">
+                    <span class="juicon juicon-phone icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-phone-smart icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-camera icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-trash icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-funnel icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-gear icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-search icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-pencil icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-paperclip icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-link icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-envelope icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-calendar icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-location icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-lock icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-bookmark icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-browser icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-image icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-eye icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-database icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-trophy icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-print icon-example"></span>
+                </li>
+            </ul>
+        </article>
+        <article id="icon-examples--people">
+            <h2 class="article-heading">People</h2>
+            <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                <!--people-->
+                <li class="grid__block">
+                    <span class="juicon juicon-person icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-person-add icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-people icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-group icon-example"></span>
+                </li>
+            </ul>
+        </article>
+        <article id="icon-examples--docs">
+            <h2 class="article-heading">Docs</h2>
+            <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                <!--docs-->
+                <li class="grid__block">
+                    <span class="juicon juicon-document icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-documents icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-documents-group icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-document-misc icon-example"></span>
+                </li>
+                <li class="grid__block">
+                    <span class="juicon juicon-document-code icon-example"></span>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <h1 class="section-heading">Buttons</h1>
+    <p>There are two types of buttons--Solid &amp; Flat. Solid buttons are usually used for the most obvious and important action on the screen or piece of content. Flat buttons are reserved for situations where we need multiple buttons that don't necessarily need to attract the user's eye.</p>
+    <section id="buttons" class="vertical">
+        <article id="solid-button-examples">
+            <h2 class="article-heading">Solid Buttons</h2>
+            <!--solid buttons-->
+            <button type="button" class="button">
+                <span class="button__content default">Button</span>
+            </button>
+            <button type="button" class="button">
+                <span class="button__content primary">Button</span>
+            </button>
+            <button type="button" class="button">
+                <span class="button__content success">Button</span>
+            </button>
+            <button type="button" class="button">
+                <span class="button__content error">Button</span>
+            </button>
+            <button type="button" class="button">
+                <span class="button__content warning">Button</span>
+            </button>
+            <button type="button" class="button">
+                <span class="button__content info">Button</span>
+            </button>
+        </article>
+        <article id="icon-button-examples">
+            <!--icons in buttons-->
+            <button type="button" class="button">
+                <span class="button__content default"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
+            </button>
+            <button type="button" class="button">
+                <span class="button__content primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
+            </button>
+        </article>
+        <article id="flat-button-examples">
+            <h2 class="article-heading">Flat Buttons</h2>
+            <!--flat buttons-->
+            <button type="button" class="button--flat">
+                <span class="button__content">Button</span>
+            </button>
+            <button type="button" class="button--flat">
+                <span class="button__content primary">Button</span>
+            </button>
+            <button type="button" class="button--flat">
+                <span class="button__content success">Button</span>
+            </button>
+            <button type="button" class="button--flat">
+                <span class="button__content error">Button</span>
+            </button>
+            <button type="button" class="button--flat">
+                <span class="button__content warning">Button</span>
+            </button>
+            <button type="button" class="button--flat">
+                <span class="button__content info">Button</span>
+            </button>
+        </article>
+        <article id="flat-icon-button-examples">
+            <!--flat buttons with icons-->
+            <button type="button" class="button--flat">
+                <span class="button__content"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
+            </button>
+            <button type="button" class="button--flat">
+                <span class="button__content primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
+            </button>
+        </article>
+        <article id="button-group-examples">
+            <h2 class="article-heading">Button groups</h2>
+            <!--button dropdown-->
+            <div class="button-group">
+                <button type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__icon juicon juicon-grid"></span>
+                        </span>
+                </button>
+                <button type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__icon juicon juicon-blocks"></span>
+                        </span>
+                </button>
+                <button type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__icon juicon juicon-dashboard"></span>
+                        </span>
+                </button>
+            </div>
+            <div class="button-group stretch">
+                    <span type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__icon juicon juicon-grid"></span>
+                        </span>
+                    </span>
+                    <span type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__icon juicon juicon-blocks"></span>
+                        </span>
+                    </span>
+                    <span type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__icon juicon juicon-dashboard"></span>
+                        </span>
+                    </span>
+            </div>
+        </article>
+        <article id="button-dropdown-examples">
+            <h2 class="article-heading">Button dropdowns</h2>
+            <!--button dropdown-->
+            <div class="button-group">
+                <button type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__text">Button dropdown</span>
+                            <span class="button__icon juicon juicon-down"></span>
+                        </span>
+                </button>
+                <ul class="dropdown-box">
+                    <li>
+                        <a class="dropdown-box__item">Button dropdown</a>
+                    </li>
+                    <li>
+                        <label class="dropdown-box__item--static">
+                            <input type="checkbox"/> Derp
+                        </label>
+                    </li>
+                    <li>
+                        <a class="dropdown-box__item">Dropdown Menu</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-box__item">Dropdown Menu</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-box__item">Dropdown Menu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="button-group">
+                <button type="button" class="button">
+                        <span class="button__content default">
+                            <span class="button__text">Split dropdown</span>
+                        </span>
+                </button>
+                <button type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__icon juicon juicon-down"></span>
+                        </span>
+                </button>
+                <ul class="dropdown-box">
+                    <li>
+                        <a class="dropdown-box__item">Split dropdown</a>
+                    </li>
+                    <li>
+                        <label class="dropdown-box__item--static">
+                            <input type="checkbox"/> Derp
+                        </label>
+                    </li>
+                    <li>
+                        <a class="dropdown-box__item">Dropdown Menu</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-box__item">Dropdown Menu</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-box__item">Dropdown Menu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="button-group">
+                <button type="button" class="button" data-toggle="dropdown">
+                        <span class="button__content default">
+                            <span class="button__text">Content dropdown</span>
+                            <span class="button__icon juicon juicon-down"></span>
+                        </span>
+                </button>
+                <ul class="dropdown-box">
+                    <button type="button" class="close-button"><span class="juicon juicon-x"></span></button>
+                    <div class="dropdown-box__content">
+
+                        This is some content inside a dropdown menu. It's pretty rad, huh?
+
+                    </div>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <h1 class="section-heading">Form Elements</h1>
+    <p>When you need input from a user, use a form! Wrap inputs inside of a <code>form-element</code> .</p>
+    <section id="formElements">
+        <article id="form-element-examples">
+            <!--Form Elements-->
+            <div class="form-element">
+                <label>Text input</label>
+                <input type="text" placeholder="Empty input text"/>
+            </div>
+            <div class="form-element">
+                <label>Textarea</label>
+                <textarea placeholder="Empty textarea text"></textarea>
+            </div>
+            <div class="form-element">
+                <label>Input group</label>
+                <div class="input-group">
+                    <div class="input-group__element">
+                        <input type="text" placeholder="Search"/>
+                    </div>
+                    <div class="input-group__action">
+                        <button type="button" class="button">
+                            <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-element">
+                <label>Text input with icon</label>
+                <div class="form-element__wrap has-icon">
+                    <div class="form-element__icon juicon juicon-search"></div>
+                    <input type="text" placeholder="Empty input text"/>
+                </div>
+            </div>
+            <div class="form-element">
+                <label>Select</label>
+                <div class="select-wrap">
+                    <div class="select-wrap__icon juicon juicon-down"></div>
+                    <select>
+                        <option>derp</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-element">
+                <label>
+                    <input type="checkbox"/> Derp
+                </label>
+            </div>
+            <div class="form-element">
+                <label>
+                    <input type="radio"/> Derp
+                </label>
+            </div>
+            <div class="form-element">
+                <label>Typeahead Multiselect</label>
+                <select id="select-state" class="mar--sm--bm">
+                    <option value="">Select states...</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+            <div class="form-element">
+                <label>Typeahead Select</label>
+                <select id="select-state2">
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+            </div>
+            <div class="form-element">
+                <label>Tags</label>
+                <div class="selectize-wrap">
+                    <select id="select-tags" multiple="multiple">
+                        <option value="">Type or select tags...</option>
+                        <optgroup label="Recent Tags">
+                            <option value="amazing">amazing</option>
+                            <option value="cool">cool</option>
+                            <option value="great">great</option>
+                        </optgroup>
+                    </select>
+                    <button class="clear-selectize button--flat">
+                            <span class="button__content">
+                                <span class="button__icon juicon juicon-x"></span>
+                            </span>
+                    </button>
+                </div>
+            </div>
+        </article>
+        <article id="form-element-error-examples">
+            <!--Form Elements-->
+            <div class="form-element has-error">
+                <label>Text input</label>
+                <input type="text" placeholder="Empty input text"/>
+                <span class="form-element__error">Error Text</span>
+            </div>
+            <div class="form-element has-error">
+                <label>Textarea</label>
+                <textarea placeholder="Empty textarea text"></textarea>
+                <span class="form-element__error">Error Text</span>
+            </div>
+            <div class="form-element has-error">
+                <label>Input group</label>
+                <div class="input-group">
+                    <div class="input-group__element">
+                        <input type="text" placeholder="Search"/>
+                    </div>
+                    <div class="input-group__action">
+                        <button type="button" class="button">
+                            <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                        </button>
+                    </div>
+                </div>
+                <span class="form-element__error">Error Text</span>
+            </div>
+            <div class="form-element has-error">
+                <label>Text input</label>
+                <div class="form-element__wrap has-icon">
+                    <div class="form-element__icon juicon juicon-search"></div>
+                    <input type="text" placeholder="Empty input text"/>
+                </div>
+                <span class="form-element__error">Error Text</span>
+            </div>
+            <div class="form-element has-error">
+                <label>Textarea</label>
+                <div class="select-wrap">
+                    <div class="select-wrap__icon juicon juicon-down"></div>
+                    <select>
+                        <option>derp</option>
+                    </select>
+                </div>
+                <span class="form-element__error">Error Text</span>
+            </div>
+            <div class="form-element has-error">
+                <label>
+                    <input type="checkbox"/> Derp
+                </label>
+            </div>
+            <div class="form-element has-error">
+                <label>
+                    <input type="radio"/> Derp
+                </label>
+            </div>
+            <div class="form-element has-error">
+                <label>Select states</label>
+                <div class="selectize-wrap">
+                    <select id="select-state3" class="mar--sm--bm" multiple="multiple">
+                        <option value="">Select states...</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                    <button class="clear-selectize button--flat">
+                            <span class="button__content">
+                                <span class="button__icon juicon juicon-x"></span>
+                            </span>
+                    </button>
+                </div>
+                <span class="form-element__error">Error Text</span>
+            </div>
+            <div class="form-element has-error">
+                <label>Select a state</label>
+                <select id="select-state4" class="mar--sm--bm">
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                </select>
+                <span class="form-element__error">Error Text</span>
+            </div>
+            <div class="form-element has-error">
+                <label>Tags</label>
+                <div class="selectize-wrap">
+                    <select id="select-tags2" multiple="multiple">
+                        <option value="">Type or select tags...</option>
+                        <optgroup label="Recent Tags">
+                            <option value="amazing">amazing</option>
+                            <option value="cool">cool</option>
+                            <option value="great">great</option>
+                        </optgroup>
+                    </select>
+                    <button class="clear-selectize button--flat">
+                            <span class="button__content">
+                                <span class="button__icon juicon juicon-x"></span>
+                            </span>
+                    </button>
+                </div>
+                <span class="form-element__error">Error Text</span>
+
+            </div>
+        </article>
+    </section>
+
+    <h1 class="section-heading">Alerts</h1>
+    <section id="alerts">
+        <article id="alert-examples">
+            <div class="alert active dismissable success">
+                <button type="button" class="close-button juicon juicon-x"></button>
+                Something pretty cool just happened
+            </div>
+            <div class="alert active dismissable error">
+                <button type="button" class="close-button juicon juicon-x"></button>
+                Something pretty bad just happened
+            </div>
+            <div class="alert active dismissable warning">
+                <button type="button" class="close-button juicon juicon-x"></button>
+                Something sorta bad just happened
+            </div>
+            <div class="alert active dismissable info">
+                <button type="button" class="close-button juicon juicon-x"></button>
+                Something pretty trivial just happened
+                <br/>
+            </div>
+        </article>
+    </section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="lib/selectize/selectize.js"></script>
+<script type="text/javascript" src="lib/tooltipster-master/js/jquery.tooltipster.js"></script>
+<script type="text/javascript" src="lib/moment/moment.js"></script>
+<script type="text/javascript" src="lib/datepicker/js/datepicker.js"></script>
+<script type="text/javascript" src="lib/daterangepicker/js/daterangepicker.js"></script>
+<script type="text/javascript" src="lib/slider/slider.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<script type="text/javascript">
+    //selectize
+    $(function() {
+        $('#select-state2, #select-state4').selectize({});
+    });
+    $('#select-state, #select-state3').selectize({
+        onChange : function(selectItems){
+            if(selectItems != null){
+                $('.selectize-wrap .selectize-input.has-items').closest('.selectize-wrap').find('.clear-selectize').addClass('active')
+            } else {
+                $('.selectize-wrap .selectize-input').closest('.selectize-wrap').find('.clear-selectize').removeClass('active')
+            }
+        }
+    });
+    $('#select-tags, #select-tags2').selectize({
+        plugins: ['remove_button'],
+        delimiter: ',',
+        persist: false,
+        create: function(input) {
+            return {
+                value: input,
+                text: input
+            }
+        },
+        sortField: 'text',
+        onChange : function(selectItems){
+            if(selectItems != null){
+                $('.selectize-wrap .selectize-input.has-items').closest('.selectize-wrap').find('.clear-selectize').addClass('active')
+            } else {
+                $('.selectize-wrap .selectize-input').closest('.selectize-wrap').find('.clear-selectize').removeClass('active')
+            }
+        }
+    });
+    //tooltips
+    $(document).ready(function() {
+        $('.tooltip').tooltipster({
+        });
+        $('#htmlTooltip').tooltipster({
+            interactive: true,
+            position: 'bottom-left',
+            content: $('<div style="max-width: 300px">You can have users read something and then click a button or something!<br/><br/><button type="button" class="button"><span class="button__content primary">Like this!</span></button></div>')
+        });
+    });
+    //datepicker
+    $('.launch-datepicker').datepicker()
+            .on('changeDate', function(ev){
+                $('.launch-datepicker').datepicker('hide');
+            });
+    //daterange
+    $('.launch-daterange').daterangepicker(
+            {
+                ranges: {
+                    'Today': [moment(), moment()],
+                    'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                    'Last 7 Days': [moment().subtract('days', 6), moment()],
+                    'Last 30 Days': [moment().subtract('days', 29), moment()]
+                },
+                opens: 'left'
+            }
+    );
+    //slider
+    $('.slider').slider();
+
+</script>
+</body>
+</html>

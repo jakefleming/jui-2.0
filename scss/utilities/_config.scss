@@ -1,0 +1,68 @@
+//config contains all basic variables
+//if you need a variable for a specific module, do not include it here, instead include it in the module
+
+//font
+$font--1:                 ProximaNovaSoft;
+$font--icon:              juicons;
+
+//space
+$base--num:               16;
+
+//font sizes
+$font-size--1:            $base--num*2;
+$font-size--2:            $base--num*1.5;
+$font-size--3:            $base--num*1.25;
+$font-size--4:            $base--num*1;
+$font-size--5:            $base--num*.875;
+$font-size--6:            $base--num*.75;
+
+//font weights
+$font-weight--1:          300;
+$font-weight--2:          500;
+$font-weight--3:          700;
+$font-weight--4:          900;
+
+//primary colors
+$color--white:            white;
+$color--black:            #384047;
+$color--primary:          #2a94d6;
+$color--success:          #43b66a;
+$color--error:            #c06057;
+$color--warning:          #e6b739;
+$color--info:             #47cfd2;
+
+//ui colors for looping through and generating selectors
+$ui-colors: (
+  primary:                $color--primary,
+  success:                $color--success,
+  error:                  $color--error,
+  warning:                $color--warning,
+  info:                   $color--info
+);
+
+//secondary colors
+$color--gray--xx-light:   #f5f6f7;
+$color--gray--x-light:    #e8eaeb;
+$color--gray--light:      #cfd0d2;
+$color--gray:             #8d9aa5;
+$color--gray--dark:       #686c70;
+$color--gray--x-dark:     #525354;
+
+// Component Variables
+$component-border-color:  #dadee2;
+
+//media queries
+$brkpoint-xs:             1px;
+$brkpoint-sm:             420px;
+$brkpoint-md:             768px;
+$brkpoint-lg:             1024px;
+
+//grid stuff
+$column-count:            12;
+
+//decorative defaults
+$base--radius:            3px;
+
+//cursor interaction variables
+$darken-p:          3%;
+$lighten-p:         40%;

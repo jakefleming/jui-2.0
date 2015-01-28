@@ -1,0 +1,151 @@
+//Cards should be used in conjunction with other cards. Usually not by themselves.
+
+//the list items
+.card-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin-left: 0;
+  }
+  &.collapse-on-small {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      .card {
+        border-top-width: 0;
+        border-radius: 0;
+        margin: 0!important;
+        &:first-child {
+          border-top-width: 1px;
+        }
+      }
+    }
+  }
+}
+.card {
+  box-shadow: none;
+  font-family: $font--1;
+  border-radius: $base--radius;
+  font-size: 1em;
+  line-height: 1.5;
+  transition: background-color $trans-duration;
+  cursor: pointer;
+  border: 1px solid $component-border-color;
+  overflow: hidden;
+  transition: $trans-duration;
+  &:hover {
+    @media (min-width: $brkpoint-md) {
+      box-shadow: 0 1px 3px transparentize($color--black, .6);
+      transition: $trans-duration;
+      transform: translateY(-2px);
+      border-color: $color--white;
+    }
+  }
+  &-body {
+    overflow: hidden;
+    border-collapse: separate;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    + .card-block {
+      padding-top: 1px;
+    }
+  }
+  &-block {
+    padding: em(15);
+    display: block;
+    + .card-body {
+      padding-top: 1px;
+    }
+  }
+  &-content {
+    padding: em(15);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: table-cell;
+    width: 100%;
+    line-height: 1.5;
+    vertical-align: middle;
+  }
+  &-cap {
+    padding: em(15);
+    line-height: 1.5;
+    text-align: center;
+    width: 3.5em;
+    display: table-cell;
+    vertical-align: top;
+    + .card-content {
+      padding-left: 0;
+    }
+    &.solid {
+      background: $color--primary;
+      color: $color--white;
+      background-size: cover!important;
+      background-position: center center!important;
+      vertical-align: middle;
+      + .card-content {
+        padding-left: em(16);
+      }
+    }
+    &.img {
+      line-height: 0;
+      width: 4em;
+      + .card-content {
+        padding-left: 0;
+      }
+      img {
+        width: em(32);
+        height: em(32);
+        border-radius: $base--radius;
+      }
+    }
+    &.icon {
+      width: 4em;
+      &.solid {
+        background: transparent;
+        vertical-align: top;
+        .juicon {
+          background-color: $color--primary;
+        }
+      }
+      .juicon {
+        width: em(32);
+        height: em(32);
+        line-height: 2;
+        border-radius: $base--radius;
+      }
+      + .card-content {
+        padding-left: 0;
+      }
+    }
+  }
+  &-feature {
+    height: em(128, 32);
+    display: block;
+    line-height: em(128, 32);
+    background-size: cover!important;
+    background-position: center center!important;
+    vertical-align: middle;
+    text-align: center;
+    font-size: em(32);
+    &.solid {
+      background-color: $color--primary;
+      color: $color--white;
+    }
+  }
+  &-heading {
+    display: block;
+    line-height: 1;
+  }
+  &-subheading {
+    display: block;
+    font-size: em(14);
+    color: $color--gray;
+    line-height: 1;
+  }
+  &.multi-line {
+    .card-content {
+      white-space: normal;
+    }
+  }
+}

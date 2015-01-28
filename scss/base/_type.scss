@@ -1,0 +1,66 @@
+//reset margins padding and line-height
+%reset-type {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+//headings
+h1, h2, h3, h4, h5, h6, p {
+  @extend %reset-type;
+  font-family: $font--1;
+  display: block;
+}
+
+p {
+  color: $color--gray--dark;
+  font-size: 1em; /* 16px */
+  font-weight: $font-weight--1;
+  line-height: 1.5000em; /* 24px */
+}
+h1, h2, h3, h4 {
+  font-weight: $font-weight--2;
+}
+h5, h6 {
+  font-weight: $font-weight--3;
+}
+
+h1 {
+  font-size: em($font-size--1);
+}
+h2 {
+  font-size: em($font-size--2);
+}
+
+h3 {
+  font-size: em($font-size--3);
+  line-height: em($base--num*1.5, $font-size--3);
+}
+
+h4 {
+  font-size: em($font-size--4);
+  line-height: em($base--num*1.5, $font-size--4);
+}
+
+h5 {
+  font-size: em($font-size--5);
+  line-height: em($base--num, $font-size--5);
+}
+
+h6 {
+  font-size: em($font-size--6);
+  line-height: em($base--num, $font-size--6);
+}
+
+//links
+a {
+  color: $color--primary;
+  text-decoration: none;
+  &:visited {
+    color: $color--primary;
+  }
+  &:hover {
+    color: darken($color--primary, 10%);
+    text-decoration: none!important;
+  }
+}

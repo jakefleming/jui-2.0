@@ -1,0 +1,51 @@
+//Alerts grab the user's attention, whether its to point out a general error, or to provide passive inactionable content
+
+.alert {
+  max-height: 0;
+  padding: 0 em($base--num);
+  overflow: hidden;
+  opacity: 0;
+  border-radius: $base--radius;
+  font-family: $font--1;
+  line-height: 1.5;
+  position: relative;
+  transition: $trans-duration;
+  @each $theme, $color in $ui-colors {
+    &.#{$theme} {
+      background-color: lighten($color, $lighten-p);
+      border-color: $color;
+      color: $color;
+      .close-button {
+        color: $color;
+      }
+    }
+  }
+  &.dismissable {
+    padding-right: em(56);
+  }
+  .close-button {
+    margin: 0;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: none; // fixes salesforce button
+    background: transparent;
+    border-width: 0;
+    width: em(56);
+    height: em(56);
+    padding: em($base--num/2) em($base--num);
+    outline: none;
+    transition: $trans-duration;
+    &:hover {
+      transition: $trans-duration;
+      opacity: 1;
+    }
+  }
+  &.active {
+    opacity: 1;
+    max-height: none;
+    padding: em($base--num);
+    transition: $trans-duration;
+  }
+}

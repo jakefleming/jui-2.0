@@ -1,0 +1,130 @@
+$list-icon-w: 40;
+$list-icon-h: 40;
+
+//the list
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+//the list items
+.list__item {
+  font-family: $font--1;
+  border-radius: $base--radius;
+  font-size: 1em;
+  line-height: 1.5;
+  transition: background-color $trans-duration;
+  cursor: pointer;
+  margin-left: 0;
+  &:hover {
+    background-color: darken($color--white, $darken-p);
+    transition: background-color $trans-duration;
+  }
+  &.active {
+    background-color: $color--primary;
+    color: $color--white;
+    .list__item-icon {
+      color: $color--white;
+      &.solid {
+        background-color: transparent;
+      }
+    }
+  }
+  &-content {
+    padding: .5em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &-icon {
+    color: $color--gray;
+    padding: em(8);
+    line-height: 24px;
+    width: em($list-icon-w);
+    height: em($list-icon-h);
+    text-align: center;
+    min-width: em($list-icon-w);
+    + .list__item-content {
+      padding-left: em(8);
+    }
+    &.solid {
+      background-color: darken($color--white, $darken-p);
+      border-radius: $base--radius;
+    }
+  }
+  &-cap {
+    padding: em(8);
+    line-height: 0;
+    + .list__item-content {
+      padding-left: em(8);
+    }
+  }
+}
+@at-root { //when scoped this must be at the root instead of nesting in the scope
+  //with flexbox
+  .flexbox {
+    .list__item {
+      @include flexbox();
+      &-content {
+        @include flex();
+        width: 0; //fix for firefox
+      }
+      &-icon, &-cap {
+        @include flex(initial);
+      }
+    }
+  }
+  //without flexbox | not quite the same. We use display: table, display: table-cell.
+  .no-flexbox {
+    .list__item {
+      border-collapse: separate;
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      &-content {
+        display: table-cell;
+        width: 100%;
+        padding-right: 48px!important;
+        line-height: 1.5;
+        vertical-align: middle;
+        + .list__item-icon, + .list__item-cap {
+          float: right;
+        }
+      }
+      &-icon, &-cap {
+        float: left;
+        display: block;
+        width: auto;
+        + .list__item-content {
+          padding-left: 48px!important;
+        }
+      }
+    }
+  }
+}
+//outlined
+.list.outlined {
+  box-shadow: inset 0 0 0 1px $component-border-color;
+  border-radius: $base--radius;
+  .list__item {
+    box-shadow: inset 0 -1px $component-border-color;
+    border-radius: 0;
+    &:first-child {
+      border-radius: $base--radius $base--radius 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 $base--radius $base--radius;
+      box-shadow: none;
+    }
+    &.active {
+      border-color: $color--primary;
+      &:hover {
+        box-shadow: inset 1px 0 $color--primary, inset -1px 0 $color--primary, inset 0 -1px $color--primary;
+      }
+    }
+    &:hover {
+      box-shadow: inset 1px 0 $component-border-color, inset -1px 0 $component-border-color, inset 0 -1px $component-border-color;
+    }
+  }
+
+}

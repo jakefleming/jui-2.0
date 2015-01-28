@@ -1,0 +1,114 @@
+//Callouts are prompts the user needs to acknowledge or interact with to accomplish an action. They take up the majority of the viewing area.
+
+.callout-stage {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  opacity: 0;
+  transition: all $trans-duration cubic-bezier(.5,-.25,.19,1.25);
+  transform: translate3d(0, 200%, 0);
+}
+
+.callout__content{
+  padding: 1.5em;
+  line-height: 1.5;
+}
+.callout__top {
+  padding: 1.5em 3em 0 1.5em;
+  position: relative;
+  .close-button {
+    color: $color--gray;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 24px;
+    line-height: 60px;
+    width: 64px;
+  }
+}
+.callout__bottom {
+  padding: 0 1.5em 1.5em 1.5em;
+  text-align: right;
+  &.flat {
+    padding: 0 .5em .5em .5em;
+  }
+}
+
+.callout__heading {
+  color: $color--black;
+  font-size: em($font-size--2);
+}
+
+.callout {
+  max-height: 0;
+  background: $color--white;
+  transition: all $trans-duration cubic-bezier(.5,-.25,.19,1.25);
+  @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media (min-width: $brkpoint-sm) {
+    border-radius: $base--radius;
+  }
+  @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+    width: em(396);
+    margin: em(24) auto;
+  }
+  @media (min-width: $brkpoint-md) {
+    width: em(480);
+    margin: em(40) auto;
+  }
+}
+
+//when active
+
+@at-root {
+  .callout-is-active {
+    overflow: hidden;
+    .callout-backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1020;
+      background-color: transparentize($color--black, .2);
+      transition: $trans-duration cubic-bezier(.44, 0, .68, 1);
+      opacity: 0;
+    }
+  }
+}
+
+.callout-stage.active {
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all $trans-duration cubic-bezier(.5,-.25,.19,1.25);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  .callout {
+    max-height: none;
+    transition: all $trans-duration cubic-bezier(.5,-.25,.19,1.25);
+  }
+}
+
+
+//fade
+.fade-in {
+  opacity: 1!important;
+  transition: $trans-duration;
+}
+.fade-out {
+  opacity: 0!important;
+  transition: $trans-duration;
+}

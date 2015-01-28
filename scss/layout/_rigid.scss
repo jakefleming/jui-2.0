@@ -1,0 +1,113 @@
+.no-flexbox { //This is a class applied to HTML by Modernizr. This is a fallback if flexbox isn't detected.
+  //grid definitions
+  .grid {
+    display: block;
+    min-height: 1px;
+    @include clearfix();
+    &.has-gutters {
+      margin-left: -(em(16));
+    }
+    //define the width of grid blocks once on the grid itself
+    @for $i from 1 through $column-count {
+      &.holds-#{$i}-blocks {
+        > .grid__block {
+          float: left;
+          width: percentage(1 / $i);
+        }
+        &-on-xsmall {
+          > .grid__block {
+            @media (min-width: $brkpoint-xs) {
+              width: percentage(1 / $i);
+              float: left;
+            }
+          }
+        }
+        &-on-small {
+          > .grid__block {
+            @media (min-width: $brkpoint-sm) {
+              width: percentage(1 / $i);
+              float: left;
+            }
+          }
+        }
+        &-on-medium {
+          > .grid__block {
+            @media (min-width: $brkpoint-md) {
+              width: percentage(1 / $i);
+              float: left;
+            }
+          }
+        }
+        &-on-large {
+          > .grid__block {
+            @media (min-width: $brkpoint-lg) {
+              width: percentage(1 / $i);
+              float: left;
+            }
+          }
+        }
+      }
+    }
+    //switch to vertical on certain sizes
+    &.orient {
+      &--vertical {
+        @include flex-flow(column nowrap);
+        &-on-xsmall {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+            @include flex-flow(column nowrap);
+            > .grid__block {
+              width: 100%;
+            }
+          }
+        }
+        &-on-small {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+            @include flex-flow(column nowrap);
+            > .grid__block {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //grid block definitions
+  [class^="grid__"] {
+    display: block;
+    position: relative;
+    min-height: 1px;
+  }
+  .grid.has-gutters {
+    > [class^="grid__"] {
+      padding: px($base--num);
+    }
+  }
+  // Generate Column Classes
+  @for $i from $column-count through 1 {
+    .grid__block--#{$i}-on-xsmall {
+      @media (min-width: $brkpoint-xs) {
+        width: percentage(($column-count + $i) / $column-count);
+        float: left;
+      }
+    }
+    .grid__block--#{$i}-on-small {
+      @media (min-width: $brkpoint-sm) {
+        width: percentage($i / $column-count);
+        float: left;
+      }
+    }
+    .grid__block--#{$i}-on-medium {
+      @media (min-width: $brkpoint-md) {
+        width: percentage($i / $column-count);
+        float: left;
+      }
+    }
+    .grid__block--#{$i}-on-large {
+      @media (min-width: $brkpoint-lg) {
+        width: percentage($i / $column-count);
+        float: left;
+      }
+    }
+  }
+}

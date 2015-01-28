@@ -1,0 +1,47 @@
+//Pebbles are colored labels or highlights used to call attention to certain pieces of text
+.pebble {
+  min-width: em(24);
+  text-align: center;
+  display: inline-block;
+  font-family: $font--1;
+  font-weight: $font-weight--1;
+  @include radius();
+  @each $theme, $color in $ui-colors {
+    &.#{$theme} {
+      background-color: $color;
+    }
+  }
+  color: #fff;
+  padding: 0 em(8);
+  &.round {
+    border-radius: 1000px;
+  }
+  &.default {
+    background-color: $color--white;
+    box-shadow: inset 0 0 0 1px $component-border-color;
+    color: $color--gray--dark;
+  }
+
+}
+
+.list-group__item {
+  .pebble {
+    line-height: .675;
+    padding: .675em;
+  }
+}
+
+.pebble {
+  > .juicon {
+    margin-left: -(em(4));
+    margin-right: -(em(4));
+  }
+}
+
+.list-group__item {
+  > .label {
+    margin: em(8);
+  }
+}
+
+

@@ -1,0 +1,11 @@
+$trans-duration: .33s;
+
+@mixin transition($properties: all, $duration: $trans-duration, $easing: ease) {
+  @if length($properties) > 1 {
+    transition-property: $properties;
+    transition-duration: $duration;
+    transition-timing-function: $easing;
+  } @else {
+    transition: $properties $duration $easing;
+  }
+}
