@@ -122,16 +122,21 @@
 body .scope-container h1, body .scope-container h2, body .scope-container h3, body .scope-container h4, body .scope-container h5, body .scope-container h6 {
   color: #384047; }
 body .scope-container section + .doc-section-heading {
-  margin-top: 6em; }
+  margin-top: 96px; }
 body .scope-container .doc-section-heading {
-  font-size: 1.5em;
+  margin-top: 96px;
+  font-size: 1.25em;
   color: #2a94d6;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 24px; }
 body .scope-container .doc-article-heading {
-  font-size: 1em;
   color: #cfd0d2;
   text-transform: uppercase;
-  margin-bottom: 1em; }
+  font-size: 0.875em;
+  line-height: 24px;
+  margin-bottom: 8px;
+  margin-top: 32px;
+  font-weight: 700; }
 body .scope-container p {
   margin: 1.5em 0 0 0;
   max-width: 27.5em; }

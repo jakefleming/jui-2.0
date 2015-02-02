@@ -80,7 +80,7 @@
   }
   .grid.has-gutters {
     > [class^="grid__"] {
-      padding: px($base--num);
+      padding-left: px($base--num);
     }
   }
   // Generate Column Classes

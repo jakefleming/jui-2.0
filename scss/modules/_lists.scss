@@ -106,6 +106,7 @@ $list-icon-h: 40;
 .list.outlined {
   box-shadow: inset 0 0 0 1px $component-border-color;
   border-radius: $base--radius;
+  background-color: $color--white;
   .list__item {
     box-shadow: inset 0 -1px $component-border-color;
     border-radius: 0;

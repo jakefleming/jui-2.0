@@ -1,6 +1,9 @@
 // Sliders
 
 .slider {
+  &-wrapper {
+    line-height: 0;
+  }
   input.slider {
     display: none!important;
   }

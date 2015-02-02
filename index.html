@@ -10,7 +10,7 @@
     <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1421252858000/Theme3/00Dj0000001ohFY/005j000000BPBWj/gc/dCustom0.css" rel="stylesheet" type="text/css">
     <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1420068168000/Theme3/default/gc/extended.css" rel="stylesheet" type="text/css">
     <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1420068168000/Theme3/default/gc/setup.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/styles-scoped.css"/><!--takes place of styles.scss for docs-->
+    <link rel="stylesheet" href="css/styles-scoped.css"/>
     <link rel="stylesheet" href="css/docs.css"/><!--takes place of styles.scss for docs-->
     <script src="js/modernizr.js"></script><!--detect if browser supports stuff like flexbox-->
     <!--<link rel="stylesheet" href="http://basehold.it/8">-->
@@ -31,7 +31,7 @@
                 </article>
                 <article id="pairing-examples" class="big">
                     <!--headings paired with paragraphs-->
-                    <h1>Heading 1</h1>
+                    <h1>Vertical Rhythm</h1>
                     <p>
                         Both paragraphs and headings will line up on a vertical baseline. They will fall either directly on a line or in between two lines. All other elements, like buttons, should align to the grid too.
                     </p>
@@ -426,15 +426,6 @@
                         <span class="button__content info">Button</span>
                     </button>
                 </article>
-                <article id="icon-button-examples">
-                    <!--icons in buttons-->
-                    <button type="button" class="button">
-                        <span class="button__content default"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
-                    </button>
-                    <button type="button" class="button">
-                        <span class="button__content primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
-                    </button>
-                </article>
                 <article id="flat-button-examples">
                     <h2 class="doc-article-heading">Flat Buttons</h2>
                     <!--flat buttons-->
@@ -457,7 +448,15 @@
                         <span class="button__content info">Button</span>
                     </button>
                 </article>
-                <article id="flat-icon-button-examples">
+                <article id="icon-button-examples">
+                    <h2 class="doc-article-heading">Buttons with icons</h2>
+                    <!--icons in buttons-->
+                    <button type="button" class="button">
+                        <span class="button__content default"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
+                    </button>
+                    <button type="button" class="button">
+                        <span class="button__content primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
+                    </button>
                     <!--flat buttons with icons-->
                     <button type="button" class="button--flat">
                         <span class="button__content"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
@@ -469,7 +468,7 @@
                 <article id="button-group-examples">
                     <h2 class="doc-article-heading">Button groups</h2>
                     <!--button dropdown-->
-                    <div class="button-group">
+                    <div class="button-group" style="margin-bottom: 16px;">
                         <button type="button" class="button" data-toggle="dropdown">
                             <span class="button__content default">
                                 <span class="button__icon juicon juicon-grid"></span>
@@ -640,16 +639,18 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-element">
-                        <label>
-                            <input type="checkbox"/> Derp
-                        </label>
-                    </div>
-                    <div class="form-element">
-                        <label>
-                            <input type="radio"/> Derp
-                        </label>
-                    </div>
+                    <ul class="form-list collapsed">
+                        <li class="form-element">
+                            <label class="input-size">
+                                <input type="checkbox"/> Derp
+                            </label>
+                        </li>
+                        <li class="form-element">
+                            <label class="input-size">
+                                <input type="radio"/> Derp
+                            </label>
+                        </li>
+                    </ul>
                     <div class="form-element">
                         <label>Typeahead Multiselect</label>
                         <select id="select-state" class="mar--sm--bm" multiple>
@@ -709,59 +710,68 @@
                     </div>
                     <div class="form-element">
                         <label>Typeahead Select</label>
-                        <select id="select-state2">
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="DC">District Of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
+                        <div class="input-group">
+                            <div class="input-group__element">
+                                <select id="select-state2">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="input-group__action">
+                                <button type="button" class="button">
+                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-element">
                         <label>Tags</label>
@@ -826,16 +836,18 @@
                         </div>
                         <span class="form-element__error">Error Text</span>
                     </div>
-                    <div class="form-element has-error">
-                        <label>
-                            <input type="checkbox"/> Derp
-                        </label>
-                    </div>
-                    <div class="form-element has-error">
-                        <label>
-                            <input type="radio"/> Derp
-                        </label>
-                    </div>
+                    <ul class="form-list collapsed">
+                        <li class="form-element has-error">
+                            <label class="input-size">
+                                <input type="checkbox"/> Derp
+                            </label>
+                        </li>
+                        <li class="form-element has-error">
+                            <label class="input-size">
+                                <input type="radio"/> Derp
+                            </label>
+                        </li>
+                    </ul>
                     <div class="form-element has-error">
                         <label>Select states</label>
                         <div class="selectize-wrap">
@@ -902,60 +914,69 @@
                         <span class="form-element__error">Error Text</span>
                     </div>
                     <div class="form-element has-error">
-                        <label>Select a state</label>
-                        <select id="select-state4" class="mar--sm--bm">
-                            <option value="AL">Alabama</option>
-                            <option value="AK">Alaska</option>
-                            <option value="AZ">Arizona</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="CA">California</option>
-                            <option value="CO">Colorado</option>
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="DC">District Of Columbia</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="HI">Hawaii</option>
-                            <option value="ID">Idaho</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IN">Indiana</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NV">Nevada</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="OH">Ohio</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="OR">Oregon</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="TX">Texas</option>
-                            <option value="UT">Utah</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WA">Washington</option>
-                            <option value="WV">West Virginia</option>
-                            <option value="WI">Wisconsin</option>
-                            <option value="WY">Wyoming</option>
-                        </select>
+                        <label>Typeahead Select</label>
+                        <div class="input-group">
+                            <div class="input-group__element">
+                                <select id="select-state4">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                            </div>
+                            <div class="input-group__action">
+                                <button type="button" class="button">
+                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                </button>
+                            </div>
+                        </div>
                         <span class="form-element__error">Error Text</span>
                     </div>
                     <div class="form-element has-error">
@@ -1269,48 +1290,48 @@
                     <h2 class="doc-article-heading">Static Height</h2>
                     <ul class="card-list collapse-on-small">
                         <li class="card">
-                            <span class="card-body">
-                                <span class="card-cap">
+                            <span class="card__body">
+                                <span class="card__cap">
                                     <span class=" juicon juicon-documents"></span>
                                 </span>
-                                <span class="card-content">A Default Card</span>
+                                <span class="card__content">A Default Card</span>
                             </span>
                         </li>
                         <li class="card">
-                            <span class="card-body">
-                                <span class="card-cap icon solid">
+                            <span class="card__body">
+                                <span class="card__cap icon solid">
                                     <span class="juicon juicon-documents"></span>
                                 </span>
-                                <span class="card-content">
+                                <span class="card__content">
                                     <span class="card-heading">Jake Fleming</span>
                                     <span class="card-subheading">Visual Designer</span>
                                 </span>
                             </span>
                         </li>
                         <li class="card">
-                            <span class="card-body">
-                                <span class="card-cap solid">
+                            <span class="card__body">
+                                <span class="card__cap solid">
                                     <span class=" juicon juicon-documents"></span>
                                 </span>
-                                <span class="card-content">A Default Card</span>
+                                <span class="card__content">A Default Card</span>
                             </span>
                         </li>
                         <li class="card">
-                            <span class="card-body">
-                                <span class="card-cap img">
+                            <span class="card__body">
+                                <span class="card__cap img">
                                     <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
                                 </span>
-                                <span class="card-content">
+                                <span class="card__content">
                                     <span class="card-heading">Jake Fleming</span>
                                     <span class="card-subheading">Visual Designer</span>
                                 </span>
                             </span>
                         </li>
                         <li class="card">
-                            <span class="card-body">
-                                <span class="card-cap solid" style="background: url('https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg')">
+                            <span class="card__body">
+                                <span class="card__cap solid" style="background: url('https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg')">
                                 </span>
-                                <span class="card-content">
+                                <span class="card__content">
                                     <span class="card-heading">Jake Fleming</span>
                                     <span class="card-subheading">Visual Designer</span>
                                 </span>
@@ -1322,46 +1343,46 @@
                     <h2 class="doc-article-heading">Multi-line</h2>
                     <ul class="card-list collapse-on-small">
                         <li class="card multi-line">
-                            <span class="card-body">
-                                <span class="card-cap">
+                            <span class="card__body">
+                                <span class="card__cap">
                                     <span class=" juicon juicon-documents"></span>
                                 </span>
-                                <span class="card-content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
+                                <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
                             </span>
                         </li>
                         <li class="card multi-line">
-                            <span class="card-body">
-                                <span class="card-cap icon solid">
+                            <span class="card__body">
+                                <span class="card__cap icon solid">
                                     <span class="juicon juicon-documents"></span>
                                 </span>
-                                <span class="card-content">
+                                <span class="card__content">
                                     Spans multiple lines and doesn't get cut off by an ellipsis.
                                 </span>
                             </span>
                         </li>
                         <li class="card multi-line">
-                            <span class="card-body">
-                                <span class="card-cap solid">
+                            <span class="card__body">
+                                <span class="card__cap solid">
                                     <span class=" juicon juicon-documents"></span>
                                 </span>
-                                <span class="card-content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
+                                <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
                             </span>
                         </li>
                         <li class="card multi-line">
-                            <span class="card-body">
-                                <span class="card-cap img">
+                            <span class="card__body">
+                                <span class="card__cap img">
                                     <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
                                 </span>
-                                <span class="card-content">
+                                <span class="card__content">
                                     Spans multiple lines and doesn't get cut off by an ellipsis.
                                 </span>
                             </span>
                         </li>
                         <li class="card multi-line">
-                            <span class="card-body">
-                                <span class="card-cap solid" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
+                            <span class="card__body">
+                                <span class="card__cap solid" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
                                 </span>
-                                <span class="card-content">
+                                <span class="card__content">
                                     Spans multiple lines and doesn't get cut off by an ellipsis.
                                 </span>
                             </span>
@@ -1372,46 +1393,46 @@
                     <h2 class="doc-article-heading">Special</h2>
                     <ul class="card-list collapse-on-small">
                         <li class="card">
-                            <span class="card-body">
-                                <span class="card-cap img">
+                            <span class="card__body">
+                                <span class="card__cap img">
                                     <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
                                 </span>
-                                <span class="card-content">
+                                <span class="card__content">
                                     <span class="card-heading">Jake Fleming</span>
                                     <span class="card-subheading">Visual Designer</span>
                                 </span>
                             </span>
-                            <span class="card-block">
+                            <span class="card__block">
                                 Has content and an extra block for more information.
                             </span>
                         </li>
                         <li class="card">
-                            <span class="card-feature" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
+                            <span class="card__feature" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
                             </span>
-                            <span class="card-body">
-                                <span class="card-content">
+                            <span class="card__body">
+                                <span class="card__content">
                                     <span class="card-heading">Jake Fleming</span>
                                     <span class="card-subheading">Visual Designer</span>
                                 </span>
                             </span>
                         </li>
                         <li class="card">
-                            <span class="card-feature">
+                            <span class="card__feature">
                                 <span class="juicon juicon-documents"></span>
                             </span>
-                            <span class="card-body">
-                                <span class="card-content">
+                            <span class="card__body">
+                                <span class="card__content">
                                     <span class="card-heading">Jake Fleming</span>
                                     <span class="card-subheading">Visual Designer</span>
                                 </span>
                             </span>
                         </li>
                         <li class="card">
-                            <span class="card-feature solid">
+                            <span class="card__feature solid">
                                 <span class="juicon juicon-documents"></span>
                             </span>
-                            <span class="card-body">
-                                <span class="card-content">
+                            <span class="card__body">
+                                <span class="card__content">
                                     <span class="card-heading">Jake Fleming</span>
                                     <span class="card-subheading">Visual Designer</span>
                                 </span>
@@ -1421,9 +1442,76 @@
                 </article>
             </section>
             <h1 class="doc-section-heading">Bars</h1>
-            <section id="bars">
+            <section id="bars" class="vertical">
                 <article>
-                    <nav class="nav-bar--solo">
+                    <nav class="nav-bar default">
+                        <div class="nav-bar__menu-toggle">
+                            <span class="juicon juicon-menu"></span>
+                        </div>
+                        <div class="nav-bar__top">
+                            NavBar
+                        </div>
+                        <ul class="nav-bar__list--right">
+                            <li class="nav-bar__list__item">
+                                <a href="index.html">Link 1</a>
+                            </li>
+                            <li class="nav-bar__list__item">
+                                <div class="button-group">
+                                    <button type="button" class="button" data-toggle="dropdown">
+                                    <span class="button__content">
+                                        <span class="button__text">Button dropdown</span>
+                                        <span class="button__icon juicon juicon-down"></span>
+                                    </span>
+                                    </button>
+                                    <ul class="dropdown-box">
+                                        <li>
+                                            <a class="dropdown-box__item">Button dropdown</a>
+                                        </li>
+                                        <li>
+                                            <label class="dropdown-box__item--static">
+                                                <input type="checkbox"/> Derp
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar__list__item">
+                                <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
+                            </li>
+                        </ul>
+                        <div class="nav-bar__appendage">
+                            <div class="grid has-gutters nav-bar__appendage--inner">
+                                <div class="grid__block">
+                                    <div class="form-element">
+                                        <textarea placeholder="Textareas are fun"></textarea>
+                                        <small class="form-element__error">Your typing is puny. Pump it up.</small>
+                                    </div>
+                                </div>
+                                <div class="grid__block">
+                                    <div class="form-element">
+                                        <input type="email" placeholder="Enter email"/>
+                                        <small class="form-element__error">Your password isn't manly enough.</small>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="email" placeholder="Enter email"/>
+                                        <small class="form-element__error">Your password isn't manly enough.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </article>
+                <article>
+                    <nav class="nav-bar primary">
                         <div class="nav-bar__menu-toggle">
                             <span class="juicon juicon-menu"></span>
                         </div>
@@ -1490,6 +1578,229 @@
                     </nav>
                 </article>
             </section>
+            <h1 class="doc-section-heading">Slates</h1>
+            <section id="slates">
+                <article>
+                    <div class="slate outlined">
+                        <nav class="nav-bar default outlined">
+                            <div class="nav-bar__menu-toggle">
+                                <span class="juicon juicon-menu"></span>
+                            </div>
+                            <div class="nav-bar__top">
+                                NavBar
+                            </div>
+                            <ul class="nav-bar__list--right">
+                                <li class="nav-bar__list__item">
+                                    <a href="index.html">Link 1</a>
+                                </li>
+                                <li class="nav-bar__list__item">
+                                    <div class="button-group">
+                                        <button type="button" class="button" data-toggle="dropdown">
+                                    <span class="button__content">
+                                        <span class="button__text">Button dropdown</span>
+                                        <span class="button__icon juicon juicon-down"></span>
+                                    </span>
+                                        </button>
+                                        <ul class="dropdown-box">
+                                            <li>
+                                                <a class="dropdown-box__item">Button dropdown</a>
+                                            </li>
+                                            <li>
+                                                <label class="dropdown-box__item--static">
+                                                    <input type="checkbox"/> Derp
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-box__item">Dropdown Menu</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-box__item">Dropdown Menu</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-box__item">Dropdown Menu</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-bar__list__item">
+                                    <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
+                                </li>
+                            </ul>
+                            <div class="nav-bar__appendage">
+                                <div class="grid has-gutters nav-bar__appendage--inner">
+                                    <div class="grid__block">
+                                        <div class="form-element">
+                                            <textarea placeholder="Textareas are fun"></textarea>
+                                            <small class="form-element__error">Your typing is puny. Pump it up.</small>
+                                        </div>
+                                    </div>
+                                    <div class="grid__block">
+                                        <div class="form-element">
+                                            <input type="email" placeholder="Enter email"/>
+                                            <small class="form-element__error">Your password isn't manly enough.</small>
+                                        </div>
+                                        <div class="form-element">
+                                            <input type="email" placeholder="Enter email"/>
+                                            <small class="form-element__error">Your password isn't manly enough.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="slate__top outlined">
+                            <div class="slate__top__control">
+                                <button type="button" class="button--flat">
+                                    <span class="button__content default">
+                                        <span class="button__icon juicon juicon-chat"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="button--flat">
+                                    <span class="button__content default">
+                                        <span class="button__icon juicon juicon-search"></span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="slate__top__main">
+                                <span class="slate__heading">derp</span>
+                                <span class="slate__subheading">derp</span>
+                            </div>
+                        </div>
+                        <table class="outlined">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Sex</th>
+                                <th>Location</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Jake Fleming</td>
+                                <td>27</td>
+                                <td>M</td>
+                                <td>Chicago, IL</td>
+                            </tr>
+                            <tr class="tr active">
+                                <td>Jake Fleming</td>
+                                <td>27</td>
+                                <td>M</td>
+                                <td>Chicago, IL</td>
+                            </tr>
+                            <tr>
+                                <td>Jake Fleming</td>
+                                <td>27</td>
+                                <td>M</td>
+                                <td>Chicago, IL</td>
+                            </tr>
+                            <tr>
+                                <td>Jake Fleming</td>
+                                <td>27</td>
+                                <td>M</td>
+                                <td>Chicago, IL</td>
+                            </tr>
+                            <tr>
+                                <td>Jake Fleming</td>
+                                <td>27</td>
+                                <td>M</td>
+                                <td>Chicago, IL</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="slate__block outlined account-for-pad removable">
+                            <button type="button" class="close-button"><span class="juicon juicon-trash"></span></button>
+                            <div class="grid orient--vertical-on-small has-gutters">
+                                <div class="grid__block--4-on-medium">
+                                    <div class="form-element">
+                                        <label class="srt-only">Typeahead Select</label>
+                                        <div class="input-group">
+                                            <div class="input-group__element">
+                                                <select id="select-thing">
+                                                    <option value="">Search...</option>
+                                                    <option value="opt1">Option 1</option>
+                                                    <option value="opt2">Option 2</option>
+                                                    <option value="opt3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-group__action">
+                                                <button type="button" class="button">
+                                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__block--4-on-medium">
+                                    <div class="form-element">
+                                        <label class="srt-only">Select</label>
+                                        <div class="select-wrap">
+                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                            <select>
+                                                <option>derp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__block--4-on-medium">
+                                    <div class="form-element">
+                                        <label class="srt-only">Select</label>
+                                        <div class="select-wrap">
+                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                            <select>
+                                                <option>derp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slate__block outlined account-for-pad removable">
+                            <button type="button" class="close-button"><span class="juicon juicon-trash"></span></button>
+                            <div class="grid orient--vertical-on-small has-gutters">
+                                <div class="grid__block--4-on-medium">
+                                    <div class="form-element">
+                                        <label class="srt-only">Select</label>
+                                        <div class="select-wrap">
+                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                            <select>
+                                                <option>derp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__block--4-on-medium">
+                                    <div class="form-element">
+                                        <label class="srt-only">Select</label>
+                                        <div class="select-wrap">
+                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                            <select>
+                                                <option>derp</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid__block--4-on-medium">
+                                    <div class="form-element">
+                                        <label class="input-size">
+                                            <input type="checkbox"/> Derp
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slate__bottom outlined">
+                            <div class="slate__bottom__control">
+                                <button type="button" class="button">
+                                    <span class="button__content primary">
+                                        <span class="button__text">Submit</span>
+                                        <span class="button__icon juicon juicon-forward"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -1505,7 +1816,9 @@
     <script type="text/javascript">
         //selectize
         $(function() {
-            $('#select-state2, #select-state4').selectize({});
+            $('#select-state2, #select-state4, #select-thing').selectize({
+
+            });
         });
         $('#select-state, #select-state3').selectize({
             onChange : function(selectItems){

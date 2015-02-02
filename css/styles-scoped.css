@@ -142,7 +142,7 @@
 @font-face {
   font-family: 'juicons';
   src: url("fonts/juicons.eot?-m8mnji");
-  src: url("fonts/juicons.eot?#iefix-m8mnji") format("embedded-opentype"), url("fonts/juicons.woff?-m8mnji") format("woff"), url("fonts/juicons.ttf?-m8mnji") format("truetype"), url("fonts/juicons.svg?-m8mnji#juicons") format("svg");
+  src: url("fonts/juicons.eot?#iefix-m8mnji") format("embedded-opentype"), url("fonts/juicons.ttf?-m8mnji") format("truetype"), url("fonts/juicons.svg?-m8mnji#juicons") format("svg"), url("fonts/juicons.woff?-m8mnji") format("woff");
   font-weight: normal;
   font-style: normal; }
 .juicon, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove {
@@ -895,7 +895,7 @@ a {
   position: relative;
   min-height: 1px; }
 .no-flexbox .grid.has-gutters > [class^="grid__"] {
-  padding: 16px; }
+  padding-left: 16px; }
 @media (min-width: 1px) {
   .no-flexbox .grid__block--12-on-xsmall {
     width: 200%;
@@ -2009,6 +2009,9 @@ body .scope-container {
     body .scope-container a:hover {
       color: #2177ac;
       text-decoration: none !important; }
+  body .scope-container .srt-only {
+    height: 0 !important;
+    overflow: hidden; }
   body .scope-container .alert {
     max-height: 0;
     padding: 0 1em;
@@ -2078,12 +2081,7 @@ body .scope-container {
       -webkit-transition: 0.33s;
               transition: 0.33s; }
   body .scope-container .nav-bar, body .scope-container .nav-bar--solo {
-    background: white;
-    margin-bottom: 1em;
-    min-height: 3.5em;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #e8eaeb; }
+    min-height: 3.5em; }
     body .scope-container .nav-bar:after, body .scope-container .nav-bar--solo:after {
       content: "";
       display: table;
@@ -2097,43 +2095,60 @@ body .scope-container {
         content: "";
         display: table;
         clear: both; }
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
         body .scope-container .nav-bar__top {
           float: left; } }
+    @media (min-width: 768px) {
+      body .scope-container .nav-bar .constrained .nav-bar__top, body .scope-container .nav-bar--solo .constrained .nav-bar__top {
+        padding: 1em 0; } }
+    body .scope-container .nav-bar .constrained .nav-bar__list--right .nav-bar__list__item:last-child > a, body .scope-container .nav-bar--solo .constrained .nav-bar__list--right .nav-bar__list__item:last-child > a, body .scope-container .nav-bar .constrained .nav-bar__list--right .nav-bar__list__item:last-child > *, body .scope-container .nav-bar--solo .constrained .nav-bar__list--right .nav-bar__list__item:last-child > * {
+      padding-right: 0; }
+    body .scope-container .nav-bar.menu--open .nav-bar__list, body .scope-container .menu--open.nav-bar--solo .nav-bar__list, body .scope-container .nav-bar.menu--open .nav-bar__list--right, body .scope-container .menu--open.nav-bar--solo .nav-bar__list--right, body .scope-container .nav-bar.menu--open .nav-bar__list--left, body .scope-container .menu--open.nav-bar--solo .nav-bar__list--left {
+      display: block;
+      min-width: 100%;
+      max-height: 31.25em;
+      min-height: 0;
+      opacity: 100;
+      -webkit-transition: 0.33s;
+              transition: 0.33s; }
     body .scope-container .nav-bar__list, body .scope-container .nav-bar__list--right, body .scope-container .nav-bar__list--left {
       list-style-type: none;
       margin: 0; }
       @media (min-width: 1px) and (max-width: 768px) {
         body .scope-container .nav-bar__list, body .scope-container .nav-bar__list--right, body .scope-container .nav-bar__list--left {
-          display: none; }
-          .menu--open body .scope-container .nav-bar__list, .menu--open body .scope-container .nav-bar__list--right, .menu--open body .scope-container .nav-bar__list--left {
-            display: block; } }
-      @media (min-width: 769px) {
+          min-width: 100%;
+          max-height: 0;
+          opacity: 0;
+          -webkit-transition: 0.33s;
+                  transition: 0.33s;
+          overflow: hidden; } }
+      @media (min-width: 768px) {
         body .scope-container .nav-bar__list--right {
           float: right; } }
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
         body .scope-container .nav-bar__list--left {
           float: left; } }
       body .scope-container .nav-bar__list__item {
         margin: 0;
         position: relative;
         font-weight: 300; }
-        @media (min-width: 769px) {
+        @media (min-width: 768px) {
           body .scope-container .nav-bar__list__item {
             float: left; } }
+        @media (min-width: 1px) and (max-width: 768px) {
+          body .scope-container .nav-bar__list__item .button-group {
+            width: 100%; }
+            body .scope-container .nav-bar__list__item .button-group .dropdown-box {
+              position: static; } }
         body .scope-container .nav-bar__list__item > a {
           display: block;
           cursor: pointer;
-          color: #686c70;
           padding: 1em;
           line-height: 1.5;
           min-width: 3.5em; }
           @media (min-width: 768px) {
             body .scope-container .nav-bar__list__item > a {
               text-align: center; } }
-          @media (min-width: 1px) and (max-width: 768px) {
-            body .scope-container .nav-bar__list__item > a {
-              background-color: #f5f6f7; } }
           body .scope-container .nav-bar__list__item > a.button {
             border-radius: 0;
             background: transparent;
@@ -2153,9 +2168,13 @@ body .scope-container {
             background: transparent;
             color: #686c70;
             padding: 0 1em;
-            line-height: 1.5; }
+            line-height: 1;
+            vertical-align: top; }
             body .scope-container .nav-bar__list__item .button .button__content .button__text + .button__icon {
               margin-left: 0; }
+            body .scope-container .nav-bar__list__item .button .button__content .button__text, body .scope-container .nav-bar__list__item .button .button__content .button__icon, body .scope-container .nav-bar__list__item .button .button__content .button__icon:before {
+              vertical-align: middle;
+              line-height: 1.25; }
         body .scope-container .nav-bar__list__item .dropdown-box.active {
           margin-top: 0.5em; }
     body .scope-container .nav-bar__appendage {
@@ -2166,7 +2185,8 @@ body .scope-container {
       max-height: 0;
       opacity: 0;
       -webkit-transition: 0.33s;
-              transition: 0.33s; }
+              transition: 0.33s;
+      overflow: hidden; }
       body .scope-container .nav-bar__appendage:after {
         content: "";
         display: table;
@@ -2177,7 +2197,6 @@ body .scope-container {
       display: block;
       background-color: #f0f1f2;
       min-width: 100%;
-      margin-top: 2px;
       max-height: 31.25em;
       min-height: 0;
       opacity: 100;
@@ -2211,94 +2230,96 @@ body .scope-container {
               transform: rotate(360deg);
       -webkit-transition: 0.33s;
               transition: 0.33s; }
-    body .scope-container .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove {
-      width: 24px;
-      height: 24px;
-      line-height: 24px;
-      -webkit-transition: 0.33s;
-              transition: 0.33s; }
-      @media (min-width: 768px) {
-        body .scope-container .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove {
-          text-align: center; } }
-      body .scope-container .nav-bar__appendage-toggle .juicon:before, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove:before, body .scope-container .item .nav-bar__appendage-toggle .remove:before {
+    body .scope-container .nav-bar__appendage-toggle {
+      line-height: 1 !important; }
+      body .scope-container .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove {
         width: 24px;
         height: 24px;
-        text-align: center; }
+        line-height: 24px;
+        -webkit-transition: 0.33s;
+                transition: 0.33s; }
+        @media (min-width: 768px) {
+          body .scope-container .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove {
+            text-align: center; } }
+        body .scope-container .nav-bar__appendage-toggle .juicon:before, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove:before, body .scope-container .item .nav-bar__appendage-toggle .remove:before {
+          width: 24px;
+          height: 24px;
+          text-align: center; }
   body .scope-container .appendage--open .nav-bar__appendage {
     display: block; }
   body .scope-container .menu--open .nav-bar__list, body .scope-container .menu--open .nav-bar__list--right, body .scope-container .menu--open .nav-bar__list--left {
     display: block; }
-  .flexbox .nav-bar > *, .flexbox body .scope-container .nav-bar--solo > *, body .scope-container .flexbox .nav-bar--solo > *, .flexbox .nav-bar--solo > * {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-       -moz-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
-  .flexbox .nav-bar .nav-bar__top, .flexbox body .scope-container .nav-bar--solo .nav-bar__top, body .scope-container .flexbox .nav-bar--solo .nav-bar__top, .flexbox .nav-bar--solo .nav-bar__top {
-    -webkit-box-flex: initial;
-    -webkit-flex: initial;
-       -moz-box-flex: initial;
-        -ms-flex: initial;
-            flex: initial; }
-  .flexbox .nav-bar__list--right, .flexbox .nav-bar__list--left {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-       -moz-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
-    .flexbox .nav-bar__list--right > *, .flexbox .nav-bar__list--left > * {
+  @media (min-width: 768px) {
+    .flexbox .nav-bar > *, .flexbox body .scope-container .nav-bar--solo > *, body .scope-container .flexbox .nav-bar--solo > *, .flexbox .nav-bar--solo > * {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+         -moz-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    .flexbox .nav-bar .nav-bar__top, .flexbox body .scope-container .nav-bar--solo .nav-bar__top, body .scope-container .flexbox .nav-bar--solo .nav-bar__top, .flexbox .nav-bar--solo .nav-bar__top {
       -webkit-box-flex: initial;
       -webkit-flex: initial;
          -moz-box-flex: initial;
           -ms-flex: initial;
               flex: initial; }
-  body .scope-container .green {
-    x-light-color: #e8f8f1;
-    light-color: #98e2c2;
-    normal-color: #48CC92;
-    dark-color: #37c486;
-    darker-color: #26885d; }
-  body .scope-container .red {
-    x-light-color: #f9eceb;
-    light-color: #e3a09b;
-    normal-color: #CC554C;
-    dark-color: #c64238;
-    darker-color: #8b2e27; }
-  body .scope-container .yellow {
-    x-light-color: #fcf3d7;
-    light-color: #f6d777;
-    normal-color: #EFBB18;
-    dark-color: #deac0f;
-    darker-color: #97750a; }
-  body .scope-container .turq {
-    x-light-color: #e9f9f8;
-    light-color: #9ae2dd;
-    normal-color: #4ACCC2;
-    dark-color: #38c5ba;
-    darker-color: #278982; }
-  body .scope-container .black {
-    x-light-color: #b1b1b5;
-    light-color: #7d7d83;
-    normal-color: #4B4B4F;
-    dark-color: #3f3f42;
-    darker-color: #19191b; }
-  body .scope-container .gray {
-    x-light-color: white;
-    light-color: #e5e5e7;
-    normal-color: #b1b1b5;
-    dark-color: #a4a4a9;
-    darker-color: #7d7d83; }
+    .flexbox .nav-bar__list--right, .flexbox .nav-bar__list--left {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+         -moz-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+      .flexbox .nav-bar__list--right > *, .flexbox .nav-bar__list--left > * {
+        -webkit-box-flex: initial;
+        -webkit-flex: initial;
+           -moz-box-flex: initial;
+            -ms-flex: initial;
+                flex: initial; } }
+  body .scope-container .nav-bar.default, body .scope-container .default.nav-bar--solo {
+    background: white;
+    box-shadow: 0 1px 0 #dadee2; }
+    body .scope-container .nav-bar.default.outlined, body .scope-container .default.outlined.nav-bar--solo {
+      box-shadow: inset 0 0 0 1px #dadee2; }
+    body .scope-container .nav-bar.default .nav-bar__list__item > a, body .scope-container .default.nav-bar--solo .nav-bar__list__item > a {
+      color: #686c70; }
+      body .scope-container .nav-bar.default .nav-bar__list__item > a.nav-bar__appendage-toggle, body .scope-container .default.nav-bar--solo .nav-bar__list__item > a.nav-bar__appendage-toggle {
+        color: #686c70; }
+    body .scope-container .nav-bar.default .nav-bar__top, body .scope-container .default.nav-bar--solo .nav-bar__top {
+      color: #686c70; }
+  body .scope-container .nav-bar.primary, body .scope-container .primary.nav-bar--solo {
+    background: #2a94d6; }
+    body .scope-container .nav-bar.primary .nav-bar__list__item, body .scope-container .primary.nav-bar--solo .nav-bar__list__item {
+      color: white; }
+      body .scope-container .nav-bar.primary .nav-bar__list__item .button__content, body .scope-container .primary.nav-bar--solo .nav-bar__list__item .button__content {
+        color: inherit; }
+      body .scope-container .nav-bar.primary .nav-bar__list__item > a, body .scope-container .primary.nav-bar--solo .nav-bar__list__item > a {
+        color: white;
+        background: transparent; }
+        body .scope-container .nav-bar.primary .nav-bar__list__item > a.nav-bar__appendage-toggle, body .scope-container .primary.nav-bar--solo .nav-bar__list__item > a.nav-bar__appendage-toggle {
+          color: white; }
+      @media (min-width: 1px) and (max-width: 768px) {
+        body .scope-container .nav-bar.primary .nav-bar__list__item .nav-bar__list__item, body .scope-container .primary.nav-bar--solo .nav-bar__list__item .nav-bar__list__item {
+          background-color: transparent; }
+          body .scope-container .nav-bar.primary .nav-bar__list__item .nav-bar__list__item:hover, body .scope-container .primary.nav-bar--solo .nav-bar__list__item .nav-bar__list__item:hover {
+            background-color: #2585c1; } }
+    body .scope-container .nav-bar.primary .nav-bar__menu-toggle, body .scope-container .primary.nav-bar--solo .nav-bar__menu-toggle {
+      color: white; }
+    body .scope-container .nav-bar.primary .nav-bar__top, body .scope-container .primary.nav-bar--solo .nav-bar__top {
+      color: white; }
+    body .scope-container .nav-bar.primary .nav-bar__appendage, body .scope-container .primary.nav-bar--solo .nav-bar__appendage {
+      background: #2177ac; }
+      body .scope-container .nav-bar.primary .nav-bar__appendage textarea, body .scope-container .primary.nav-bar--solo .nav-bar__appendage textarea, body .scope-container .nav-bar.primary .nav-bar__appendage input, body .scope-container .primary.nav-bar--solo .nav-bar__appendage input {
+        background: white; }
   body .scope-container .button--flat, body .scope-container .button, body .scope-container a.button, body .scope-container button.button, body .scope-container a.button--flat, body .scope-container .close-button {
     background-image: none;
     background: transparent;
@@ -2312,14 +2333,15 @@ body .scope-container {
     font-weight: 300;
     margin: 0;
     outline: none;
-    padding: 2px 0;
+    border-radius: 0;
+    padding: 0;
     vertical-align: middle;
     white-space: nowrap;
     text-align: center; }
   body .scope-container .button__content {
     border-radius: 3px;
     display: inline-block;
-    line-height: 2.25em;
+    line-height: 2.5em;
     padding: 0 1em;
     vertical-align: middle;
     -webkit-transition: background-color 0.33s ease;
@@ -2404,20 +2426,23 @@ body .scope-container {
     top: 0;
     -webkit-transition: 0.33s;
             transition: 0.33s;
-    overflow: hidden;
-    z-index: 1; }
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 1;
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+    clear: both; }
     body .scope-container .dropdown-box li {
       margin-left: 0; }
     body .scope-container .dropdown-box.active {
       min-width: 100%;
-      margin-top: 2px;
+      margin-top: 0px;
       max-height: 18.75em;
       max-width: 15em;
       min-height: 0;
       opacity: 100;
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
-      overflow-x: hidden;
       -webkit-transition: 0.33s;
               transition: 0.33s; }
     body .scope-container .dropdown-box__item, body .scope-container .dropdown-box__item--static {
@@ -2433,6 +2458,8 @@ body .scope-container {
       padding: 0 1em;
       vertical-align: middle;
       white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
       -webkit-transition: 0.33s;
               transition: 0.33s; }
       body .scope-container .dropdown-box__item:hover, body .scope-container .dropdown-box__item--static:hover {
@@ -2488,18 +2515,23 @@ body .scope-container {
       height: 40px;
       padding: 8px 16px;
       outline: none; }
-  body .scope-container .button-group .button {
-    margin-left: -5px; }
-    body .scope-container .button-group .button .button__content {
-      border-radius: 0; }
-    body .scope-container .button-group .button:first-of-type {
-      margin-left: 0; }
-      body .scope-container .button-group .button:first-of-type .button__content {
-        border-top-left-radius: 3px;
-        border-bottom-left-radius: 3px; }
-    body .scope-container .button-group .button:last-of-type .button__content {
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px; }
+  body .scope-container .button-group {
+    font-size: 0;
+    line-height: 40px; }
+    body .scope-container .button-group .button {
+      font-size: 16px; }
+      body .scope-container .button-group .button .button__content {
+        border-radius: 0; }
+      body .scope-container .button-group .button:first-of-type {
+        margin-left: 0; }
+        body .scope-container .button-group .button:first-of-type .button__content {
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px; }
+      body .scope-container .button-group .button:last-of-type .button__content {
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px; }
+    body .scope-container .button-group .dropdown-box {
+      font-size: 16px; }
   .flexbox .button-group.stretch {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2637,6 +2669,7 @@ body .scope-container {
         body .scope-container .card-list.collapse-on-small .card:first-child {
           border-top-width: 1px; } }
   body .scope-container .card {
+    background-color: white;
     box-shadow: none;
     font-family: ProximaNovaSoft;
     border-radius: 3px;
@@ -2658,20 +2691,20 @@ body .scope-container {
             -ms-transform: translateY(-2px);
                 transform: translateY(-2px);
         border-color: white; } }
-    body .scope-container .card-body {
+    body .scope-container .card__body {
       overflow: hidden;
       border-collapse: separate;
       display: table;
       width: 100%;
       table-layout: fixed; }
-      body .scope-container .card-body + .card-block {
+      body .scope-container .card__body + .card__block {
         padding-top: 1px; }
-    body .scope-container .card-block {
+    body .scope-container .card__block {
       padding: 0.9375em;
       display: block; }
-      body .scope-container .card-block + .card-body {
+      body .scope-container .card__block + .card__body {
         padding-top: 1px; }
-    body .scope-container .card-content {
+    body .scope-container .card__content {
       padding: 0.9375em;
       white-space: nowrap;
       overflow: hidden;
@@ -2680,47 +2713,47 @@ body .scope-container {
       width: 100%;
       line-height: 1.5;
       vertical-align: middle; }
-    body .scope-container .card-cap {
+    body .scope-container .card__cap {
       padding: 0.9375em;
       line-height: 1.5;
       text-align: center;
       width: 3.5em;
       display: table-cell;
       vertical-align: top; }
-      body .scope-container .card-cap + .card-content {
+      body .scope-container .card__cap + .card__content {
         padding-left: 0; }
-      body .scope-container .card-cap.solid {
+      body .scope-container .card__cap.solid {
         background: #2a94d6;
         color: white;
         background-size: cover !important;
         background-position: center center !important;
         vertical-align: middle; }
-        body .scope-container .card-cap.solid + .card-content {
+        body .scope-container .card__cap.solid + .card__content {
           padding-left: 1em; }
-      body .scope-container .card-cap.img {
+      body .scope-container .card__cap.img {
         line-height: 0;
         width: 4em; }
-        body .scope-container .card-cap.img + .card-content {
+        body .scope-container .card__cap.img + .card__content {
           padding-left: 0; }
-        body .scope-container .card-cap.img img {
+        body .scope-container .card__cap.img img {
           width: 2em;
           height: 2em;
           border-radius: 3px; }
-      body .scope-container .card-cap.icon {
+      body .scope-container .card__cap.icon {
         width: 4em; }
-        body .scope-container .card-cap.icon.solid {
+        body .scope-container .card__cap.icon.solid {
           background: transparent;
           vertical-align: top; }
-          body .scope-container .card-cap.icon.solid .juicon, body .scope-container .card-cap.icon.solid .button.load-this .button__content:before, body .scope-container .button.load-this .card-cap.icon.solid .button__content:before, body .scope-container .card-cap.icon.solid .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card-cap.icon.solid .form-element__wrap:before, body .scope-container .card-cap.icon.solid .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card-cap.icon.solid .selectize-input:before, body .scope-container .card-cap.icon.solid .item .remove, body .scope-container .item .card-cap.icon.solid .remove {
+          body .scope-container .card__cap.icon.solid .juicon, body .scope-container .card__cap.icon.solid .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap.icon.solid .button__content:before, body .scope-container .card__cap.icon.solid .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap.icon.solid .form-element__wrap:before, body .scope-container .card__cap.icon.solid .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap.icon.solid .selectize-input:before, body .scope-container .card__cap.icon.solid .item .remove, body .scope-container .item .card__cap.icon.solid .remove {
             background-color: #2a94d6; }
-        body .scope-container .card-cap.icon .juicon, body .scope-container .card-cap.icon .button.load-this .button__content:before, body .scope-container .button.load-this .card-cap.icon .button__content:before, body .scope-container .card-cap.icon .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card-cap.icon .form-element__wrap:before, body .scope-container .card-cap.icon .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card-cap.icon .selectize-input:before, body .scope-container .card-cap.icon .item .remove, body .scope-container .item .card-cap.icon .remove {
+        body .scope-container .card__cap.icon .juicon, body .scope-container .card__cap.icon .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap.icon .button__content:before, body .scope-container .card__cap.icon .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap.icon .form-element__wrap:before, body .scope-container .card__cap.icon .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap.icon .selectize-input:before, body .scope-container .card__cap.icon .item .remove, body .scope-container .item .card__cap.icon .remove {
           width: 2em;
           height: 2em;
           line-height: 2;
           border-radius: 3px; }
-        body .scope-container .card-cap.icon + .card-content {
+        body .scope-container .card__cap.icon + .card__content {
           padding-left: 0; }
-    body .scope-container .card-feature {
+    body .scope-container .card__feature {
       height: 4em;
       display: block;
       line-height: 4em;
@@ -2729,19 +2762,27 @@ body .scope-container {
       vertical-align: middle;
       text-align: center;
       font-size: 2em; }
-      body .scope-container .card-feature.solid {
+      body .scope-container .card__feature.solid {
         background-color: #2a94d6;
         color: white; }
-    body .scope-container .card-heading {
+    body .scope-container .card__heading {
       display: block;
       line-height: 1; }
-    body .scope-container .card-subheading {
+    body .scope-container .card__subheading {
       display: block;
       font-size: 0.875em;
       color: #8d9aa5;
-      line-height: 1; }
-    body .scope-container .card.multi-line .card-content {
+      line-height: 1.14286em; }
+    body .scope-container .card.multi-line .card__content {
       white-space: normal; }
+  body .scope-container .constrained {
+    margin: 0 auto; }
+    body .scope-container .constrained.default {
+      max-width: 64em; }
+    body .scope-container .constrained.small {
+      max-width: 43.75em; }
+    body .scope-container .constrained.x-small {
+      max-width: 25em; }
   body .scope-container .form-element {
     padding-bottom: 1em;
     position: relative; }
@@ -2755,7 +2796,7 @@ body .scope-container {
     display: block;
     font-size: 1em;
     font-family: ProximaNovaSoft;
-    font-weight: 100;
+    font-weight: 300;
     color: #686c70;
     width: 100%;
     border: 1px solid #dadee2;
@@ -2778,20 +2819,18 @@ body .scope-container {
     body .scope-container input[type="text"]::-webkit-input-placeholder, body .scope-container input[type="password"]::-webkit-input-placeholder, body .scope-container input[type="tel"]::-webkit-input-placeholder, body .scope-container input[type="number"]::-webkit-input-placeholder, body .scope-container input[type="email"]::-webkit-input-placeholder, body .scope-container input[type="search"]::-webkit-input-placeholder, body .scope-container input[type="url"]::-webkit-input-placeholder, body .scope-container textarea::-webkit-input-placeholder {
       color: #8d9aa5; }
   body .scope-container input[type="text"], body .scope-container input[type="password"], body .scope-container input[type="tel"], body .scope-container input[type="number"], body .scope-container input[type="email"], body .scope-container input[type="search"], body .scope-container input[type="url"] {
-    height: 2.25em;
-    -webkit-appearance: none;
-    margin: 0.125em 0; }
+    height: 2.5em;
+    -webkit-appearance: none; }
   body .scope-container input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset; }
   body .scope-container textarea {
     resize: vertical;
-    height: 5.75em;
-    margin: 0.125em 0;
+    height: 6em;
     appearance: none;
     box-shadow: none; }
   body .scope-container .input-group {
     position: relative; }
-    body .scope-container .input-group > .input-group__element input {
+    body .scope-container .input-group > .input-group__element input, body .scope-container .input-group > .input-group__element .selectize-input {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-right: 0; }
@@ -2845,17 +2884,16 @@ body .scope-container {
     padding: 0.5em 0.5em;
     z-index: 0;
     width: 3.25em;
-    height: 2.125em;
+    height: 2.375em;
     text-align: center;
-    line-height: 1.25; }
+    line-height: 1.5; }
   body .scope-container .select-wrap {
     border-radius: 3px;
     position: relative;
     border-width: 1px;
     border-style: solid;
     border-color: #dadee2;
-    background-color: white;
-    margin: 0.125em 0; }
+    background-color: white; }
     body .scope-container .select-wrap:hover {
       background-color: #e6e6e6; }
     body .scope-container .select-wrap .select-wrap__icon {
@@ -2867,9 +2905,9 @@ body .scope-container {
       z-index: 0;
       cursor: pointer;
       width: 3.25em;
-      height: 2.125em;
+      height: 2.375em;
       text-align: center;
-      line-height: 1.25; }
+      line-height: 1.5; }
     body .scope-container .select-wrap select {
       -webkit-appearance: none;
       -ms-appearance: none;
@@ -2883,7 +2921,7 @@ body .scope-container {
       padding-right: 3.25em;
       margin: 0px;
       width: 100%;
-      height: 2.125em;
+      height: 2.375em;
       background: transparent;
       font-family: ProximaNovaSoft;
       font-weight: 300;
@@ -2966,6 +3004,18 @@ body .scope-container {
     font-family: ProximaNovaSoft;
     color: #c06057;
     line-height: 1.339; }
+  body .scope-container label.input-size {
+    padding: 0.57143em 0; }
+  body .scope-container .form-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    body .scope-container .form-list li {
+      margin: 0; }
+    body .scope-container .form-list.collapsed {
+      padding-bottom: 1em; }
+      body .scope-container .form-list.collapsed li {
+        padding: 0; }
   body .scope-container .list {
     list-style-type: none;
     margin: 0;
@@ -3054,7 +3104,8 @@ body .scope-container {
         padding-left: 48px !important; }
   body .scope-container .list.outlined {
     box-shadow: inset 0 0 0 1px #dadee2;
-    border-radius: 3px; }
+    border-radius: 3px;
+    background-color: white; }
     body .scope-container .list.outlined .list__item {
       box-shadow: inset 0 -1px #dadee2;
       border-radius: 0; }
@@ -3102,6 +3153,110 @@ body .scope-container {
     margin-right: -0.25em; }
   body .scope-container .list-group__item > .label {
     margin: 0.5em; }
+  body .scope-container .slate {
+    font-family: ProximaNovaSoft;
+    color: #384047;
+    border-radius: 3px; }
+    body .scope-container .slate.outlined {
+      box-shadow: inset 0 0 0 1px #dadee2; }
+    body .scope-container .slate__top {
+      padding: 1em;
+      position: relative; }
+      body .scope-container .slate__top.outlined {
+        box-shadow: inset 0 -1px 0 #dadee2; }
+    body .scope-container .slate__block {
+      padding: 1em; }
+      body .scope-container .slate__block.outlined {
+        box-shadow: 0 -1px 0 #dadee2; }
+      body .scope-container .slate__block.account-for-pad {
+        padding-bottom: 0; }
+      body .scope-container .slate__block.removable {
+        position: relative;
+        padding-right: 3.5em; }
+        body .scope-container .slate__block.removable > .close-button {
+          color: #8d9aa5;
+          position: absolute;
+          right: 0;
+          background-image: none;
+          background: transparent;
+          border-width: 0;
+          width: 56px;
+          height: 40px;
+          padding: 8px 16px;
+          outline: none;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+          body .scope-container .slate__block.removable > .close-button .juicon, body .scope-container .slate__block.removable > .close-button .button.load-this .button__content:before, body .scope-container .button.load-this .slate__block.removable > .close-button .button__content:before, body .scope-container .slate__block.removable > .close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__block.removable > .close-button .form-element__wrap:before, body .scope-container .slate__block.removable > .close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__block.removable > .close-button .selectize-input:before, body .scope-container .slate__block.removable > .close-button .item .remove, body .scope-container .item .slate__block.removable > .close-button .remove {
+            vertical-align: top; }
+    body .scope-container .slate__bottom {
+      padding: 1em;
+      position: relative; }
+      body .scope-container .slate__bottom.outlined {
+        box-shadow: inset 0 1px 0 #dadee2; }
+    body .scope-container .slate__heading {
+      display: block;
+      font-weight: 500;
+      color: #384047;
+      font-size: 1.25em;
+      line-height: 1.2em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    body .scope-container .slate__subheading {
+      display: block;
+      font-weight: 300;
+      color: #8d9aa5;
+      font-size: 1em;
+      line-height: 1em;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .flexbox .slate__top, .flexbox .slate__bottom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+       -moz-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .flexbox .slate__top__main, .flexbox .slate__bottom__main {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+         -moz-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      -webkit-box-ordinal-group: 0;
+      -webkit-order: -1;
+         -moz-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center; }
+    .flexbox .slate__top__control, .flexbox .slate__bottom__control {
+      -webkit-box-flex: initial;
+      -webkit-flex: initial;
+         -moz-box-flex: initial;
+          -ms-flex: initial;
+              flex: initial;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center; }
+
+  .no-flexbox .slate__top:after, .no-flexbox .slate__bottom:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .no-flexbox .slate__top__control, .no-flexbox .slate__bottom__control {
+    float: right;
+    padding-left: 8px; }
+  body .scope-container .slate > .nav-bar:first-child, body .scope-container .slate > .nav-bar--solo:first-child {
+    border-radius: 3px 3px 0 0; }
   body .scope-container table {
     width: 100%;
     max-width: 100%;
@@ -3251,6 +3406,8 @@ body .scope-container {
     display: inline-block;
     vertical-align: middle;
     position: relative; }
+    body .scope-container .slider-wrapper {
+      line-height: 0; }
     body .scope-container .slider input.slider {
       display: none !important; }
     body .scope-container .slider-tooltip {
@@ -3356,8 +3513,7 @@ body .scope-container {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 3px;
-    padding: 5px 8px;
-    margin: 2px 0; }
+    padding: 7px 8px; }
     body .scope-container .selectize-input.full {
       background-color: white; }
     body .scope-container .selectize-input.disabled, body .scope-container .selectize-input.disabled * {
@@ -3388,7 +3544,7 @@ body .scope-container {
       body .scope-container .selectize-input > input:focus {
         outline: none !important; }
   body .scope-container .selectize-control.multi .selectize-input.has-items {
-    padding: 5px 8px 2px 8px; }
+    padding: 7px 8px 4px 8px; }
   body .scope-container .selectize-control.multi .selectize-input > div {
     cursor: pointer;
     margin: 0 3px 3px 0;
@@ -3465,9 +3621,9 @@ body .scope-container {
     z-index: 0;
     cursor: pointer;
     width: 3.25em;
-    height: 2.25em;
+    height: 2.5em;
     text-align: center;
-    line-height: 1.25; }
+    line-height: 1.5; }
   body .scope-container .selectize-control.single .selectize-input.focus:before {
     right: 0 !important; }
   body .scope-container .selectize-control.rtl.single .selectize-input:after {
@@ -3524,8 +3680,18 @@ body .scope-container {
       display: block; }
   body .scope-container .item .remove {
     font-size: .75em;
+    line-height: 1.1;
     padding: 4px 4px 4px 8px;
-    color: #8d9aa5; }
+    color: #8d9aa5;
+    vertical-align: baseline; }
+  body .scope-container .input-group__element .selectize-input {
+    background-color: #e8eaeb; }
+    body .scope-container .input-group__element .selectize-input:before {
+      content: "" !important; }
+  body .scope-container .input-group__element .selectize-control {
+    position: static; }
+    body .scope-container .input-group__element .selectize-control .selectize-dropdown {
+      width: 100% !important; }
   body .scope-container .tooltipster-default {
     border-radius: 3px;
     background: #384047;

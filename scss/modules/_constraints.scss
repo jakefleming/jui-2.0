@@ -1,0 +1,14 @@
+//constraints are max-widths for content
+
+.constrained {
+  margin: 0 auto;
+  &.default {
+    max-width: em(1024);
+  }
+  &.small {
+    max-width: em(700);
+  }
+  &.x-small {
+    max-width: em(400);
+  }
+}

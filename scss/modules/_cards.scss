@@ -22,6 +22,7 @@
   }
 }
 .card {
+  background-color: $color--white;
   box-shadow: none;
   font-family: $font--1;
   border-radius: $base--radius;
@@ -40,24 +41,24 @@
       border-color: $color--white;
     }
   }
-  &-body {
+  &__body {
     overflow: hidden;
     border-collapse: separate;
     display: table;
     width: 100%;
     table-layout: fixed;
-    + .card-block {
+    + .card__block {
       padding-top: 1px;
     }
   }
-  &-block {
+  &__block {
     padding: em(15);
     display: block;
-    + .card-body {
+    + .card__body {
       padding-top: 1px;
     }
   }
-  &-content {
+  &__content {
     padding: em(15);
     white-space: nowrap;
     overflow: hidden;
@@ -67,14 +68,14 @@
     line-height: 1.5;
     vertical-align: middle;
   }
-  &-cap {
+  &__cap {
     padding: em(15);
     line-height: 1.5;
     text-align: center;
     width: 3.5em;
     display: table-cell;
     vertical-align: top;
-    + .card-content {
+    + .card__content {
       padding-left: 0;
     }
     &.solid {
@@ -83,14 +84,14 @@
       background-size: cover!important;
       background-position: center center!important;
       vertical-align: middle;
-      + .card-content {
+      + .card__content {
         padding-left: em(16);
       }
     }
     &.img {
       line-height: 0;
       width: 4em;
-      + .card-content {
+      + .card__content {
         padding-left: 0;
       }
       img {
@@ -114,12 +115,12 @@
         line-height: 2;
         border-radius: $base--radius;
       }
-      + .card-content {
+      + .card__content {
         padding-left: 0;
       }
     }
   }
-  &-feature {
+  &__feature {
     height: em(128, 32);
     display: block;
     line-height: em(128, 32);
@@ -133,18 +134,18 @@
       color: $color--white;
     }
   }
-  &-heading {
+  &__heading {
     display: block;
     line-height: 1;
   }
-  &-subheading {
+  &__subheading {
     display: block;
     font-size: em(14);
     color: $color--gray;
-    line-height: 1;
+    line-height: em(16,14)
   }
   &.multi-line {
-    .card-content {
+    .card__content {
       white-space: normal;
     }
   }

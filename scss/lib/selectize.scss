@@ -139,8 +139,8 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   @include selectize-box-sizing(border-box);
   //@include selectize-box-shadow($selectize-shadow-input);
   @include selectize-border-radius($selectize-border-radius);
-  padding: 5px 8px;
-  margin: 2px 0;
+  padding: 7px 8px;
+  //margin: 2px 0;
   &.full {
 	background-color: $selectize-color-input-full;
   }
@@ -187,7 +187,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   $padding-x: $selectize-padding-x;
   $padding-top: $selectize-padding-y - $selectize-padding-item-y - $selectize-width-item-border;
   $padding-bottom: $selectize-padding-y - $selectize-padding-item-y - $selectize-margin-item-y - $selectize-width-item-border;
-  padding: 5px 8px 2px 8px;
+  padding: 7px 8px 4px 8px;
 }
 .selectize-control.multi .selectize-input > div {
   cursor: pointer;
@@ -300,9 +300,9 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 	z-index: 0;
 	cursor: pointer;
 	width: em(52);
-	height: em(36);
+	height: em(40);
 	text-align: center;
-	line-height: 1.25;
+	line-height: 1.5;
   }
   &.focus {
 	&:before {
@@ -398,6 +398,23 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   @extend .juicon;
   @extend .juicon-x;
   font-size: .75em;
+  line-height: 1.1;
   padding: 4px 4px 4px 8px;
   color: $color--gray;
+  vertical-align: baseline;
+}
+
+.input-group__element {
+  .selectize-input {
+    background-color: $color--gray--x-light;
+    &:before {
+      content: ''!important;
+    }
+  }
+  .selectize-control {
+    position: static;
+    .selectize-dropdown {
+      width: 100%!important;
+    }
+  }
 }

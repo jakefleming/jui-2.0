@@ -16,7 +16,9 @@
   font-weight: $font-weight--1;
   margin: 0;
   outline: none;
-  padding: 2px 0;
+  border-radius: 0;
+  //padding: 2px 0;
+  padding: 0;
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
@@ -28,7 +30,7 @@
 %button__content-core {
   border-radius: 3px;
   display: inline-block;
-  line-height: em(36);
+  line-height: em(40);
   padding: 0 1em;
   vertical-align: middle;
   @include transition(background-color);
@@ -149,21 +151,23 @@
   position: absolute;
   top: 0;
   transition: $trans-duration;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
   z-index: 1;
+  backface-visibility: visible;
+  clear: both;
   li {
     margin-left: 0;
   }
   &.active {
     min-width: 100%;
-    margin-top: 2px;
+    margin-top: 0px;
     max-height: em(300);
     max-width: em(240);
     min-height: 0;
     opacity: 100;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
     transition: $trans-duration;
   }
   &__item {
@@ -179,6 +183,8 @@
     padding: 0 em(16);
     vertical-align: middle;
     white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
     transition: $trans-duration;
     &:hover {
       color: $color--gray--dark;
@@ -258,8 +264,10 @@
 
 //button groups
 .button-group {
+  font-size: 0;
+  line-height: 40px;
   .button {
-    margin-left: -5px;
+    font-size: 16px;
     .button__content {
       border-radius: 0;
     }
@@ -276,6 +284,9 @@
         border-bottom-right-radius: $base--radius;
       }
     }
+  }
+  .dropdown-box {
+    font-size: 16px;
   }
 }
 @at-root {

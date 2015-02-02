@@ -24,7 +24,7 @@ $form-element-bg: #e8eaeb;
   display: block;
   font-size: 1em;
   font-family: $font--1;
-  font-weight: 100;
+  font-weight: $font-weight--1;
   color: $color--gray--dark;
   width: 100%;
   border: 1px solid $component-border-color;
@@ -54,9 +54,9 @@ $form-element-bg: #e8eaeb;
 input {
   &[type="text"], &[type="password"], &[type="tel"], &[type="number"], &[type="email"], &[type="search"], &[type="url"]{
     @extend %form-element-base;
-    height: em(36); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    height: em(40); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
     -webkit-appearance: none;
-    margin: em(2) 0;
+    //margin: em(2) 0;
   }
   // Change the white to any color ;)
   &:-webkit-autofill {
@@ -69,8 +69,8 @@ input {
 textarea {
   @extend %form-element-base;
   resize: vertical;
-  height: em(92);
-  margin: em(2) 0;
+  height: em(96);
+  //margin: em(2) 0;
   appearance: none;
   box-shadow: none;
 }
@@ -79,7 +79,7 @@ textarea {
 //general attributes for input groups
 .input-group {
   position: relative;
-  > .input-group__element input {
+  > .input-group__element input, > .input-group__element .selectize-input  {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right: 0;
@@ -140,9 +140,9 @@ textarea {
   padding: em(8) em(8);
   z-index: 0;
   width: em(52);
-  height: em(34);
+  height: em(38);
   text-align: center;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 //selects
@@ -153,7 +153,7 @@ textarea {
   border-style: solid;
   border-color: $component-border-color;
   background-color: $color--white;
-  margin: em(2) 0;
+  //margin: em(2) 0;
   &:hover {
     background-color: darken($color--white, 10%);
   }
@@ -166,9 +166,9 @@ textarea {
     z-index: 0;
     cursor: pointer;
     width: em(52);
-    height: em(34);
+    height: em(38);
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.5;
   }
   select {
     -webkit-appearance: none;
@@ -183,7 +183,7 @@ textarea {
     padding-right: em(52);
     margin: 0px;
     width: 100%;
-    height: em(34);
+    height: em(38);
     background: transparent;
     font-family: $font--1;
     font-weight: $font-weight--1;
@@ -307,4 +307,27 @@ input[type="file"] {
   font-family: $font--1;
   color: $color--error;
   line-height: 1.339;
+}
+
+//labels
+label {
+  &.input-size {
+    padding: em(8,14) 0 ;
+  }
+}
+
+//form list
+.form-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+  }
+  &.collapsed {
+    padding-bottom: 1em;
+    li {
+      padding: 0;
+    }
+  }
 }

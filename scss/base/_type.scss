@@ -64,3 +64,9 @@ a {
     text-decoration: none!important;
   }
 }
+
+//screen reader
+.srt-only {
+  height: 0!important;
+  overflow: hidden;
+}
