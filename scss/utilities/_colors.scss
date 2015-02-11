@@ -1,31 +1,24 @@
-$colors: (
-        color--primary  : #2a94d6,
-        color--success  : #43b66a,
-        color--error    : #c06057,
-        color--warning  : #e6b739,
-        color--info     : #47cfd2,
-        color--black    : #4B4B4F,
-        color--gray     : #97979c,
-);
+$colors: (color--primary: #2a94d6, color--success: #43b66a, color--error: #c06057, color--warning: #e6b739, color--info: #47cfd2, color--black: #4B4B4F, color--gray: #97979c);
 
-$xx-light         : 30%;
-$x-light          : 20%;
-$light            : 10%;
-$dark             : 5%;
-$x-dark           : 10%;
-$xx-dark          : 20%;
+$xx-light: 40%;
+$x-light: 20%;
+$light: 10%;
+$dark: 5%;
+$x-dark: 10%;
+$xx-dark: 20%;
 
 @mixin generate-colors($color, $name) {
-  #{'$'+$name}--xx-light: lighten($color, $xx-light);
-  #{'$'+$name}--x-light: lighten($color, $x-light);
-  #{'$'+$name}--light: lighten($color, $light);
-  #{'$'+$name}: $color;
-  #{'$'+$name}--dark: darken($color, $dark);
-  #{'$'+$name}--x-dark: darken($color, $x-dark);
-  #{'$'+$name}--xx-dark: darken($color, $xx-dark)
-}
+  #{"$" + $name}--xx-light: lighten($color, $xx-light);
+  //#{'$'+$name}--x-light: lighten($color, $x-light);
+  #{"$" + $name}--light: lighten($color, $light);
+  #{"$" + $name}: $color;
+  #{"$" + $name}--dark: darken($color, $dark);
 
-strip-everything-out-of-here {
+
+  //#{'$'+$name}--x-dark: darken($color, $x-dark);
+  #{"$" + $name}--xx-dark: darken($color, $xx-dark);
+}
+strip dis out {
   @each $theme, $color in $colors {
     @include generate-colors($color, $theme);
   }

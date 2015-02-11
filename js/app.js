@@ -12,13 +12,13 @@ $(document).ready(function() {
     function openDropdown(clickedElement) {
         var currentDropdownMenu = $(clickedElement).closest('.button-group').find('.dropdown-box');
         //console.log(clickedElement);
-        $(clickedElement).closest('.button-group').find('.dropdown-box').addClass('active');
-        $('.dropdown-box.active').not(currentDropdownMenu).removeClass('active');
+        $(clickedElement).closest('.button-group').find('.dropdown-box').addClass('dropdown-box--active');
+        $('.dropdown-box.active').not(currentDropdownMenu).removeClass('dropdown-box--active');
     }
     //close dropdown
     function closeDropdown(clickedElement) {
         console.log(clickedElement);
-        $('.dropdown-box').removeClass('active');
+        $('.dropdown-box').removeClass('dropdown-box--active');
     }
     //when dropdown button is clicked toggle dropdown
     $('[data-toggle="dropdown"]').on('click', function( e ) {
@@ -52,11 +52,11 @@ $(document).ready(function() {
     //display Callout
     function displayCallout(t) {
         var id = $(t).attr('data-target');
-        $('#' + id).addClass('active');
+        $('#' + id).addClass('callout-is-active');
     }
     //hide Callout
     function hideCallout() {
-        $('.callout-stage.active').removeClass('active');
+        $('.callout-stage.callout-is-active').removeClass('callout-is-active');
     }
     //add class to body to prevent scrolling
     function removeScroll() {
@@ -112,8 +112,8 @@ $(document).ready(function() {
      // alert //
     // // // //
 
-    $('body').on('click','.alert .close-button', function() {
-        $(this).closest('.alert').removeClass('active');
+    $('body').on('click','.alert .alert__close-button', function() {
+        $(this).closest('.alert').removeClass('alert--active');
     })
 
       // // // //
@@ -134,15 +134,15 @@ $(document).ready(function() {
 
     // navbar menu toggling
     $(".nav-bar__menu-toggle").click(function(e){
-        $(e.target).closest('.nav-bar').toggleClass("menu--open");
-        $(e.target).closest('.nav-bar--solo').toggleClass("menu--open");
+        $(e.target).closest('.nav-bar').toggleClass("menu-is-open");
+        $(e.target).closest('.nav-bar--solo').toggleClass("menu-is-open");
         $("body").toggleClass("nav-bar__menu--open");
     });
 
     // navbar appendage toggling
     $(".nav-bar__appendage-toggle").click(function(e){
-        $(e.target).closest('.nav-bar').toggleClass("appendage--open");
-        $(e.target).closest('.nav-bar--solo').toggleClass("appendage--open");
+        $(e.target).closest('.nav-bar').toggleClass("appendage-is-open");
+        $(e.target).closest('.nav-bar--solo').toggleClass("appendage-is-open");
     });
 
       // // // // // // //
@@ -155,7 +155,7 @@ $(document).ready(function() {
         var control = $select[0].selectize;
         control.clear();
         $(this).closest('.selectize-wrap').find('.selectize-input').removeClass('has-items');
-        $(this).closest('.selectize-wrap').find('.clear-selectize').removeClass('active');
+        $(this).closest('.selectize-wrap').find('.clear-selectize').removeClass('clear-selectize--active');
     })
 
 

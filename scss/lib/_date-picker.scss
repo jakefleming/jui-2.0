@@ -7,33 +7,33 @@
  *
  */
 .datepicker {
-  display: none;
-  top: 0;
-  left: 0;
   border: 0px solid $component-border-color;
+  display: none;
+  left: 0;
+  top: 0;
   &.dropdown-menu {
-    position: absolute;
     max-height: none;
+    position: absolute;
     @media (min-width: 1px) and (max-width: $brkpoint-md) {
+      left: 0 !important;
       width: 100%;
-      left: 0!important;
     }
   }
   > div {
     display: none;
   }
   table {
+    margin: 0;
     width: 100%;
-    margin: 0
   }
   td, th {
-    border: 1px solid #f0f1f2!important;
-    text-align: center;
-    width: 20px;
-    height: 20px;
+    border: 1px solid #f0f1f2 !important;
     font-size: em(14px, 16px);
+    height: 20px;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
+    width: 20px;
   }
   td {
     background-color: $color--white;
@@ -56,14 +56,14 @@
         color: $color--gray--dark;
       }
       &.active, &.active:hover {
-        color: $color--white;
         background-color: $color--primary;
         border-color: $color--primary;
+        color: $color--white;
       }
       &.active {
-        &:hover, &:hover:hover, &:focus, &:hover:focus, &:active, &:hover:active, &.active, &:hover.active, &.disabled, &:hover.disabled, &[disabled], &:hover[disabled]  {
-          color: $color--white;
+        &:hover, &:hover:hover, &:focus, &:hover:focus, &:active, &:hover:active, &.active, &:hover.active, &.disabled, &:hover.disabled, &[disabled], &:hover[disabled] {
           background-color: $color--primary;
+          color: $color--white;
         }
         &:active, &:hover:active, &.active, &:hover.active {
           background-color: $color--primary;
@@ -71,27 +71,24 @@
       }
     }
     span {
-      display: block;
-      height: 52px;
-      width: 52px;
-      line-height: 52px;
-      float: left;
-      margin: 2px;
       cursor: pointer;
-
+      display: block;
+      float: left;
+      height: 52px;
+      line-height: 52px;
+      margin: 2px;
+      width: 52px;
       &:hover {
         background: $color--gray--x-light;
       }
       &.active {
         background-color: $color--primary;
         color: $color--white;
-
-
       }
       &.active {
-        &:hover,&:focus, &:active, &.active, &.disabled, &[disabled] {
-          color: $color--white;
+        &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
           background-color: $color--primary;
+          color: $color--white;
         }
         &:active, &.active {
           background-color: $color--primary;
@@ -114,8 +111,8 @@
           color: $color--black;
           cursor: pointer;
           &.next, &.prev {
-            font-size: 14px;
             color: $color--gray--dark;
+            font-size: 14px;
           }
         }
       }
@@ -127,10 +124,10 @@
   &.date {
     .add-on {
       i {
-        display: block;
         cursor: pointer;
-        width: 16px;
+        display: block;
         height: 16px;
+        width: 16px;
       }
     }
   }

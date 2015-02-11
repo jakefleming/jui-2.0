@@ -1,50 +1,56 @@
 //Alerts grab the user's attention, whether its to point out a general error, or to provide passive inactionable content
 
 .alert {
-  max-height: 0;
-  padding: 0 em($base--num);
-  overflow: hidden;
-  opacity: 0;
   border-radius: $base--radius;
   font-family: $font--1;
   line-height: 1.5;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 em($base--num);
   position: relative;
   transition: $trans-duration;
+  //creating all the alert colors by looping through the ui-colors map
   @each $theme, $color in $ui-colors {
-    &.#{$theme} {
+    &--#{$theme} {
       background-color: lighten($color, $lighten-p);
       border-color: $color;
       color: $color;
-      .close-button {
+      .alert__close-button {
         color: $color;
       }
     }
   }
-  &.dismissable {
+  //if the alert has an 'x' add padding to the right
+  &--dismissable {
     padding-right: em(56);
   }
-  .close-button {
-    margin: 0;
-    opacity: .4;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: none; // fixes salesforce button
+  //the button that contains the 'x'
+  &__close-button {
+    @extend %close-button;
+    background-image: none;
+    // fixes salesforce button
     background: transparent;
     border-width: 0;
-    width: em(56);
     height: em(56);
-    padding: em($base--num/2) em($base--num);
+    margin: 0;
+    opacity: .4;
     outline: none;
+    padding: em($base--num / 2) em($base--num);
+    position: absolute;
+    right: 0;
+    top: 0;
     transition: $trans-duration;
+    width: em(56);
     &:hover {
-      transition: $trans-duration;
       opacity: 1;
+      transition: $trans-duration;
     }
   }
-  &.active {
-    opacity: 1;
+  //needs this class to be visible
+  &--active {
     max-height: none;
+    opacity: 1;
     padding: em($base--num);
     transition: $trans-duration;
   }

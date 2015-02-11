@@ -1,0 +1,15 @@
+.blank-state {
+  color: $color--gray--light;
+  font-family: $font--1;
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 2em 1em;
+  text-align: center;
+  > .juicon {
+    display: block;
+    font-size: 2em;
+    line-height: 1;
+    margin-bottom: .5em;
+  }
+  @include flex();
+}

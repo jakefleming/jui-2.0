@@ -1,158 +1,243 @@
 @import "utilities/index";
+@import "base/fonts/jui-lettering-medium";
+
+//html {
+//  height: 100%;
+//}
+//body, .scope-container, #docs {
+//  height: inherit;
+//}
 
 body .scope-container {
-//type
-h1,h2,h3,h4,h5,h6{
-  color: $color--black;
-}
-section + .doc-section-heading {
-  margin-top: 96px;
-}
-.doc-section-heading {
-  margin-top: 96px;
-  font-size: 1.25em;
-  color: $color--primary;
-  text-transform: uppercase;
-  line-height: 24px;
-}
-.doc-article-heading {
-  color: $color--gray--light;
-  text-transform: uppercase;
-  font-size: em(14);
-  line-height: 24px;
-  margin-bottom: 8px;
-  margin-top: 32px;
-  font-weight: $font-weight--3;
-}
-
-p {
-  margin: 1.5em 0 0 0;
-  max-width: em(440);
-}
-
-h1 {
-  margin: em($base--num*1.5, $font-size--1) 0 0 0;
-}
-h2 {
-  margin: em($base--num*1.5, $font-size--2) 0 0 0;
-}
-
-h3 {
-  margin: em($base--num*1.5, $font-size--3) 0 0 0;
-}
-
-h4 {
-  margin: em($base--num*1.5, $font-size--4) 0 0 0;
-}
-
-h5 {
-  margin: em($base--num*1.5, $font-size--5) 0 0 0;
-}
-
-h6 {
-  margin: em($base--num*1.5, $font-size--6) 0 0 0;
-}
-
-code {
-  background-color: $color--gray--x-light;
-  font-size: $font--1;
-  line-height: 1.5;
-  padding: 2px 8px;
-  border-radius: 3px;
-  color: $color--error;
-  vertical-align: top;
-}
-
-.button.docButton {
-  margin: 1em 0;
-}
-
-//layout
-#docs {
-  margin: 0 auto;
-  max-width: em(800);
-  padding: 0 px($base--num);
-  padding-top: 4em;
-}
-section {
-  margin-left: -(px($base--num));
-  @include flexbox();
-  @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-    @include flex-flow(column nowrap);
+  //type
+  h1, h2, h3, h4, h5, h6 {
+    color: $color--black;
   }
-  &.vertical {
-    @include flex-flow(column nowrap);
+  section + .doc-section-heading {
+    margin-top: 96px;
   }
-  &:last-child {
-    margin-bottom: em(240);
+  .doc-section-heading {
+    color: $color--primary;
+    font-family: $font--2;
+    font-size: 1.25em;
+    line-height: 24px;
+    margin-top: 64px;
+    text-transform: uppercase;
+    @media (min-width: $brkpoint-md) {
+      margin-top: 96px;
+    }
   }
-}
-article {
-  margin-top: em(24);
-  padding-left: px($base--num);
-  @include flex();
-}
-.big {
-  @include flex-grow(2);
-}
-#type {
-  article {
-    margin: 0;
+  .doc-article-heading {
+    color: $color--gray--light;
+    font-family: $font--2;
+    font-size: em(14);
+    font-weight: $font-weight--3;
+    line-height: 24px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: uppercase;
   }
-}
-
-#grid-examples {
-  margin-left: -16px;
-  .grid {
-    margin-bottom: 16px;
-    &.orient--vertical-on-small {
-      .grid__block {
-        @media (max-width: $brkpoint-md) {
-          margin-bottom: 16px;
-        }
+  p {
+    margin: 1.5em 0 0 0;
+    max-width: em(440);
+  }
+  h1 {
+    margin: em($base--num * 1.5, $font-size--1) 0 0 0;
+  }
+  h2 {
+    margin: em($base--num * 1.5, $font-size--2) 0 0 0;
+  }
+  h3 {
+    margin: em($base--num * 1.5, $font-size--3) 0 0 0;
+  }
+  h4 {
+    margin: em($base--num * 1.5, $font-size--4) 0 0 0;
+  }
+  h5 {
+    margin: em($base--num * 1.5, $font-size--5) 0 0 0;
+  }
+  h6 {
+    margin: em($base--num * 1.5, $font-size--6) 0 0 0;
+  }
+  code {
+    background-color: $color--gray--x-light;
+    border-radius: 3px;
+    color: $color--error;
+    font-size: $font--1;
+    line-height: 1.5;
+    padding: 2px 8px;
+    vertical-align: top;
+  }
+  .button.docButton {
+    margin: 1em 0;
+  }
+  // nav
+  .doc-nav {
+    display: block;
+    li {
+      display: block;
+      margin: 0;
+    }
+    @media (min-width: $brkpoint-md) {
+      @include flexbox;
+    }
+    > li {
+      @media (min-width: $brkpoint-md) {
+        @include flex(0 0 25%);
       }
     }
   }
-  .grid__block {
-    background: $color--gray--x-light;
-    border-left: 16px solid white;
-    min-height: 48px;
-  }
-}
-
-//icons
-#icons {
-  ul {
-    text-align: center;
-  }
-  .icon-example {
-    color: $color--gray;
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    font-size: 24px;
-    text-align: center;
-    margin: 16px 0;
-  }
-  article {
-    margin-top: 0;
-  }
-}
-
-//alerts
-#alerts {
-  .alert.active {
-    margin-bottom: 1em;
-  }
-}
-
-//cards
-
-#cards {
-  .card-list {
-    .card {
-      margin-bottom: 8px;
+  //page-headers
+  .doc-page-header {
+    background-color: $color--primary;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: auto 256px;
+    min-height: 256px;
+    padding: 1em;
+    @media (min-width: $brkpoint-md) {
+      padding: 2em 0;
     }
   }
-}
+  #bathroom-sink-header {
+    background-image: url('../assets/illustrations/bathroom-sink.png');
+  }
+  #templates-header {
+    background-image: url('../assets/illustrations/templates.png');
+  }
+  .doc-page-heading {
+    color: $color--white;
+    font-family: $font--2;
+    font-size: 3em;
+    line-height: 1;
+    margin-top: 1.25em;
+  }
+  .doc-page-subheading {
+    color: transparentize($color--white, .6);
+    font-family: $font--2;
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 1;
+    margin: 0;
+  }
+  //layout
+  #docs {
+    margin: 0 auto;
+    max-width: em(800);
+    @media (min-width: $brkpoint-md) {
+      //padding-top: 4em;
+    }
+    section {
+      @include flexbox;
+      margin-left: -(px($base--num));
+      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+        @include flex-flow(column nowrap);
+      }
+      &.vertical {
+        @include flex-flow(column nowrap);
+      }
+      &:last-child {
+        margin-bottom: em(240);
+      }
+    }
+    article {
+      @include flex;
+      margin-top: em(24);
+      padding-left: px($base--num);
+    }
+    .line-pre {
+      background-color: $color--gray--xx-light;
+      font-size: 14px;
+      line-height: 1;
+      padding: em(16, 14);
+    }
+  }
+  .big {
+    @include flex-grow(2);
+  }
+  #type {
+    article {
+      margin: 0;
+    }
+  }
+  #grid-examples {
+    margin-left: -16px;
+    .grid {
+      margin-bottom: 16px;
+    }
+    .grid__block {
+      background: $color--gray--x-light;
+      border-left: 16px solid white;
+      min-height: 48px;
+    }
+  }
+  //icons
+  #icons {
+    ul {
+      text-align: center;
+    }
+    .icon-example {
+      color: $color--gray;
+      display: inline-block;
+      font-size: 24px;
+      height: 24px;
+      margin: 16px 0;
+      text-align: center;
+      width: 24px;
+    }
+    article {
+      margin-top: 0;
+    }
+    .doc-article-heading {
+      margin-top: 32px;
+    }
+  }
+  //alerts
+  #alerts {
+    .alert.alert--active {
+      margin-bottom: 1em;
+    }
+  }
+  //cards
+  #cards {
+    .card-list {
+      .card {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .template-nav {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      display: none;
+    }
+  }
+  .template-iframe {
+    border: 0;
+    width: 400%;
+    -ms-zoom: 0.25;
+    -ms-transform-origin: 0 0;
+    -moz-transform: scale(0.25);
+    -moz-transform-origin: 0px 25px;
+    -o-transform: scale(0.25);
+    -o-transform-origin: 0px 25px;
+    -webkit-transform: scale(0.25);
+    -webkit-transform-origin: 0 0;
+    height: 400%;
+    cursor: pointer;
+  }
+  .template-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .template-list {
+    li {
+      @media (min-width: $brkpoint-md) {
+        margin-bottom: 16px;
+      }
+    }
+  }
 }

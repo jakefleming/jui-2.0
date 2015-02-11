@@ -6,16 +6,25 @@ $list-icon-h: 40;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  //remove radius on collapse
+  &.collapse-on-small-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      .list__item {
+        border-radius: 0;
+      }
+    }
+  }
 }
+
 //the list items
 .list__item {
-  font-family: $font--1;
   border-radius: $base--radius;
+  cursor: pointer;
+  font-family: $font--1;
   font-size: 1em;
   line-height: 1.5;
-  transition: background-color $trans-duration;
-  cursor: pointer;
   margin-left: 0;
+  transition: background-color $trans-duration;
   &:hover {
     background-color: darken($color--white, $darken-p);
     transition: background-color $trans-duration;
@@ -30,86 +39,75 @@ $list-icon-h: 40;
       }
     }
   }
+  //the main content in the list__item
   &-content {
-    padding: .5em 1em;
-    white-space: nowrap;
     overflow: hidden;
+    padding: .5em 1em;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
+  //if your list item needs an icon
   &-icon {
     color: $color--gray;
-    padding: em(8);
-    line-height: 24px;
-    width: em($list-icon-w);
     height: em($list-icon-h);
-    text-align: center;
+    line-height: 24px;
     min-width: em($list-icon-w);
+    padding: em(8);
+    text-align: center;
+    width: em($list-icon-w);
     + .list__item-content {
       padding-left: em(8);
     }
+    //give it a background
     &.solid {
       background-color: darken($color--white, $darken-p);
       border-radius: $base--radius;
     }
   }
+  //a cap can containt an image or something else, but you might wanna make sure it's 24px X 24px unless you don't mind the content not lining up
   &-cap {
-    padding: em(8);
     line-height: 0;
+    padding: em(8);
     + .list__item-content {
       padding-left: em(8);
     }
   }
-}
-@at-root { //when scoped this must be at the root instead of nesting in the scope
-  //with flexbox
-  .flexbox {
-    .list__item {
-      @include flexbox();
-      &-content {
-        @include flex();
-        width: 0; //fix for firefox
+  //if you need an alert indicator for your list item
+  &-alert {
+    text-align: center;
+    padding: 8px;
+    &__content {
+      border-radius: 12px;
+      display: inline-block;
+      font-size: 14px;
+      line-height: em(24, 14);
+      min-width: 24px;
+      padding: 0 5px;
+      vertical-align: top;
+      .juicon {
+        line-height: 24px;
       }
-      &-icon, &-cap {
-        @include flex(initial);
+      &.default {
+        background-color: $color--white;
+        box-shadow: inset 0 0 0 1px $component-border-color;
       }
-    }
-  }
-  //without flexbox | not quite the same. We use display: table, display: table-cell.
-  .no-flexbox {
-    .list__item {
-      border-collapse: separate;
-      display: table;
-      width: 100%;
-      table-layout: fixed;
-      &-content {
-        display: table-cell;
-        width: 100%;
-        padding-right: 48px!important;
-        line-height: 1.5;
-        vertical-align: middle;
-        + .list__item-icon, + .list__item-cap {
-          float: right;
-        }
-      }
-      &-icon, &-cap {
-        float: left;
-        display: block;
-        width: auto;
-        + .list__item-content {
-          padding-left: 48px!important;
+      @each $theme, $color in $ui-colors {
+        &.#{$theme} {
+          background: $color;
+          color: $color--white;
         }
       }
     }
   }
 }
-//outlined
-.list.outlined {
-  box-shadow: inset 0 0 0 1px $component-border-color;
-  border-radius: $base--radius;
+//outlined lists
+.list.list--outlined {
   background-color: $color--white;
+  border-radius: $base--radius;
+  box-shadow: inset 0 0 0 1px $component-border-color;
   .list__item {
-    box-shadow: inset 0 -1px $component-border-color;
     border-radius: 0;
+    box-shadow: inset 0 -1px $component-border-color;
     &:first-child {
       border-radius: $base--radius $base--radius 0 0;
     }
@@ -127,5 +125,48 @@ $list-icon-h: 40;
       box-shadow: inset 1px 0 $component-border-color, inset -1px 0 $component-border-color, inset 0 -1px $component-border-color;
     }
   }
-
+}
+//when scoped this must be at the root instead of nesting in the scope
+@at-root {
+  //with flexbox
+  .flexbox {
+    .list__item {
+      @include flexbox;
+      &-content {
+        //fix for firefox
+        @include flex;
+        width: 0;
+      }
+      &-icon, &-cap, &-label {
+        @include flex(initial);
+      }
+    }
+  }
+  //without flexbox | not quite the same. We use display: table, display: table-cell.
+  .no-flexbox {
+    .list__item {
+      border-collapse: separate;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      &-content {
+        display: table-cell;
+        line-height: 1.5;
+        padding-right: 48px !important;
+        vertical-align: middle;
+        width: 100%;
+        + .list__item-icon, + .list__item-cap, + .list__item-label {
+          float: right;
+        }
+      }
+      &-icon, &-cap, &-label {
+        display: block;
+        float: left;
+        width: auto;
+        + .list__item-content {
+          padding-left: 48px !important;
+        }
+      }
+    }
+  }
 }

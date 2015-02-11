@@ -3,6 +3,15 @@ module.exports = function (grunt) {
         cfg: {
             dist: './'
         },
+        prettysass: {
+            options: {
+                // Task-specific options go here.
+                alphabetize: true
+            },
+            your_target: {
+                src: ['scss/**/*.scss']
+            }
+        },
         sass: {
             dist: {
                 files: [{
@@ -38,5 +47,6 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-prettysass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 };

@@ -1,39 +1,39 @@
 // Sliders
 
 .slider {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
   &-wrapper {
     line-height: 0;
   }
   input.slider {
-    display: none!important;
+    display: none !important;
   }
   &-tooltip {
+    background-color: $color--black;
+    border-radius: $base--radius;
+    color: $color--white;
     font-family: $font--1;
     font-size: 14px;
     line-height: em(16, 14);
+    margin-top: -10px;
     padding: em($base--num) em($base--num);
     position: absolute;
-    background-color: $color--black;
-    color: $color--white;
-    border-radius: $base--radius;
-    margin-top: -10px;
   }
   .tooltip-arrow {
-    display: block;
-    text-align: center;
-    left: 50%;
-    z-index: -1;
+    border-color: $color--black;
     border-left: 9px solid transparent !important;
     border-right: 9px solid transparent !important;
-    border-top: 9px solid;
+    border-top: 9px solid $color--black;
     bottom: -7px;
-    border-color: $color--black;
-    position: absolute;
+    display: block;
+    left: 50%;
     margin-left: -9px;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
   }
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
   input {
     display: none;
   }
@@ -41,65 +41,65 @@
     white-space: nowrap;
   }
   &__track {
-    border-radius: 100px;
-    position: absolute;
-    cursor: pointer;
     background: $color--gray--x-light;
+    border-radius: 100px;
+    cursor: pointer;
+    position: absolute;
   }
   &__selection {
+    background: $color--primary;
     border-radius: 100px;
     position: absolute;
-    background: $color--primary;
   }
   &__handle {
-    position: absolute;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
     background: $color--white;
-    box-shadow: 0 1px 3px transparentize($color--black, .6)
+    border-radius: 50%;
+    box-shadow: 0 1px 3px transparentize($color--black, 0.6);
+    height: 24px;
+    position: absolute;
+    width: 24px;
   }
   &--horizontal {
     height: 16px;
     width: 100% !important;
     .slider__track {
       height: 16px;
-      width: 100%;
-      margin-top: -8px;
-      top: 50%;
       left: 0;
+      margin-top: -8px;
       padding: 4px;
+      top: 50%;
+      width: 100%;
     }
     .slider__selection {
+      bottom: 0;
       float: left;
       height: 8px;
       top: 4px;
-      bottom: 0;
     }
     .slider__handle {
-      margin-left: -10px;
-      margin-top: -10px;
+      margin-left: -8px;
+      margin-top: -8px;
     }
   }
   &--vertical {
     height: 160px;
     width: 24px;
     .slider__track {
-      width: 24px;
       height: 100%;
-      margin-left: 8px;
       left: 50%;
+      margin-left: 8px;
       top: 0;
+      width: 24px;
     }
     .slider__selection {
-      width: 100%;
+      bottom: 0;
       left: 0;
       top: 0;
-      bottom: 0;
+      width: 100%;
     }
     .slider__handle {
       margin-left: -8px;
-      margin-top: -24px
+      margin-top: -24px;
     }
   }
 }

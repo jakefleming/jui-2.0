@@ -4,20 +4,19 @@ $base--img-unit: 16;
 
 .square {
   &--xsmall {
-    width: px($base--img-unit*1.5);
-    height: px($base--img-unit*1.5);
+    height: px($base--img-unit * 1.5);
+    width: px($base--img-unit * 1.5);
   }
   &--small {
-    width: px($base--img-unit*2);
-    height: px($base--img-unit*2);
+    height: px($base--img-unit * 2);
+    width: px($base--img-unit * 2);
   }
   &--medium {
-    width: px($base--img-unit*2.5);
-    height: px($base--img-unit*2.5);
+    height: px($base--img-unit * 2.5);
+    width: px($base--img-unit * 2.5);
   }
   &--large {
-    width: px($base--img-unit*3.5);
-    height: px($base--img-unit*3.5);
-
+    height: px($base--img-unit * 3.5);
+    width: px($base--img-unit * 3.5);
   }
 }

@@ -1,39 +1,36 @@
 //Forms are used to collect data from users
 $form-element-bg: #e8eaeb;
 
-
-//form elements
+//use form-element to wrap around things like labels with inputs
 .form-element {
   padding-bottom: em(16);
   position: relative;
-}
-
-//labels for form elements
-.form-element {
+  //labels for form elements
   label {
     color: $color--gray--dark;
     display: block;
-    font-size: em(14);
     font-family: $font--1;
+    font-size: em(14);
     line-height: em(24, 14);
   }
 }
 
-//inputs: text, password, tel, number, email, search, url
+//the basis of all* inputs
 %form-element-base {
-  display: block;
-  font-size: 1em;
-  font-family: $font--1;
-  font-weight: $font-weight--1;
-  color: $color--gray--dark;
-  width: 100%;
-  border: 1px solid $component-border-color;
+  @include radius;
+  @include transition(background-color);
   background-color: $form-element-bg;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-image: none;
+  border: 1px solid $component-border-color;
+  color: $color--gray--dark;
+  display: block;
+  font-family: $font--1;
+  font-size: 1em;
+  font-weight: $font-weight--1;
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   outline: none;
   padding: em(8) em(8);
-  @include transition(background-color);
-  @include radius();
+  width: 100%;
   &:focus {
     background-color: $color--white;
   }
@@ -42,7 +39,7 @@ $form-element-bg: #e8eaeb;
   }
   &::-moz-placeholder {
     color: $color--gray;
-    opacity: 1!important;
+    opacity: 1 !important;
   }
   &:-ms-input-placeholder {
     color: $color--gray;
@@ -51,12 +48,13 @@ $form-element-bg: #e8eaeb;
     color: $color--gray;
   }
 }
+
+//extending the form-element base to appropriate selectors
 input {
-  &[type="text"], &[type="password"], &[type="tel"], &[type="number"], &[type="email"], &[type="search"], &[type="url"]{
-    @extend %form-element-base;
-    height: em(40); // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  &[type="text"], &[type="password"], &[type="tel"], &[type="number"], &[type="email"], &[type="search"], &[type="url"] {
     -webkit-appearance: none;
-    //margin: em(2) 0;
+    @extend %form-element-base;
+    height: em(40);
   }
   // Change the white to any color ;)
   &:-webkit-autofill {
@@ -64,59 +62,59 @@ input {
   }
 }
 
-
 //textareas
 textarea {
   @extend %form-element-base;
-  resize: vertical;
-  height: em(96);
   //margin: em(2) 0;
   appearance: none;
   box-shadow: none;
+  height: em(96);
+  resize: vertical;
 }
 
 //input groups
 //general attributes for input groups
 .input-group {
   position: relative;
-  > .input-group__element input, > .input-group__element .selectize-input  {
-    border-top-right-radius: 0;
+  > .input-group__element input, > .input-group__element .selectize-input {
     border-bottom-right-radius: 0;
     border-right: 0;
+    border-top-right-radius: 0;
   }
   > .input-group__action .button__content {
-    border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
   }
 }
+
+//these selectors must be at the root of the css file for scoping purposes
 @at-root {
   //with flexbox
   .flexbox {
     .input-group {
-      @include flexbox();
+      @include flexbox;
       &__element {
-        @include flex();
+        @include flex;
       }
       &__action {
         @include flex(initial);
       }
     }
   }
-
   //without flexbox | not quite the same. We use display: table, display: table-cell.
   .no-flexbox {
     .input-group {
+      @include clearfix;
       border-collapse: separate;
       display: table;
-      @include clearfix;
       &__element {
         display: table-cell;
         width: 100%;
       }
       &__action {
         display: table-cell;
-        width: 1%;
         vertical-align: middle;
+        width: 1%;
         .button, .button__content {
           width: 100%;
         }
@@ -125,74 +123,75 @@ textarea {
   }
 }
 
-//form element icons
+//when you need an icon for a form element use a wrap
 .form-element__wrap {
   position: relative;
   &.has-icon input {
     padding-right: em(52);
   }
 }
+//form element icons
 .form-element__icon {
   color: $color--gray;
+  height: em(38);
+  line-height: 1.5;
+  padding: em(8) em(8);
   position: absolute;
   right: 0px;
-  top: 0px;
-  padding: em(8) em(8);
-  z-index: 0;
-  width: em(52);
-  height: em(38);
   text-align: center;
-  line-height: 1.5;
+  top: 0px;
+  width: em(52);
+  z-index: 0;
 }
-
-//selects
-.select-wrap {
-  @include radius();
-  position: relative;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $component-border-color;
+//selects need a wrap so we can customize how they look
+.select-element {
+  @include radius;
   background-color: $color--white;
-  //margin: em(2) 0;
+  border-color: $component-border-color;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
   &:hover {
-    background-color: darken($color--white, 10%);
+    background-color: darken($color--white, $darken-p);
   }
-  .select-wrap__icon {
+  //select-element__icon can be used to display a caret, or any icon you'd like for your select. will always be on the right.
+  .select-element__icon {
     color: $color--gray;
+    cursor: pointer;
+    height: em(38);
+    line-height: 1.5;
+    padding: em(8) em(8);
     position: absolute;
     right: 0px;
-    top: 0px;
-    padding: em(8) em(8);
-    z-index: 0;
-    cursor: pointer;
-    width: em(52);
-    height: em(38);
     text-align: center;
-    line-height: 1.5;
+    top: 0px;
+    width: em(52);
+    z-index: 0;
   }
+  //stripping the styles from the select so its transparent and matches other form elements
   select {
-    -webkit-appearance: none;
-    -ms-appearance: none;
     -moz-appearance: none;
+    -moz-appearance: progresschunk; //this is a weird fix for firefox
+    -ms-appearance: none;
     -o-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
     background-image: none;
-    outline: none;
+    background: transparent;
+    border: 0;
+    color: $color--gray--dark;
     cursor: pointer;
+    font-family: $font--1;
+    font-size: 1rem;
+    font-weight: $font-weight--1;
+    height: em(38);
+    margin: 0px;
+    outline: none;
     padding-left: em(8);
     padding-right: em(52);
-    margin: 0px;
-    width: 100%;
-    height: em(38);
-    background: transparent;
-    font-family: $font--1;
-    font-weight: $font-weight--1;
-    font-size: 1rem;
-    color: $color--gray--dark;
-    z-index: 1;
     position: relative;
-    border: 0;
-    -moz-appearance: progresschunk;
+    width: 100%;
+    z-index: 1;
     &::-ms-expand {
       display: none;
     }
@@ -203,88 +202,88 @@ textarea {
 }
 
 // Checkboxes and Radios
-
 input[type=checkbox], input[type=radio] {
-  background: #fff;
-  -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  background: #fff;
+  border-color: $component-border-color;
   border-style: solid;
   border-width: 1px;
-  border-color: $component-border-color;
-  -webkit-box-shadow: none;
   box-shadow: none;
   height: 24px;
-  width: 24px;
+  outline: none !important;
   vertical-align: bottom;
-  outline: none!important;
+  width: 24px;
   &:disabled {
-    opacity: 0.5; }
+    opacity: 0.5;
+  }
   &:focus, &:active {
     background: darken($color--white, $darken-p);
   }
   &:checked {
-    background: $color--primary !important;
     -webkit-box-shadow: none;
-    box-shadow: none;
+    background: $color--primary !important;
     border: 1px solid transparent;
+    box-shadow: none;
   }
 }
-
+//when inside a form-element checkboxes and radios get a margin to the right so the label isn't right up against it.
 .form-element {
   input[type=checkbox], input[type=radio] {
     margin-right: 4px;
   }
 }
-
+//when a checkbox is checked it gets a background and a checkmark made from borders
 input[type=checkbox] {
   @include radius($base--radius);
   &:checked {
     &:after {
-      display: block;
-      position: relative;
-      content: '';
-      height: 4px;
-      width: 10px;
+      -webkit-transform: translate(4px, 6px) rotate(-45deg);
       border-bottom: 4px solid #fff;
       border-left: 4px solid #fff;
-      -webkit-transform: translate(4px, 6px) rotate(-45deg);
+      content: '';
+      display: block;
+      height: 4px;
+      position: relative;
+      width: 10px;
     }
   }
 }
-
+//when a radio is checked it gets a background and a white dot in the middle
 input[type=radio] {
   border-radius: 50%;
   &:checked {
     &:after {
-      display: block;
-      position: relative;
-      content: '';
-      left: 6px;
-      top: 6px;
-      height: 10px;
-      width: 10px;
-      border-radius: 100%;
       background: #fff;
+      border-radius: 100%;
+      content: '';
+      display: block;
+      height: 10px;
+      left: 6px;
+      position: relative;
+      top: 6px;
+      width: 10px;
     }
   }
 }
 
-//file
+//file input can't be styled much
 input[type="file"] {
-  font-family: $font--1;
-  font-size: em(14);
   color: $color--gray;
   display: block;
+  font-family: $font--1;
+  font-size: em(14);
 }
 
-//errors
-.form-element.has-error {
+//errors for form elements
+.form-element.form-element--has-error {
   //button errors
   .button__content {
     box-shadow: inset 0 0 0 1px $color--error;
   }
   //input errors
-  input, textarea, .select-wrap {
+  input, textarea, .select-element {
     background: lighten($color--error, $lighten-p);
     border: 1px solid $color--error;
   }
@@ -297,26 +296,27 @@ input[type="file"] {
   label {
     color: $color--error;
   }
-  .form-element__error {
+  .form-element__error-text {
     display: block;
   }
 }
-.form-element__error {
-  display: none;
-  font-size: em($font-size--6);
-  font-family: $font--1;
+//if you need some text for your error put it below the input inside of the form-element
+.form-element__error-text {
   color: $color--error;
+  display: none;
+  font-family: $font--1;
+  font-size: em($font-size--6);
   line-height: 1.339;
 }
 
-//labels
+//labels for inputs
 label {
   &.input-size {
-    padding: em(8,14) 0 ;
+    padding: em(8, 14) 0;
   }
 }
 
-//form list
+//if you need form elements inside of a list use a form-list
 .form-list {
   list-style-type: none;
   margin: 0;
@@ -324,7 +324,8 @@ label {
   li {
     margin: 0;
   }
-  &.collapsed {
+  //if you need them to have no space between use collapse
+  &--collapse {
     padding-bottom: 1em;
     li {
       padding: 0;

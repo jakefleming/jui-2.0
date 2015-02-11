@@ -1,22 +1,27 @@
 //Tables should only be used to display data
 
 table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+  width: 100%;
   td, th {
     font-family: $font--1;
     font-weight: $font-weight--1;
   }
-  &.outlined {
+  &.table--outlined {
     td {
       box-shadow: inset 0 1px 0 $color--gray--x-light;
       color: $color--gray--dark;
     }
   }
+  td {
+    color: $color--gray--dark;
+  }
   th {
     color: $color--black;
   }
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 0;
   // Cells
   > thead,
   > tbody,
@@ -31,11 +36,11 @@ table {
       }
       > th,
       > td {
-        text-align: left;
-        padding: 8px 16px;
-        line-height: 1.5;
-        vertical-align: top;
         //border-top: 1px solid $color--gray--x-light;
+        line-height: 1.5;
+        padding: 8px 16px;
+        text-align: left;
+        vertical-align: top;
       }
       > th {
         font-weight: $font-weight--2;
@@ -64,6 +69,7 @@ table {
       > th,
       > td {
         //border-bottom: 1px solid $color--gray--x-light;
+     
       }
       &:last-of-type {
         td {
@@ -80,25 +86,33 @@ table {
   tbody {
     tr {
       &:hover {
+        background-color: $color--gray--xx-light;
         cursor: pointer;
-        background-color: #f5f6f7;
+        transition: $trans-duration;
       }
     }
   }
 }
+
+.table-wrap {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
 .sort-it {
   position: relative;
 }
+
 .sort-arrow {
-  float: right;
+  -webkit-transition-timing-function: ease-in-out;
+  color: $color--gray;
   cursor: pointer;
+  float: right;
+  padding: 4px;
   position: absolute;
   right: 4px;
-  color: $color--gray;
-  padding: 4px;
-  transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
   transition-duration: .25s;
+  transition-timing-function: ease-in-out;
   &--flipped {
     transform: rotate(180deg);
   }

@@ -2,8 +2,10 @@
 
 //converts numbers to em
 @function em($target, $context: $base--num) {
-  @if $target == 0 { @return 0 }
   @return $target / $context + 0em;
+  @if $target == 0 {
+    @return 0;
+  }
 }
 
 @function px($target) {

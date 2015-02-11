@@ -8,19 +8,23 @@
 //headings
 h1, h2, h3, h4, h5, h6, p {
   @extend %reset-type;
-  font-family: $font--1;
   display: block;
+  font-family: $font--1;
 }
 
 p {
   color: $color--gray--dark;
-  font-size: 1em; /* 16px */
+  font-size: 1em;
+  /* 16px */
   font-weight: $font-weight--1;
-  line-height: 1.5000em; /* 24px */
+  line-height: 1.5000em;
+  /* 24px */
 }
+
 h1, h2, h3, h4 {
   font-weight: $font-weight--2;
 }
+
 h5, h6 {
   font-weight: $font-weight--3;
 }
@@ -28,18 +32,19 @@ h5, h6 {
 h1 {
   font-size: em($font-size--1);
 }
+
 h2 {
   font-size: em($font-size--2);
 }
 
 h3 {
   font-size: em($font-size--3);
-  line-height: em($base--num*1.5, $font-size--3);
+  line-height: em($base--num * 1.5, $font-size--3);
 }
 
 h4 {
   font-size: em($font-size--4);
-  line-height: em($base--num*1.5, $font-size--4);
+  line-height: em($base--num * 1.5, $font-size--4);
 }
 
 h5 {
@@ -61,12 +66,12 @@ a {
   }
   &:hover {
     color: darken($color--primary, 10%);
-    text-decoration: none!important;
+    text-decoration: none !important;
   }
 }
 
 //screen reader
 .srt-only {
-  height: 0!important;
+  height: 0 !important;
   overflow: hidden;
 }

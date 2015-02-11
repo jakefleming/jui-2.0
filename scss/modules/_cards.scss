@@ -1,6 +1,6 @@
 //Cards should be used in conjunction with other cards. Usually not by themselves.
 
-//the list items
+//A list of cards
 .card-list {
   list-style-type: none;
   margin: 0;
@@ -8,101 +8,124 @@
   li {
     margin-left: 0;
   }
-  &.collapse-on-small {
-    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-      .card {
-        border-top-width: 0;
-        border-radius: 0;
-        margin: 0!important;
-        &:first-child {
-          border-top-width: 1px;
+  //collapses the card list
+  &--collapse {
+    .card {
+      border-radius: 0;
+      border-top-width: 0;
+      margin: 0 !important;
+      &:first-child {
+        border-top-width: 1px;
+      }
+    }
+    &-on-small-only {
+      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+        .card {
+          border-radius: 0;
+          border-top-width: 0;
+          margin: 0 !important;
+          &:first-child {
+            border-top-width: 1px;
+          }
         }
       }
     }
   }
 }
+
+//cards
 .card {
   background-color: $color--white;
-  box-shadow: none;
-  font-family: $font--1;
   border-radius: $base--radius;
+  border: 1px solid $component-border-color;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  font-family: $font--1;
   font-size: 1em;
   line-height: 1.5;
-  transition: background-color $trans-duration;
-  cursor: pointer;
-  border: 1px solid $component-border-color;
   overflow: hidden;
   transition: $trans-duration;
+  transition: background-color $trans-duration;
+  //on hover give a 3D effect of the card raising
   &:hover {
     @media (min-width: $brkpoint-md) {
-      box-shadow: 0 1px 3px transparentize($color--black, .6);
-      transition: $trans-duration;
-      transform: translateY(-2px);
       border-color: $color--white;
+      box-shadow: 0 1px 3px transparentize($color--black, 0.6);
+      transform: translateY(-2px);
+      transition: $trans-duration;
     }
   }
+  //main div for content that allows for certain items to stack up to each other
   &__body {
-    overflow: hidden;
     border-collapse: separate;
     display: table;
-    width: 100%;
+    overflow: hidden;
     table-layout: fixed;
+    width: 100%;
     + .card__block {
       padding-top: 1px;
     }
   }
+  //a general block level div to contain content
   &__block {
-    padding: em(15);
     display: block;
+    padding: em(15);
     + .card__body {
       padding-top: 1px;
     }
   }
+  //the main content inside of the body
   &__content {
-    padding: em(15);
-    white-space: nowrap;
+    display: table-cell;
+    line-height: 1.5;
     overflow: hidden;
-    text-overflow: ellipsis;
-    display: table-cell;
-    width: 100%;
-    line-height: 1.5;
-    vertical-align: middle;
-  }
-  &__cap {
     padding: em(15);
-    line-height: 1.5;
-    text-align: center;
-    width: 3.5em;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+  }
+  //a piece like an image or icon that caps the left or right side of the card
+  &__cap {
+    color: $color--gray;
     display: table-cell;
+    line-height: 1.5;
+    padding: em(15);
+    text-align: center;
     vertical-align: top;
+    width: 3.5em;
     + .card__content {
       padding-left: 0;
     }
-    &.solid {
+    //give the cap a background color
+    &--solid {
+      background-position: center center !important;
+      background-size: cover !important;
       background: $color--primary;
       color: $color--white;
-      background-size: cover!important;
-      background-position: center center!important;
       vertical-align: middle;
       + .card__content {
         padding-left: em(16);
       }
     }
-    &.img {
+    //give the cap an img
+    &--img {
       line-height: 0;
       width: 4em;
       + .card__content {
         padding-left: 0;
       }
       img {
-        width: em(32);
-        height: em(32);
         border-radius: $base--radius;
+        height: em(32);
+        width: em(32);
       }
     }
-    &.icon {
+    //give the cap an icon
+    &--icon {
       width: 4em;
-      &.solid {
+      &.card__cap--solid {
         background: transparent;
         vertical-align: top;
         .juicon {
@@ -110,40 +133,50 @@
         }
       }
       .juicon {
-        width: em(32);
+        border-radius: $base--radius;
         height: em(32);
         line-height: 2;
-        border-radius: $base--radius;
+        width: em(32);
       }
       + .card__content {
         padding-left: 0;
       }
     }
   }
+  //a thumbnail like feature to a card. can have a background image or icon or both
   &__feature {
-    height: em(128, 32);
+    background-position: center center !important;
+    background-size: cover !important;
     display: block;
-    line-height: em(128, 32);
-    background-size: cover!important;
-    background-position: center center!important;
-    vertical-align: middle;
-    text-align: center;
     font-size: em(32);
-    &.solid {
+    height: em(128, 32);
+    line-height: em(128, 32);
+    text-align: center;
+    vertical-align: middle;
+    //give the feature a background color
+    &--solid {
       background-color: $color--primary;
       color: $color--white;
     }
+    //give the feature an icon
+    .juicon {
+      vertical-align: middle;
+    }
   }
+  //a general heading for a card
   &__heading {
+    color: $color--black;
     display: block;
     line-height: 1;
   }
+  //a general subheading for a card
   &__subheading {
+    color: $color--gray;
     display: block;
     font-size: em(14);
-    color: $color--gray;
-    line-height: em(16,14)
+    line-height: em(16, 14);
   }
+  //removes the height restriction from a card
   &.multi-line {
     .card__content {
       white-space: normal;

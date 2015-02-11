@@ -2,22 +2,29 @@
 // Progress bars
 // --------------------------------------------------
 
-
 // Bar animations
 // -------------------------
 
 // WebKit
 @-webkit-keyframes progress-bar-stripes {
-  from  { background-position: 40px 0; }
-  to    { background-position: 0 0; }
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
 }
+
 
 // Spec and IE10+
 @keyframes progress-bar-stripes {
-  from  { background-position: 40px 0; }
-  to    { background-position: 0 0; }
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
 }
-
 
 
 // Bar itself
@@ -26,36 +33,36 @@
 // Outer container
 .progress {
   @include radius(100px);
-  overflow: hidden;
-  height: 16px;
   background-color: $color--gray--x-light;
+  height: 16px;
+  overflow: hidden;
   padding: 4px;
   &__bar {
+    background-color: $color--primary;
     border-radius: 100px;
-    transition: width $trans-duration;
+    color: #fff;
     float: left;
-    width: 0%;
     height: 100%;
     //  font-size: $font-size-small;
     line-height: 1.5;
-    color: #fff;
     text-align: center;
-    background-color: $color--primary;
+    transition: width $trans-duration;
+    width: 0%;
     // Account for lower percentages
     &[aria-valuenow="1"],
     &[aria-valuenow="2"] {
       min-width: 30px;
     }
     &[aria-valuenow="0"] {
-      color: $color--gray--light;
-      min-width: 30px;
       background-color: transparent;
       background-image: none;
       box-shadow: none;
+      color: $color--gray--light;
+      min-width: 30px;
     }
     @each $theme, $color in $ui-colors {
       &.#{$theme} {
-        background-color: $color
+        background-color: $color;
       }
     }
   }

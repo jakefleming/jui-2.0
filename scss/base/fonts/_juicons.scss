@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'juicons';
-  src:url('fonts/juicons.eot?-m8mnji');
-  src:url('fonts/juicons.eot?#iefix-m8mnji') format('embedded-opentype'),
-  url('fonts/juicons.ttf?-m8mnji') format('truetype'),
-  url('fonts/juicons.svg?-m8mnji#juicons') format('svg'),
-url('fonts/juicons.woff?-m8mnji') format('woff');
+  src:url('fonts/juicons/juicons.eot?-m8mnji');
+  src:url('fonts/juicons/juicons.eot?#iefix-m8mnji') format('embedded-opentype'),
+  url('fonts/juicons/juicons.ttf?-m8mnji') format('truetype'),
+  url('fonts/juicons/juicons.svg?-m8mnji#juicons') format('svg'),
+  url('fonts/juicons/juicons.woff?-m8mnji') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,7 +21,10 @@ url('fonts/juicons.woff?-m8mnji') format('woff');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
-  vertical-align: middle;
+  //vertical-align: middle;
+  //min-height: 24px;
+  line-height: 1.5;
+  vertical-align: top;
   &:before {
     display: inline-block;
     vertical-align: top;

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>JUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--testing salesforce scope-->
+    <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1420068168000/Theme3/default/gc/elements.css" rel="stylesheet" type="text/css">
+    <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1420068168000/Theme3/default/gc/common.css" rel="stylesheet" type="text/css">
+    <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1418663684000/Theme3/gc/dStandard.css" rel="stylesheet" type="text/css">
+    <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1421252858000/Theme3/00Dj0000001ohFY/005j000000BPBWj/gc/dCustom0.css" rel="stylesheet" type="text/css">
+    <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1420068168000/Theme3/default/gc/extended.css" rel="stylesheet" type="text/css">
+    <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1420068168000/Theme3/default/gc/setup.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/styles-scoped.css"/>
+    <link rel="stylesheet" href="../css/docs.css"/><!--takes place of styles.scss for docs-->
+    <script src="../js/modernizr.js"></script><!--detect if browser supports stuff like flexbox-->
+    <!--<link rel="stylesheet" href="http://basehold.it/8">-->
+</head>
+<body>
+<div class="scope-container">
+    <div id="docs" class="has-md-padding-for-md">
+        <!--template-->
+        <div class="grid has-gutters separate orient--vertical-on-small">
+            <div class="grid__block--3-on-medium">
+                <ul class="list collapse-on-small-only">
+                    <li class="list__item active">
+                        <span class="list__item-icon juicon juicon-dashboard"></span>
+                        <span class="list__item-content">Dashboard</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-icon juicon juicon-people"></span>
+                        <span class="list__item-content">Leads</span>
+                    </li>
+                    <li class="list__item">
+                        <span class="list__item-icon juicon juicon-chart-bar"></span>
+                        <span class="list__item-content">Trends</span>
+                        <span class="list__item-alert">
+                            <span class="list__item-alert__content error">
+                                <div class="juicon juicon-exclamation"></div>
+                            </span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid__block--9-on-medium separate-on-medium collapse-on-small-only">
+                <div class="grid holds-3-blocks-on-medium has-gutters orient--vertical-on-small">
+                    <div class="grid__block">
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap">
+                                    <span class=" juicon juicon-group"></span>
+                                </span>
+                                <span class="card__content">
+                                    <span class="card__heading"><strong>3</strong> new leads</span>
+                                </span>
+                            </span>
+                        </li>
+                    </div>
+                    <div class="grid__block">
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap">
+                                    <span class=" juicon juicon-trophy"></span>
+                                </span>
+                                <span class="card__content">
+                                    <span class="card__heading"><strong>5</strong> goals met</span>
+                                </span>
+                            </span>
+                        </li>
+                    </div>
+                    <div class="grid__block">
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap">
+                                    <span class=" juicon juicon-check"></span>
+                                </span>
+                                <span class="card__content">
+                                    <span class="card__heading"><strong>9</strong> new tasks</span>
+                                </span>
+                            </span>
+                        </li>
+                    </div>
+                </div>
+                <div class="grid orient--vertical-on-small has-gutters holds-2-blocks">
+                    <div class="grid__block">
+                        <div class="slate slate--outlined">
+                            <div class="slate__top slate__top--outlined">
+                                <div class="slate__top-main">
+                                    <span class="slate__heading">Recent Leads</span>
+                                </div>
+                            </div>
+                            <table class="table--outlined">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <span class="juicon juicon-person"></span> Lead
+                                    </th>
+                                    <th>
+                                        <span class="juicon juicon-calendar"></span> Date
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Jake Fleming</td>
+                                    <td>Today</td>
+                                </tr>
+                                <tr>
+                                    <td>Rachel Gray</td>
+                                    <td>Today</td>
+                                </tr>
+                                <tr>
+                                    <td>Ross Belmont</td>
+                                    <td>Yesterday</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="grid__block">
+                        <div class="slate slate--outlined">
+                            <div class="slate__top slate__top--outlined">
+                                <div class="slate__top-main">
+                                    <span class="slate__heading">Recent Goals</span>
+                                </div>
+                            </div>
+                            <table class="table--outlined">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <span class="juicon juicon-trophy"></span> Goal
+                                    </th>
+                                    <th>
+                                        <span class="juicon juicon-calendar"></span> Date
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>100 sales</td>
+                                    <td>Today</td>
+                                </tr>
+                                <tr>
+                                    <td>25 new leads</td>
+                                    <td>2 days ago</td>
+                                </tr>
+                                <tr>
+                                    <td>3 milestones</td>
+                                    <td>3 days ago</td>
+                                </tr>
+                                <tr>
+                                    <td>1 new record</td>
+                                    <td>4 days ago</td>
+                                </tr>
+                                <tr>
+                                    <td>3 milestones</td>
+                                    <td>5 days ago</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="grid__block--12-on-medium">
+                        <div class="slate slate--outlined">
+                            <div class="slate__top slate__top--outlined">
+                                <div class="slate__top-main">
+                                    <span class="slate__heading">Profits</span>
+                                </div>
+                            </div>
+                            <div class="blank-state">
+                                <div class="juicon juicon-chart-pie"></div>
+                                There isn't anything here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="../lib/selectize/selectize.js"></script>
+<script type="text/javascript" src="../lib/tooltipster-master/js/jquery.tooltipster.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+<script>
+    $(function() {
+        $('#select-thing').selectize({
+
+        });
+    });
+</script>
+</body>
+</html>

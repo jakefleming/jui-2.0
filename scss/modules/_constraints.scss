@@ -2,13 +2,19 @@
 
 .constrained {
   margin: 0 auto;
-  &.default {
-    max-width: em(1024);
+  &--x-large {
+    max-width: em(1200);
   }
-  &.small {
-    max-width: em(700);
+  &--large {
+    max-width: em(1000);
   }
-  &.x-small {
+  &--default {
+    max-width: em(768);
+  }
+  &--small {
+    max-width: em(600);
+  }
+  &--x-small {
     max-width: em(400);
   }
 }

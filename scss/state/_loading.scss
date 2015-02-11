@@ -6,37 +6,38 @@
     padding-right: 48px;
     position: relative;
     &:before {
-      @extend .juicon;
       @extend .juicon-loading;
-      position: absolute;
+      @extend .juicon;
+      animation: spin-it 1s linear infinite;
       height: 24px;
-      width: 24px;
-      padding: 6px 16px;
       line-height: 1.5;
+      padding: 8px 16px;
+      position: absolute;
       right: 0;
       top: 0;
-      animation: spin-it 1s linear infinite;
+      width: 24px;
     }
     &.default {
       color: $color--gray;
     }
   }
 }
+
 .form-element.load-this {
   .form-element__wrap {
     &:before {
-      @extend .juicon;
       @extend .juicon-loading;
-      color: $color--gray;
-      position: absolute;
-      height: 24px;
-      width: 24px;
-      padding: 6px 16px;
-      line-height: 1.5;
-      right: 0;
-      top: 0;
+      @extend .juicon;
       animation: spin-it 1s linear infinite;
+      color: $color--gray;
+      height: 24px;
+      line-height: 1.5;
+      padding: 8px 16px;
+      position: absolute;
+      right: 0;
       text-align: center;
+      top: 0;
+      width: 24px;
     }
   }
   .form-element__icon {

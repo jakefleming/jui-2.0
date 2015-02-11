@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-    <title>Slate</title>
+    <title>JUI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!--testing salesforce scope-->
     <link class="user" href="https://c.na16.visual.force.com/sCSS/32.0/sprites/1420068168000/Theme3/default/gc/elements.css" rel="stylesheet" type="text/css">
@@ -17,7 +17,53 @@
 </head>
 <body>
     <div class="scope-container">
-        <div id="docs">
+        <nav class="nav-bar nav-bar--default">
+            <div class="constrained constrained--default">
+                <div class="nav-bar__menu-toggle">
+                    <span class="juicon juicon-menu"></span>
+                </div>
+                <div class="nav-bar__top">
+                    JUI
+                </div>
+                <ul class="nav-bar__list nav-bar__list--right ">
+                    <li class="nav-bar__list-item nav-bar__list-item--active">
+                        <a href="./">Bathroom Sink</a>
+                    </li>
+                    <li class="nav-bar__list-item">
+                        <a href="templates">Templates</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-bar__appendage">
+                <div class="constrained constrained--default">
+                    <div class="grid has-gutters nav-bar__appendage-inner">
+                        <div class="grid__block">
+                            <div class="form-element">
+                                <textarea placeholder="Textareas are fun"></textarea>
+                                <small class="form-element__error-text">Your typing is puny. Pump it up.</small>
+                            </div>
+                        </div>
+                        <div class="grid__block">
+                            <div class="form-element">
+                                <input type="email" placeholder="Enter email"/>
+                                <small class="form-element__error-text">Your password isn't manly enough.</small>
+                            </div>
+                            <div class="form-element">
+                                <input type="email" placeholder="Enter email"/>
+                                <small class="form-element__error-text">Your password isn't manly enough.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header id="bathroom-sink-header" class="doc-page-header">
+            <div class="constrained constrained--default">
+                <h1 class="doc-page-heading">Bathroom Sink</h1>
+                <h2 class="doc-page-subheading">Everything you need to dump out a page</h2>
+            </div>
+        </header>
+        <div id="docs" class="has-md-padding">
             <h1 class="doc-section-heading">Type</h1>
             <section id="type">
                 <article id="heading-examples">
@@ -45,14 +91,29 @@
             <p>We utilize <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">flex</a> for layout purposes. <a href="http://modernizr.com/">Modernizr</a> will detect if flex is supported by the browser. If it isn't supported, the <code>grid</code> and <code>grid__block</code> selectors will fall back to the old float-based layout.</p>
             <section id="layout">
                 <article id="grid-examples">
-                    <div class="grid holds-2-blocks orient--vertical-on-small">
+                    <div class="grid holds-1-blocks">
+                        <div class="grid__block"></div>
+                    </div>
+                    <div class="grid holds-2-blocks">
                         <div class="grid__block"></div>
                         <div class="grid__block"></div>
                     </div>
-                    <div class="grid holds-4-blocks orient--vertical-on-small">
+                    <div class="grid holds-3-blocks">
+                        <div class="grid__block"></div>
+                        <div class="grid__block"></div>
+                        <div class="grid__block"></div>
+                    </div>
+                    <div class="grid holds-4-blocks-on-medium holds-2-blocks-on-xsmall">
                         <div class="grid__block"></div>
                         <div class="grid__block"></div>
                         <div class="grid__block pinned-on-small"></div>
+                        <div class="grid__block"></div>
+                    </div>
+                    <div class="grid holds-5-blocks-on-medium holds-2-blocks-on-xsmall">
+                        <div class="grid__block"></div>
+                        <div class="grid__block"></div>
+                        <div class="grid__block pinned-on-small"></div>
+                        <div class="grid__block"></div>
                         <div class="grid__block"></div>
                     </div>
                     <div class="grid holds-12-blocks orient--vertical-on-small">
@@ -75,13 +136,13 @@
             <p>
                 We use a custom icon font called "Juicons" ( joo-ee-cons ) for all icons appearing in our apps and static sites.
             </p>
-            <a href="css/fonts/juicons.zip" class="button docButton">
-                <span class="button__content default"><span class="button__text">Download Juicons</span><span class="button__icon juicon juicon-download"></span></span>
+            <a href="css/fonts/juicons.zip" class="button button--solid docButton">
+                <span class="button__content button__content--default"><span class="button__text">Download Juicons</span><span class="button__icon juicon juicon-download"></span></span>
             </a>
             <section id="icons" class="vertical">
                 <article id="icon-examples--arrows">
                     <h2 class="doc-article-heading">Arrows</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--arrows-->
                         <li class="grid__block">
                             <span class="juicon juicon-up icon-example"></span>
@@ -153,7 +214,7 @@
                 </article>
                 <article id="icon-examples--symbols">
                     <h2 class="doc-article-heading">Symbols</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--symbols-->
                         <li class="grid__block">
                             <span class="juicon juicon-x icon-example"></span>
@@ -210,7 +271,7 @@
                 </article>
                 <article id="icon-examples--feedback">
                     <h2 class="doc-article-heading">Feedback &amp; Stats</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--feedback & stats-->
                         <li class="grid__block">
                             <span class="juicon juicon-flag icon-example"></span>
@@ -246,7 +307,7 @@
                 </article>
                 <article id="icon-examples--layout">
                     <h2 class="doc-article-heading">Layout &amp; Lists</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--layout & lists-->
                         <li class="grid__block">
                             <span class="juicon juicon-grid icon-example"></span>
@@ -270,7 +331,7 @@
                 </article>
                 <article id="icon-examples--things">
                     <h2 class="doc-article-heading">Things</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--things-->
                         <li class="grid__block">
                             <span class="juicon juicon-phone icon-example"></span>
@@ -339,7 +400,7 @@
                 </article>
                 <article id="icon-examples--people">
                     <h2 class="doc-article-heading">People</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--people-->
                         <li class="grid__block">
                             <span class="juicon juicon-person icon-example"></span>
@@ -357,7 +418,7 @@
                 </article>
                 <article id="icon-examples--docs">
                     <h2 class="doc-article-heading">Docs</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--docs-->
                         <li class="grid__block">
                             <span class="juicon juicon-document icon-example"></span>
@@ -378,7 +439,7 @@
                 </article>
                 <article id="icon-examples--social">
                     <h2 class="doc-article-heading">Social</h2>
-                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-small holds-2-blocks-on-xsmall">
+                    <ul class="grid holds-8-blocks-on-medium holds-4-blocks-on-xsmall">
                         <!--docs-->
                         <li class="grid__block">
                             <span class="juicon juicon-dropbox icon-example"></span>
@@ -407,97 +468,97 @@
                 <article id="solid-button-examples">
                     <h2 class="doc-article-heading">Solid Buttons</h2>
                     <!--solid buttons-->
-                    <button type="button" class="button">
-                        <span class="button__content default">Button</span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--default">Button</span>
                     </button>
-                    <button type="button" class="button">
-                        <span class="button__content primary">Button</span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--primary">Button</span>
                     </button>
-                    <button type="button" class="button">
-                        <span class="button__content success">Button</span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--success">Button</span>
                     </button>
-                    <button type="button" class="button">
-                        <span class="button__content error">Button</span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--error">Button</span>
                     </button>
-                    <button type="button" class="button">
-                        <span class="button__content warning">Button</span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--warning">Button</span>
                     </button>
-                    <button type="button" class="button">
-                        <span class="button__content info">Button</span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--info">Button</span>
                     </button>
                 </article>
                 <article id="flat-button-examples">
                     <h2 class="doc-article-heading">Flat Buttons</h2>
                     <!--flat buttons-->
-                    <button type="button" class="button--flat">
+                    <button type="button" class="button button--flat">
                         <span class="button__content">Button</span>
                     </button>
-                    <button type="button" class="button--flat">
-                        <span class="button__content primary">Button</span>
+                    <button type="button" class="button button--flat">
+                        <span class="button__content button__content--primary">Button</span>
                     </button>
-                    <button type="button" class="button--flat">
-                        <span class="button__content success">Button</span>
+                    <button type="button" class="button button--flat">
+                        <span class="button__content button__content--success">Button</span>
                     </button>
-                    <button type="button" class="button--flat">
-                        <span class="button__content error">Button</span>
+                    <button type="button" class="button button--flat">
+                        <span class="button__content button__content--error">Button</span>
                     </button>
-                    <button type="button" class="button--flat">
-                        <span class="button__content warning">Button</span>
+                    <button type="button" class="button button--flat">
+                        <span class="button__content button__content--warning">Button</span>
                     </button>
-                    <button type="button" class="button--flat">
-                        <span class="button__content info">Button</span>
+                    <button type="button" class="button button--flat">
+                        <span class="button__content button__content--info">Button</span>
                     </button>
                 </article>
                 <article id="icon-button-examples">
                     <h2 class="doc-article-heading">Buttons with icons</h2>
                     <!--icons in buttons-->
-                    <button type="button" class="button">
-                        <span class="button__content default"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--default"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
                     </button>
-                    <button type="button" class="button">
-                        <span class="button__content primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
+                    <button type="button" class="button button--solid">
+                        <span class="button__content button__content--primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
                     </button>
                     <!--flat buttons with icons-->
-                    <button type="button" class="button--flat">
+                    <button type="button" class="button button--flat">
                         <span class="button__content"><span class="button__icon juicon juicon-heart"></span><span class="button__text">Button</span></span>
                     </button>
-                    <button type="button" class="button--flat">
-                        <span class="button__content primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
+                    <button type="button" class="button button--flat">
+                        <span class="button__content button__content--primary"><span class="button__text">Button</span><span class="button__icon juicon juicon-heart"></span></span>
                     </button>
                 </article>
                 <article id="button-group-examples">
                     <h2 class="doc-article-heading">Button groups</h2>
                     <!--button dropdown-->
                     <div class="button-group" style="margin-bottom: 16px;">
-                        <button type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-grid"></span>
                             </span>
                         </button>
-                        <button type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-blocks"></span>
                             </span>
                         </button>
-                        <button type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-dashboard"></span>
                             </span>
                         </button>
                     </div>
                     <div class="button-group stretch">
-                        <span type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <span type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-grid"></span>
                             </span>
                         </span>
-                        <span type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <span type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-blocks"></span>
                             </span>
                         </span>
-                        <span type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <span type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-dashboard"></span>
                             </span>
                         </span>
@@ -507,8 +568,8 @@
                     <h2 class="doc-article-heading">Button dropdowns</h2>
                     <!--button dropdown-->
                     <div class="button-group">
-                        <button type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__text">Button dropdown</span>
                                 <span class="button__icon juicon juicon-down"></span>
                             </span>
@@ -518,7 +579,7 @@
                                 <a class="dropdown-box__item">Button dropdown</a>
                             </li>
                             <li>
-                                <label class="dropdown-box__item--static">
+                                <label class="dropdown-box__item dropdown-box__item--static">
                                     <input type="checkbox"/> Derp
                                 </label>
                             </li>
@@ -534,13 +595,13 @@
                         </ul>
                     </div>
                     <div class="button-group">
-                        <button type="button" class="button">
-                            <span class="button__content default">
+                        <button type="button" class="button button--solid">
+                            <span class="button__content button__content--default">
                                 <span class="button__text">Split dropdown</span>
                             </span>
                         </button>
-                        <button type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-down"></span>
                             </span>
                         </button>
@@ -549,7 +610,7 @@
                                 <a class="dropdown-box__item">Split dropdown</a>
                             </li>
                             <li>
-                                <label class="dropdown-box__item--static">
+                                <label class="dropdown-box__item dropdown-box__item--static">
                                     <input type="checkbox"/> Derp
                                 </label>
                             </li>
@@ -565,14 +626,14 @@
                         </ul>
                     </div>
                     <div class="button-group">
-                        <button type="button" class="button" data-toggle="dropdown">
-                            <span class="button__content default">
+                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                            <span class="button__content button__content--default">
                                 <span class="button__text">Content dropdown</span>
                                 <span class="button__icon juicon juicon-down"></span>
                             </span>
                         </button>
                         <ul class="dropdown-box" style="width: 300px">
-                            <button type="button" class="close-button"><span class="juicon juicon-x"></span></button>
+                            <button type="button" class="dropdown-box__close-button"><span class="juicon juicon-x"></span></button>
                             <div class="dropdown-box__content">
                                 <div class="dropdown-box__block">
                                     Put content inside of dropdowns.
@@ -590,7 +651,7 @@
                                     </div>
                                 </div>
                                 <button type="button" class="button stretch" data-dismiss="dropdown">
-                                    <span class="button__content primary">Sign in</span>
+                                    <span class="button__content button__content--primary">Sign in</span>
                                 </button>
                             </div>
                         </ul>
@@ -617,8 +678,8 @@
                                 <input type="text" placeholder="Search"/>
                             </div>
                             <div class="input-group__action">
-                                <button type="button" class="button">
-                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                <button type="button" class="button button--solid">
+                                    <span class="button__content button__content--default"><span class="button__icon juicon juicon-search"></span></span>
                                 </button>
                             </div>
                         </div>
@@ -632,14 +693,14 @@
                     </div>
                     <div class="form-element">
                         <label>Select</label>
-                        <div class="select-wrap">
-                            <div class="select-wrap__icon juicon juicon-down"></div>
+                        <div class="select-element">
+                            <div class="select-element__icon juicon juicon-down"></div>
                             <select>
                                 <option>derp</option>
                             </select>
                         </div>
                     </div>
-                    <ul class="form-list collapsed">
+                    <ul class="form-list form-list--collapse">
                         <li class="form-element">
                             <label class="input-size">
                                 <input type="checkbox"/> Derp
@@ -767,8 +828,8 @@
                                 </select>
                             </div>
                             <div class="input-group__action">
-                                <button type="button" class="button">
-                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                <button type="button" class="button button--solid">
+                                    <span class="button__content button__content--default"><span class="button__icon juicon juicon-search"></span></span>
                                 </button>
                             </div>
                         </div>
@@ -784,7 +845,7 @@
                                     <option value="great">great</option>
                                 </optgroup>
                             </select>
-                            <button class="clear-selectize button--flat">
+                            <button class="clear-selectize button button--flat">
                                 <span class="button__content">
                                     <span class="button__icon juicon juicon-x"></span>
                                 </span>
@@ -794,61 +855,61 @@
                 </article>
                 <article id="form-element-error-examples">
                     <!--Form Elements-->
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Text input</label>
                         <input type="text" placeholder="Empty input text"/>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
                     </div>
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Textarea</label>
                         <textarea placeholder="Empty textarea text"></textarea>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
                     </div>
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Input group</label>
                         <div class="input-group">
                             <div class="input-group__element">
                                 <input type="text" placeholder="Search"/>
                             </div>
                             <div class="input-group__action">
-                                <button type="button" class="button">
-                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                <button type="button" class="button button--solid">
+                                    <span class="button__content button__content--default"><span class="button__icon juicon juicon-search"></span></span>
                                 </button>
                             </div>
                         </div>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
                     </div>
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Text input</label>
                         <div class="form-element__wrap has-icon">
                             <div class="form-element__icon juicon juicon-search"></div>
                             <input type="text" placeholder="Empty input text"/>
                         </div>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
                     </div>
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Textarea</label>
-                        <div class="select-wrap">
-                            <div class="select-wrap__icon juicon juicon-down"></div>
+                        <div class="select-element">
+                            <div class="select-element__icon juicon juicon-down"></div>
                             <select>
                                 <option>derp</option>
                             </select>
                         </div>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
                     </div>
-                    <ul class="form-list collapsed">
-                        <li class="form-element has-error">
+                    <ul class="form-list form-list--collapse">
+                        <li class="form-element form-element--has-error">
                             <label class="input-size">
                                 <input type="checkbox"/> Derp
                             </label>
                         </li>
-                        <li class="form-element has-error">
+                        <li class="form-element form-element--has-error">
                             <label class="input-size">
                                 <input type="radio"/> Derp
                             </label>
                         </li>
                     </ul>
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Select states</label>
                         <div class="selectize-wrap">
                             <select id="select-state3" class="mar--sm--bm" multiple="multiple">
@@ -905,15 +966,15 @@
                                 <option value="WI">Wisconsin</option>
                                 <option value="WY">Wyoming</option>
                             </select>
-                            <button class="clear-selectize button--flat">
+                            <button class="clear-selectize button button--flat">
                                 <span class="button__content">
                                     <span class="button__icon juicon juicon-x"></span>
                                 </span>
                             </button>
                         </div>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
                     </div>
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Typeahead Select</label>
                         <div class="input-group">
                             <div class="input-group__element">
@@ -972,14 +1033,14 @@
                                 </select>
                             </div>
                             <div class="input-group__action">
-                                <button type="button" class="button">
-                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                <button type="button" class="button button--solid">
+                                    <span class="button__content button__content--default"><span class="button__icon juicon juicon-search"></span></span>
                                 </button>
                             </div>
                         </div>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
                     </div>
-                    <div class="form-element has-error">
+                    <div class="form-element form-element--has-error">
                         <label>Tags</label>
                         <div class="selectize-wrap">
                             <select id="select-tags2" multiple="multiple">
@@ -990,13 +1051,13 @@
                                     <option value="great">great</option>
                                 </optgroup>
                             </select>
-                            <button class="clear-selectize button--flat">
+                            <button class="clear-selectize button button--flat">
                                 <span class="button__content">
                                     <span class="button__icon juicon juicon-x"></span>
                                 </span>
                             </button>
                         </div>
-                        <span class="form-element__error">Error Text</span>
+                        <span class="form-element__error-text">Error Text</span>
 
                     </div>
                 </article>
@@ -1004,15 +1065,84 @@
             <h1 class="doc-section-heading">Pebbles</h1>
             <p>When you need to show emphasis to a piece of text, use a pebble. There are many different types of pebbles you can use.</p>
             <section id="pebbles">
-                <!--pebble examples-->
+                <!--pebble pebble--examples-->
                 <article class="pebble-examples">
                     <p style="margin: 0;">
-                        <span class="pebble default">default</span>
-                        <span class="pebble primary">primary</span>
-                        <span class="pebble success">success</span>
-                        <span class="pebble warning">warning</span>
-                        <span class="pebble error">error</span>
-                        <span class="pebble info">info</span>
+                        <span class="pebble pebble--default">
+                            <span class="pebble__content">
+                                <span class="pebble__text">
+                                    default
+                                </span>
+                                <span class="pebble__icon juicon juicon-check"></span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--primary">
+                            <span class="pebble__content">
+                                <span class="pebble__text">
+                                    primary
+                                </span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--success">
+                            <span class="pebble__content">
+                                <span class="pebble__text">
+                                    success
+                                </span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--warning">
+                            <span class="pebble__content">
+                                <span class="pebble__text">
+                                    warning
+                                </span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--error">
+                            <span class="pebble__content">
+                                <span class="pebble__text">
+                                    error
+                                </span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--info">
+                            <span class="pebble__content">
+                                <span class="pebble__text">
+                                    info
+                                </span>
+                            </span>
+                        </span>
+                    </p>
+                    <p style="margin-bottom: 0;margin-top: 8px;">
+                        <span class="pebble pebble--default pebble--round">
+                            <span class="pebble__content">
+                                <span class="pebble__icon juicon juicon-check"></span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--primary pebble--round">
+                            <span class="pebble__content">
+                                <span class="pebble__icon juicon juicon-check"></span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--success pebble--round">
+                            <span class="pebble__content">
+                                <span class="pebble__icon juicon juicon-check"></span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--warning pebble--round">
+                            <span class="pebble__content">
+                                <span class="pebble__icon juicon juicon-check"></span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--error pebble--round">
+                            <span class="pebble__content">
+                                <span class="pebble__icon juicon juicon-check"></span>
+                            </span>
+                        </span>
+                        <span class="pebble pebble--info pebble--round">
+                            <span class="pebble__content">
+                                <span class="pebble__icon juicon juicon-check"></span>
+                            </span>
+                        </span>
                     </p>
                 </article>
             </section>
@@ -1020,18 +1150,18 @@
             <section id="callouts">
                 <!--Callout button-->
                 <article class="callout-examples">
-                    <button type="button" class="button" data-toggle="callout" data-target="myCallout">
-                        <span class="button__content primary">Callout</span>
+                    <button type="button" class="button button--solid" data-toggle="callout" data-target="myCallout">
+                        <span class="button__content button__content--primary">Callout</span>
                     </button>
-                    <button type="button" class="button" data-toggle="callout" data-target="myCallout2">
-                        <span class="button__content primary">Callout</span>
+                    <button type="button" class="button button--solid" data-toggle="callout" data-target="myCallout2">
+                        <span class="button__content button__content--primary">Callout</span>
                     </button>
                 </article>
                 <!--Callout-->
                 <div class="callout-stage" id="myCallout">
                     <div class="callout">
                         <div class="callout__top">
-                            <button type="button" class="close-button" data-dismiss="callout">
+                            <button type="button" class="callout__close-button" data-dismiss="callout">
                                 <span class="juicon juicon-x"></span>
                             </button>
                             <span class="callout__heading">Hey there!</span>
@@ -1044,11 +1174,11 @@
                             Duis dignissim elementum pretium. Vivamus vel pretium lectus. Mauris sit amet nibh mi. Duis commodo, felis sed consequat finibus, libero eros viverra elit, vel sagittis turpis ex quis elit. Curabitur sit amet varius velit. Fusce sit amet enim auctor, semper mauris at, laoreet orci. Aenean vestibulum dolor vitae porta dapibus. Nullam turpis turpis, convallis sit amet venenatis non, hendrerit at felis. Proin metus nisi, fringilla id tellus eget, blandit rhoncus tortor. Sed quis lectus sit amet dui tempor tincidunt. Maecenas eget justo at justo convallis luctus quis consequat nulla.
                         </div>
                         <div class="callout__bottom flat">
-                            <button type="button" class="button--flat" data-dismiss="callout">
+                            <button type="button" class="button button--flat" data-dismiss="callout">
                                 <span class="button__content">Option 1</span>
                             </button>
-                            <button type="button" class="button--flat" data-dismiss="callout">
-                                <span class="button__content primary">Option 2</span>
+                            <button type="button" class="button button--flat" data-dismiss="callout">
+                                <span class="button__content button__content--primary">Option 2</span>
                             </button>
                         </div>
                     </div>
@@ -1057,7 +1187,7 @@
                 <div class="callout-stage" id="myCallout2">
                     <div class="callout">
                         <div class="callout__top">
-                            <button type="button" class="close-button" data-dismiss="callout">
+                            <button type="button" class="callout__close-button" data-dismiss="callout">
                                 <span class="juicon juicon-x"></span>
                             </button>
                             <span class="callout__heading">Hey there!</span>
@@ -1066,11 +1196,11 @@
                             Retium lectus. Mauris sit amet nibh mi. Duis commodo, felis sed consequat finibus, libero eros viverra elit, vel sagittis turpis ex quis elit. Curabitur sit amet varius velit. Fusce sit amet enim auctor, semper mauris at, laoreet orci. Aenean vestibulum dolor vitae porta dapibus. Nullam turpis turpis, convallis sit amet venenatis non, hendrerit at felis. Proin metus nisi, fringilla id tellus eget, blandit rhoncus tortor. Sed quis lectus sit amet dui tempor tincidunt. Maecenas eget justo at justo convallis luctus quis consequat nulla.
                         </div>
                         <div class="callout__bottom flat">
-                            <button type="button" class="button--flat" data-dismiss="callout">
+                            <button type="button" class="button button--flat" data-dismiss="callout">
                                 <span class="button__content">Option 1</span>
                             </button>
-                            <button type="button" class="button--flat" data-dismiss="callout">
-                                <span class="button__content primary">Option 2</span>
+                            <button type="button" class="button button--flat" data-dismiss="callout">
+                                <span class="button__content button__content--primary">Option 2</span>
                             </button>
                         </div>
                     </div>
@@ -1079,20 +1209,20 @@
             <h1 class="doc-section-heading">Alerts</h1>
             <section id="alerts">
                 <article id="alert-examples">
-                    <div class="alert active dismissable success">
-                        <button type="button" class="close-button juicon juicon-x"></button>
+                    <div class="alert alert--active alert--dismissable alert--success">
+                        <button type="button" class="alert__close-button juicon juicon-x"></button>
                         Something pretty cool just happened
                     </div>
-                    <div class="alert active dismissable error">
-                        <button type="button" class="close-button juicon juicon-x"></button>
+                    <div class="alert alert--active alert--dismissable alert--error">
+                        <button type="button" class="alert__close-button juicon juicon-x"></button>
                         Something pretty bad just happened
                     </div>
-                    <div class="alert active dismissable warning">
-                        <button type="button" class="close-button juicon juicon-x"></button>
+                    <div class="alert alert--active alert--dismissable alert--warning">
+                        <button type="button" class="alert__close-button juicon juicon-x"></button>
                         Something sorta bad just happened
                     </div>
-                    <div class="alert active dismissable info">
-                        <button type="button" class="close-button juicon juicon-x"></button>
+                    <div class="alert alert--active alert--dismissable alert--info">
+                        <button type="button" class="alert__close-button juicon juicon-x"></button>
                         Something pretty trivial just happened
                         <br/>
                     </div>
@@ -1131,7 +1261,7 @@
                 </article>
                 <article id="outlined-list-examples">
                     <h2 class="doc-article-heading">Outlined list</h2>
-                    <ul class="list outlined">
+                    <ul class="list list--outlined">
                         <li class="list__item active">
                             <span class="list__item-content">An active item with an icon on the right</span>
                             <span class="list__item-icon juicon juicon-documents"></span>
@@ -1162,510 +1292,8 @@
             <h1 class="doc-section-heading">Tables</h1>
             <section id="tables">
                 <article id="table-examples">
-                    <table class="outlined">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Sex</th>
-                            <th>Location</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Jake Fleming</td>
-                            <td>27</td>
-                            <td>M</td>
-                            <td>Chicago, IL</td>
-                        </tr>
-                        <tr class="tr active">
-                            <td>Jake Fleming</td>
-                            <td>27</td>
-                            <td>M</td>
-                            <td>Chicago, IL</td>
-                        </tr>
-                        <tr>
-                            <td>Jake Fleming</td>
-                            <td>27</td>
-                            <td>M</td>
-                            <td>Chicago, IL</td>
-                        </tr>
-                        <tr>
-                            <td>Jake Fleming</td>
-                            <td>27</td>
-                            <td>M</td>
-                            <td>Chicago, IL</td>
-                        </tr>
-                        <tr>
-                            <td>Jake Fleming</td>
-                            <td>27</td>
-                            <td>M</td>
-                            <td>Chicago, IL</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Tooltips</h1>
-            <section id="tooltips">
-                <article>
-                    <p style="margin-top: 0">
-                        We are using <a class="tooltip" title="Go to Tooltipster's site" href="http://iamceege.github.io/tooltipster/">Tooltipster</a> for our tooltips. You can even put <a id="htmlTooltip">HTML</a> in your tooltip!
-                    </p>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Pickers</h1>
-            <section id="pickers">
-                <article id="date-picker-examples">
-                    <h2 class="doc-article-heading">Date Picker</h2>
-                    <div class="form-element">
-                        <label>Choose a date</label>
-                        <div class="input-group">
-                            <div class="input-group__element">
-                                <input type="text" placeholder="00/00/00"/>
-                            </div>
-                            <div class="input-group__action">
-                                <button type="button" class="button launch-datepicker" data-date-format="yyyy-mm-dd" data-date="2012-02-20">
-                                    <span class="button__content default"><span class="button__icon juicon juicon-calendar"></span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article id="date-range-examples">
-                    <h2 class="doc-article-heading">Date Range Picker</h2>
-                    <div class="form-element">
-                        <label>Choose a date range</label>
-                        <div class="input-group">
-                            <div class="input-group__element">
-                                <input type="text" placeholder="00/00/00"/>
-                            </div>
-                            <div class="input-group__action">
-                                <button type="button" class="button launch-daterange opensleft">
-                                    <span class="button__content default"><span class="button__icon juicon juicon-calendar"></span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Progress</h1>
-            <section id="progress">
-                <article id="progress-examples">
-                    <div class="progress">
-                        <div class="progress__bar success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Slider</h1>
-            <section id="sliders">
-                <article id="slider-examples">
-                    <div class="slider-wrapper">
-                        <input type="text" class="slider" value="" data-slider-min="0" data-slider-max="1000000" data-slider-step="1000" data-slider-value="[0,1000000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show"/>
-                    </div>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Loading</h1>
-            <section id="loading">
-                <article id="button-loading-examples">
-                    <h2 class="doc-article-heading">Buttons</h2>
-                    <button type="button" class="button load-this">
-                        <span class="button__content default">Button</span>
-                    </button>
-                </article>
-                <article id="form-loading-examples">
-                    <h2 class="doc-article-heading">Form elements</h2>
-                    <div class="form-element load-this">
-                        <div class="form-element__wrap has-icon">
-                            <div class="form-element__icon juicon juicon-search"></div>
-                            <input type="text" placeholder="Empty input text"/>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Cards</h1>
-            <section id="cards">
-                <article id="card-examples">
-                    <h2 class="doc-article-heading">Static Height</h2>
-                    <ul class="card-list collapse-on-small">
-                        <li class="card">
-                            <span class="card__body">
-                                <span class="card__cap">
-                                    <span class=" juicon juicon-documents"></span>
-                                </span>
-                                <span class="card__content">A Default Card</span>
-                            </span>
-                        </li>
-                        <li class="card">
-                            <span class="card__body">
-                                <span class="card__cap icon solid">
-                                    <span class="juicon juicon-documents"></span>
-                                </span>
-                                <span class="card__content">
-                                    <span class="card-heading">Jake Fleming</span>
-                                    <span class="card-subheading">Visual Designer</span>
-                                </span>
-                            </span>
-                        </li>
-                        <li class="card">
-                            <span class="card__body">
-                                <span class="card__cap solid">
-                                    <span class=" juicon juicon-documents"></span>
-                                </span>
-                                <span class="card__content">A Default Card</span>
-                            </span>
-                        </li>
-                        <li class="card">
-                            <span class="card__body">
-                                <span class="card__cap img">
-                                    <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
-                                </span>
-                                <span class="card__content">
-                                    <span class="card-heading">Jake Fleming</span>
-                                    <span class="card-subheading">Visual Designer</span>
-                                </span>
-                            </span>
-                        </li>
-                        <li class="card">
-                            <span class="card__body">
-                                <span class="card__cap solid" style="background: url('https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg')">
-                                </span>
-                                <span class="card__content">
-                                    <span class="card-heading">Jake Fleming</span>
-                                    <span class="card-subheading">Visual Designer</span>
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                </article>
-                <article id="card-multiline-examples">
-                    <h2 class="doc-article-heading">Multi-line</h2>
-                    <ul class="card-list collapse-on-small">
-                        <li class="card multi-line">
-                            <span class="card__body">
-                                <span class="card__cap">
-                                    <span class=" juicon juicon-documents"></span>
-                                </span>
-                                <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
-                            </span>
-                        </li>
-                        <li class="card multi-line">
-                            <span class="card__body">
-                                <span class="card__cap icon solid">
-                                    <span class="juicon juicon-documents"></span>
-                                </span>
-                                <span class="card__content">
-                                    Spans multiple lines and doesn't get cut off by an ellipsis.
-                                </span>
-                            </span>
-                        </li>
-                        <li class="card multi-line">
-                            <span class="card__body">
-                                <span class="card__cap solid">
-                                    <span class=" juicon juicon-documents"></span>
-                                </span>
-                                <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
-                            </span>
-                        </li>
-                        <li class="card multi-line">
-                            <span class="card__body">
-                                <span class="card__cap img">
-                                    <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
-                                </span>
-                                <span class="card__content">
-                                    Spans multiple lines and doesn't get cut off by an ellipsis.
-                                </span>
-                            </span>
-                        </li>
-                        <li class="card multi-line">
-                            <span class="card__body">
-                                <span class="card__cap solid" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
-                                </span>
-                                <span class="card__content">
-                                    Spans multiple lines and doesn't get cut off by an ellipsis.
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                </article>
-                <article id="">
-                    <h2 class="doc-article-heading">Special</h2>
-                    <ul class="card-list collapse-on-small">
-                        <li class="card">
-                            <span class="card__body">
-                                <span class="card__cap img">
-                                    <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
-                                </span>
-                                <span class="card__content">
-                                    <span class="card-heading">Jake Fleming</span>
-                                    <span class="card-subheading">Visual Designer</span>
-                                </span>
-                            </span>
-                            <span class="card__block">
-                                Has content and an extra block for more information.
-                            </span>
-                        </li>
-                        <li class="card">
-                            <span class="card__feature" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
-                            </span>
-                            <span class="card__body">
-                                <span class="card__content">
-                                    <span class="card-heading">Jake Fleming</span>
-                                    <span class="card-subheading">Visual Designer</span>
-                                </span>
-                            </span>
-                        </li>
-                        <li class="card">
-                            <span class="card__feature">
-                                <span class="juicon juicon-documents"></span>
-                            </span>
-                            <span class="card__body">
-                                <span class="card__content">
-                                    <span class="card-heading">Jake Fleming</span>
-                                    <span class="card-subheading">Visual Designer</span>
-                                </span>
-                            </span>
-                        </li>
-                        <li class="card">
-                            <span class="card__feature solid">
-                                <span class="juicon juicon-documents"></span>
-                            </span>
-                            <span class="card__body">
-                                <span class="card__content">
-                                    <span class="card-heading">Jake Fleming</span>
-                                    <span class="card-subheading">Visual Designer</span>
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Bars</h1>
-            <section id="bars" class="vertical">
-                <article>
-                    <nav class="nav-bar default">
-                        <div class="nav-bar__menu-toggle">
-                            <span class="juicon juicon-menu"></span>
-                        </div>
-                        <div class="nav-bar__top">
-                            NavBar
-                        </div>
-                        <ul class="nav-bar__list--right">
-                            <li class="nav-bar__list__item">
-                                <a href="index.html">Link 1</a>
-                            </li>
-                            <li class="nav-bar__list__item">
-                                <div class="button-group">
-                                    <button type="button" class="button" data-toggle="dropdown">
-                                    <span class="button__content">
-                                        <span class="button__text">Button dropdown</span>
-                                        <span class="button__icon juicon juicon-down"></span>
-                                    </span>
-                                    </button>
-                                    <ul class="dropdown-box">
-                                        <li>
-                                            <a class="dropdown-box__item">Button dropdown</a>
-                                        </li>
-                                        <li>
-                                            <label class="dropdown-box__item--static">
-                                                <input type="checkbox"/> Derp
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-box__item">Dropdown Menu</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-box__item">Dropdown Menu</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-box__item">Dropdown Menu</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar__list__item">
-                                <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
-                            </li>
-                        </ul>
-                        <div class="nav-bar__appendage">
-                            <div class="grid has-gutters nav-bar__appendage--inner">
-                                <div class="grid__block">
-                                    <div class="form-element">
-                                        <textarea placeholder="Textareas are fun"></textarea>
-                                        <small class="form-element__error">Your typing is puny. Pump it up.</small>
-                                    </div>
-                                </div>
-                                <div class="grid__block">
-                                    <div class="form-element">
-                                        <input type="email" placeholder="Enter email"/>
-                                        <small class="form-element__error">Your password isn't manly enough.</small>
-                                    </div>
-                                    <div class="form-element">
-                                        <input type="email" placeholder="Enter email"/>
-                                        <small class="form-element__error">Your password isn't manly enough.</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </article>
-                <article>
-                    <nav class="nav-bar primary">
-                        <div class="nav-bar__menu-toggle">
-                            <span class="juicon juicon-menu"></span>
-                        </div>
-                        <div class="nav-bar__top">
-                            NavBar
-                        </div>
-                        <ul class="nav-bar__list--right">
-                            <li class="nav-bar__list__item">
-                                <a href="index.html">Link 1</a>
-                            </li>
-                            <li class="nav-bar__list__item">
-                                <div class="button-group">
-                                    <button type="button" class="button" data-toggle="dropdown">
-                                    <span class="button__content">
-                                        <span class="button__text">Button dropdown</span>
-                                        <span class="button__icon juicon juicon-down"></span>
-                                    </span>
-                                    </button>
-                                    <ul class="dropdown-box">
-                                        <li>
-                                            <a class="dropdown-box__item">Button dropdown</a>
-                                        </li>
-                                        <li>
-                                            <label class="dropdown-box__item--static">
-                                                <input type="checkbox"/> Derp
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-box__item">Dropdown Menu</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-box__item">Dropdown Menu</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-box__item">Dropdown Menu</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-bar__list__item">
-                                <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
-                            </li>
-                        </ul>
-                        <div class="nav-bar__appendage">
-                            <div class="grid has-gutters nav-bar__appendage--inner">
-                                <div class="grid__block">
-                                    <div class="form-element">
-                                        <textarea placeholder="Textareas are fun"></textarea>
-                                        <small class="form-element__error">Your typing is puny. Pump it up.</small>
-                                    </div>
-                                </div>
-                                <div class="grid__block">
-                                    <div class="form-element">
-                                        <input type="email" placeholder="Enter email"/>
-                                        <small class="form-element__error">Your password isn't manly enough.</small>
-                                    </div>
-                                    <div class="form-element">
-                                        <input type="email" placeholder="Enter email"/>
-                                        <small class="form-element__error">Your password isn't manly enough.</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                </article>
-            </section>
-            <h1 class="doc-section-heading">Slates</h1>
-            <section id="slates">
-                <article>
-                    <div class="slate outlined">
-                        <nav class="nav-bar default outlined">
-                            <div class="nav-bar__menu-toggle">
-                                <span class="juicon juicon-menu"></span>
-                            </div>
-                            <div class="nav-bar__top">
-                                NavBar
-                            </div>
-                            <ul class="nav-bar__list--right">
-                                <li class="nav-bar__list__item">
-                                    <a href="index.html">Link 1</a>
-                                </li>
-                                <li class="nav-bar__list__item">
-                                    <div class="button-group">
-                                        <button type="button" class="button" data-toggle="dropdown">
-                                    <span class="button__content">
-                                        <span class="button__text">Button dropdown</span>
-                                        <span class="button__icon juicon juicon-down"></span>
-                                    </span>
-                                        </button>
-                                        <ul class="dropdown-box">
-                                            <li>
-                                                <a class="dropdown-box__item">Button dropdown</a>
-                                            </li>
-                                            <li>
-                                                <label class="dropdown-box__item--static">
-                                                    <input type="checkbox"/> Derp
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-box__item">Dropdown Menu</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-box__item">Dropdown Menu</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-box__item">Dropdown Menu</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="nav-bar__list__item">
-                                    <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
-                                </li>
-                            </ul>
-                            <div class="nav-bar__appendage">
-                                <div class="grid has-gutters nav-bar__appendage--inner">
-                                    <div class="grid__block">
-                                        <div class="form-element">
-                                            <textarea placeholder="Textareas are fun"></textarea>
-                                            <small class="form-element__error">Your typing is puny. Pump it up.</small>
-                                        </div>
-                                    </div>
-                                    <div class="grid__block">
-                                        <div class="form-element">
-                                            <input type="email" placeholder="Enter email"/>
-                                            <small class="form-element__error">Your password isn't manly enough.</small>
-                                        </div>
-                                        <div class="form-element">
-                                            <input type="email" placeholder="Enter email"/>
-                                            <small class="form-element__error">Your password isn't manly enough.</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
-                        <div class="slate__top outlined">
-                            <div class="slate__top__control">
-                                <button type="button" class="button--flat">
-                                    <span class="button__content default">
-                                        <span class="button__icon juicon juicon-chat"></span>
-                                    </span>
-                                </button>
-                                <button type="button" class="button--flat">
-                                    <span class="button__content default">
-                                        <span class="button__icon juicon juicon-search"></span>
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="slate__top__main">
-                                <span class="slate__heading">derp</span>
-                                <span class="slate__subheading">derp</span>
-                            </div>
-                        </div>
-                        <table class="outlined">
+                    <div class="table-wrap">
+                        <table class="table--outlined">
                             <thead>
                             <tr>
                                 <th>Name</th>
@@ -1707,8 +1335,514 @@
                             </tr>
                             </tbody>
                         </table>
-                        <div class="slate__block outlined account-for-pad removable">
-                            <button type="button" class="close-button"><span class="juicon juicon-trash"></span></button>
+                    </div>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Tooltips</h1>
+            <section id="tooltips">
+                <article>
+                    <p style="margin-top: 0">
+                        We are using <a class="tooltip" title="Go to Tooltipster's site" href="http://iamceege.github.io/tooltipster/">Tooltipster</a> for our tooltips. You can even put <a id="htmlTooltip">HTML</a> in your tooltip!
+                    </p>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Pickers</h1>
+            <section id="pickers">
+                <article id="date-picker-examples">
+                    <h2 class="doc-article-heading">Date Picker</h2>
+                    <div class="form-element">
+                        <label>Choose a date</label>
+                        <div class="input-group">
+                            <div class="input-group__element">
+                                <input type="text" placeholder="00/00/00"/>
+                            </div>
+                            <div class="input-group__action">
+                                <button type="button" class="button button--solid launch-datepicker" data-date-format="yyyy-mm-dd" data-date="2012-02-20">
+                                    <span class="button__content button__content--default"><span class="button__icon juicon juicon-calendar"></span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article id="date-range-examples">
+                    <h2 class="doc-article-heading">Date Range Picker</h2>
+                    <div class="form-element">
+                        <label>Choose a date range</label>
+                        <div class="input-group">
+                            <div class="input-group__element">
+                                <input type="text" placeholder="00/00/00"/>
+                            </div>
+                            <div class="input-group__action">
+                                <button type="button" class="button button--solid launch-daterange opensleft">
+                                    <span class="button__content button__content--default"><span class="button__icon juicon juicon-calendar"></span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Progress</h1>
+            <section id="progress">
+                <article id="progress-examples">
+                    <div class="progress">
+                        <div class="progress__bar success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Slider</h1>
+            <section id="sliders">
+                <article id="slider-examples">
+                    <div class="slider-wrapper">
+                        <input type="text" class="slider" value="" data-slider-min="0" data-slider-max="1000000" data-slider-step="1000" data-slider-value="[0,1000000]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show"/>
+                    </div>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Loading</h1>
+            <section id="loading">
+                <article id="button-loading-examples">
+                    <h2 class="doc-article-heading">Buttons</h2>
+                    <button type="button" class="button load-this">
+                        <span class="button__content button__content--default">Button</span>
+                    </button>
+                </article>
+                <article id="form-loading-examples">
+                    <h2 class="doc-article-heading">Form elements</h2>
+                    <div class="form-element load-this">
+                        <div class="form-element__wrap has-icon">
+                            <div class="form-element__icon juicon juicon-search"></div>
+                            <input type="text" placeholder="Empty input text"/>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Cards</h1>
+            <section id="cards">
+                <article id="card-examples">
+                    <h2 class="doc-article-heading">Static Height</h2>
+                    <ul class="card-list card-list--collapse-on-small-only">
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap">
+                                    <span class=" juicon juicon-documents"></span>
+                                </span>
+                                <span class="card__content">A Default Card</span>
+                            </span>
+                        </li>
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--icon card__cap--solid">
+                                    <span class="juicon juicon-documents"></span>
+                                </span>
+                                <span class="card__content">
+                                    <span class="card__heading">Jake Fleming</span>
+                                    <span class="card__subheading">Visual Designer</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--solid">
+                                    <span class=" juicon juicon-documents"></span>
+                                </span>
+                                <span class="card__content">A Default Card</span>
+                            </span>
+                        </li>
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--img">
+                                    <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
+                                </span>
+                                <span class="card__content">
+                                    <span class="card__heading">Jake Fleming</span>
+                                    <span class="card__subheading">Visual Designer</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--solid" style="background: url('https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg')">
+                                </span>
+                                <span class="card__content">
+                                    <span class="card__heading">Jake Fleming</span>
+                                    <span class="card__subheading">Visual Designer</span>
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+                <article id="card-multiline-examples">
+                    <h2 class="doc-article-heading">Multi-line</h2>
+                    <ul class="card-list card-list--collapse-on-small-only">
+                        <li class="card multi-line">
+                            <span class="card__body">
+                                <span class="card__cap">
+                                    <span class=" juicon juicon-documents"></span>
+                                </span>
+                                <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
+                            </span>
+                        </li>
+                        <li class="card multi-line">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--icon card__cap--solid">
+                                    <span class="juicon juicon-documents"></span>
+                                </span>
+                                <span class="card__content">
+                                    Spans multiple lines and doesn't get cut off by an ellipsis.
+                                </span>
+                            </span>
+                        </li>
+                        <li class="card multi-line">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--solid">
+                                    <span class=" juicon juicon-documents"></span>
+                                </span>
+                                <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
+                            </span>
+                        </li>
+                        <li class="card multi-line">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--img">
+                                    <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
+                                </span>
+                                <span class="card__content">
+                                    Spans multiple lines and doesn't get cut off by an ellipsis.
+                                </span>
+                            </span>
+                        </li>
+                        <li class="card multi-line">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--solid" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
+                                </span>
+                                <span class="card__content">
+                                    Spans multiple lines and doesn't get cut off by an ellipsis.
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+                <article id="">
+                    <h2 class="doc-article-heading">Special</h2>
+                    <ul class="card-list card-list--collapse-on-small-only">
+                        <li class="card">
+                            <span class="card__body">
+                                <span class="card__cap card__cap--img">
+                                    <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
+                                </span>
+                                <span class="card__content">
+                                    <span class="card__heading">Jake Fleming</span>
+                                    <span class="card__subheading">Visual Designer</span>
+                                </span>
+                            </span>
+                            <span class="card__block">
+                                Has content and an extra block for more information.
+                            </span>
+                        </li>
+                        <li class="card">
+                            <span class="card__feature" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
+                            </span>
+                            <span class="card__body">
+                                <span class="card__content">
+                                    <span class="card__heading">Jake Fleming</span>
+                                    <span class="card__subheading">Visual Designer</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="card">
+                            <span class="card__feature">
+                                <span class="juicon juicon-documents"></span>
+                            </span>
+                            <span class="card__body">
+                                <span class="card__content">
+                                    <span class="card__heading">Jake Fleming</span>
+                                    <span class="card__subheading">Visual Designer</span>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="card">
+                            <span class="card__feature card__feature--solid">
+                                <span class="juicon juicon-documents"></span>
+                            </span>
+                            <span class="card__body">
+                                <span class="card__content">
+                                    <span class="card__heading">Jake Fleming</span>
+                                    <span class="card__subheading">Visual Designer</span>
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Bars</h1>
+            <section id="bars" class="vertical">
+                <article>
+                    <nav class="nav-bar nav-bar--default">
+                        <div class="nav-bar__menu-toggle">
+                            <span class="juicon juicon-menu"></span>
+                        </div>
+                        <div class="nav-bar__top">
+                            NavBar
+                        </div>
+                        <ul class="nav-bar__list nav-bar__list--right ">
+                            <li class="nav-bar__list-item">
+                                <a href="index.html">Link 1</a>
+                            </li>
+                            <li class="nav-bar__list-item">
+                                <div class="button-group">
+                                    <button type="button" class="button button--solid" data-toggle="dropdown">
+                                    <span class="button__content">
+                                        <span class="button__text">Button dropdown</span>
+                                        <span class="button__icon juicon juicon-down"></span>
+                                    </span>
+                                    </button>
+                                    <ul class="dropdown-box">
+                                        <li>
+                                            <a class="dropdown-box__item">Button dropdown</a>
+                                        </li>
+                                        <li>
+                                            <label class="dropdown-box__item dropdown-box__item--static">
+                                                <input type="checkbox"/> Derp
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar__list-item">
+                                <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
+                            </li>
+                        </ul>
+                        <div class="nav-bar__appendage">
+                            <div class="grid has-gutters nav-bar__appendage-inner">
+                                <div class="grid__block">
+                                    <div class="form-element">
+                                        <textarea placeholder="Textareas are fun"></textarea>
+                                        <small class="form-element__error-text">Your typing is puny. Pump it up.</small>
+                                    </div>
+                                </div>
+                                <div class="grid__block">
+                                    <div class="form-element">
+                                        <input type="email" placeholder="Enter email"/>
+                                        <small class="form-element__error-text">Your password isn't manly enough.</small>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="email" placeholder="Enter email"/>
+                                        <small class="form-element__error-text">Your password isn't manly enough.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </article>
+                <article>
+                    <nav class="nav-bar nav-bar--primary">
+                        <div class="nav-bar__menu-toggle">
+                            <span class="juicon juicon-menu"></span>
+                        </div>
+                        <div class="nav-bar__top">
+                            NavBar
+                        </div>
+                        <ul class="nav-bar__list nav-bar__list--right ">
+                            <li class="nav-bar__list-item">
+                                <a href="index.html">Link 1</a>
+                            </li>
+                            <li class="nav-bar__list-item">
+                                <div class="button-group">
+                                    <button type="button" class="button button--solid" data-toggle="dropdown">
+                                    <span class="button__content">
+                                        <span class="button__text">Button dropdown</span>
+                                        <span class="button__icon juicon juicon-down"></span>
+                                    </span>
+                                    </button>
+                                    <ul class="dropdown-box">
+                                        <li>
+                                            <a class="dropdown-box__item">Button dropdown</a>
+                                        </li>
+                                        <li>
+                                            <label class="dropdown-box__item dropdown-box__item--static">
+                                                <input type="checkbox"/> Derp
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-box__item">Dropdown Menu</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-bar__list-item">
+                                <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
+                            </li>
+                        </ul>
+                        <div class="nav-bar__appendage">
+                            <div class="grid has-gutters nav-bar__appendage-inner">
+                                <div class="grid__block">
+                                    <div class="form-element">
+                                        <textarea placeholder="Textareas are fun"></textarea>
+                                        <small class="form-element__error-text">Your typing is puny. Pump it up.</small>
+                                    </div>
+                                </div>
+                                <div class="grid__block">
+                                    <div class="form-element">
+                                        <input type="email" placeholder="Enter email"/>
+                                        <small class="form-element__error-text">Your password isn't manly enough.</small>
+                                    </div>
+                                    <div class="form-element">
+                                        <input type="email" placeholder="Enter email"/>
+                                        <small class="form-element__error-text">Your password isn't manly enough.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </article>
+            </section>
+            <h1 class="doc-section-heading">Slates</h1>
+            <section id="slates">
+                <article>
+                    <div class="slate slate--outlined">
+                        <nav class="nav-bar nav-bar--default nav-bar--outlined">
+                            <div class="nav-bar__menu-toggle">
+                                <span class="juicon juicon-menu"></span>
+                            </div>
+                            <div class="nav-bar__top">
+                                NavBar
+                            </div>
+                            <ul class="nav-bar__list nav-bar__list--right ">
+                                <li class="nav-bar__list-item">
+                                    <a href="index.html">Link 1</a>
+                                </li>
+                                <li class="nav-bar__list-item">
+                                    <div class="button-group">
+                                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                                    <span class="button__content">
+                                        <span class="button__text">Button dropdown</span>
+                                        <span class="button__icon juicon juicon-down"></span>
+                                    </span>
+                                        </button>
+                                        <ul class="dropdown-box">
+                                            <li>
+                                                <a class="dropdown-box__item">Button dropdown</a>
+                                            </li>
+                                            <li>
+                                                <label class="dropdown-box__item dropdown-box__item--static">
+                                                    <input type="checkbox"/> Derp
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-box__item">Dropdown Menu</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-box__item">Dropdown Menu</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-box__item">Dropdown Menu</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-bar__list-item">
+                                    <a class="nav-bar__appendage-toggle"><span class="juicon juicon-gear"></span></a>
+                                </li>
+                            </ul>
+                            <div class="nav-bar__appendage">
+                                <div class="grid has-gutters nav-bar__appendage-inner">
+                                    <div class="grid__block">
+                                        <div class="form-element">
+                                            <textarea placeholder="Textareas are fun"></textarea>
+                                            <small class="form-element__error-text">Your typing is puny. Pump it up.</small>
+                                        </div>
+                                    </div>
+                                    <div class="grid__block">
+                                        <div class="form-element">
+                                            <input type="email" placeholder="Enter email"/>
+                                            <small class="form-element__error-text">Your password isn't manly enough.</small>
+                                        </div>
+                                        <div class="form-element">
+                                            <input type="email" placeholder="Enter email"/>
+                                            <small class="form-element__error-text">Your password isn't manly enough.</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="slate__top slate__top--outlined">
+                            <div class="slate__top-control">
+                                <button type="button" class="button button--flat">
+                                    <span class="button__content button__content--primary">
+                                        <span class="button__icon juicon juicon-chat"></span>
+                                    </span>
+                                </button>
+                                <button type="button" class="button button--flat">
+                                    <span class="button__content button__content--primary">
+                                        <span class="button__icon juicon juicon-search"></span>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="slate__top-main">
+                                <span class="slate__heading">derp</span>
+                                <span class="slate__subheading">derp</span>
+                            </div>
+                        </div>
+                        <div class="table-wrap">
+                            <table class="table--outlined">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Sex</th>
+                                    <th>Location</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Jake Fleming</td>
+                                    <td>27</td>
+                                    <td>M</td>
+                                    <td>Chicago, IL</td>
+                                </tr>
+                                <tr class="tr">
+                                    <td>Jake Fleming</td>
+                                    <td>27</td>
+                                    <td>M</td>
+                                    <td>Chicago, IL</td>
+                                </tr>
+                                <tr>
+                                    <td>Jake Fleming</td>
+                                    <td>27</td>
+                                    <td>M</td>
+                                    <td>Chicago, IL</td>
+                                </tr>
+                                <tr>
+                                    <td>Jake Fleming</td>
+                                    <td>27</td>
+                                    <td>M</td>
+                                    <td>Chicago, IL</td>
+                                </tr>
+                                <tr>
+                                    <td>Jake Fleming</td>
+                                    <td>27</td>
+                                    <td>M</td>
+                                    <td>Chicago, IL</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="slate__block slate__block--outlined slate__block--has-no-bottom-pad slate__block--removable">
+                            <button type="button" class="slate__block-close-button"><span class="juicon juicon-trash"></span></button>
                             <div class="grid orient--vertical-on-small has-gutters">
                                 <div class="grid__block--4-on-medium">
                                     <div class="form-element">
@@ -1723,8 +1857,8 @@
                                                 </select>
                                             </div>
                                             <div class="input-group__action">
-                                                <button type="button" class="button">
-                                                    <span class="button__content default"><span class="button__icon juicon juicon-search"></span></span>
+                                                <button type="button" class="button button--solid">
+                                                    <span class="button__content button__content--default"><span class="button__icon juicon juicon-search"></span></span>
                                                 </button>
                                             </div>
                                         </div>
@@ -1733,8 +1867,8 @@
                                 <div class="grid__block--4-on-medium">
                                     <div class="form-element">
                                         <label class="srt-only">Select</label>
-                                        <div class="select-wrap">
-                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                        <div class="select-element">
+                                            <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
                                                 <option>derp</option>
                                             </select>
@@ -1744,8 +1878,8 @@
                                 <div class="grid__block--4-on-medium">
                                     <div class="form-element">
                                         <label class="srt-only">Select</label>
-                                        <div class="select-wrap">
-                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                        <div class="select-element">
+                                            <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
                                                 <option>derp</option>
                                             </select>
@@ -1754,14 +1888,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slate__block outlined account-for-pad removable">
-                            <button type="button" class="close-button"><span class="juicon juicon-trash"></span></button>
+                        <div class="slate__block slate__block--outlined slate__block--has-no-bottom-pad  slate__block--removable">
+                            <button type="button" class="slate__block-close-button"><span class="juicon juicon-trash"></span></button>
                             <div class="grid orient--vertical-on-small has-gutters">
                                 <div class="grid__block--4-on-medium">
                                     <div class="form-element">
                                         <label class="srt-only">Select</label>
-                                        <div class="select-wrap">
-                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                        <div class="select-element">
+                                            <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
                                                 <option>derp</option>
                                             </select>
@@ -1771,8 +1905,8 @@
                                 <div class="grid__block--4-on-medium">
                                     <div class="form-element">
                                         <label class="srt-only">Select</label>
-                                        <div class="select-wrap">
-                                            <div class="select-wrap__icon juicon juicon-down"></div>
+                                        <div class="select-element">
+                                            <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
                                                 <option>derp</option>
                                             </select>
@@ -1788,10 +1922,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="slate__bottom outlined">
+                        <div class="slate__bottom slate__bottom--outlined">
                             <div class="slate__bottom__control">
-                                <button type="button" class="button">
-                                    <span class="button__content primary">
+                                <button type="button" class="button button--solid">
+                                    <span class="button__content button__content--primary">
                                         <span class="button__text">Submit</span>
                                         <span class="button__icon juicon juicon-forward"></span>
                                     </span>
@@ -1823,9 +1957,9 @@
         $('#select-state, #select-state3').selectize({
             onChange : function(selectItems){
                 if(selectItems != null){
-                    $('.selectize-wrap .selectize-input.has-items').closest('.selectize-wrap').find('.clear-selectize').addClass('active')
+                    $('.selectize-wrap .selectize-input.has-items').closest('.selectize-wrap').find('.clear-selectize').addClass('clear-selectize--active')
                 } else {
-                    $('.selectize-wrap .selectize-input').closest('.selectize-wrap').find('.clear-selectize').removeClass('active')
+                    $('.selectize-wrap .selectize-input').closest('.selectize-wrap').find('.clear-selectize').removeClass('clear-selectize--active')
                 }
             }
         });
@@ -1842,9 +1976,9 @@
             sortField: 'text',
             onChange : function(selectItems){
                 if(selectItems != null){
-                    $('.selectize-wrap .selectize-input.has-items').closest('.selectize-wrap').find('.clear-selectize').addClass('active')
+                    $('.selectize-wrap .selectize-input.has-items').closest('.selectize-wrap').find('.clear-selectize').addClass('clear-selectize--active')
                 } else {
-                    $('.selectize-wrap .selectize-input').closest('.selectize-wrap').find('.clear-selectize').removeClass('active')
+                    $('.selectize-wrap .selectize-input').closest('.selectize-wrap').find('.clear-selectize').removeClass('clear-selectize--active')
                 }
             }
         });
@@ -1855,7 +1989,7 @@
             $('#htmlTooltip').tooltipster({
                 interactive: true,
                 position: 'bottom-left',
-                content: $('<div style="max-width: 300px">You can have users read something and then click a button or something!<br/><br/><button type="button" class="button"><span class="button__content primary">Like this!</span></button></div>')
+                content: $('<div style="max-width: 300px">You can have users read something and then click a button or something!<br/><br/><button type="button" class="button button--solid"><span class="button__content button__content--primary">Like this!</span></button></div>')
             });
         });
         //datepicker

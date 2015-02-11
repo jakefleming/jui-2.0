@@ -2,15 +2,16 @@
 @import "base/fonts";
 @import "base/normalize";
 @import "layout/index";
+
 body .scope-container {
   @import "base/type";
-  @import "modules/index";
-  @import "state/index";
-  //third party
-  @import "lib/progress";
-  @import "lib/slider";
-  @import "lib/selectize";
-  @import "lib/tooltipster";
   @import "lib/date-picker";
   @import "lib/daterangepicker";
+  //third party
+  @import "lib/progress";
+  @import "lib/selectize";
+  @import "lib/slider";
+  @import "lib/tooltipster";
+  @import "modules/index";
+  @import "state/index";
 }

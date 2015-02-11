@@ -1,9 +1,10 @@
-.no-flexbox { //This is a class applied to HTML by Modernizr. This is a fallback if flexbox isn't detected.
+.no-flexbox {
+  //This is a class applied to HTML by Modernizr. This is a fallback if flexbox isn't detected.
   //grid definitions
   .grid {
+    @include clearfix;
     display: block;
     min-height: 1px;
-    @include clearfix();
     &.has-gutters {
       margin-left: -(em(16));
     }
@@ -17,32 +18,32 @@
         &-on-xsmall {
           > .grid__block {
             @media (min-width: $brkpoint-xs) {
-              width: percentage(1 / $i);
               float: left;
+              width: percentage(1 / $i);
             }
           }
         }
         &-on-small {
           > .grid__block {
             @media (min-width: $brkpoint-sm) {
-              width: percentage(1 / $i);
               float: left;
+              width: percentage(1 / $i);
             }
           }
         }
         &-on-medium {
           > .grid__block {
             @media (min-width: $brkpoint-md) {
-              width: percentage(1 / $i);
               float: left;
+              width: percentage(1 / $i);
             }
           }
         }
         &-on-large {
           > .grid__block {
             @media (min-width: $brkpoint-lg) {
-              width: percentage(1 / $i);
               float: left;
+              width: percentage(1 / $i);
             }
           }
         }
@@ -71,15 +72,14 @@
       }
     }
   }
-
   //grid block definitions
-  [class^="grid__"] {
+  [class*="grid__"] {
     display: block;
-    position: relative;
     min-height: 1px;
+    position: relative;
   }
   .grid.has-gutters {
-    > [class^="grid__"] {
+    > [class*="grid__"] {
       padding-left: px($base--num);
     }
   }
@@ -87,26 +87,41 @@
   @for $i from $column-count through 1 {
     .grid__block--#{$i}-on-xsmall {
       @media (min-width: $brkpoint-xs) {
-        width: percentage(($column-count + $i) / $column-count);
         float: left;
+        width: percentage(($column-count + $i) / $column-count);
       }
     }
     .grid__block--#{$i}-on-small {
       @media (min-width: $brkpoint-sm) {
-        width: percentage($i / $column-count);
         float: left;
+        width: percentage($i / $column-count);
       }
     }
     .grid__block--#{$i}-on-medium {
       @media (min-width: $brkpoint-md) {
-        width: percentage($i / $column-count);
         float: left;
+        width: percentage($i / $column-count);
       }
     }
     .grid__block--#{$i}-on-large {
       @media (min-width: $brkpoint-lg) {
-        width: percentage($i / $column-count);
         float: left;
+        width: percentage($i / $column-count);
+      }
+    }
+  }
+  //offset
+  @for $i from 1 through $column-count {
+    .offset--right--#{$i} {
+      left: percentage($i / $column-count);
+      @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+        left: auto;
+      }
+    }
+    .offset--left--#{$i} {
+      right: percentage($i / $column-count);
+      @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+        right: auto;
       }
     }
   }

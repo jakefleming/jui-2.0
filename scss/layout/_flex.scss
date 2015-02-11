@@ -1,11 +1,11 @@
 //mixins for flex grid can be found in the "mixins" scss file, since they might be used for things other than the main grid
 
-
-.flexbox { //this is a class put on HTML by Modernizr. Remove this scope if you don't care about IE
+.flexbox {
+  //this is a class put on HTML by Modernizr. Remove this scope if you don't care about IE
   //grid definitions
   .grid {
-    @include flexbox();
     @include flex-wrap(wrap);
+    @include flexbox;
     &.has-gutters {
       margin-left: -(px($base--num));
     }
@@ -68,14 +68,18 @@
       }
     }
   }
-
   //grid block definitions
-  [class^="grid__"] {
+  [class*="grid__"] {
+    @include flex;
+    @include flexbox;
+    @include flex-direction(column);
     position: relative;
-    @include flex();
+    * {
+      @include flex();
+    }
   }
-  .grid.has-gutters {
-    >[class^="grid__"] {
+  .grid.has-gutters, .grid__block {
+    > [class*="grid__"] {
       padding-left: px($base--num);
     }
   }
@@ -83,22 +87,22 @@
   @for $i from 1 through $column-count {
     .grid__block--#{$i}-on-xsmall {
       @media (min-width: $brkpoint-xs) {
-        @include flex( 0 0 percentage($i / $column-count));
+        @include flex(0 0 percentage($i / $column-count));
       }
     }
     .grid__block--#{$i}-on-small {
       @media (min-width: $brkpoint-sm) {
-        @include flex( 0 0 percentage($i / $column-count));
+        @include flex(0 0 percentage($i / $column-count));
       }
     }
-    .grid__block--#{$i}-on-medium{
+    .grid__block--#{$i}-on-medium {
       @media (min-width: $brkpoint-md) {
-        @include flex( 0 0 percentage($i / $column-count));
+        @include flex(0 0 percentage($i / $column-count));
       }
     }
     .grid__block--#{$i}-on-large {
       @media (min-width: $brkpoint-lg) {
-        @include flex( 0 0 percentage($i / $column-count));
+        @include flex(0 0 percentage($i / $column-count));
       }
     }
   }
@@ -134,4 +138,7 @@
 //handling items when flex is applied
 ul.grid {
   list-style-type: none;
+  li {
+    margin-left: 0;
+  }
 }
