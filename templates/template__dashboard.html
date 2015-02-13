@@ -17,12 +17,12 @@
 </head>
 <body>
 <div class="scope-container">
-    <div id="docs" class="has-md-padding-for-md">
+    <div class="constrained constrained--large has-md-padding-for-md">
         <!--template-->
-        <div class="grid has-gutters separate orient--vertical-on-small">
+        <div class="grid has-gutters grid--separate orient--vertical-on-small">
             <div class="grid__block--3-on-medium">
-                <ul class="list collapse-on-small-only">
-                    <li class="list__item active">
+                <ul class="list list--outlined list--collapse-on-small-only">
+                    <li class="list__item list__item--active">
                         <span class="list__item-icon juicon juicon-dashboard"></span>
                         <span class="list__item-content">Dashboard</span>
                     </li>
@@ -33,18 +33,13 @@
                     <li class="list__item">
                         <span class="list__item-icon juicon juicon-chart-bar"></span>
                         <span class="list__item-content">Trends</span>
-                        <span class="list__item-alert">
-                            <span class="list__item-alert__content error">
-                                <div class="juicon juicon-exclamation"></div>
-                            </span>
-                        </span>
                     </li>
                 </ul>
             </div>
-            <div class="grid__block--9-on-medium separate-on-medium collapse-on-small-only">
-                <div class="grid holds-3-blocks-on-medium has-gutters orient--vertical-on-small">
-                    <div class="grid__block">
-                        <li class="card">
+            <div class="grid__block--9-on-medium card-list card-list--collapse-on-small-only">
+                <div class="grid grid--separate-on-medium has-gutters orient--vertical-on-small">
+                    <div class="grid__block grid__block--4-on-medium">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap">
                                     <span class=" juicon juicon-group"></span>
@@ -55,8 +50,8 @@
                             </span>
                         </li>
                     </div>
-                    <div class="grid__block">
-                        <li class="card">
+                    <div class="grid__block grid__block--4-on-medium">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap">
                                     <span class=" juicon juicon-trophy"></span>
@@ -67,8 +62,8 @@
                             </span>
                         </li>
                     </div>
-                    <div class="grid__block">
-                        <li class="card">
+                    <div class="grid__block grid__block--4-on-medium">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap">
                                     <span class=" juicon juicon-check"></span>
@@ -79,13 +74,11 @@
                             </span>
                         </li>
                     </div>
-                </div>
-                <div class="grid orient--vertical-on-small has-gutters holds-2-blocks">
-                    <div class="grid__block">
-                        <div class="slate slate--outlined">
+                    <div class="grid__block grid__block--6-on-medium growing-children">
+                        <div class="slate slate--outlined slate--collapse-on-small-only">
                             <div class="slate__top slate__top--outlined">
                                 <div class="slate__top-main">
-                                    <span class="slate__heading">Recent Leads</span>
+                                    <span class="slate__title">Recent Leads</span>
                                 </div>
                             </div>
                             <table class="table--outlined">
@@ -116,11 +109,11 @@
                             </table>
                         </div>
                     </div>
-                    <div class="grid__block">
-                        <div class="slate slate--outlined">
+                    <div class="grid__block grid__block--6-on-medium growing-children">
+                        <div class="slate slate--outlined slate--collapse-on-small-only">
                             <div class="slate__top slate__top--outlined">
                                 <div class="slate__top-main">
-                                    <span class="slate__heading">Recent Goals</span>
+                                    <span class="slate__title">Recent Goals</span>
                                 </div>
                             </div>
                             <table class="table--outlined">
@@ -159,11 +152,11 @@
                             </table>
                         </div>
                     </div>
-                    <div class="grid__block--12-on-medium">
-                        <div class="slate slate--outlined">
+                    <div class="grid__block grid__block--12-on-medium">
+                        <div class="slate slate--outlined slate--collapse-on-small-only">
                             <div class="slate__top slate__top--outlined">
                                 <div class="slate__top-main">
-                                    <span class="slate__heading">Profits</span>
+                                    <span class="slate__title">Profits</span>
                                 </div>
                             </div>
                             <div class="blank-state">

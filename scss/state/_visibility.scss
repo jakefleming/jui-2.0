@@ -1,0 +1,8 @@
+//mostly hiding and showing with js
+.hide {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: $trans-duration;
+}

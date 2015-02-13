@@ -1,12 +1,19 @@
 @import "utilities/index";
 @import "base/fonts/jui-lettering-medium";
 
-//html {
-//  height: 100%;
-//}
+html {
+  height: 100%
+}
 //body, .scope-container, #docs {
 //  height: inherit;
 //}
+
+.doc-bg-1 {
+  background-color: $color--gray--x-light;
+}
+.doc-bg-transparent {
+  background-color: transparent;
+}
 
 body .scope-container {
   //type

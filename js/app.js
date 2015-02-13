@@ -1,8 +1,17 @@
+//handle touch
+$.fn.click = function(listener) {
+
+    return this.each(function() {
+
+        var $this = $( this );
+
+        $this.on('vclick', listener);
+
+    });
+
+};
+
 $(document).ready(function() {
-    
-
-
-
 
       // // // // // // //
      // Dropdown menus //
@@ -17,12 +26,13 @@ $(document).ready(function() {
     }
     //close dropdown
     function closeDropdown(clickedElement) {
-        console.log(clickedElement);
+        //console.log(clickedElement);
         $('.dropdown-box').removeClass('dropdown-box--active');
     }
     //when dropdown button is clicked toggle dropdown
     $('[data-toggle="dropdown"]').on('click', function( e ) {
         e.stopPropagation();
+        closeDropdown();
         openDropdown(this);
     });
 
@@ -85,22 +95,22 @@ $(document).ready(function() {
     $("[data-toggle='callout']").on("click", function() {
         displayCallout(this);
         removeScroll();
-    })
+    });
     //when button is clicked add no scroll to body
     $('body').on('click', '[data-toggle="callout"]', function () {
         displayBD();
-    })
+    });
     //when backdrop is clicked, close callout and remove class from body
     $('body').on('click', function () {
         addScroll();
         hideCallout();
         hideBD();
-    })
+    });
     $('.callout').on('click', '[data-dismiss="callout"]', function () {
         addScroll();
         hideCallout();
         hideBD();
-    })
+    });
     //clicking certain elements will not close modal
     $('body').on('click', '.callout, [data-toggle="callout"]', function(e){
         e.stopPropagation();
@@ -114,7 +124,7 @@ $(document).ready(function() {
 
     $('body').on('click','.alert .alert__close-button', function() {
         $(this).closest('.alert').removeClass('alert--active');
-    })
+    });
 
       // // // //
      // lists //
@@ -126,7 +136,7 @@ $(document).ready(function() {
 
     $('body').on('click', '.list-item', function(){
 
-    })
+    });
 
       // // // // //
      // nav-bar  //
@@ -156,7 +166,39 @@ $(document).ready(function() {
         control.clear();
         $(this).closest('.selectize-wrap').find('.selectize-input').removeClass('has-items');
         $(this).closest('.selectize-wrap').find('.clear-selectize').removeClass('clear-selectize--active');
-    })
+    });
 
 
-})
+      // // // // //
+     // Drawers  //
+    // // // // //
+
+    //Open Drawer
+    function openDrawer(t) {
+        var id = $(t).attr('data-target');
+        $('#' + id).toggleClass('drawer--active');
+    }
+    //Close Drawer
+    function closeDrawer() {
+        $('.drawer.drawer--active').removeClass('drawer--active');
+    }
+
+    //when button is clicked open Drawer
+    $("[data-toggle='drawer']").on("click", function() {
+        openDrawer(this);
+    });
+
+    //when backdrop is clicked, close callout and remove class from body
+    $('body').on('click', function () {
+        closeDrawer();
+    });
+    $('.drawer').on('click', '[data-dismiss="drawer"]', function () {
+        closeDrawer();
+    });
+    //clicking certain elements will not close modal
+    $('body').on('click', '.drawer, [data-toggle="drawer"]', function(e){
+        e.stopPropagation();
+    });
+
+
+});

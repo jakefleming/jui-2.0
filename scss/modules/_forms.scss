@@ -6,12 +6,12 @@ $form-element-bg: #e8eaeb;
   padding-bottom: em(16);
   position: relative;
   //labels for form elements
-  label {
+  &__label {
     color: $color--gray--dark;
     display: block;
     font-family: $font--1;
-    font-size: em(14);
-    line-height: em(24, 14);
+    font-size: 1em;
+    line-height: 1.5;
   }
 }
 
@@ -65,7 +65,7 @@ input {
 //textareas
 textarea {
   @extend %form-element-base;
-  //margin: em(2) 0;
+  -webkit-appearance: none;
   appearance: none;
   box-shadow: none;
   height: em(96);
@@ -293,7 +293,7 @@ input[type="file"] {
   input[type=checkbox], input[type=radio] {
     border-color: $color--error;
   }
-  label {
+  .form-element__label {
     color: $color--error;
   }
   .form-element__error-text {
@@ -312,7 +312,7 @@ input[type="file"] {
 //labels for inputs
 label {
   &.input-size {
-    padding: em(8, 14) 0;
+    padding: .5em 0;
   }
 }
 

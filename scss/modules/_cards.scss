@@ -14,8 +14,11 @@
       border-radius: 0;
       border-top-width: 0;
       margin: 0 !important;
-      &:first-child {
-        border-top-width: 1px;
+      &--outlined {
+        box-shadow: inset 0 1px $component-border-color, inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+        &:first-child {
+          box-shadow: 0 -1px $component-border-color, inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+        }
       }
     }
     &-on-small-only {
@@ -37,9 +40,7 @@
 .card {
   background-color: $color--white;
   border-radius: $base--radius;
-  border: 1px solid $component-border-color;
   box-shadow: none;
-  cursor: pointer;
   display: block;
   font-family: $font--1;
   font-size: 1em;
@@ -47,11 +48,15 @@
   overflow: hidden;
   transition: $trans-duration;
   transition: background-color $trans-duration;
+  &--outlined {
+    box-shadow: inset 0 0 0 1px $component-border-color;
+  }
   //on hover give a 3D effect of the card raising
-  &:hover {
+  &--actionable:hover {
     @media (min-width: $brkpoint-md) {
       border-color: $color--white;
-      box-shadow: 0 1px 3px transparentize($color--black, 0.6);
+      box-shadow: 0 1px 3px transparentize($color--black, 0.6)!important;
+      cursor: pointer;
       transform: translateY(-2px);
       transition: $trans-duration;
     }
@@ -64,13 +69,13 @@
     table-layout: fixed;
     width: 100%;
     + .card__block {
-      padding-top: 1px;
+      padding-top: 0px;
     }
   }
   //a general block level div to contain content
   &__block {
     display: block;
-    padding: em(15);
+    padding: 1em;
     + .card__body {
       padding-top: 1px;
     }
@@ -80,7 +85,7 @@
     display: table-cell;
     line-height: 1.5;
     overflow: hidden;
-    padding: em(15);
+    padding: 1em;
     text-overflow: ellipsis;
     vertical-align: middle;
     white-space: nowrap;
@@ -91,7 +96,7 @@
     color: $color--gray;
     display: table-cell;
     line-height: 1.5;
-    padding: em(15);
+    padding: 1em;
     text-align: center;
     vertical-align: top;
     width: 3.5em;
@@ -177,7 +182,7 @@
     line-height: em(16, 14);
   }
   //removes the height restriction from a card
-  &.multi-line {
+  &--multi-line {
     .card__content {
       white-space: normal;
     }

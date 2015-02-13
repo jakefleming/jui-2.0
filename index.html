@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="css/styles-scoped.css"/>
     <link rel="stylesheet" href="css/docs.css"/><!--takes place of styles.scss for docs-->
     <script src="js/modernizr.js"></script><!--detect if browser supports stuff like flexbox-->
-    <!--<link rel="stylesheet" href="http://basehold.it/8">-->
+<!--
+    <link rel="stylesheet" href="http://basehold.it/8">
+-->
 </head>
 <body>
     <div class="scope-container">
@@ -463,7 +465,7 @@
                 </article>
             </section>
             <h1 class="doc-section-heading">Buttons</h1>
-            <p>There are two types of buttons--Solid &amp; Flat. Solid buttons are usually used for the most obvious and important action on the screen or piece of content. Flat buttons are reserved for situations where we need multiple buttons that don't necessarily need to attract the user's eye.</p>
+            <p>There are two types of buttons -- Solid &amp; Flat. Solid buttons are usually used for the most obvious and important action on the screen or piece of content. Flat buttons are reserved for situations where we need multiple buttons that don't necessarily need to attract the user's eye.</p>
             <section id="buttons" class="vertical">
                 <article id="solid-button-examples">
                     <h2 class="doc-article-heading">Solid Buttons</h2>
@@ -600,7 +602,7 @@
                                 <span class="button__text">Split dropdown</span>
                             </span>
                         </button>
-                        <button type="button" class="button button--solid" data-toggle="dropdown">
+                        <button type="button" class="button button--solid button--split" data-toggle="dropdown">
                             <span class="button__content button__content--default">
                                 <span class="button__icon juicon juicon-down"></span>
                             </span>
@@ -641,7 +643,7 @@
                                 <div class="form-element">
                                     <div class="form-element__wrap has-icon">
                                         <div class="form-element__icon juicon juicon-person"></div>
-                                        <input type="text" placeholder="Empty input text"/>
+                                        <input type="text" placeholder="User name"/>
                                     </div>
                                 </div>
                                 <div class="form-element">
@@ -650,7 +652,7 @@
                                         <input type="password" placeholder="Password"/>
                                     </div>
                                 </div>
-                                <button type="button" class="button stretch" data-dismiss="dropdown">
+                                <button type="button" class="button button--solid stretch" data-dismiss="dropdown">
                                     <span class="button__content button__content--primary">Sign in</span>
                                 </button>
                             </div>
@@ -664,15 +666,15 @@
                 <article id="form-element-examples">
                     <!--Form Elements-->
                     <div class="form-element">
-                        <label>Text input</label>
+                        <label class="form-element__label">Text input</label>
                         <input type="text" placeholder="Empty input text"/>
                     </div>
                     <div class="form-element">
-                        <label>Textarea</label>
+                        <label class="form-element__label">Textarea</label>
                         <textarea placeholder="Empty textarea text"></textarea>
                     </div>
                     <div class="form-element">
-                        <label>Input group</label>
+                        <label class="form-element__label">Input group</label>
                         <div class="input-group">
                             <div class="input-group__element">
                                 <input type="text" placeholder="Search"/>
@@ -685,14 +687,14 @@
                         </div>
                     </div>
                     <div class="form-element">
-                        <label>Text input with icon</label>
+                        <label class="form-element__label">Text input with icon</label>
                         <div class="form-element__wrap has-icon">
                             <div class="form-element__icon juicon juicon-search"></div>
                             <input type="text" placeholder="Empty input text"/>
                         </div>
                     </div>
                     <div class="form-element">
-                        <label>Select</label>
+                        <label class="form-element__label">Select</label>
                         <div class="select-element">
                             <div class="select-element__icon juicon juicon-down"></div>
                             <select>
@@ -702,18 +704,18 @@
                     </div>
                     <ul class="form-list form-list--collapse">
                         <li class="form-element">
-                            <label class="input-size">
+                            <label class="form-element__label input-size">
                                 <input type="checkbox"/> Derp
                             </label>
                         </li>
                         <li class="form-element">
-                            <label class="input-size">
+                            <label class="form-element__label input-size">
                                 <input type="radio"/> Derp
                             </label>
                         </li>
                     </ul>
                     <div class="form-element">
-                        <label>Typeahead Multiselect</label>
+                        <label class="form-element__label">Typeahead Multiselect</label>
                         <select id="select-state" class="mar--sm--bm" multiple>
                             <option value="">Select states...</option>
                             <option value="AL">Alabama</option>
@@ -770,7 +772,7 @@
                         </select>
                     </div>
                     <div class="form-element">
-                        <label>Typeahead Select</label>
+                        <label class="form-element__label">Typeahead Select</label>
                         <div class="input-group">
                             <div class="input-group__element">
                                 <select id="select-state2">
@@ -835,7 +837,7 @@
                         </div>
                     </div>
                     <div class="form-element">
-                        <label>Tags</label>
+                        <label class="form-element__label">Tags</label>
                         <div class="selectize-wrap">
                             <select id="select-tags" multiple="multiple">
                                 <option value="">Type or select tags...</option>
@@ -856,17 +858,17 @@
                 <article id="form-element-error-examples">
                     <!--Form Elements-->
                     <div class="form-element form-element--has-error">
-                        <label>Text input</label>
+                        <label class="form-element__label">Text input</label>
                         <input type="text" placeholder="Empty input text"/>
                         <span class="form-element__error-text">Error Text</span>
                     </div>
                     <div class="form-element form-element--has-error">
-                        <label>Textarea</label>
+                        <label class="form-element__label">Textarea</label>
                         <textarea placeholder="Empty textarea text"></textarea>
                         <span class="form-element__error-text">Error Text</span>
                     </div>
                     <div class="form-element form-element--has-error">
-                        <label>Input group</label>
+                        <label class="form-element__label">Input group</label>
                         <div class="input-group">
                             <div class="input-group__element">
                                 <input type="text" placeholder="Search"/>
@@ -880,7 +882,7 @@
                         <span class="form-element__error-text">Error Text</span>
                     </div>
                     <div class="form-element form-element--has-error">
-                        <label>Text input</label>
+                        <label class="form-element__label">Text input</label>
                         <div class="form-element__wrap has-icon">
                             <div class="form-element__icon juicon juicon-search"></div>
                             <input type="text" placeholder="Empty input text"/>
@@ -888,7 +890,7 @@
                         <span class="form-element__error-text">Error Text</span>
                     </div>
                     <div class="form-element form-element--has-error">
-                        <label>Textarea</label>
+                        <label class="form-element__label">Textarea</label>
                         <div class="select-element">
                             <div class="select-element__icon juicon juicon-down"></div>
                             <select>
@@ -899,18 +901,18 @@
                     </div>
                     <ul class="form-list form-list--collapse">
                         <li class="form-element form-element--has-error">
-                            <label class="input-size">
+                            <label class="form-element__label input-size">
                                 <input type="checkbox"/> Derp
                             </label>
                         </li>
                         <li class="form-element form-element--has-error">
-                            <label class="input-size">
+                            <label class="form-element__label input-size">
                                 <input type="radio"/> Derp
                             </label>
                         </li>
                     </ul>
                     <div class="form-element form-element--has-error">
-                        <label>Select states</label>
+                        <label class="form-element__label">Select states</label>
                         <div class="selectize-wrap">
                             <select id="select-state3" class="mar--sm--bm" multiple="multiple">
                                 <option value="">Select states...</option>
@@ -975,7 +977,7 @@
                         <span class="form-element__error-text">Error Text</span>
                     </div>
                     <div class="form-element form-element--has-error">
-                        <label>Typeahead Select</label>
+                        <label class="form-element__label">Typeahead Select</label>
                         <div class="input-group">
                             <div class="input-group__element">
                                 <select id="select-state4">
@@ -1041,7 +1043,7 @@
                         <span class="form-element__error-text">Error Text</span>
                     </div>
                     <div class="form-element form-element--has-error">
-                        <label>Tags</label>
+                        <label class="form-element__label">Tags</label>
                         <div class="selectize-wrap">
                             <select id="select-tags2" multiple="multiple">
                                 <option value="">Type or select tags...</option>
@@ -1058,7 +1060,6 @@
                             </button>
                         </div>
                         <span class="form-element__error-text">Error Text</span>
-
                     </div>
                 </article>
             </section>
@@ -1073,7 +1074,6 @@
                                 <span class="pebble__text">
                                     default
                                 </span>
-                                <span class="pebble__icon juicon juicon-check"></span>
                             </span>
                         </span>
                         <span class="pebble pebble--primary">
@@ -1233,7 +1233,7 @@
                 <article id="regular-list-examples">
                     <h2 class="doc-article-heading">Regular list</h2>
                     <ul class="list">
-                        <li class="list__item active">
+                        <li class="list__item list__item--active">
                             <span class="list__item-content">An active item with an icon on the right</span>
                             <span class="list__item-icon juicon juicon-documents"></span>
                         </li>
@@ -1262,7 +1262,7 @@
                 <article id="outlined-list-examples">
                     <h2 class="doc-article-heading">Outlined list</h2>
                     <ul class="list list--outlined">
-                        <li class="list__item active">
+                        <li class="list__item list__item--active">
                             <span class="list__item-content">An active item with an icon on the right</span>
                             <span class="list__item-icon juicon juicon-documents"></span>
                         </li>
@@ -1309,7 +1309,7 @@
                                 <td>M</td>
                                 <td>Chicago, IL</td>
                             </tr>
-                            <tr class="tr active">
+                            <tr class="tr--active">
                                 <td>Jake Fleming</td>
                                 <td>27</td>
                                 <td>M</td>
@@ -1351,7 +1351,7 @@
                 <article id="date-picker-examples">
                     <h2 class="doc-article-heading">Date Picker</h2>
                     <div class="form-element">
-                        <label>Choose a date</label>
+                        <label class="form-element__label">Choose a date</label>
                         <div class="input-group">
                             <div class="input-group__element">
                                 <input type="text" placeholder="00/00/00"/>
@@ -1367,7 +1367,7 @@
                 <article id="date-range-examples">
                     <h2 class="doc-article-heading">Date Range Picker</h2>
                     <div class="form-element">
-                        <label>Choose a date range</label>
+                        <label class="form-element__label">Choose a date range</label>
                         <div class="input-group">
                             <div class="input-group__element">
                                 <input type="text" placeholder="00/00/00"/>
@@ -1402,7 +1402,7 @@
             <section id="loading">
                 <article id="button-loading-examples">
                     <h2 class="doc-article-heading">Buttons</h2>
-                    <button type="button" class="button load-this">
+                    <button type="button" class="button button--solid load-this">
                         <span class="button__content button__content--default">Button</span>
                     </button>
                 </article>
@@ -1421,7 +1421,7 @@
                 <article id="card-examples">
                     <h2 class="doc-article-heading">Static Height</h2>
                     <ul class="card-list card-list--collapse-on-small-only">
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap">
                                     <span class=" juicon juicon-documents"></span>
@@ -1429,7 +1429,7 @@
                                 <span class="card__content">A Default Card</span>
                             </span>
                         </li>
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap card__cap--icon card__cap--solid">
                                     <span class="juicon juicon-documents"></span>
@@ -1440,7 +1440,7 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap card__cap--solid">
                                     <span class=" juicon juicon-documents"></span>
@@ -1448,7 +1448,7 @@
                                 <span class="card__content">A Default Card</span>
                             </span>
                         </li>
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap card__cap--img">
                                     <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
@@ -1459,7 +1459,7 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap card__cap--solid" style="background: url('https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg')">
                                 </span>
@@ -1474,7 +1474,7 @@
                 <article id="card-multiline-examples">
                     <h2 class="doc-article-heading">Multi-line</h2>
                     <ul class="card-list card-list--collapse-on-small-only">
-                        <li class="card multi-line">
+                        <li class="card card--outlined card--multi-line">
                             <span class="card__body">
                                 <span class="card__cap">
                                     <span class=" juicon juicon-documents"></span>
@@ -1482,7 +1482,7 @@
                                 <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
                             </span>
                         </li>
-                        <li class="card multi-line">
+                        <li class="card card--outlined card--multi-line">
                             <span class="card__body">
                                 <span class="card__cap card__cap--icon card__cap--solid">
                                     <span class="juicon juicon-documents"></span>
@@ -1492,7 +1492,7 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="card multi-line">
+                        <li class="card card--outlined card--multi-line">
                             <span class="card__body">
                                 <span class="card__cap card__cap--solid">
                                     <span class=" juicon juicon-documents"></span>
@@ -1500,7 +1500,7 @@
                                 <span class="card__content">Spans multiple lines and doesn't get cut off by an ellipsis.</span>
                             </span>
                         </li>
-                        <li class="card multi-line">
+                        <li class="card card--outlined card--multi-line">
                             <span class="card__body">
                                 <span class="card__cap card__cap--img">
                                     <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
@@ -1510,7 +1510,7 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="card multi-line">
+                        <li class="card card--outlined card--multi-line">
                             <span class="card__body">
                                 <span class="card__cap card__cap--solid" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
                                 </span>
@@ -1524,7 +1524,7 @@
                 <article id="">
                     <h2 class="doc-article-heading">Special</h2>
                     <ul class="card-list card-list--collapse-on-small-only">
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__body">
                                 <span class="card__cap card__cap--img">
                                     <img src="https://lh5.googleusercontent.com/-s0OGtO75hrs/AAAAAAAAAAI/AAAAAAAAAAA/72W0rg_MwqQ/s192-c/photo.jpg"/>
@@ -1538,7 +1538,7 @@
                                 Has content and an extra block for more information.
                             </span>
                         </li>
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__feature" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
                             </span>
                             <span class="card__body">
@@ -1548,7 +1548,7 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__feature">
                                 <span class="juicon juicon-documents"></span>
                             </span>
@@ -1559,7 +1559,7 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="card">
+                        <li class="card card--outlined">
                             <span class="card__feature card__feature--solid">
                                 <span class="juicon juicon-documents"></span>
                             </span>
@@ -1793,8 +1793,8 @@
                                 </button>
                             </div>
                             <div class="slate__top-main">
-                                <span class="slate__heading">derp</span>
-                                <span class="slate__subheading">derp</span>
+                                <span class="slate__title">derp</span>
+                                <span class="slate__subtitle">derp</span>
                             </div>
                         </div>
                         <div class="table-wrap">
@@ -1844,9 +1844,9 @@
                         <div class="slate__block slate__block--outlined slate__block--has-no-bottom-pad slate__block--removable">
                             <button type="button" class="slate__block-close-button"><span class="juicon juicon-trash"></span></button>
                             <div class="grid orient--vertical-on-small has-gutters">
-                                <div class="grid__block--4-on-medium">
+                                <div class="grid__block grid__block--4-on-medium">
                                     <div class="form-element">
-                                        <label class="srt-only">Typeahead Select</label>
+                                        <label class="form-element__label srt-only">Typeahead Select</label>
                                         <div class="input-group">
                                             <div class="input-group__element">
                                                 <select id="select-thing">
@@ -1864,9 +1864,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__block--4-on-medium">
+                                <div class="grid__block grid__block--4-on-medium">
                                     <div class="form-element">
-                                        <label class="srt-only">Select</label>
+                                        <label class="form-element__label srt-only">Select</label>
                                         <div class="select-element">
                                             <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
@@ -1875,9 +1875,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__block--4-on-medium">
+                                <div class="grid__block grid__block--4-on-medium">
                                     <div class="form-element">
-                                        <label class="srt-only">Select</label>
+                                        <label class="form-element__label srt-only">Select</label>
                                         <div class="select-element">
                                             <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
@@ -1891,9 +1891,9 @@
                         <div class="slate__block slate__block--outlined slate__block--has-no-bottom-pad  slate__block--removable">
                             <button type="button" class="slate__block-close-button"><span class="juicon juicon-trash"></span></button>
                             <div class="grid orient--vertical-on-small has-gutters">
-                                <div class="grid__block--4-on-medium">
+                                <div class="grid__block grid__block--4-on-medium">
                                     <div class="form-element">
-                                        <label class="srt-only">Select</label>
+                                        <label class="form-element__label srt-only">Select</label>
                                         <div class="select-element">
                                             <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
@@ -1902,9 +1902,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__block--4-on-medium">
+                                <div class="grid__block grid__block--4-on-medium">
                                     <div class="form-element">
-                                        <label class="srt-only">Select</label>
+                                        <label class="form-element__label srt-only">Select</label>
                                         <div class="select-element">
                                             <div class="select-element__icon juicon juicon-down"></div>
                                             <select>
@@ -1913,9 +1913,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="grid__block--4-on-medium">
+                                <div class="grid__block grid__block--4-on-medium">
                                     <div class="form-element">
-                                        <label class="input-size">
+                                        <label class="form-element__label input-size">
                                             <input type="checkbox"/> Derp
                                         </label>
                                     </div>
@@ -1923,7 +1923,7 @@
                             </div>
                         </div>
                         <div class="slate__bottom slate__bottom--outlined">
-                            <div class="slate__bottom__control">
+                            <div class="slate__bottom-control">
                                 <button type="button" class="button button--solid">
                                     <span class="button__content button__content--primary">
                                         <span class="button__text">Submit</span>
@@ -1935,9 +1935,46 @@
                     </div>
                 </article>
             </section>
+            <h1 class="doc-section-heading">
+                Drawers
+            </h1>
+            <section id="drawers">
+                <article id="drawer-example">
+                    <button type="button" class="button button--solid" data-toggle="drawer" data-target="myDrawer">
+                    <span class="button__content button__content--primary">
+                        <span class="button__text">Open the drawer</span>
+                    </span>
+                    </button>
+                    <div id="myDrawer" class="drawer">
+                        <div class="drawer__body">
+                            <ul class="drawer__list">
+                                <li class="drawer__list-title">Dumb stuff</li>
+                                <li class="drawer__list-item active">
+                                    <a href="" class="drawer__list-item-link">
+                                        <span class="drawer__list-item-icon juicon juicon-envelope"></span>
+                                        <span class="drawer__list-item-content">Inbox</span>
+                                    </a>
+                                </li>
+                                <li class="drawer__list-item active">
+                                    <a href="" class="drawer__list-item-link">
+                                        <span class="drawer__list-item-icon juicon juicon-chat"></span>
+                                        <span class="drawer__list-item-content">Chats</span>
+                                    <span class="drawer__list-item-alert">
+                                    <span class="drawer__list-item-alert-content drawer__list-item-alert-content--error">
+                                        2
+                                    </span>
+                                    </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
 
     <script type="text/javascript" src="lib/selectize/selectize.js"></script>
     <script type="text/javascript" src="lib/tooltipster-master/js/jquery.tooltipster.js"></script>
@@ -2013,5 +2050,7 @@
         $('.slider').slider();
 
     </script>
+
+
 </body>
 </html>

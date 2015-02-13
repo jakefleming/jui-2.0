@@ -17,8 +17,10 @@
       top: 0;
       width: 24px;
     }
-    &.default {
-      color: $color--gray;
+    &--default {
+      &:before {
+        color: $color--gray;
+      }
     }
   }
 }

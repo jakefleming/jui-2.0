@@ -16,14 +16,6 @@ $nav-default-text: $color--black;
       float: left;
     }
   }
-  //Takes away padding on the left and right when it is in a constrained div
-  .constrained {
-    .nav-bar__top {
-      @media (min-width: $brkpoint-md) {
-        padding: 1em 0;
-      }
-    }
-  }
   // A list of items like links
   &__list {
     list-style-type: none;

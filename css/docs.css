@@ -240,6 +240,15 @@
 .jui-lettering-medium-z:before {
   content: ""; }
 
+html {
+  height: 100%; }
+
+.doc-bg-1 {
+  background-color: #e8eaeb; }
+
+.doc-bg-transparent {
+  background-color: transparent; }
+
 body .scope-container h1, body .scope-container h2, body .scope-container h3, body .scope-container h4, body .scope-container h5, body .scope-container h6 {
   color: #384047; }
 body .scope-container section + .doc-section-heading {

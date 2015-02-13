@@ -20,7 +20,14 @@ html {
 // Remove default margin.
 
 body {
+  background-color: transparent;//resetting salesforce
   margin: 0;
+}
+
+body {
+  @media (max-device-width: $brkpoint-md) {
+    cursor: pointer;
+  }
 }
 
 //type contains base styles for typography

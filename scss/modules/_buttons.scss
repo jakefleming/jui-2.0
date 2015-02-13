@@ -148,7 +148,7 @@
   margin-top: 0px;
   max-height: 0;
   max-width: px(240);
-  min-width: 100%;
+  min-width: 100.01%;
   opacity: 0;
   overflow: hidden;
   position: absolute;
@@ -163,7 +163,7 @@
     max-height: px(300);
     max-width: px(240);
     min-height: 0;
-    min-width: 100%;
+    min-width: 100.01%;
     opacity: 100;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -243,7 +243,7 @@
   }
   //if the dropdown box has a close button, give the content div a margin on the top to account for it.
   .dropdown-box__close-button + .dropdown-box__content {
-    margin-top: 16px;
+    margin-top: 15px;
   }
   //close button for dropdowns
   &__close-button {
@@ -291,6 +291,17 @@
     font-size: 16px;
   }
 }
+
+.button--split {
+  @each $theme, $color in $ui-colors {
+    .button__content {
+      &--#{$theme} {
+        box-shadow: inset 1px 0 darken($color, 5%);
+      }
+    }
+  }
+}
+
 //this stuff must be at the root of the css file for scoping reasons
 @at-root {
   .flexbox {

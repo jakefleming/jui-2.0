@@ -1,0 +1,86 @@
+//page heading
+
+$page-bar-heading-size: $font-size--3;
+$page-bar-subheading-size: $font-size--4;
+
+.page-bar {
+  box-shadow: 0 1px $component-border-color;
+  padding: .5em;
+  @media (min-width: $brkpoint-md) {
+    padding: 1em 0;
+    margin-bottom: 1em;
+  }
+  &__title {
+    color: $color--black;
+    display: block;
+    font-size: 1em;
+    font-weight: $font-weight--2;
+    line-height: 1em;
+    overflow: hidden;
+    padding: 0 .5em;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @media (min-width: $brkpoint-md) {
+      line-height: em(24, $page-bar-heading-size);
+      font-size: em($page-bar-heading-size);
+      padding: 0;
+      text-align: left;
+    }
+  }
+  &__subtitle {
+    color: $color--gray;
+    display: block;
+    font-size: em(14);
+    font-weight: $font-weight--1;
+    line-height: em(16, 14);
+    overflow: hidden;
+    padding: 0 .5em;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    @media (min-width: $brkpoint-md) {
+      font-size: em($page-bar-subheading-size);
+      line-height: em(16, $page-bar-subheading-size);
+      padding: 0;
+      text-align: left;
+    }
+  }
+  &__control + .page-bar__control {
+    margin-left: .25em;
+  }
+}
+
+@at-root {
+  .flexbox {
+    .page-bar {
+      @include flexbox();
+      &__main {
+        @include flex;
+        @include order(-1);
+        align-self: center;
+      }
+      &__control {
+        @include flex(initial);
+        align-self: center;
+        &--left-on-small-only {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+            @include order(-1);
+          }
+        }
+      }
+    }
+  }
+  .no-flexbox {
+    .page-bar {
+      @include clearfix;
+      &__control {
+        float: right;
+        padding-left: 8px;
+        &--left-on-small-only {
+          float: left;
+        }
+      }
+    }
+  }
+}

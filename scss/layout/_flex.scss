@@ -53,7 +53,7 @@
           @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
             @include flex-flow(column nowrap);
             > .grid__block {
-              @include flex(0 0 100%);
+              //@include flex(0 0 100%);
             }
           }
         }
@@ -61,7 +61,7 @@
           @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
             @include flex-flow(column nowrap);
             > .grid__block {
-              @include flex(0 0 100%);
+              //@include flex(0 0 100%);
             }
           }
         }
@@ -74,9 +74,6 @@
     @include flexbox;
     @include flex-direction(column);
     position: relative;
-    * {
-      @include flex();
-    }
   }
   .grid.has-gutters, .grid__block {
     > [class*="grid__"] {
@@ -132,6 +129,12 @@
   }
   .shrink {
     flex: initial;
+  }
+}
+
+.growing-children {
+  > * {
+    @include flex();
   }
 }
 

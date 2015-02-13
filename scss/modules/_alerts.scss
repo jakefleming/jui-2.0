@@ -50,8 +50,12 @@
   //needs this class to be visible
   &--active {
     max-height: none;
+    min-height: em(56);
     opacity: 1;
     padding: em($base--num);
     transition: $trans-duration;
+    + * {
+      margin-top: 1em;
+    }
   }
 }

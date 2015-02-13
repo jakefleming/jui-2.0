@@ -1,0 +1,200 @@
+$list-icon-w: 40;
+$list-icon-h: 40;
+
+//drawers are hidden containers like menus
+
+.drawer {
+  bottom: 0;
+  box-shadow: 0 1px 3px transparentize($color--black, .6);
+  left: 0;
+  overflow: visible;
+  position: fixed;
+  width: 232px;
+  top: 0;
+  z-index: 4;
+  transform: translateX(-242px);
+  transition: transform .15s ease-in-out;
+  will-change: top,left;
+  &--active {
+    transform: translateX(0px);
+    transition: all $trans-duration;
+  }
+  //this is the inside of the drawer -- handles overflow and stuff
+  &__body {
+    background: $color--white;
+    bottom: 0;
+    color: $color--gray--dark;
+    line-height: 40px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    white-space: nowrap;
+    width: 232px;
+    top: 0
+  }
+  //put any content here
+  &__block {
+    
+  }
+  &__list {
+    box-shadow: 0 1px 0 $component-border-color;
+    list-style-type: none;
+    margin: 8px 0;
+    padding: 0 0 8px 0;
+    &-title {
+      color: $color--gray;
+      font-size: 12px;
+      line-height: 24px;
+      margin: 0;
+      padding: 0 16px;
+    }
+    &-item {
+      cursor: pointer;
+      font-family: $font--1;
+      font-size: 1em;
+      line-height: 1.5;
+      margin-left: 0;
+      padding: 0 8px;
+      transition: background-color $trans-duration;
+      &:hover {
+        background-color: darken($color--white, $darken-p);
+        transition: background-color $trans-duration;
+      }
+      &--active {
+        background-color: $color--primary;
+        color: $color--white;
+        &:hover {
+          background-color: $color--primary;
+          color: $color--white;
+        }
+        .drawer__list-item-icon {
+          color: $color--white;
+          &.solid {
+            background-color: transparent;
+          }
+        }
+        .drawer__list-item-link {
+          > .drawer__list-item-content {
+            color: $color--white;
+          }
+        }
+        .drawer__list-item-content {
+          color: $color--white;
+        }
+      }
+      &-link {
+        width: 100%;
+        > .drawer__list-item-content {
+          color: $color--gray--dark;
+        }
+      }
+      //the main content in the list__item
+      &-content {
+        color: $color--gray--dark;
+        display: block;
+        overflow: hidden;
+        padding: .5em 1em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      //if your list item needs an icon
+      &-icon {
+        color: $color--gray;
+        height: em($list-icon-h);
+        line-height: 24px;
+        min-width: em($list-icon-w);
+        padding: em(8);
+        text-align: center;
+        width: em($list-icon-w);
+        + .drawer__list-item-content {
+          padding-left: em(8);
+        }
+        //give it a background
+        &.solid {
+          background-color: darken($color--white, $darken-p);
+          border-radius: $base--radius;
+        }
+      }
+      //a cap can containt an image or something else, but you might wanna make sure it's 24px X 24px unless you don't mind the content not lining up
+      &-cap {
+        line-height: 0;
+        padding: em(8);
+        + .drawer__list-item-content {
+          padding-left: em(8);
+        }
+      }
+      //if you need an alert indicator for your list item
+      &-alert {
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+        &-content {
+          border-radius: 12px;
+          display: inline-block;
+          font-size: 12px;
+          line-height: 20px;
+          min-width: 20px;
+          padding: 0 4px;
+          vertical-align: top;
+          .juicon {
+            line-height: 20px;
+          }
+          &.default {
+            background-color: $color--white;
+            box-shadow: inset 0 0 0 1px $component-border-color;
+          }
+          @each $theme, $color in $ui-colors {
+            &--#{$theme} {
+              background: $color;
+              color: $color--white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//when scoped this must be at the root instead of nesting in the scope
+@at-root {
+  //with flexbox
+  .flexbox {
+    .drawer__list-item, .drawer__list-item-link {
+      @include flexbox;
+      &-content {
+        //fix for firefox
+        @include flex;
+        width: 0;
+      }
+      &-icon, &-cap, &-alert {
+        @include flex(initial);
+      }
+    }
+  }
+  //without flexbox | not quite the same. We use display: table, display: table-cell.
+  .no-flexbox {
+    .drawer__list-item, .drawer__list-item-link {
+      border-collapse: separate;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      &-content {
+        display: table-cell;
+        line-height: 1.5;
+        padding-right: 48px !important;
+        vertical-align: middle;
+        width: 100%;
+        + .drawer__list-item-icon, + .drawer__list-item-cap, + .drawer__list-item-alert {
+          float: right;
+        }
+      }
+      &-icon, &-cap, &-label {
+        display: block;
+        float: left;
+        width: auto;
+        + .drawer__list-item-content {
+          padding-left: 48px !important;
+        }
+      }
+    }
+  }
+}

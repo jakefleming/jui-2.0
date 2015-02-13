@@ -115,20 +115,20 @@
 }
 
 //give grid bottom margin to separate rows
-.separate {
-  > .grid > [class*="grid__block"], > [class*="grid__block"] {
+.grid.grid--separate {
+  > [class*="grid__block"] {
     margin-bottom: 1em;
   }
   &-on-small {
     @media (min-width: $brkpoint-sm) {
-      > .grid > [class*="grid__block"], > [class*="grid__block"] {
+      > [class*="grid__block"] {
         margin-bottom: 1em;
       }
     }
   }
   &-on-medium {
     @media (min-width: $brkpoint-md) {
-      > .grid > [class*="grid__block"], > [class*="grid__block"] {
+      > [class*="grid__block"] {
         margin-bottom: 1em;
       }
     }
