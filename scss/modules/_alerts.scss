@@ -21,10 +21,6 @@
       }
     }
   }
-  //if the alert has an 'x' add padding to the right
-  &--dismissable {
-    padding-right: em(56);
-  }
   //the button that contains the 'x'
   &__close-button {
     @extend %close-button;
@@ -54,6 +50,10 @@
     opacity: 1;
     padding: em($base--num);
     transition: $trans-duration;
+    //if the alert has an 'x' add padding to the right
+    &.alert--dismissable {
+      padding-right: em(56);
+    }
     + * {
       margin-top: 1em;
     }

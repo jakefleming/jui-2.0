@@ -24,7 +24,8 @@
     margin-left: 0 !important;
   }
   &.dropdown-menu {
-    border: 1px solid $component-border-color;
+    //border: 1px solid $component-border-color;
+    box-shadow: 0 1px 3px transparentize($color--black, .6);
     max-width: none;
     z-index: 3000;
   }

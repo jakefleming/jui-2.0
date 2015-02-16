@@ -249,54 +249,6 @@ html {
 .doc-bg-transparent {
   background-color: transparent; }
 
-body .scope-container h1, body .scope-container h2, body .scope-container h3, body .scope-container h4, body .scope-container h5, body .scope-container h6 {
-  color: #384047; }
-body .scope-container section + .doc-section-heading {
-  margin-top: 96px; }
-body .scope-container .doc-section-heading {
-  color: #2a94d6;
-  font-family: ProximaNova;
-  font-size: 1.25em;
-  line-height: 24px;
-  margin-top: 64px;
-  text-transform: uppercase; }
-  @media (min-width: 768px) {
-    body .scope-container .doc-section-heading {
-      margin-top: 96px; } }
-body .scope-container .doc-article-heading {
-  color: #cfd0d2;
-  font-family: ProximaNova;
-  font-size: 0.875em;
-  font-weight: 700;
-  line-height: 24px;
-  margin-bottom: 8px;
-  margin-top: 0;
-  text-transform: uppercase; }
-body .scope-container p {
-  margin: 1.5em 0 0 0;
-  max-width: 27.5em; }
-body .scope-container h1 {
-  margin: 0.75em 0 0 0; }
-body .scope-container h2 {
-  margin: 1em 0 0 0; }
-body .scope-container h3 {
-  margin: 1.2em 0 0 0; }
-body .scope-container h4 {
-  margin: 1.5em 0 0 0; }
-body .scope-container h5 {
-  margin: 1.71429em 0 0 0; }
-body .scope-container h6 {
-  margin: 2em 0 0 0; }
-body .scope-container code {
-  background-color: #e8eaeb;
-  border-radius: 3px;
-  color: #c06057;
-  font-size: ProximaNovaSoft;
-  line-height: 1.5;
-  padding: 2px 8px;
-  vertical-align: top; }
-body .scope-container .button.docButton {
-  margin: 1em 0; }
 body .scope-container .doc-nav {
   display: block; }
   body .scope-container .doc-nav li {
@@ -322,10 +274,24 @@ body .scope-container .doc-page-header {
   background-repeat: no-repeat;
   background-size: auto 256px;
   min-height: 256px;
-  padding: 1em; }
-  @media (min-width: 768px) {
+  padding: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (min-width: 769px) {
     body .scope-container .doc-page-header {
       padding: 2em 0; } }
+body .scope-container .doc-page-header-inner {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 body .scope-container #bathroom-sink-header {
   background-image: url("../assets/illustrations/bathroom-sink.png"); }
 body .scope-container #templates-header {
@@ -335,7 +301,7 @@ body .scope-container .doc-page-heading {
   font-family: ProximaNova;
   font-size: 3em;
   line-height: 1;
-  margin-top: 1.25em; }
+  margin-top: 0; }
 body .scope-container .doc-page-subheading {
   color: rgba(255, 255, 255, 0.4);
   font-family: ProximaNova;
@@ -346,6 +312,29 @@ body .scope-container .doc-page-subheading {
 body .scope-container #docs {
   margin: 0 auto;
   max-width: 50em; }
+  body .scope-container #docs h1, body .scope-container #docs h2, body .scope-container #docs h3, body .scope-container #docs h4, body .scope-container #docs h5, body .scope-container #docs h6 {
+    color: #384047; }
+  body .scope-container #docs section + .doc-section-heading {
+    margin-top: 96px; }
+  body .scope-container #docs .doc-section-heading {
+    color: #2a94d6;
+    font-family: ProximaNova;
+    font-size: 1.25em;
+    line-height: 24px;
+    margin-top: 64px;
+    text-transform: uppercase; }
+    @media (min-width: 768px) {
+      body .scope-container #docs .doc-section-heading {
+        margin-top: 96px; } }
+  body .scope-container #docs .doc-article-heading {
+    color: #cfd0d2;
+    font-family: ProximaNova;
+    font-size: 0.875em;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    text-transform: uppercase; }
   body .scope-container #docs section {
     display: -webkit-box;
     display: -webkit-flex;
@@ -377,6 +366,31 @@ body .scope-container #docs {
     font-size: 14px;
     line-height: 1;
     padding: 1.14286em; }
+  body .scope-container #docs p {
+    margin: 1.5em 0 0 0;
+    max-width: 27.5em; }
+  body .scope-container #docs h1 {
+    margin: 0.75em 0 0 0; }
+  body .scope-container #docs h2 {
+    margin: 1em 0 0 0; }
+  body .scope-container #docs h3 {
+    margin: 1.2em 0 0 0; }
+  body .scope-container #docs h4 {
+    margin: 1.5em 0 0 0; }
+  body .scope-container #docs h5 {
+    margin: 1.71429em 0 0 0; }
+  body .scope-container #docs h6 {
+    margin: 2em 0 0 0; }
+  body .scope-container #docs code {
+    background-color: #e8eaeb;
+    border-radius: 3px;
+    color: #c06057;
+    font-size: ProximaNovaSoft;
+    line-height: 1.5;
+    padding: 2px 8px;
+    vertical-align: top; }
+  body .scope-container #docs .button.docButton {
+    margin: 1em 0; }
 body .scope-container .big {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
@@ -400,6 +414,7 @@ body .scope-container #icons .icon-example {
   display: inline-block;
   font-size: 24px;
   height: 24px;
+  line-height: 24px;
   margin: 16px 0;
   text-align: center;
   width: 24px; }

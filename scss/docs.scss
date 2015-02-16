@@ -1,3 +1,4 @@
+//@import "scope-test/index"; //for testing sf scope
 @import "utilities/index";
 @import "base/fonts/jui-lettering-medium";
 
@@ -16,68 +17,6 @@ html {
 }
 
 body .scope-container {
-  //type
-  h1, h2, h3, h4, h5, h6 {
-    color: $color--black;
-  }
-  section + .doc-section-heading {
-    margin-top: 96px;
-  }
-  .doc-section-heading {
-    color: $color--primary;
-    font-family: $font--2;
-    font-size: 1.25em;
-    line-height: 24px;
-    margin-top: 64px;
-    text-transform: uppercase;
-    @media (min-width: $brkpoint-md) {
-      margin-top: 96px;
-    }
-  }
-  .doc-article-heading {
-    color: $color--gray--light;
-    font-family: $font--2;
-    font-size: em(14);
-    font-weight: $font-weight--3;
-    line-height: 24px;
-    margin-bottom: 8px;
-    margin-top: 0;
-    text-transform: uppercase;
-  }
-  p {
-    margin: 1.5em 0 0 0;
-    max-width: em(440);
-  }
-  h1 {
-    margin: em($base--num * 1.5, $font-size--1) 0 0 0;
-  }
-  h2 {
-    margin: em($base--num * 1.5, $font-size--2) 0 0 0;
-  }
-  h3 {
-    margin: em($base--num * 1.5, $font-size--3) 0 0 0;
-  }
-  h4 {
-    margin: em($base--num * 1.5, $font-size--4) 0 0 0;
-  }
-  h5 {
-    margin: em($base--num * 1.5, $font-size--5) 0 0 0;
-  }
-  h6 {
-    margin: em($base--num * 1.5, $font-size--6) 0 0 0;
-  }
-  code {
-    background-color: $color--gray--x-light;
-    border-radius: 3px;
-    color: $color--error;
-    font-size: $font--1;
-    line-height: 1.5;
-    padding: 2px 8px;
-    vertical-align: top;
-  }
-  .button.docButton {
-    margin: 1em 0;
-  }
   // nav
   .doc-nav {
     display: block;
@@ -102,9 +41,14 @@ body .scope-container {
     background-size: auto 256px;
     min-height: 256px;
     padding: 1em;
-    @media (min-width: $brkpoint-md) {
+    @include flexbox();
+    @media (min-width: $brkpoint-md+1) {
       padding: 2em 0;
     }
+  }
+  .doc-page-header-inner {
+    @include align-self(center);
+    @include flex();
   }
   #bathroom-sink-header {
     background-image: url('../assets/illustrations/bathroom-sink.png');
@@ -117,7 +61,7 @@ body .scope-container {
     font-family: $font--2;
     font-size: 3em;
     line-height: 1;
-    margin-top: 1.25em;
+    margin-top: 0;
   }
   .doc-page-subheading {
     color: transparentize($color--white, .6);
@@ -133,6 +77,34 @@ body .scope-container {
     max-width: em(800);
     @media (min-width: $brkpoint-md) {
       //padding-top: 4em;
+    }
+    //type
+    h1, h2, h3, h4, h5, h6 {
+      color: $color--black;
+    }
+    section + .doc-section-heading {
+      margin-top: 96px;
+    }
+    .doc-section-heading {
+      color: $color--primary;
+      font-family: $font--2;
+      font-size: 1.25em;
+      line-height: 24px;
+      margin-top: 64px;
+      text-transform: uppercase;
+      @media (min-width: $brkpoint-md) {
+        margin-top: 96px;
+      }
+    }
+    .doc-article-heading {
+      color: $color--gray--light;
+      font-family: $font--2;
+      font-size: em(14);
+      font-weight: $font-weight--3;
+      line-height: 24px;
+      margin-bottom: 8px;
+      margin-top: 0;
+      text-transform: uppercase;
     }
     section {
       @include flexbox;
@@ -157,6 +129,40 @@ body .scope-container {
       font-size: 14px;
       line-height: 1;
       padding: em(16, 14);
+    }
+    p {
+      margin: 1.5em 0 0 0;
+      max-width: em(440);
+    }
+    h1 {
+      margin: em($base--num * 1.5, $font-size--1) 0 0 0;
+    }
+    h2 {
+      margin: em($base--num * 1.5, $font-size--2) 0 0 0;
+    }
+    h3 {
+      margin: em($base--num * 1.5, $font-size--3) 0 0 0;
+    }
+    h4 {
+      margin: em($base--num * 1.5, $font-size--4) 0 0 0;
+    }
+    h5 {
+      margin: em($base--num * 1.5, $font-size--5) 0 0 0;
+    }
+    h6 {
+      margin: em($base--num * 1.5, $font-size--6) 0 0 0;
+    }
+    code {
+      background-color: $color--gray--x-light;
+      border-radius: 3px;
+      color: $color--error;
+      font-size: $font--1;
+      line-height: 1.5;
+      padding: 2px 8px;
+      vertical-align: top;
+    }
+    .button.docButton {
+      margin: 1em 0;
     }
   }
   .big {
@@ -188,6 +194,7 @@ body .scope-container {
       display: inline-block;
       font-size: 24px;
       height: 24px;
+      line-height: 24px;
       margin: 16px 0;
       text-align: center;
       width: 24px;

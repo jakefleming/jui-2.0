@@ -53,7 +53,7 @@
           @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
             @include flex-flow(column nowrap);
             > .grid__block {
-              //@include flex(0 0 100%);
+              @include flex();
             }
           }
         }
@@ -61,7 +61,7 @@
           @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
             @include flex-flow(column nowrap);
             > .grid__block {
-              //@include flex(0 0 100%);
+              @include flex();
             }
           }
         }

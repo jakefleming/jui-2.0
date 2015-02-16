@@ -96,7 +96,7 @@ $list-icon-h: 40;
     height: 40px;
     text-align: center;
     padding: 10px;
-    &__content {
+    &-content {
       border-radius: 12px;
       display: inline-block;
       font-size: 12px;
@@ -104,7 +104,7 @@ $list-icon-h: 40;
       min-width: 20px;
       padding: 0 4px;
       vertical-align: top;
-      .juicon {
+      .icon {
         line-height: 20px;
       }
       &.default {

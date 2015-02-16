@@ -88,7 +88,7 @@ $slate-subheading-size: $font-size--4;
         transform: translateY(-50%);
         transition: $trans-duration;
         width: 56px;
-        .juicon {
+        .icon {
           vertical-align: top;
         }
         &:hover {
@@ -120,7 +120,7 @@ $slate-subheading-size: $font-size--4;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    .juicon {
+    .icon {
       color: $color--gray;
       line-height: 24px;
       margin-right: 16px;
@@ -136,7 +136,7 @@ $slate-subheading-size: $font-size--4;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    .juicon {
+    .icon {
       color: $color--gray;
       line-height: 1;
     }
@@ -157,6 +157,11 @@ $slate-subheading-size: $font-size--4;
   border-radius: $base--radius $base--radius 0 0;
   &.nav-bar--default.nav-bar--outlined {
     background-color: transparent;
+    .nav-bar__appendage, .nav-bar__list-item:hover > a, .nav-bar__list-item:hover > .button-group {
+      @media (max-width: $brkpoint-md) {
+        box-shadow: inset -1px 0 $component-border-color, inset 1px 0 $component-border-color;
+      }
+    }
   }
 }
 

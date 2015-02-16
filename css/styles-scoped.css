@@ -174,8 +174,8 @@
   src: url("fonts/juicons/juicons.eot?#iefix-m8mnji") format("embedded-opentype"), url("fonts/juicons/juicons.ttf?-m8mnji") format("truetype"), url("fonts/juicons/juicons.svg?-m8mnji#juicons") format("svg"), url("fonts/juicons/juicons.woff?-m8mnji") format("woff");
   font-weight: normal;
   font-style: normal; }
-.juicon, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
-  font-family: 'juicons';
+.icon, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
+  font-family: juicons;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -188,282 +188,309 @@
   display: inline-block;
   line-height: 1.5;
   vertical-align: top; }
-  .juicon:before, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
+  .icon:before, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
     display: inline-block;
     vertical-align: top; }
 
-.juicon-alert:before {
+.icon-anatomy:before {
+  content: "\e663"; }
+
+.icon-alert:before {
   content: "\e600"; }
 
-.juicon-asterisk:before {
+.icon-asterisk:before {
   content: "\e601"; }
 
-.juicon-backward:before {
+.icon-backward:before {
   content: "\e602"; }
 
-.juicon-ban:before {
+.icon-ban:before {
   content: "\e603"; }
 
-.juicon-blocks:before {
+.icon-blocks:before {
   content: "\e604"; }
 
-.juicon-bookmark:before {
+.icon-bookmark:before {
   content: "\e605"; }
 
-.juicon-browser:before {
+.icon-browser:before {
   content: "\e606"; }
 
-.juicon-calendar:before {
+.icon-calendar:before {
   content: "\e607"; }
 
-.juicon-camera:before {
+.icon-camera:before {
   content: "\e608"; }
 
-.juicon-chart-bar:before {
+.icon-chart-bar:before {
   content: "\e609"; }
 
-.juicon-chart-pie:before {
+.icon-chart-pie:before {
   content: "\e60a"; }
 
-.juicon-chat:before {
+.icon-chat:before {
   content: "\e60b"; }
 
-.juicon-check-circle:before {
+.icon-check-circle:before {
   content: "\e60c"; }
 
-.juicon-check:before {
+.icon-check:before {
   content: "\e60d"; }
 
-.juicon-chevron-left:before {
+.icon-chevron-left:before {
   content: "\e60e"; }
 
-.juicon-chevron-right:before {
+.icon-chevron-right:before {
   content: "\e60f"; }
 
-.juicon-dashboard:before {
+.icon-clipboard:before {
   content: "\e610"; }
 
-.juicon-database:before {
+.icon-cloud:before {
   content: "\e611"; }
 
-.juicon-dislike:before {
+.icon-dashboard:before {
   content: "\e612"; }
 
-.juicon-document-code:before {
+.icon-database:before {
   content: "\e613"; }
 
-.juicon-document-misc:before {
+.icon-dislike:before {
   content: "\e614"; }
 
-.juicon-document:before {
+.icon-document-code:before {
   content: "\e615"; }
 
-.juicon-documents-group:before {
+.icon-document-misc:before {
   content: "\e616"; }
 
-.juicon-documents:before {
+.icon-document:before {
   content: "\e617"; }
 
-.juicon-dots:before {
+.icon-documents-group:before {
   content: "\e618"; }
 
-.juicon-down:before, body .scope-container .selectize-control.single .selectize-input:before {
+.icon-documents:before {
   content: "\e619"; }
 
-.juicon-download:before {
+.icon-dots:before {
   content: "\e61a"; }
 
-.juicon-downward:before {
+.icon-down:before, body .scope-container .selectize-control.single .selectize-input:before {
   content: "\e61b"; }
 
-.juicon-envelope:before {
+.icon-download:before {
   content: "\e61c"; }
 
-.juicon-exclamation-circle:before {
+.icon-downward:before {
   content: "\e61d"; }
 
-.juicon-exclamation:before {
+.icon-dropbox:before {
   content: "\e61e"; }
 
-.juicon-expand:before {
+.icon-envelope:before {
   content: "\e61f"; }
 
-.juicon-eye:before {
+.icon-exclamation-circle:before {
   content: "\e620"; }
 
-.juicon-flag:before {
+.icon-exclamation:before {
   content: "\e621"; }
 
-.juicon-flip:before {
+.icon-expand:before {
   content: "\e622"; }
 
-.juicon-forward:before {
+.icon-eye:before {
   content: "\e623"; }
 
-.juicon-funnel:before {
+.icon-facebook:before {
   content: "\e624"; }
 
-.juicon-gear:before {
+.icon-flag:before {
   content: "\e625"; }
 
-.juicon-grid:before {
+.icon-flip:before {
   content: "\e626"; }
 
-.juicon-group:before {
+.icon-forward:before {
   content: "\e627"; }
 
-.juicon-heart:before {
+.icon-funnel:before {
   content: "\e628"; }
 
-.juicon-image:before {
+.icon-gear:before {
   content: "\e629"; }
 
-.juicon-info-circle:before {
+.icon-google-drive:before {
   content: "\e62a"; }
 
-.juicon-info:before {
+.icon-google-plus:before {
   content: "\e62b"; }
 
-.juicon-left:before {
+.icon-grid:before {
   content: "\e62c"; }
 
-.juicon-like:before {
+.icon-group:before {
   content: "\e62d"; }
 
-.juicon-link:before {
+.icon-heart:before {
   content: "\e62e"; }
 
-.juicon-list:before {
+.icon-image:before {
   content: "\e62f"; }
 
-.juicon-loading:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
+.icon-info-circle:before {
   content: "\e630"; }
 
-.juicon-location:before {
+.icon-info:before {
   content: "\e631"; }
 
-.juicon-lock:before {
+.icon-left:before {
   content: "\e632"; }
 
-.juicon-menu:before {
+.icon-like:before {
   content: "\e633"; }
 
-.juicon-minus-circle:before {
+.icon-link:before {
   content: "\e634"; }
 
-.juicon-minus:before {
+.icon-linkedin:before {
   content: "\e635"; }
 
-.juicon-move-horizontal:before {
+.icon-list:before {
   content: "\e636"; }
 
-.juicon-move-vertical:before {
+.icon-loading:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
   content: "\e637"; }
 
-.juicon-move:before {
+.icon-location:before {
   content: "\e638"; }
 
-.juicon-new-window:before {
+.icon-lock:before {
   content: "\e639"; }
 
-.juicon-paperclip:before {
+.icon-menu:before {
   content: "\e63a"; }
 
-.juicon-pencil:before {
+.icon-minus-circle:before {
   content: "\e63b"; }
 
-.juicon-people:before {
+.icon-minus:before {
   content: "\e63c"; }
 
-.juicon-person-add:before {
+.icon-move-horizontal:before {
   content: "\e63d"; }
 
-.juicon-person:before {
+.icon-move-vertical:before {
   content: "\e63e"; }
 
-.juicon-phone-smart:before {
+.icon-move:before {
   content: "\e63f"; }
 
-.juicon-phone:before {
+.icon-network:before {
   content: "\e640"; }
 
-.juicon-plus-circle:before {
+.icon-new-window:before {
   content: "\e641"; }
 
-.juicon-plus:before {
+.icon-paperclip:before {
   content: "\e642"; }
 
-.juicon-question-circle:before {
+.icon-pencil:before {
   content: "\e643"; }
 
-.juicon-question:before {
+.icon-people:before {
   content: "\e644"; }
 
-.juicon-refresh:before {
+.icon-person-add:before {
   content: "\e645"; }
 
-.juicon-reply:before {
+.icon-person:before {
   content: "\e646"; }
 
-.juicon-right:before {
+.icon-phone-smart:before {
   content: "\e647"; }
 
-.juicon-search:before {
+.icon-phone:before {
   content: "\e648"; }
 
-.juicon-share:before {
+.icon-pin:before {
   content: "\e649"; }
 
-.juicon-signout:before {
+.icon-plus-circle:before {
   content: "\e64a"; }
 
-.juicon-sort:before {
+.icon-plus:before {
   content: "\e64b"; }
 
-.juicon-star:before {
+.icon-print:before {
   content: "\e64c"; }
 
-.juicon-trash:before {
+.icon-question-circle:before {
   content: "\e64d"; }
 
-.juicon-up:before {
+.icon-question:before {
   content: "\e64e"; }
 
-.juicon-upload:before {
+.icon-refresh:before {
   content: "\e64f"; }
 
-.juicon-upward:before {
+.icon-reply:before {
   content: "\e650"; }
 
-.juicon-x-circle:before {
+.icon-right:before {
   content: "\e651"; }
 
-.juicon-x:before, body .scope-container .item .remove:before {
+.icon-search:before {
   content: "\e652"; }
 
-.juicon-twitter:before {
-  content: "\e655"; }
-
-.juicon-linkedin:before {
-  content: "\e656"; }
-
-.juicon-google-plus:before {
-  content: "\e657"; }
-
-.juicon-facebook:before {
-  content: "\e658"; }
-
-.juicon-google-drive:before {
-  content: "\e659"; }
-
-.juicon-dropbox:before {
-  content: "\e65a"; }
-
-.juicon-trophy:before {
+.icon-share:before {
   content: "\e653"; }
 
-.juicon-print:before {
+.icon-signout:before {
   content: "\e654"; }
+
+.icon-sliders:before {
+  content: "\e655"; }
+
+.icon-sort:before {
+  content: "\e656"; }
+
+.icon-star:before {
+  content: "\e657"; }
+
+.icon-tag:before {
+  content: "\e658"; }
+
+.icon-trash:before {
+  content: "\e659"; }
+
+.icon-trophy:before {
+  content: "\e65a"; }
+
+.icon-twitter:before {
+  content: "\e65b"; }
+
+.icon-up:before {
+  content: "\e65c"; }
+
+.icon-upload:before {
+  content: "\e65d"; }
+
+.icon-upward:before {
+  content: "\e65e"; }
+
+.icon-usd:before {
+  content: "\e65f"; }
+
+.icon-wrench:before {
+  content: "\e660"; }
+
+.icon-x-circle:before {
+  content: "\e661"; }
+
+.icon-x:before, body .scope-container .item .remove:before {
+  content: "\e662"; }
 
 html {
   -ms-text-size-adjust: 100%;
@@ -1675,12 +1702,24 @@ a {
       .flexbox .grid.orient--vertical-on-xsmall {
         -webkit-flex-flow: column nowrap;
             -ms-flex-flow: column nowrap;
-                flex-flow: column nowrap; } }
+                flex-flow: column nowrap; }
+        .flexbox .grid.orient--vertical-on-xsmall > .grid__block {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+             -moz-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; } }
     @media (min-width: 1px) and (max-width: 768px) {
       .flexbox .grid.orient--vertical-on-small {
         -webkit-flex-flow: column nowrap;
             -ms-flex-flow: column nowrap;
-                flex-flow: column nowrap; } }
+                flex-flow: column nowrap; }
+        .flexbox .grid.orient--vertical-on-small > .grid__block {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+             -moz-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1; } }
 .flexbox [class*="grid__"] {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2986,6 +3025,7 @@ body .scope-container {
     left: 0;
     top: 0; }
     body .scope-container .datepicker.dropdown-menu {
+      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
       max-height: none;
       position: absolute; }
       @media (min-width: 1px) and (max-width: 768px) {
@@ -3065,6 +3105,8 @@ body .scope-container {
     display: block;
     height: 16px;
     width: 16px; }
+  body .scope-container .range_inputs_container {
+    padding: 16px 0 8px 0; }
   body .scope-container .daterangepicker {
     border-radius: 3px;
     background: white;
@@ -3076,7 +3118,7 @@ body .scope-container {
     body .scope-container .daterangepicker li {
       margin-left: 0 !important; }
     body .scope-container .daterangepicker.dropdown-menu {
-      border: 1px solid #dadee2;
+      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
       max-width: none;
       z-index: 3000; }
     body .scope-container .daterangepicker.opensleft .ranges, body .scope-container .daterangepicker.opensleft .calendar {
@@ -3829,8 +3871,6 @@ body .scope-container {
       color: #47cfd2; }
       body .scope-container .alert--info .alert__close-button {
         color: #47cfd2; }
-    body .scope-container .alert--dismissable {
-      padding-right: 3.5em; }
     body .scope-container .alert__close-button {
       background-image: none;
       background: transparent;
@@ -3857,6 +3897,8 @@ body .scope-container {
       padding: 1em;
       -webkit-transition: 0.33s;
               transition: 0.33s; }
+      body .scope-container .alert--active.alert--dismissable {
+        padding-right: 3.5em; }
       body .scope-container .alert--active + * {
         margin-top: 1em; }
   body .scope-container .nav-bar {
@@ -3888,31 +3930,45 @@ body .scope-container {
           overflow: hidden;
           -webkit-transition: 0.33s;
                   transition: 0.33s; } }
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         body .scope-container .nav-bar__list--right {
           float: right; } }
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         body .scope-container .nav-bar__list--left {
           float: left; } }
       body .scope-container .nav-bar__list-item {
         font-weight: 400;
         margin: 0;
         position: relative; }
-        @media (min-width: 768px) {
+        @media (min-width: 769px) {
           body .scope-container .nav-bar__list-item {
             float: left; } }
         @media (min-width: 1px) and (max-width: 768px) {
           body .scope-container .nav-bar__list-item .button-group {
             width: 100%; }
+            body .scope-container .nav-bar__list-item .button-group .button {
+              width: 100%;
+              text-align: left; }
             body .scope-container .nav-bar__list-item .button-group .dropdown-box {
-              position: static; } }
+              border: 0;
+              border-radius: 0;
+              box-shadow: inset 0 0 0 1px #dadee2;
+              position: static; }
+              body .scope-container .nav-bar__list-item .button-group .dropdown-box .dropdown-box__item:hover {
+                box-shadow: inset 1px 0 #dadee2, inset -1px 0 #dadee2;
+                -webkit-transition: background 0.33s;
+                        transition: background 0.33s; }
+              body .scope-container .nav-bar__list-item .button-group .dropdown-box li:first-child .dropdown-box__item:hover {
+                box-shadow: inset 0 1px #dadee2, inset 1px 0 #dadee2, inset -1px 0 #dadee2; }
+              body .scope-container .nav-bar__list-item .button-group .dropdown-box li:last-child .dropdown-box__item:hover {
+                box-shadow: inset 0 -1px #dadee2, inset 1px 0 #dadee2, inset -1px 0 #dadee2; } }
         body .scope-container .nav-bar__list-item > a {
           cursor: pointer;
           display: block;
           line-height: 1.5;
           min-width: 3.5em;
           padding: 1em; }
-          @media (min-width: 768px) {
+          @media (min-width: 769px) {
             body .scope-container .nav-bar__list-item > a {
               text-align: center; } }
           body .scope-container .nav-bar__list-item > a.button {
@@ -3921,9 +3977,11 @@ body .scope-container {
             border: 0;
             color: inherit; }
         @media (min-width: 1px) and (max-width: 768px) {
-          body .scope-container .nav-bar__list-item:hover > a {
+          body .scope-container .nav-bar__list-item:hover > a, body .scope-container .nav-bar__list-item:hover > .button-group {
             background-color: #f5f6f7;
-            color: #8d9aa5; } }
+            color: #8d9aa5;
+            -webkit-transition: background 0.33s;
+                    transition: background 0.33s; } }
         body .scope-container .nav-bar__list-item--active > *, body .scope-container .nav-bar__list-item--active > a, body .scope-container .nav-bar__list-item--active:hover > *, body .scope-container .nav-bar__list-item--active:hover > a {
           background-color: #e8eaeb;
           color: #686c70; }
@@ -3942,7 +4000,10 @@ body .scope-container {
               line-height: 1.25;
               vertical-align: middle; }
         body .scope-container .nav-bar__list-item .dropdown-box--active {
-          margin-top: 0.5em; }
+          margin-top: 0; }
+          @media (min-width: 769px) {
+            body .scope-container .nav-bar__list-item .dropdown-box--active {
+              margin-top: 0.5em; } }
     body .scope-container .nav-bar__menu-toggle {
       cursor: pointer;
       display: none;
@@ -3952,7 +4013,7 @@ body .scope-container {
       line-height: 1.75em;
       text-align: center;
       width: 1.75em; }
-      body .scope-container .nav-bar__menu-toggle .juicon, body .scope-container .nav-bar__menu-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__menu-toggle .selectize-input:before, body .scope-container .nav-bar__menu-toggle .item .remove, body .scope-container .item .nav-bar__menu-toggle .remove, body .scope-container .nav-bar__menu-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__menu-toggle .button__content:before, body .scope-container .nav-bar__menu-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__menu-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar__menu-toggle .icon, body .scope-container .nav-bar__menu-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__menu-toggle .selectize-input:before, body .scope-container .nav-bar__menu-toggle .item .remove, body .scope-container .item .nav-bar__menu-toggle .remove, body .scope-container .nav-bar__menu-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__menu-toggle .button__content:before, body .scope-container .nav-bar__menu-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__menu-toggle .form-element__wrap:before {
         line-height: inherit; }
       @media (min-width: 1px) and (max-width: 768px) {
         body .scope-container .nav-bar__menu-toggle {
@@ -3983,7 +4044,7 @@ body .scope-container {
         padding-top: 1em; }
     body .scope-container .nav-bar__appendage-toggle {
       line-height: 1.5 !important; }
-      body .scope-container .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
         height: 24px;
         line-height: 24px;
         -webkit-transition: 0.33s;
@@ -3991,9 +4052,9 @@ body .scope-container {
         vertical-align: top;
         width: 24px; }
         @media (min-width: 768px) {
-          body .scope-container .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
+          body .scope-container .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
             text-align: center; } }
-        body .scope-container .nav-bar__appendage-toggle .juicon:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove:before, body .scope-container .item .nav-bar__appendage-toggle .remove:before, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
+        body .scope-container .nav-bar__appendage-toggle .icon:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove:before, body .scope-container .item .nav-bar__appendage-toggle .remove:before, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
           height: 24px;
           text-align: center;
           width: 24px; }
@@ -4006,7 +4067,7 @@ body .scope-container {
       opacity: 100;
       -webkit-transition: 0.33s;
               transition: 0.33s; }
-      body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 1000px;
         box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
@@ -4026,7 +4087,7 @@ body .scope-container {
         color: #384047; }
         body .scope-container .nav-bar--default .nav-bar__list-item > a.nav-bar__appendage-toggle {
           color: #384047; }
-      body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
         background: #f5f6f7;
         border-radius: 1000px;
         box-shadow: 0 0 0 4px #f5f6f7; }
@@ -4050,7 +4111,7 @@ body .scope-container {
               background-color: #2585c1; } }
       body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage {
         background-color: #2585c1; }
-        body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .juicon, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
+        body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
           background: rgba(255, 255, 255, 0.1);
           border-radius: 1000px;
           box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1); }
@@ -4062,42 +4123,12 @@ body .scope-container {
         background: #2177ac; }
         body .scope-container .nav-bar--primary .nav-bar__appendage textarea, body .scope-container .nav-bar--primary .nav-bar__appendage input {
           background: white; }
-  @media (min-width: 768px) {
-    .flexbox .nav-bar > * {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-         -moz-box-flex: 1;
-          -ms-flex: 1;
-              flex: 1; }
-    .flexbox .nav-bar .nav-bar__top {
-      -webkit-box-flex: initial;
-      -webkit-flex: initial;
-         -moz-box-flex: initial;
-          -ms-flex: initial;
-              flex: initial; }
-    .flexbox .nav-bar__list {
-      -webkit-box-align: end;
-      -webkit-align-items: flex-end;
-         -moz-box-align: end;
-          -ms-flex-align: end;
-              align-items: flex-end;
-      -moz-flex-wrap: wrap;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      -webkit-flex-wrap: wrap;
-              flex-wrap: wrap;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .flexbox .nav-bar__list > * {
-        -webkit-box-flex: initial;
-        -webkit-flex: initial;
-           -moz-box-flex: initial;
-            -ms-flex: initial;
-                flex: initial; } }
+      @media (min-width: 1px) and (max-width: 768px) {
+        body .scope-container .nav-bar--primary .nav-bar__list-item:hover > a, body .scope-container .nav-bar--primary .nav-bar__list-item:hover > .button-group {
+          background-color: #2585c1;
+          color: white;
+          -webkit-transition: background 0.33s;
+                  transition: background 0.33s; } }
   body .scope-container .button, body .scope-container a.button, body .scope-container button.button, body .scope-container .clear-selectize, body .scope-container .alert__close-button, body .scope-container .dropdown-box__close-button, body .scope-container .callout__top .callout__close-button, body .scope-container .slate__block--removable > .slate__block-close-button {
     background-image: none;
     background: transparent;
@@ -4126,7 +4157,7 @@ body .scope-container {
     vertical-align: middle; }
   body .scope-container .button--flat .button__content {
     color: #384047; }
-    body .scope-container .button--flat .button__content--default .juicon, body .scope-container .button--flat .button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--flat .button__content--default .selectize-input:before, body .scope-container .button--flat .button__content--default .item .remove, body .scope-container .item .button--flat .button__content--default .remove, body .scope-container .button--flat .button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--flat .button__content--default .button__content:before, body .scope-container .button--flat .button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--flat .button__content--default .form-element__wrap:before {
+    body .scope-container .button--flat .button__content--default .icon, body .scope-container .button--flat .button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--flat .button__content--default .selectize-input:before, body .scope-container .button--flat .button__content--default .item .remove, body .scope-container .item .button--flat .button__content--default .remove, body .scope-container .button--flat .button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--flat .button__content--default .button__content:before, body .scope-container .button--flat .button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--flat .button__content--default .form-element__wrap:before {
       color: #8d9aa5; }
     body .scope-container .button--flat .button__content--primary {
       color: #2a94d6; }
@@ -4144,7 +4175,7 @@ body .scope-container {
     background-color: white;
     box-shadow: inset 0 0 0 1px #dadee2;
     color: #384047; }
-    body .scope-container .button--solid .button__content.button__content--default .juicon, body .scope-container .button--solid .button__content.button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--solid .button__content.button__content--default .selectize-input:before, body .scope-container .button--solid .button__content.button__content--default .item .remove, body .scope-container .item .button--solid .button__content.button__content--default .remove, body .scope-container .button--solid .button__content.button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--solid .button__content.button__content--default .button__content:before, body .scope-container .button--solid .button__content.button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--solid .button__content.button__content--default .form-element__wrap:before {
+    body .scope-container .button--solid .button__content.button__content--default .icon, body .scope-container .button--solid .button__content.button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--solid .button__content.button__content--default .selectize-input:before, body .scope-container .button--solid .button__content.button__content--default .item .remove, body .scope-container .item .button--solid .button__content.button__content--default .remove, body .scope-container .button--solid .button__content.button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--solid .button__content.button__content--default .button__content:before, body .scope-container .button--solid .button__content.button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--solid .button__content.button__content--default .form-element__wrap:before {
       color: #8d9aa5; }
   body .scope-container .button--solid:hover .button__content.button__content--default {
     background-color: #f7f7f7; }
@@ -4201,7 +4232,7 @@ body .scope-container {
     position: relative; }
   body .scope-container .dropdown-box {
     background: white;
-    border: 1px solid #dadee2;
+    box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
     list-style-type: none;
     margin-top: 0px;
     max-height: 0;
@@ -4402,7 +4433,7 @@ body .scope-container {
       top: 0;
       vertical-align: middle;
       width: 64px; }
-      body .scope-container .callout__top .callout__close-button .juicon, body .scope-container .callout__top .callout__close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .callout__top .callout__close-button .selectize-input:before, body .scope-container .callout__top .callout__close-button .item .remove, body .scope-container .item .callout__top .callout__close-button .remove, body .scope-container .callout__top .callout__close-button .button.load-this .button__content:before, body .scope-container .button.load-this .callout__top .callout__close-button .button__content:before, body .scope-container .callout__top .callout__close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .callout__top .callout__close-button .form-element__wrap:before {
+      body .scope-container .callout__top .callout__close-button .icon, body .scope-container .callout__top .callout__close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .callout__top .callout__close-button .selectize-input:before, body .scope-container .callout__top .callout__close-button .item .remove, body .scope-container .item .callout__top .callout__close-button .remove, body .scope-container .callout__top .callout__close-button .button.load-this .button__content:before, body .scope-container .button.load-this .callout__top .callout__close-button .button__content:before, body .scope-container .callout__top .callout__close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .callout__top .callout__close-button .form-element__wrap:before {
         line-height: 64px; }
   body .scope-container .callout__heading {
     color: #384047;
@@ -4439,6 +4470,7 @@ body .scope-container {
     -webkit-transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25);
             transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25); }
     body .scope-container .callout-stage.callout-is-active .callout {
+      box-shadow: 0 1px 6px rgba(56, 64, 71, 0.9);
       max-height: none;
       -webkit-transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25);
               transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25); }
@@ -4550,9 +4582,9 @@ body .scope-container {
         body .scope-container .card__cap--icon.card__cap--solid {
           background: transparent;
           vertical-align: top; }
-          body .scope-container .card__cap--icon.card__cap--solid .juicon, body .scope-container .card__cap--icon.card__cap--solid .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon.card__cap--solid .selectize-input:before, body .scope-container .card__cap--icon.card__cap--solid .item .remove, body .scope-container .item .card__cap--icon.card__cap--solid .remove, body .scope-container .card__cap--icon.card__cap--solid .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon.card__cap--solid .button__content:before, body .scope-container .card__cap--icon.card__cap--solid .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon.card__cap--solid .form-element__wrap:before {
+          body .scope-container .card__cap--icon.card__cap--solid .icon, body .scope-container .card__cap--icon.card__cap--solid .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon.card__cap--solid .selectize-input:before, body .scope-container .card__cap--icon.card__cap--solid .item .remove, body .scope-container .item .card__cap--icon.card__cap--solid .remove, body .scope-container .card__cap--icon.card__cap--solid .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon.card__cap--solid .button__content:before, body .scope-container .card__cap--icon.card__cap--solid .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon.card__cap--solid .form-element__wrap:before {
             background-color: #2a94d6; }
-        body .scope-container .card__cap--icon .juicon, body .scope-container .card__cap--icon .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon .selectize-input:before, body .scope-container .card__cap--icon .item .remove, body .scope-container .item .card__cap--icon .remove, body .scope-container .card__cap--icon .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon .button__content:before, body .scope-container .card__cap--icon .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon .form-element__wrap:before {
+        body .scope-container .card__cap--icon .icon, body .scope-container .card__cap--icon .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon .selectize-input:before, body .scope-container .card__cap--icon .item .remove, body .scope-container .item .card__cap--icon .remove, body .scope-container .card__cap--icon .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon .button__content:before, body .scope-container .card__cap--icon .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon .form-element__wrap:before {
           border-radius: 3px;
           height: 2em;
           line-height: 2;
@@ -4571,7 +4603,7 @@ body .scope-container {
       body .scope-container .card__feature--solid {
         background-color: #2a94d6;
         color: white; }
-      body .scope-container .card__feature .juicon, body .scope-container .card__feature .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__feature .selectize-input:before, body .scope-container .card__feature .item .remove, body .scope-container .item .card__feature .remove, body .scope-container .card__feature .button.load-this .button__content:before, body .scope-container .button.load-this .card__feature .button__content:before, body .scope-container .card__feature .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__feature .form-element__wrap:before {
+      body .scope-container .card__feature .icon, body .scope-container .card__feature .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__feature .selectize-input:before, body .scope-container .card__feature .item .remove, body .scope-container .item .card__feature .remove, body .scope-container .card__feature .button.load-this .button__content:before, body .scope-container .button.load-this .card__feature .button__content:before, body .scope-container .card__feature .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__feature .form-element__wrap:before {
         vertical-align: middle; }
     body .scope-container .card__heading {
       color: #384047;
@@ -4707,7 +4739,7 @@ body .scope-container {
             min-width: 20px;
             padding: 0 4px;
             vertical-align: top; }
-            body .scope-container .drawer__list-item-alert-content .juicon, body .scope-container .drawer__list-item-alert-content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .drawer__list-item-alert-content .selectize-input:before, body .scope-container .drawer__list-item-alert-content .item .remove, body .scope-container .item .drawer__list-item-alert-content .remove, body .scope-container .drawer__list-item-alert-content .button.load-this .button__content:before, body .scope-container .button.load-this .drawer__list-item-alert-content .button__content:before, body .scope-container .drawer__list-item-alert-content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .drawer__list-item-alert-content .form-element__wrap:before {
+            body .scope-container .drawer__list-item-alert-content .icon, body .scope-container .drawer__list-item-alert-content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .drawer__list-item-alert-content .selectize-input:before, body .scope-container .drawer__list-item-alert-content .item .remove, body .scope-container .item .drawer__list-item-alert-content .remove, body .scope-container .drawer__list-item-alert-content .button.load-this .button__content:before, body .scope-container .button.load-this .drawer__list-item-alert-content .button__content:before, body .scope-container .drawer__list-item-alert-content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .drawer__list-item-alert-content .form-element__wrap:before {
               line-height: 20px; }
             body .scope-container .drawer__list-item-alert-content.default {
               background-color: white;
@@ -5068,7 +5100,7 @@ body .scope-container {
       height: 40px;
       text-align: center;
       padding: 10px; }
-      body .scope-container .list__item-alert__content {
+      body .scope-container .list__item-alert-content {
         border-radius: 12px;
         display: inline-block;
         font-size: 12px;
@@ -5076,24 +5108,24 @@ body .scope-container {
         min-width: 20px;
         padding: 0 4px;
         vertical-align: top; }
-        body .scope-container .list__item-alert__content .juicon, body .scope-container .list__item-alert__content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .list__item-alert__content .selectize-input:before, body .scope-container .list__item-alert__content .item .remove, body .scope-container .item .list__item-alert__content .remove, body .scope-container .list__item-alert__content .button.load-this .button__content:before, body .scope-container .button.load-this .list__item-alert__content .button__content:before, body .scope-container .list__item-alert__content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .list__item-alert__content .form-element__wrap:before {
+        body .scope-container .list__item-alert-content .icon, body .scope-container .list__item-alert-content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .list__item-alert-content .selectize-input:before, body .scope-container .list__item-alert-content .item .remove, body .scope-container .item .list__item-alert-content .remove, body .scope-container .list__item-alert-content .button.load-this .button__content:before, body .scope-container .button.load-this .list__item-alert-content .button__content:before, body .scope-container .list__item-alert-content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .list__item-alert-content .form-element__wrap:before {
           line-height: 20px; }
-        body .scope-container .list__item-alert__content.default {
+        body .scope-container .list__item-alert-content.default {
           background-color: white;
           box-shadow: inset 0 0 0 1px #dadee2; }
-        body .scope-container .list__item-alert__content--primary {
+        body .scope-container .list__item-alert-content--primary {
           background: #2a94d6;
           color: white; }
-        body .scope-container .list__item-alert__content--success {
+        body .scope-container .list__item-alert-content--success {
           background: #43b66a;
           color: white; }
-        body .scope-container .list__item-alert__content--error {
+        body .scope-container .list__item-alert-content--error {
           background: #c06057;
           color: white; }
-        body .scope-container .list__item-alert__content--warning {
+        body .scope-container .list__item-alert-content--warning {
           background: #e6b739;
           color: white; }
-        body .scope-container .list__item-alert__content--info {
+        body .scope-container .list__item-alert-content--info {
           background: #47cfd2;
           color: white; }
   body .scope-container .list.list--outlined {
@@ -5332,7 +5364,7 @@ body .scope-container {
           -webkit-transition: 0.33s;
                   transition: 0.33s;
           width: 56px; }
-          body .scope-container .slate__block--removable > .slate__block-close-button .juicon, body .scope-container .slate__block--removable > .slate__block-close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__block--removable > .slate__block-close-button .selectize-input:before, body .scope-container .slate__block--removable > .slate__block-close-button .item .remove, body .scope-container .item .slate__block--removable > .slate__block-close-button .remove, body .scope-container .slate__block--removable > .slate__block-close-button .button.load-this .button__content:before, body .scope-container .button.load-this .slate__block--removable > .slate__block-close-button .button__content:before, body .scope-container .slate__block--removable > .slate__block-close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__block--removable > .slate__block-close-button .form-element__wrap:before {
+          body .scope-container .slate__block--removable > .slate__block-close-button .icon, body .scope-container .slate__block--removable > .slate__block-close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__block--removable > .slate__block-close-button .selectize-input:before, body .scope-container .slate__block--removable > .slate__block-close-button .item .remove, body .scope-container .item .slate__block--removable > .slate__block-close-button .remove, body .scope-container .slate__block--removable > .slate__block-close-button .button.load-this .button__content:before, body .scope-container .button.load-this .slate__block--removable > .slate__block-close-button .button__content:before, body .scope-container .slate__block--removable > .slate__block-close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__block--removable > .slate__block-close-button .form-element__wrap:before {
             vertical-align: top; }
           body .scope-container .slate__block--removable > .slate__block-close-button:hover {
             color: #2a94d6; }
@@ -5353,7 +5385,7 @@ body .scope-container {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
-      body .scope-container .slate__title .juicon, body .scope-container .slate__title .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__title .selectize-input:before, body .scope-container .slate__title .item .remove, body .scope-container .item .slate__title .remove, body .scope-container .slate__title .button.load-this .button__content:before, body .scope-container .button.load-this .slate__title .button__content:before, body .scope-container .slate__title .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__title .form-element__wrap:before {
+      body .scope-container .slate__title .icon, body .scope-container .slate__title .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__title .selectize-input:before, body .scope-container .slate__title .item .remove, body .scope-container .item .slate__title .remove, body .scope-container .slate__title .button.load-this .button__content:before, body .scope-container .button.load-this .slate__title .button__content:before, body .scope-container .slate__title .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__title .form-element__wrap:before {
         color: #8d9aa5;
         line-height: 24px;
         margin-right: 16px; }
@@ -5366,7 +5398,7 @@ body .scope-container {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
-      body .scope-container .slate__subtitle .juicon, body .scope-container .slate__subtitle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__subtitle .selectize-input:before, body .scope-container .slate__subtitle .item .remove, body .scope-container .item .slate__subtitle .remove, body .scope-container .slate__subtitle .button.load-this .button__content:before, body .scope-container .button.load-this .slate__subtitle .button__content:before, body .scope-container .slate__subtitle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__subtitle .form-element__wrap:before {
+      body .scope-container .slate__subtitle .icon, body .scope-container .slate__subtitle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__subtitle .selectize-input:before, body .scope-container .slate__subtitle .item .remove, body .scope-container .item .slate__subtitle .remove, body .scope-container .slate__subtitle .button.load-this .button__content:before, body .scope-container .button.load-this .slate__subtitle .button__content:before, body .scope-container .slate__subtitle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__subtitle .form-element__wrap:before {
         color: #8d9aa5;
         line-height: 1; }
     body .scope-container .slate--collapse {
@@ -5378,6 +5410,9 @@ body .scope-container {
     border-radius: 3px 3px 0 0; }
     body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined {
       background-color: transparent; }
+      @media (max-width: 768px) {
+        body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined .nav-bar__appendage, body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined .nav-bar__list-item:hover > a, body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined .nav-bar__list-item:hover > .button-group {
+          box-shadow: inset -1px 0 #dadee2, inset 1px 0 #dadee2; } }
   .flexbox .slate__top, .flexbox .slate__bottom {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5511,7 +5546,7 @@ body .scope-container {
        -moz-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
-    body .scope-container .blank-state > .juicon, body .scope-container .selectize-control.single .blank-state > .selectize-input:before, body .scope-container .item .blank-state > .remove, body .scope-container .button.load-this .blank-state > .button__content:before, body .scope-container .form-element.load-this .blank-state > .form-element__wrap:before {
+    body .scope-container .blank-state > .juicon {
       display: block;
       font-size: 2em;
       line-height: 1;

@@ -21,7 +21,7 @@ $(document).ready(function() {
     function openDropdown(clickedElement) {
         var currentDropdownMenu = $(clickedElement).closest('.button-group').find('.dropdown-box');
         //console.log(clickedElement);
-        $(clickedElement).closest('.button-group').find('.dropdown-box').addClass('dropdown-box--active');
+        $(clickedElement).closest('.button-group').find('.dropdown-box').toggleClass('dropdown-box--active');
         $('.dropdown-box.active').not(currentDropdownMenu).removeClass('dropdown-box--active');
     }
     //close dropdown

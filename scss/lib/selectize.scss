@@ -295,8 +295,8 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
     cursor: text;
   }
   &:before {
-    @extend .juicon-down;
-    @extend .juicon;
+    @extend .icon-down;
+    @extend .icon;
     box-sizing: border-box;
     color: $color--gray;
     cursor: pointer;
@@ -401,8 +401,8 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 }
 
 .item .remove {
-  @extend .juicon-x;
-  @extend .juicon;
+  @extend .icon-x;
+  @extend .icon;
   color: $color--gray;
   font-size: .75em;
   line-height: 1.1;

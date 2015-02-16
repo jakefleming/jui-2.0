@@ -6,8 +6,8 @@
     padding-right: 48px;
     position: relative;
     &:before {
-      @extend .juicon-loading;
-      @extend .juicon;
+      @extend .icon-loading;
+      @extend .icon;
       animation: spin-it 1s linear infinite;
       height: 24px;
       line-height: 1.5;
@@ -28,8 +28,8 @@
 .form-element.load-this {
   .form-element__wrap {
     &:before {
-      @extend .juicon-loading;
-      @extend .juicon;
+      @extend .icon-loading;
+      @extend .icon;
       animation: spin-it 1s linear infinite;
       color: $color--gray;
       height: 24px;

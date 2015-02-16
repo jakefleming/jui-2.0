@@ -29,13 +29,13 @@ $nav-default-text: $color--black;
     }
     //a list on the right
     &--right {
-      @media (min-width: $brkpoint-md) {
+      @media (min-width: $brkpoint-md+1) {
         float: right;
       }
     }
     //a list on the left
     &--left {
-      @media (min-width: $brkpoint-md) {
+      @media (min-width: $brkpoint-md+1) {
         float: left;
       }
     }
@@ -45,15 +45,42 @@ $nav-default-text: $color--black;
       margin: 0;
       position: relative;
       //on medium screens stack up left
-      @media (min-width: $brkpoint-md) {
+      @media (min-width: $brkpoint-md+1) {
         float: left;
       }
       //on small screens make the dropdown menu part of the list instead of floating outside of it
       .button-group {
         @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
           width: 100%;
+          .button {
+            width: 100%;
+            text-align: left;
+          }
           .dropdown-box {
+            border: 0;
+            border-radius: 0;
+            box-shadow: inset 0 0 0 1px $component-border-color;
             position: static;
+            .dropdown-box__item {
+              &:hover {
+                box-shadow: inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+                transition: background $trans-duration;
+              }
+            }
+            li:first-child {
+              .dropdown-box__item {
+                &:hover {
+                  box-shadow: inset 0 1px $component-border-color, inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+                }
+              }
+            }
+            li:last-child {
+              .dropdown-box__item {
+                &:hover {
+                  box-shadow: inset 0 -1px $component-border-color, inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+                }
+              }
+            }
           }
         }
       }
@@ -64,7 +91,7 @@ $nav-default-text: $color--black;
         line-height: 1.5;
         min-width: em(56);
         padding: 1em;
-        @media (min-width: $brkpoint-md) {
+        @media (min-width: $brkpoint-md+1) {
           text-align: center;
         }
         //links that are also buttons
@@ -77,10 +104,11 @@ $nav-default-text: $color--black;
       }
       //hovering over list items
       &:hover {
-        > a {
+        > a, > .button-group {
           @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
             background-color: $color--gray--xx-light;
             color: $color--gray;
+            transition: background $trans-duration;
           }
         }
       }
@@ -112,7 +140,10 @@ $nav-default-text: $color--black;
       }
       //adjust the position of the dropdown box to be directly over the button in the nav
       .dropdown-box--active {
-        margin-top: em(8);
+        margin-top: 0;
+        @media (min-width: $brkpoint-md+1) {
+          margin-top: em(8);
+        }
       }
     }
   }
@@ -126,7 +157,7 @@ $nav-default-text: $color--black;
     line-height: em(56, 32);
     text-align: center;
     width: em(56, 32);
-    .juicon {
+    .icon {
       line-height: inherit;
     }
     //shows the menu-toggle button on small screens
@@ -161,7 +192,7 @@ $nav-default-text: $color--black;
   //button to open appendage
   &__appendage-toggle {
     line-height: 1.5 !important;
-    .juicon {
+    .icon {
       height: 24px;
       line-height: 24px;
       transition: $trans-duration;
@@ -189,7 +220,7 @@ $nav-default-text: $color--black;
       transition: $trans-duration;
       //button that closes the appendage
       &-toggle {
-        .juicon {
+        .icon {
           background: rgba(255,255,255,.1);
           border-radius: 1000px;
           box-shadow: 0 0 0 4px rgba(255,255,255,.1);
@@ -221,7 +252,7 @@ $nav-default-text: $color--black;
       .nav-bar__appendage {
         //button that closes the appendage
         &-toggle {
-          .juicon {
+          .icon {
             background: $color--gray--xx-light;
             border-radius: 1000px;
             box-shadow: 0 0 0 4px $color--gray--xx-light;
@@ -262,7 +293,7 @@ $nav-default-text: $color--black;
         background-color: $color--primary--dark;
         //button that closes the appendage
         &-toggle {
-          .juicon {
+          .icon {
             background: rgba(255,255,255,.1);
             border-radius: 1000px;
             box-shadow: 0 0 0 4px rgba(255,255,255,.1);
@@ -282,25 +313,15 @@ $nav-default-text: $color--black;
         background: $color--white;
       }
     }
-  }
-}
-//this stuff needs to be put in the root with '@at-root' so it can be scoped properly
-@at-root .flexbox {
-  @media (min-width: $brkpoint-md) {
-    .nav-bar {
-      > * {
-        @include flex;
-      }
-      .nav-bar__top {
-        @include flex(initial);
-      }
-    }
-    .nav-bar__list {
-      @include align-items(flex-end);
-      @include flex-wrap(wrap);
-      @include flexbox;
-      > * {
-        @include flex(initial);
+    .nav-bar__list-item {
+      &:hover {
+        > a, > .button-group {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+            background-color: $color--primary--dark;
+            color: $color--white;
+            transition: background $trans-duration;
+          }
+        }
       }
     }
   }

@@ -12,6 +12,7 @@
   left: 0;
   top: 0;
   &.dropdown-menu {
+    box-shadow: 0 1px 3px transparentize($color--black, .6);
     max-height: none;
     position: absolute;
     @media (min-width: 1px) and (max-width: $brkpoint-md) {
@@ -27,7 +28,7 @@
     width: 100%;
   }
   td, th {
-    border: 1px solid #f0f1f2 !important;
+    border: 1px solid #f0f1f2 !important; //to look more like sf1
     font-size: em(14px, 16px);
     height: 20px;
     padding-left: 0;
@@ -131,4 +132,8 @@
       }
     }
   }
+}
+
+.range_inputs_container {
+  padding: 16px 0 8px 0;
 }

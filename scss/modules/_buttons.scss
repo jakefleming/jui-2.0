@@ -47,7 +47,7 @@
   .button__content {
     color: $color--black;
     &--default {
-      .juicon {
+      .icon {
         color: $color--gray;
       }
     }
@@ -71,7 +71,7 @@
     background-color: $color--white;
     box-shadow: inset 0 0 0 1px $component-border-color;
     color: $color--black;
-    .juicon {
+    .icon {
       color: $color--gray;
     }
   }
@@ -143,7 +143,8 @@
 //dropdown boxes (menu)
 .dropdown-box {
   background: $color--white;
-  border: 1px solid $component-border-color;
+  //border: 1px solid $component-border-color;
+  box-shadow: 0 1px 3px transparentize($color--black, .6);
   list-style-type: none;
   margin-top: 0px;
   max-height: 0;

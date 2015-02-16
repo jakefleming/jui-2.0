@@ -133,11 +133,11 @@
       &.card__cap--solid {
         background: transparent;
         vertical-align: top;
-        .juicon {
+        .icon {
           background-color: $color--primary;
         }
       }
-      .juicon {
+      .icon {
         border-radius: $base--radius;
         height: em(32);
         line-height: 2;
@@ -164,7 +164,7 @@
       color: $color--white;
     }
     //give the feature an icon
-    .juicon {
+    .icon {
       vertical-align: middle;
     }
   }
