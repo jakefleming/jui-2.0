@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66cf635c-0c7d-4fd8-ad12-2c04805eae87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_ExtCSS-SFDC.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_common.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_dCustom0.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_dStandard.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_elements.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_ext-all-notheme.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_extended.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_forceComHomepage.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_index.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_setup.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_sf1-app.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/scope-test/_zen-componentsCompatible.scss" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/juicons.eot" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/juicons.svg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/juicons.ttf" afterPath="" />
@@ -22,54 +10,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/proximanovasoft-medium-webfont.ttf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/proximanovasoft-regular-webfont.ttf" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/fonts/proximanovasoft-semibold-webfont.ttf" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_alerts.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_alerts.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_bars.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_bars.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_buttons.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_buttons.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_callouts.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_callouts.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_cards.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_cards.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/701c8732016a121939edaaba49ada01293073349/_date-picker.scssc" afterPath="$PROJECT_DIR$/.sass-cache/701c8732016a121939edaaba49ada01293073349/_date-picker.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/701c8732016a121939edaaba49ada01293073349/_daterangepicker.scssc" afterPath="$PROJECT_DIR$/.sass-cache/701c8732016a121939edaaba49ada01293073349/_daterangepicker.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/a7b639079e8a991e3829b16c900c6604963cc892/_flex.scssc" afterPath="$PROJECT_DIR$/.sass-cache/a7b639079e8a991e3829b16c900c6604963cc892/_flex.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/4dba78a88d35909d491220c3e1ab330ebff3b0ad/_juicons.scssc" afterPath="$PROJECT_DIR$/.sass-cache/4dba78a88d35909d491220c3e1ab330ebff3b0ad/_juicons.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_lists.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_lists.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/cfaaa75bdcbad00aa1e45521d0c90a2049ce6d84/_loading.scssc" afterPath="$PROJECT_DIR$/.sass-cache/cfaaa75bdcbad00aa1e45521d0c90a2049ce6d84/_loading.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_slates.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_slates.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/docs.scssc" afterPath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/docs.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons.zip" afterPath="$PROJECT_DIR$/css/fonts/juicons.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/701c8732016a121939edaaba49ada01293073349/selectize.scssc" afterPath="$PROJECT_DIR$/.sass-cache/701c8732016a121939edaaba49ada01293073349/selectize.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_alerts.scss" afterPath="$PROJECT_DIR$/scss/modules/_alerts.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_bars.scss" afterPath="$PROJECT_DIR$/scss/modules/_bars.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_buttons.scss" afterPath="$PROJECT_DIR$/scss/modules/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_callouts.scss" afterPath="$PROJECT_DIR$/scss/modules/_callouts.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_cards.scss" afterPath="$PROJECT_DIR$/scss/modules/_cards.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/lib/_date-picker.scss" afterPath="$PROJECT_DIR$/scss/lib/_date-picker.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/lib/_daterangepicker.scss" afterPath="$PROJECT_DIR$/scss/lib/_daterangepicker.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_drawers.scss" afterPath="$PROJECT_DIR$/scss/modules/_drawers.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/layout/_flex.scss" afterPath="$PROJECT_DIR$/scss/layout/_flex.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/base/fonts/_juicons.scss" afterPath="$PROJECT_DIR$/scss/base/fonts/_juicons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_lists.scss" afterPath="$PROJECT_DIR$/scss/modules/_lists.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/state/_loading.scss" afterPath="$PROJECT_DIR$/scss/state/_loading.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_slates.scss" afterPath="$PROJECT_DIR$/scss/modules/_slates.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/datepicker/js/datepicker.js" afterPath="$PROJECT_DIR$/lib/datepicker/js/datepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/daterangepicker/js/daterangepicker.js" afterPath="$PROJECT_DIR$/lib/daterangepicker/js/daterangepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/docs.css.map" afterPath="$PROJECT_DIR$/css/docs.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/docs.css" afterPath="$PROJECT_DIR$/css/docs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/docs.scss" afterPath="$PROJECT_DIR$/scss/docs.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/lib/selectize.scss" afterPath="$PROJECT_DIR$/scss/lib/selectize.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles-scoped.css.map" afterPath="$PROJECT_DIR$/css/styles-scoped.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles-scoped.css" afterPath="$PROJECT_DIR$/css/styles-scoped.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css.map" afterPath="$PROJECT_DIR$/css/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template__add-conditions.html" afterPath="$PROJECT_DIR$/templates/template__add-conditions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template__blank.html" afterPath="$PROJECT_DIR$/templates/template__blank.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template__dashboard.html" afterPath="$PROJECT_DIR$/templates/template__dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template__page-bar.html" afterPath="$PROJECT_DIR$/templates/template__page-bar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template__setup-tabs.html" afterPath="$PROJECT_DIR$/templates/template__setup-tabs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/template__sign-in.html" afterPath="$PROJECT_DIR$/templates/template__sign-in.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="jui-2.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,11 +57,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_juicons.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_juicons.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scss/base/fonts/_juicons.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7024504" vertical-offset="5638" max-vertical-offset="6555">
-                  <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
+                <state vertical-scroll-proportion="-13.833333" vertical-offset="5638" max-vertical-offset="6555">
+                  <caret line="398" column="19" selection-start-line="398" selection-start-column="19" selection-end-line="398" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider editor-type-id="MarkdownPreviewEditor">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.08813161" vertical-offset="0" max-vertical-offset="851">
+                  <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
                   <folding />
                 </state>
               </provider>
@@ -211,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/styles-scoped.css" />
         <option value="$PROJECT_DIR$/scss/state/_blank.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_constraints.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_pebbles.scss" />
@@ -262,6 +215,7 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/docs.css" />
         <option value="$PROJECT_DIR$/scss/docs.scss" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -686,7 +640,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11992188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11992188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -722,13 +676,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scss/state/_index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="120">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/state/_visibility.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="195">
@@ -1103,14 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/base/fonts/_juicons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7024504" vertical-offset="5638" max-vertical-offset="6555">
-          <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6470587" vertical-offset="5934" max-vertical-offset="31125">
@@ -1142,6 +1081,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3930">
           <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/base/fonts/_juicons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.833333" vertical-offset="5638" max-vertical-offset="6555">
+          <caret line="398" column="19" selection-start-line="398" selection-start-column="19" selection-end-line="398" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08813161" vertical-offset="0" max-vertical-offset="851">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
           <folding />
         </state>
       </provider>
