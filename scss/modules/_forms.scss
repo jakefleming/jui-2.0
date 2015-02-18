@@ -239,9 +239,9 @@ input[type=checkbox] {
   @include radius($base--radius);
   &:checked {
     &:after {
-      -webkit-transform: translate(4px, 6px) rotate(-45deg);
-      border-bottom: 4px solid #fff;
-      border-left: 4px solid #fff;
+      -webkit-transform: translate(5px, 7px) rotate(-45deg);
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
       content: '';
       display: block;
       height: 4px;

@@ -21,6 +21,8 @@
   }
   //if the icon is first, we assume it isn't followed by text, and we apply negative margin to have it line up better
   &__icon {
+    font-size: 14px;
+    line-height: 24px;
     margin-left: em(-4);
     margin-right: em(-4);
   }

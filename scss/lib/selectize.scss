@@ -295,7 +295,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
     cursor: text;
   }
   &:before {
-    @extend .icon-down;
+    @extend .icon-caret-down;
     @extend .icon;
     box-sizing: border-box;
     color: $color--gray;
