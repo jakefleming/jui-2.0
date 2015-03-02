@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66cf635c-0c7d-4fd8-ad12-2c04805eae87" name="Default" comment="" />
+    <list default="true" id="66cf635c-0c7d-4fd8-ad12-2c04805eae87" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
     <ignored path="jui-2.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -62,10 +64,19 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="5.0956826" vertical-offset="26113" max-vertical-offset="31680">
-                  <caret line="2032" column="48" selection-start-line="2032" selection-start-column="48" selection-end-line="2032" selection-end-column="48" />
+                <state vertical-scroll-proportion="0.7024504" vertical-offset="26293" max-vertical-offset="32910">
+                  <caret line="1793" column="76" selection-start-line="1793" selection-start-column="76" selection-end-line="1793" selection-end-column="76" />
                   <folding>
-                    <marker date="1425329365000" expanded="true" signature="124218:124234" placeholder="..." />
+                    <element signature="n#style#0;n#div#0;n#article#3;n#section#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#ul#0;n#div#2;n#article#4;n#section#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#article#0;n#section#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#1;n#article#0;n#section#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#article#0;n#section#10;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#article#0;n#section#12;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#span#0;n#li#4;n#ul#0;n#article#0;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#span#0;n#li#4;n#ul#0;n#article#1;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#article#2;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <marker date="1425330104000" expanded="true" signature="120929:120945" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -369,6 +380,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jui-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jui-2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="illustrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -853,21 +882,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.0956826" vertical-offset="26113" max-vertical-offset="31680">
-          <caret line="2032" column="48" selection-start-line="2032" selection-start-column="48" selection-end-line="2032" selection-end-column="48" />
-          <folding>
-            <marker date="1425329365000" expanded="true" signature="124218:124234" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/template__sign-in.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6067678" vertical-offset="260" max-vertical-offset="1575">
           <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7024504" vertical-offset="26293" max-vertical-offset="32910">
+          <caret line="1793" column="76" selection-start-line="1793" selection-start-column="76" selection-end-line="1793" selection-end-column="76" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#article#3;n#section#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#2;n#article#4;n#section#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#article#0;n#section#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#article#0;n#section#5;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#article#0;n#section#10;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#article#0;n#section#12;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#li#4;n#ul#0;n#article#0;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#li#4;n#ul#0;n#article#1;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#1;n#ul#0;n#article#2;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1425330104000" expanded="true" signature="120929:120945" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
