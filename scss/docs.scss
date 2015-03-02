@@ -47,8 +47,10 @@ body .scope-container {
     }
   }
   .doc-page-header-inner {
-    @include align-self(center);
     @include flex();
+    @media (min-width: $brkpoint-md) {
+      @include align-self(center);
+    }
   }
   #bathroom-sink-header {
     background-image: url('../assets/illustrations/bathroom-sink.png');
@@ -59,9 +61,12 @@ body .scope-container {
   .doc-page-heading {
     color: $color--white;
     font-family: $font--2;
-    font-size: 3em;
+    font-size: 2em;
     line-height: 1;
     margin-top: 0;
+    @media (min-width: $brkpoint-md) {
+      font-size: 3em;
+    }
   }
   .doc-page-subheading {
     color: transparentize($color--white, .6);
@@ -74,7 +79,7 @@ body .scope-container {
   //layout
   #docs {
     margin: 0 auto;
-    max-width: em(800);
+    max-width: em(768);
     @media (min-width: $brkpoint-md) {
       //padding-top: 4em;
     }
@@ -123,6 +128,9 @@ body .scope-container {
       @include flex;
       margin-top: em(24);
       padding-left: px($base--num);
+      &.big {
+        @include flex-grow(2);
+      }
     }
     .line-pre {
       background-color: $color--gray--xx-light;
@@ -165,9 +173,6 @@ body .scope-container {
       margin: 1em 0;
     }
   }
-  .big {
-    @include flex-grow(2);
-  }
   #type {
     article {
       margin: 0;
@@ -197,7 +202,6 @@ body .scope-container {
       line-height: 24px;
       margin: 16px 0;
       text-align: center;
-      width: 24px;
     }
     article {
       margin-top: 0;

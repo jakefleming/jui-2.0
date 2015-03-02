@@ -145,6 +145,11 @@ $nav-default-text: $color--black;
           margin-top: em(8);
         }
       }
+      &-icon {
+        line-height: 24px;
+        width: 24px;
+        margin: 0 4px;
+      }
     }
   }
   //the button you click to show and hide the contents of the nav on smaller screens

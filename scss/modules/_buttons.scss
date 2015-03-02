@@ -196,13 +196,21 @@
     margin-left: 0;
     margin-top: -16px;
     outline: none;
+    overflow: hidden;
     padding: 0 em(16);
+    text-overflow: ellipsis;
     transition: $trans-duration;
     vertical-align: middle;
     white-space: nowrap;
+    @include clearfix();
     &:hover {
       background-color: darken($color--white, $darken-p);
       color: $color--gray--dark;
+    }
+    &-icon {
+      float: right;
+      line-height: 40px;
+      margin-left: 16px;
     }
   }
   //this is an item that doesn't close the dropdown when you click it
