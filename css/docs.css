@@ -318,7 +318,7 @@ body .scope-container #docs {
   margin: 0 auto;
   max-width: 48em; }
   body .scope-container #docs h1, body .scope-container #docs h2, body .scope-container #docs h3, body .scope-container #docs h4, body .scope-container #docs h5, body .scope-container #docs h6 {
-    color: #1C2833; }
+    color: #384047; }
   body .scope-container #docs section + .doc-section-heading {
     margin-top: 96px; }
   body .scope-container #docs .doc-section-heading {
@@ -611,33 +611,33 @@ body .scope-container .template-link {
     .color-swatches li:nth-child(35):after {
       content: "#238d90"; }
   .color-swatches li:nth-child(36) {
-    background: #4d6e8c; }
+    background: #768593; }
     .color-swatches li:nth-child(36):after {
-      content: "#4d6e8c"; }
+      content: "#768593"; }
   .color-swatches li:nth-child(37) {
-    background: #44617b; }
+    background: #697986; }
     .color-swatches li:nth-child(37):after {
-      content: "#44617b"; }
+      content: "#697986"; }
   .color-swatches li:nth-child(38) {
-    background: #2e4254; }
+    background: #4e5a64; }
     .color-swatches li:nth-child(38):after {
-      content: "#2e4254"; }
+      content: "#4e5a64"; }
   .color-swatches li:nth-child(39) {
-    background: #1C2833; }
+    background: #384047; }
     .color-swatches li:nth-child(39):after {
-      content: "#1C2833"; }
+      content: "#384047"; }
   .color-swatches li:nth-child(40) {
-    background: #131b23; }
+    background: #2d3339; }
     .color-swatches li:nth-child(40):after {
-      content: "#131b23"; }
+      content: "#2d3339"; }
   .color-swatches li:nth-child(41) {
-    background: #0a0e12; }
+    background: #22262a; }
     .color-swatches li:nth-child(41):after {
-      content: "#0a0e12"; }
+      content: "#22262a"; }
   .color-swatches li:nth-child(42) {
-    background: black; }
+    background: #0b0d0e; }
     .color-swatches li:nth-child(42):after {
-      content: "black"; }
+      content: "#0b0d0e"; }
   .color-swatches li:nth-child(43) {
     background: #f7f8f9; }
     .color-swatches li:nth-child(43):after {

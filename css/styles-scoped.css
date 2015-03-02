@@ -642,7 +642,7 @@ html {
   font-family: sans-serif; }
 
 body {
-  color: #44617b;
+  color: #697986;
   background-color: transparent;
   margin: 0; }
 
@@ -3119,7 +3119,7 @@ body .scope-container {
   /* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
   /* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */ }
   body .scope-container body {
-    color: #4d6e8c; }
+    color: #768593; }
   body .scope-container h1, body .scope-container h2, body .scope-container h3, body .scope-container h4, body .scope-container h5, body .scope-container h6, body .scope-container p {
     line-height: 1;
     margin: 0;
@@ -3128,7 +3128,7 @@ body .scope-container {
     display: block;
     font-family: ProximaNovaSoft; }
   body .scope-container p {
-    color: #44617b;
+    color: #697986;
     font-size: 1em;
     /* 16px */
     font-weight: 400;
@@ -3171,7 +3171,7 @@ body .scope-container {
     left: 0;
     top: 0; }
     body .scope-container .datepicker.dropdown-menu {
-      box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
+      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
       max-height: none;
       position: absolute; }
       @media (min-width: 1px) and (max-width: 768px) {
@@ -3193,7 +3193,7 @@ body .scope-container {
       width: 20px; }
     body .scope-container .datepicker td {
       background-color: white;
-      color: #1C2833;
+      color: #384047;
       padding: 8px 10px; }
       body .scope-container .datepicker td.day:hover {
         background: #e9ebed;
@@ -3235,16 +3235,16 @@ body .scope-container {
           background-color: #2a94d6; }
         body .scope-container .datepicker td span.old {
           background: #e9ebed;
-          color: #44617b; }
+          color: #697986; }
         body .scope-container .datepicker td span.datepicker th.switch {
           width: 145px; }
     body .scope-container .datepicker thead tr {
       background-color: #f0f1f2; }
       body .scope-container .datepicker thead tr:first-child th {
-        color: #1C2833;
+        color: #384047;
         cursor: pointer; }
         body .scope-container .datepicker thead tr:first-child th.next, body .scope-container .datepicker thead tr:first-child th.prev {
-          color: #44617b;
+          color: #697986;
           font-size: 14px; }
   body .scope-container .input-append.date .add-on i {
     cursor: pointer;
@@ -3264,7 +3264,7 @@ body .scope-container {
     body .scope-container .daterangepicker li {
       margin-left: 0 !important; }
     body .scope-container .daterangepicker.dropdown-menu {
-      box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
+      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
       max-width: none;
       z-index: 3000; }
     body .scope-container .daterangepicker.opensleft .ranges, body .scope-container .daterangepicker.opensleft .calendar {
@@ -3361,12 +3361,12 @@ body .scope-container {
         font-size: 80%; }
     body .scope-container .daterangepicker td.available {
       background-color: white;
-      color: #1C2833; }
+      color: #384047; }
     body .scope-container .daterangepicker td.off, body .scope-container .daterangepicker td.disabled {
       background: #f7f8f8;
       color: #8d99a6; }
     body .scope-container .daterangepicker th.month {
-      color: #1C2833;
+      color: #384047;
       width: auto; }
     body .scope-container .daterangepicker option.disabled {
       color: #8d99a6; }
@@ -3403,7 +3403,7 @@ body .scope-container {
     background-color: white;
     border-radius: 3px !important;
     box-shadow: inset 0 0 0 1px #dadee2;
-    color: #44617b;
+    color: #697986;
     display: inline-block;
     float: left;
     line-height: 2.25em;
@@ -3422,7 +3422,7 @@ body .scope-container {
   body .scope-container th.next.available:active:hover, body .scope-container th.prev.available:active:hover {
     background-color: #e9ebed;
     border-color: transparent !important;
-    color: #1C2833; }
+    color: #384047; }
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 40px 0; }
@@ -3474,7 +3474,7 @@ body .scope-container {
   body .scope-container .selectize-input,
   body .scope-container .selectize-input input {
     -webkit-font-smoothing: inherit;
-    color: #44617b;
+    color: #697986;
     font-family: ProximaNovaSoft;
     font-size: 1em;
     line-height: 1.5; }
@@ -3530,7 +3530,7 @@ body .scope-container {
     background: white;
     border-radius: 3px;
     border: 0 solid #d0d0d0;
-    color: #44617b;
+    color: #697986;
     cursor: pointer;
     margin-right: 4px;
     margin: 0 3px 3px 0;
@@ -3539,11 +3539,11 @@ body .scope-container {
     body .scope-container .selectize-control.multi .selectize-input > div.active {
       background: #fdf9ee;
       border: 0 solid #cacaca;
-      color: #44617b; }
+      color: #697986; }
   body .scope-container .selectize-control.multi .selectize-input.disabled > div, body .scope-container .selectize-control.multi .selectize-input.disabled > div.active {
     background: white;
     border: 0 solid white;
-    color: #acacac; }
+    color: #c4c4c4; }
   body .scope-container .selectize-input:after {
     clear: left;
     content: ' ';
@@ -3571,18 +3571,18 @@ body .scope-container {
       border-top: 0 none; }
     body .scope-container .selectize-dropdown .optgroup-header {
       background: white;
-      color: #1C2833;
+      color: #384047;
       cursor: default;
       font-size: 0.75em;
       line-height: 24px;
       text-transform: uppercase; }
     body .scope-container .selectize-dropdown .active {
       background-color: #f7f7f7;
-      color: #44617b; }
+      color: #697986; }
       body .scope-container .selectize-dropdown .active.create {
-        color: #44617b; }
+        color: #697986; }
     body .scope-container .selectize-dropdown .create {
-      color: rgba(68, 97, 123, 0.5); }
+      color: rgba(105, 121, 134, 0.5); }
   body .scope-container .selectize-dropdown-content {
     max-height: 200px;
     overflow-x: hidden;
@@ -3682,7 +3682,7 @@ body .scope-container {
     body .scope-container .slider input.slider {
       display: none !important; }
     body .scope-container .slider-tooltip {
-      background-color: #1C2833;
+      background-color: #384047;
       border-radius: 3px;
       color: white;
       font-family: ProximaNovaSoft;
@@ -3692,10 +3692,10 @@ body .scope-container {
       padding: 1em 1em;
       position: absolute; }
     body .scope-container .slider .tooltip-arrow {
-      border-color: #1C2833;
+      border-color: #384047;
       border-left: 9px solid transparent !important;
       border-right: 9px solid transparent !important;
-      border-top: 9px solid #1C2833;
+      border-top: 9px solid #384047;
       bottom: -7px;
       display: block;
       left: 50%;
@@ -3719,7 +3719,7 @@ body .scope-container {
     body .scope-container .slider__handle {
       background: white;
       border-radius: 50%;
-      box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
+      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
       height: 24px;
       position: absolute;
       width: 24px; }
@@ -3759,11 +3759,11 @@ body .scope-container {
         margin-left: -8px;
         margin-top: -24px; }
   body .scope-container .tooltipster-default {
-    background: #1C2833;
+    background: #384047;
     border-radius: 3px;
     color: white; }
   body .scope-container .tooltipster-default .tooltipster-content {
-    background-color: #1C2833;
+    background-color: #384047;
     border-radius: 3px;
     font-family: ProximaNovaSoft;
     font-size: 14px;
@@ -4140,7 +4140,7 @@ body .scope-container {
           body .scope-container .nav-bar__list-item .button .button__content {
             background: transparent;
             box-shadow: none;
-            color: #1C2833;
+            color: #384047;
             line-height: 1;
             padding: 0 1em;
             vertical-align: top; }
@@ -4240,15 +4240,15 @@ body .scope-container {
         body .scope-container .nav-bar--default.outlined .nav-bar__appendage {
           box-shadow: inset -1px 0 0 #dadee2, inset 1px 0 0 #dadee2; }
       body .scope-container .nav-bar--default .nav-bar__list-item > a {
-        color: #1C2833; }
+        color: #384047; }
         body .scope-container .nav-bar--default .nav-bar__list-item > a.nav-bar__appendage-toggle {
-          color: #1C2833; }
+          color: #384047; }
       body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
         background: #f7f8f9;
         border-radius: 1000px;
         box-shadow: 0 0 0 4px #f7f8f9; }
       body .scope-container .nav-bar--default .nav-bar__top {
-        color: #1C2833; }
+        color: #384047; }
     body .scope-container .nav-bar--primary {
       background: #2a94d6; }
       body .scope-container .nav-bar--primary .nav-bar__list-item {
@@ -4310,7 +4310,7 @@ body .scope-container {
     padding: 0 1em;
     vertical-align: middle; }
   body .scope-container .button--flat .button__content {
-    color: #44617b; }
+    color: #697986; }
     body .scope-container .button--flat .button__content--default .icon, body .scope-container .button--flat .button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--flat .button__content--default .selectize-input:before, body .scope-container .button--flat .button__content--default .item .remove, body .scope-container .item .button--flat .button__content--default .remove, body .scope-container .button--flat .button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--flat .button__content--default .button__content:before, body .scope-container .button--flat .button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--flat .button__content--default .form-element__wrap:before {
       color: #8d99a6; }
     body .scope-container .button--flat .button__content--primary {
@@ -4324,11 +4324,11 @@ body .scope-container {
     body .scope-container .button--flat .button__content--info {
       color: #47cfd2; }
   body .scope-container .button--flat:hover .button__content {
-    background-color: rgba(28, 40, 51, 0.1); }
+    background-color: rgba(56, 64, 71, 0.1); }
   body .scope-container .button--solid .button__content.button__content--default {
     background-color: white;
     box-shadow: inset 0 0 0 1px #dadee2;
-    color: #44617b; }
+    color: #697986; }
     body .scope-container .button--solid .button__content.button__content--default .icon, body .scope-container .button--solid .button__content.button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--solid .button__content.button__content--default .selectize-input:before, body .scope-container .button--solid .button__content.button__content--default .item .remove, body .scope-container .item .button--solid .button__content.button__content--default .remove, body .scope-container .button--solid .button__content.button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--solid .button__content.button__content--default .button__content:before, body .scope-container .button--solid .button__content.button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--solid .button__content.button__content--default .form-element__wrap:before {
       color: #8d99a6; }
   body .scope-container .button--solid:hover .button__content.button__content--default {
@@ -4386,7 +4386,7 @@ body .scope-container {
     position: relative; }
   body .scope-container .dropdown-box {
     background: white;
-    box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
+    box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
     list-style-type: none;
     margin-top: 0px;
     max-height: 0;
@@ -4413,7 +4413,7 @@ body .scope-container {
               transition: 0.33s;
       z-index: 1; }
       body .scope-container .dropdown-box--active .dropdown-box__item {
-        color: #44617b;
+        color: #697986;
         margin-top: 0;
         -webkit-transition: 0.33s;
                 transition: 0.33s; }
@@ -4600,7 +4600,7 @@ body .scope-container {
       body .scope-container .callout__top .callout__close-button .icon, body .scope-container .callout__top .callout__close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .callout__top .callout__close-button .selectize-input:before, body .scope-container .callout__top .callout__close-button .item .remove, body .scope-container .item .callout__top .callout__close-button .remove, body .scope-container .callout__top .callout__close-button .button.load-this .button__content:before, body .scope-container .button.load-this .callout__top .callout__close-button .button__content:before, body .scope-container .callout__top .callout__close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .callout__top .callout__close-button .form-element__wrap:before {
         line-height: 64px; }
   body .scope-container .callout__heading {
-    color: #1C2833;
+    color: #384047;
     display: inline-block;
     font-size: 1.5em;
     line-height: 32px; }
@@ -4615,7 +4615,7 @@ body .scope-container {
   .callout-is-active {
     overflow: hidden; }
     .callout-is-active .callout-backdrop {
-      background-color: rgba(28, 40, 51, 0.8);
+      background-color: rgba(56, 64, 71, 0.8);
       bottom: 0;
       left: 0;
       opacity: 0;
@@ -4634,7 +4634,7 @@ body .scope-container {
     -webkit-transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25);
             transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25); }
     body .scope-container .callout-stage.callout-is-active .callout {
-      box-shadow: 0 1px 6px rgba(28, 40, 51, 0.9);
+      box-shadow: 0 1px 6px rgba(56, 64, 71, 0.9);
       max-height: none;
       -webkit-transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25);
               transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25); }
@@ -4685,7 +4685,7 @@ body .scope-container {
     @media (min-width: 768px) {
       body .scope-container .card--actionable:hover {
         border-color: white;
-        box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4) !important;
+        box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4) !important;
         cursor: pointer;
         -webkit-transform: translateY(-2px);
             -ms-transform: translateY(-2px);
@@ -4770,7 +4770,7 @@ body .scope-container {
       body .scope-container .card__feature .icon, body .scope-container .card__feature .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__feature .selectize-input:before, body .scope-container .card__feature .item .remove, body .scope-container .item .card__feature .remove, body .scope-container .card__feature .button.load-this .button__content:before, body .scope-container .button.load-this .card__feature .button__content:before, body .scope-container .card__feature .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__feature .form-element__wrap:before {
         vertical-align: middle; }
     body .scope-container .card__heading {
-      color: #1C2833;
+      color: #384047;
       display: block;
       line-height: 1; }
     body .scope-container .card__subheading {
@@ -4794,7 +4794,7 @@ body .scope-container {
       max-width: 25em; }
   body .scope-container .drawer {
     bottom: 0;
-    box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
+    box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
     left: 0;
     overflow: visible;
     position: fixed;
@@ -4816,7 +4816,7 @@ body .scope-container {
     body .scope-container .drawer__body {
       background: white;
       bottom: 0;
-      color: #44617b;
+      color: #697986;
       line-height: 40px;
       overflow-x: hidden;
       overflow-y: auto;
@@ -4865,9 +4865,9 @@ body .scope-container {
         body .scope-container .drawer__list-item-link {
           width: 100%; }
           body .scope-container .drawer__list-item-link > .drawer__list-item-content {
-            color: #44617b; }
+            color: #697986; }
         body .scope-container .drawer__list-item-content {
-          color: #44617b;
+          color: #697986;
           display: block;
           overflow: hidden;
           padding: .5em 1em;
@@ -4966,7 +4966,7 @@ body .scope-container {
     padding-bottom: 1em;
     position: relative; }
     body .scope-container .form-element__label {
-      color: #1C2833;
+      color: #384047;
       display: block;
       font-family: ProximaNovaSoft;
       font-size: 1em;
@@ -4978,7 +4978,7 @@ body .scope-container {
     background-color: #e9ebed;
     background-image: none;
     border: 1px solid #dadee2;
-    color: #44617b;
+    color: #697986;
     display: block;
     font-family: ProximaNovaSoft;
     font-size: 1em;
@@ -5098,7 +5098,7 @@ body .scope-container {
       background-image: none;
       background: transparent;
       border: 0;
-      color: #44617b;
+      color: #697986;
       cursor: pointer;
       font-family: ProximaNovaSoft;
       font-size: 1rem;
@@ -5235,9 +5235,9 @@ body .scope-container {
     body .scope-container .list__item-link {
       width: 100%; }
       body .scope-container .list__item-link > .list__item-content {
-        color: #44617b; }
+        color: #697986; }
     body .scope-container .list__item-content {
-      color: #44617b;
+      color: #697986;
       overflow: hidden;
       padding: .5em 1em;
       text-overflow: ellipsis;
@@ -5357,7 +5357,7 @@ body .scope-container {
         padding: 1em 0;
         margin-bottom: 1em; } }
     body .scope-container .page-bar__title {
-      color: #1C2833;
+      color: #384047;
       display: block;
       font-size: 1em;
       font-weight: 500;
@@ -5469,13 +5469,13 @@ body .scope-container {
     body .scope-container .pebble--default {
       background-color: white;
       box-shadow: inset 0 0 0 1px #dadee2;
-      color: #44617b; }
+      color: #697986; }
     body .scope-container .pebble--round {
       border-radius: 1000px; }
   body .scope-container .slate {
     background-color: white;
     border-radius: 3px;
-    color: #1C2833;
+    color: #384047;
     font-family: ProximaNovaSoft; }
     body .scope-container .slate--outlined {
       box-shadow: inset 0 0 0 1px #dadee2; }
@@ -5543,7 +5543,7 @@ body .scope-container {
       body .scope-container .slate__bottom-main {
         padding-right: 1em; }
     body .scope-container .slate__title {
-      color: #1C2833;
+      color: #384047;
       display: block;
       font-size: 1.25em;
       font-weight: 500;
@@ -5634,11 +5634,11 @@ body .scope-container {
       font-weight: 400; }
     body .scope-container table.table--outlined td {
       box-shadow: inset 0 1px 0 #dadee2;
-      color: #44617b; }
+      color: #697986; }
     body .scope-container table td {
-      color: #44617b; }
+      color: #697986; }
     body .scope-container table th {
-      color: #1C2833; }
+      color: #384047; }
     body .scope-container table > thead > tr.tr--active > th,
     body .scope-container table > thead > tr.tr--active > td,
     body .scope-container table > tbody > tr.tr--active > th,
