@@ -20,42 +20,46 @@
                     </div>
                 </div>
             </div>
-            <div class="slate__block slate__block--has-no-bottom-pad">
-                <div class="form-element">
-                    <div class="form-element__wrap has-icon">
-                        <div class="form-element__icon icon icon-person"></div>
-                        <input type="text" placeholder="User name"/>
+            <form action="#">
+                <div class="slate__block slate__block--has-no-bottom-pad">
+                    <div class="form-element">
+                        <div class="form-element__wrap has-icon">
+                            <div class="form-element__icon icon icon-person"></div>
+                            <input id="userName" type="text" placeholder="User name"/>
+                            <span class="form-element__error-text">Error Text</span>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <div class="form-element__wrap has-icon">
+                            <div class="form-element__icon icon icon-lock"></div>
+                            <input id="password" type="password" placeholder="Password"/>
+                            <span class="form-element__error-text">Error Text</span>
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <label class="input-size">
+                            <input type="checkbox" checked/> Remember me
+                        </label>
                     </div>
                 </div>
-                <div class="form-element">
-                    <div class="form-element__wrap has-icon">
-                        <div class="form-element__icon icon icon-lock"></div>
-                        <input type="password" placeholder="Password"/>
+                <div class="slate__bottom slate__bottom--outlined">
+                    <div class="slate__bottom-control">
+                        <button type="submit" class="button button--solid">
+                            <span class="button__content button__content--primary">
+                                <span class="button__text">Sign in</span>
+                                <span class="button__icon icon icon-arrow-right"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="slate__bottom-main">
+                        <button type="button" class="button button--flat">
+                            <span class="button__content button__content--primary">
+                                <span class="button__text">Create account</span>
+                            </span>
+                        </button>
                     </div>
                 </div>
-                <div class="form-element">
-                    <label class="input-size">
-                        <input type="checkbox" checked/> Remember me
-                    </label>
-                </div>
-            </div>
-            <div class="slate__bottom slate__bottom--outlined">
-                <div class="slate__bottom-control">
-                    <button type="button" class="button button--solid">
-                        <span class="button__content button__content--primary">
-                            <span class="button__text">Sign in</span>
-                            <span class="button__icon icon icon-arrow-right"></span>
-                        </span>
-                    </button>
-                </div>
-                <div class="slate__bottom-main">
-                    <button type="button" class="button button--flat">
-                        <span class="button__content button__content--primary">
-                            <span class="button__text">Create account</span>
-                        </span>
-                    </button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
@@ -63,12 +67,33 @@
 
 <script type="text/javascript" src="../lib/selectize/selectize.js"></script>
 <script type="text/javascript" src="../lib/tooltipster-master/js/jquery.tooltipster.js"></script>
-<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript" src="../js/jui-app.js"></script>
 <script>
     $(function() {
         $('#select-thing').selectize({
 
         });
+
+        var $password = $('#password');
+
+        //hide hints
+        $('form .form-element__error-text').hide();
+
+        function passwordEvent(){
+            //find out if password is valid
+            if($(this).val().length > 8) {
+                //hide hint if valid
+                $(this).next().hide();
+            } else {
+                //else show hint
+                $(this).next().show();
+            }
+        }
+
+        //When event happens on password input
+        $('#password').focus(passwordEvent).keyup(passwordEvent);
+
+
     });
 </script>
 </body>

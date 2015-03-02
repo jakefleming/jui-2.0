@@ -284,14 +284,16 @@ body .scope-container .doc-page-header {
     body .scope-container .doc-page-header {
       padding: 2em 0; } }
 body .scope-container .doc-page-header-inner {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
      -moz-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
+  @media (min-width: 768px) {
+    body .scope-container .doc-page-header-inner {
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center; } }
 body .scope-container #bathroom-sink-header {
   background-image: url("../assets/illustrations/bathroom-sink.png"); }
 body .scope-container #templates-header {
@@ -299,9 +301,12 @@ body .scope-container #templates-header {
 body .scope-container .doc-page-heading {
   color: white;
   font-family: ProximaNova;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1;
   margin-top: 0; }
+  @media (min-width: 768px) {
+    body .scope-container .doc-page-heading {
+      font-size: 3em; } }
 body .scope-container .doc-page-subheading {
   color: rgba(255, 255, 255, 0.4);
   font-family: ProximaNova;
@@ -311,7 +316,7 @@ body .scope-container .doc-page-subheading {
   margin: 0; }
 body .scope-container #docs {
   margin: 0 auto;
-  max-width: 50em; }
+  max-width: 48em; }
   body .scope-container #docs h1, body .scope-container #docs h2, body .scope-container #docs h3, body .scope-container #docs h4, body .scope-container #docs h5, body .scope-container #docs h6 {
     color: #384047; }
   body .scope-container #docs section + .doc-section-heading {
@@ -361,6 +366,12 @@ body .scope-container #docs {
             flex: 1;
     margin-top: 1.5em;
     padding-left: 16px; }
+    body .scope-container #docs article.big {
+      -webkit-box-flex: 2;
+      -webkit-flex-grow: 2;
+         -moz-box-flex: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2; }
   body .scope-container #docs .line-pre {
     background-color: #f5f6f7;
     font-size: 14px;
@@ -391,12 +402,6 @@ body .scope-container #docs {
     vertical-align: top; }
   body .scope-container #docs .button.docButton {
     margin: 1em 0; }
-body .scope-container .big {
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-     -moz-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2; }
 body .scope-container #type article {
   margin: 0; }
 body .scope-container #grid-examples {
@@ -416,8 +421,7 @@ body .scope-container #icons .icon-example {
   height: 24px;
   line-height: 24px;
   margin: 16px 0;
-  text-align: center;
-  width: 24px; }
+  text-align: center; }
 body .scope-container #icons article {
   margin-top: 0; }
 body .scope-container #icons .doc-article-heading {
