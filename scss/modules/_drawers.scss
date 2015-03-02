@@ -23,7 +23,7 @@ $list-icon-h: 40;
   &__body {
     background: $color--white;
     bottom: 0;
-    color: $color--gray--dark;
+    color: $text-color-normal;
     line-height: 40px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -42,7 +42,7 @@ $list-icon-h: 40;
     margin: 8px 0;
     padding: 0 0 8px 0;
     &-title {
-      color: $color--gray;
+      color: $text-color-deemphasized;
       font-size: 12px;
       line-height: 24px;
       margin: 0;
@@ -85,12 +85,12 @@ $list-icon-h: 40;
       &-link {
         width: 100%;
         > .drawer__list-item-content {
-          color: $color--gray--dark;
+          color: $text-color-normal;
         }
       }
       //the main content in the list__item
       &-content {
-        color: $color--gray--dark;
+        color: $text-color-normal;
         display: block;
         overflow: hidden;
         padding: .5em 1em;
@@ -99,7 +99,7 @@ $list-icon-h: 40;
       }
       //if your list item needs an icon
       &-icon {
-        color: $color--gray;
+        color: $text-color-deemphasized;
         height: em($list-icon-h);
         line-height: 24px;
         min-width: em($list-icon-w);

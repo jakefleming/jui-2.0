@@ -55,7 +55,7 @@
   &--actionable:hover {
     @media (min-width: $brkpoint-md) {
       border-color: $color--white;
-      box-shadow: 0 1px 3px transparentize($color--black, 0.6)!important;
+      box-shadow: 0 1px 3px transparentize($text-color-emphasized, 0.6)!important;
       cursor: pointer;
       transform: translateY(-2px);
       transition: $trans-duration;
@@ -93,7 +93,7 @@
   }
   //a piece like an image or icon that caps the left or right side of the card
   &__cap {
-    color: $color--gray;
+    color: $text-color-deemphasized;
     display: table-cell;
     line-height: 1.5;
     padding: 1em;
@@ -170,13 +170,13 @@
   }
   //a general heading for a card
   &__heading {
-    color: $color--black;
+    color: $text-color-emphasized;
     display: block;
     line-height: 1;
   }
   //a general subheading for a card
   &__subheading {
-    color: $color--gray;
+    color: $text-color-deemphasized;
     display: block;
     font-size: em(14);
     line-height: em(16, 14);

@@ -642,6 +642,7 @@ html {
   font-family: sans-serif; }
 
 body {
+  color: #44617b;
   background-color: transparent;
   margin: 0; }
 
@@ -650,7 +651,6 @@ body {
     cursor: pointer; } }
 
 body {
-  color: #686c70;
   font-family: ProximaNovaSoft;
   font-size: 16px;
   -webkit-hyphens: none;
@@ -3118,6 +3118,8 @@ body .scope-container {
   /* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
   /* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
   /* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */ }
+  body .scope-container body {
+    color: #4d6e8c; }
   body .scope-container h1, body .scope-container h2, body .scope-container h3, body .scope-container h4, body .scope-container h5, body .scope-container h6, body .scope-container p {
     line-height: 1;
     margin: 0;
@@ -3126,7 +3128,7 @@ body .scope-container {
     display: block;
     font-family: ProximaNovaSoft; }
   body .scope-container p {
-    color: #686c70;
+    color: #44617b;
     font-size: 1em;
     /* 16px */
     font-weight: 400;
@@ -3169,7 +3171,7 @@ body .scope-container {
     left: 0;
     top: 0; }
     body .scope-container .datepicker.dropdown-menu {
-      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
+      box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
       max-height: none;
       position: absolute; }
       @media (min-width: 1px) and (max-width: 768px) {
@@ -3182,7 +3184,7 @@ body .scope-container {
       margin: 0;
       width: 100%; }
     body .scope-container .datepicker td, body .scope-container .datepicker th {
-      border: 1px solid #f0f1f2 !important;
+      border: 1px solid #e9ebed !important;
       font-size: 0.875em;
       height: 20px;
       padding-left: 0;
@@ -3191,19 +3193,19 @@ body .scope-container {
       width: 20px; }
     body .scope-container .datepicker td {
       background-color: white;
-      color: #384047;
+      color: #1C2833;
       padding: 8px 10px; }
       body .scope-container .datepicker td.day:hover {
-        background: #e8eaeb;
+        background: #e9ebed;
         cursor: pointer; }
       body .scope-container .datepicker td.day.disabled {
-        color: #e8eaeb; }
+        color: #dadee2; }
       body .scope-container .datepicker td.day.old, body .scope-container .datepicker td.day.new {
-        background: #f5f6f7;
-        color: #686c70; }
+        background: #e9ebed;
+        color: #9ca6b1; }
       body .scope-container .datepicker td.day.old {
-        background: #f5f6f7;
-        color: #686c70; }
+        background: #e9ebed;
+        color: #9ca6b1; }
       body .scope-container .datepicker td.day.active, body .scope-container .datepicker td.day.active:hover {
         background-color: #2a94d6;
         border-color: #2a94d6;
@@ -3222,7 +3224,7 @@ body .scope-container {
         margin: 2px;
         width: 52px; }
         body .scope-container .datepicker td span:hover {
-          background: #e8eaeb; }
+          background: #e9ebed; }
         body .scope-container .datepicker td span.active {
           background-color: #2a94d6;
           color: white; }
@@ -3232,17 +3234,17 @@ body .scope-container {
         body .scope-container .datepicker td span.active:active, body .scope-container .datepicker td span.active.active {
           background-color: #2a94d6; }
         body .scope-container .datepicker td span.old {
-          background: #f5f6f7;
-          color: #686c70; }
+          background: #e9ebed;
+          color: #44617b; }
         body .scope-container .datepicker td span.datepicker th.switch {
           width: 145px; }
     body .scope-container .datepicker thead tr {
       background-color: #f0f1f2; }
       body .scope-container .datepicker thead tr:first-child th {
-        color: #384047;
+        color: #1C2833;
         cursor: pointer; }
         body .scope-container .datepicker thead tr:first-child th.next, body .scope-container .datepicker thead tr:first-child th.prev {
-          color: #686c70;
+          color: #44617b;
           font-size: 14px; }
   body .scope-container .input-append.date .add-on i {
     cursor: pointer;
@@ -3262,7 +3264,7 @@ body .scope-container {
     body .scope-container .daterangepicker li {
       margin-left: 0 !important; }
     body .scope-container .daterangepicker.dropdown-menu {
-      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
+      box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
       max-width: none;
       z-index: 3000; }
     body .scope-container .daterangepicker.opensleft .ranges, body .scope-container .daterangepicker.opensleft .calendar {
@@ -3292,14 +3294,14 @@ body .scope-container {
         margin: 0;
         padding: 0; }
       body .scope-container .daterangepicker .ranges li {
-        border-bottom: 1px solid #e8eaeb;
+        border-bottom: 1px solid #dadee2;
         cursor: pointer;
         padding: 8px 16px; }
         body .scope-container .daterangepicker .ranges li.active, body .scope-container .daterangepicker .ranges li.active:hover {
           background: #2a94d6;
           color: white; }
         body .scope-container .daterangepicker .ranges li:hover {
-          background: #f5f6f7; }
+          background: #e9ebed; }
         body .scope-container .daterangepicker .ranges li:first-child {
           border-radius: 3px 3px 0 0; }
         body .scope-container .daterangepicker .ranges li:last-child {
@@ -3323,7 +3325,7 @@ body .scope-container {
     body .scope-container .daterangepicker .calendar-date {
       background: white; }
       body .scope-container .daterangepicker .calendar-date thead tr {
-        background-color: #f0f1f2; }
+        background-color: #e9ebed; }
     body .scope-container .daterangepicker .calendar-time {
       line-height: 30px;
       margin: 8px auto 0 auto;
@@ -3332,7 +3334,7 @@ body .scope-container {
       margin: 0;
       width: 100%; }
     body .scope-container .daterangepicker td, body .scope-container .daterangepicker th {
-      border: 1px solid #f0f1f2 !important;
+      border: 1px solid #e9ebed !important;
       cursor: pointer;
       font-size: 0.875em;
       height: 20px;
@@ -3342,7 +3344,7 @@ body .scope-container {
       white-space: nowrap;
       width: 20px; }
       body .scope-container .daterangepicker td.available:hover, body .scope-container .daterangepicker th.available:hover {
-        background: #e8eaeb; }
+        background: #e9ebed; }
       body .scope-container .daterangepicker td.available.active, body .scope-container .daterangepicker td.available:active:hover, body .scope-container .daterangepicker th.available.active, body .scope-container .daterangepicker th.available:active:hover {
         background-color: #2a94d6;
         border-color: #2a94d6 !important;
@@ -3355,19 +3357,19 @@ body .scope-container {
         border-radius: 0;
         color: #d5eaf7; }
       body .scope-container .daterangepicker td.week, body .scope-container .daterangepicker th.week {
-        color: #cfd0d2;
+        color: #c7ccd2;
         font-size: 80%; }
     body .scope-container .daterangepicker td.available {
       background-color: white;
-      color: #384047; }
+      color: #1C2833; }
     body .scope-container .daterangepicker td.off, body .scope-container .daterangepicker td.disabled {
-      background: #f5f6f7;
-      color: #686c70; }
+      background: #f7f8f8;
+      color: #8d99a6; }
     body .scope-container .daterangepicker th.month {
-      color: #384047;
+      color: #1C2833;
       width: auto; }
     body .scope-container .daterangepicker option.disabled {
-      color: #8d9aa5; }
+      color: #8d99a6; }
     body .scope-container .daterangepicker select.monthselect, body .scope-container .daterangepicker select.yearselect {
       cursor: default;
       font-size: 12px;
@@ -3401,7 +3403,7 @@ body .scope-container {
     background-color: white;
     border-radius: 3px !important;
     box-shadow: inset 0 0 0 1px #dadee2;
-    color: #686c70;
+    color: #44617b;
     display: inline-block;
     float: left;
     line-height: 2.25em;
@@ -3417,6 +3419,10 @@ body .scope-container {
     line-height: 2.25em;
     padding: 0 1em !important;
     vertical-align: middle; }
+  body .scope-container th.next.available:active:hover, body .scope-container th.prev.available:active:hover {
+    background-color: #e9ebed;
+    border-color: transparent !important;
+    color: #1C2833; }
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 40px 0; }
@@ -3429,7 +3435,7 @@ body .scope-container {
     background-position: 0 0; } }
   body .scope-container .progress {
     border-radius: 100px;
-    background-color: #e8eaeb;
+    background-color: #e9ebed;
     height: 16px;
     overflow: hidden;
     padding: 4px; }
@@ -3450,7 +3456,7 @@ body .scope-container {
         background-color: transparent;
         background-image: none;
         box-shadow: none;
-        color: #cfd0d2;
+        color: #c7ccd2;
         min-width: 30px; }
       body .scope-container .progress__bar.primary {
         background-color: #2a94d6; }
@@ -3468,7 +3474,7 @@ body .scope-container {
   body .scope-container .selectize-input,
   body .scope-container .selectize-input input {
     -webkit-font-smoothing: inherit;
-    color: #686c70;
+    color: #44617b;
     font-family: ProximaNovaSoft;
     font-size: 1em;
     line-height: 1.5; }
@@ -3524,7 +3530,7 @@ body .scope-container {
     background: white;
     border-radius: 3px;
     border: 0 solid #d0d0d0;
-    color: #686c70;
+    color: #44617b;
     cursor: pointer;
     margin-right: 4px;
     margin: 0 3px 3px 0;
@@ -3533,11 +3539,11 @@ body .scope-container {
     body .scope-container .selectize-control.multi .selectize-input > div.active {
       background: #fdf9ee;
       border: 0 solid #cacaca;
-      color: #686c70; }
+      color: #44617b; }
   body .scope-container .selectize-control.multi .selectize-input.disabled > div, body .scope-container .selectize-control.multi .selectize-input.disabled > div.active {
     background: white;
     border: 0 solid white;
-    color: #b8b8b8; }
+    color: #acacac; }
   body .scope-container .selectize-input:after {
     clear: left;
     content: ' ';
@@ -3565,18 +3571,18 @@ body .scope-container {
       border-top: 0 none; }
     body .scope-container .selectize-dropdown .optgroup-header {
       background: white;
-      color: #384047;
+      color: #1C2833;
       cursor: default;
       font-size: 0.75em;
       line-height: 24px;
       text-transform: uppercase; }
     body .scope-container .selectize-dropdown .active {
       background-color: #f7f7f7;
-      color: #686c70; }
+      color: #44617b; }
       body .scope-container .selectize-dropdown .active.create {
-        color: #686c70; }
+        color: #44617b; }
     body .scope-container .selectize-dropdown .create {
-      color: rgba(104, 108, 112, 0.5); }
+      color: rgba(68, 97, 123, 0.5); }
   body .scope-container .selectize-dropdown-content {
     max-height: 200px;
     overflow-x: hidden;
@@ -3588,7 +3594,7 @@ body .scope-container {
   body .scope-container .selectize-control.single .selectize-input:before {
     -moz-box-sizing: border-box;
          box-sizing: border-box;
-    color: #8d9aa5;
+    color: #8d99a6;
     cursor: pointer;
     height: 2.5em;
     line-height: 1.5;
@@ -3614,7 +3620,7 @@ body .scope-container {
   body .scope-container .selectize-control {
     line-height: 0; }
   body .scope-container .multi .selectize-input {
-    background-color: #e8eaeb;
+    background-color: #e9ebed;
     -webkit-transition: background-color 0.33s;
             transition: background-color 0.33s; }
     body .scope-container .multi .selectize-input:focus {
@@ -3646,7 +3652,7 @@ body .scope-container {
     vertical-align: middle;
     z-index: 1; }
     body .scope-container .clear-selectize .button__icon {
-      color: #8d9aa5; }
+      color: #8d99a6; }
     body .scope-container .clear-selectize .button__content {
       box-shadow: none !important; }
     body .scope-container .clear-selectize:hover .button__content {
@@ -3654,13 +3660,13 @@ body .scope-container {
     body .scope-container .clear-selectize--active {
       display: block !important; }
   body .scope-container .item .remove {
-    color: #8d9aa5;
+    color: #8d99a6;
     font-size: .75em;
     line-height: 1.1;
     padding: 4px 4px 4px 8px;
     vertical-align: baseline; }
   body .scope-container .input-group__element .selectize-input {
-    background-color: #e8eaeb; }
+    background-color: #e9ebed; }
     body .scope-container .input-group__element .selectize-input:before {
       content: "" !important; }
   body .scope-container .input-group__element .selectize-control {
@@ -3676,7 +3682,7 @@ body .scope-container {
     body .scope-container .slider input.slider {
       display: none !important; }
     body .scope-container .slider-tooltip {
-      background-color: #384047;
+      background-color: #1C2833;
       border-radius: 3px;
       color: white;
       font-family: ProximaNovaSoft;
@@ -3686,10 +3692,10 @@ body .scope-container {
       padding: 1em 1em;
       position: absolute; }
     body .scope-container .slider .tooltip-arrow {
-      border-color: #384047;
+      border-color: #1C2833;
       border-left: 9px solid transparent !important;
       border-right: 9px solid transparent !important;
-      border-top: 9px solid #384047;
+      border-top: 9px solid #1C2833;
       bottom: -7px;
       display: block;
       left: 50%;
@@ -3702,7 +3708,7 @@ body .scope-container {
     body .scope-container .slider .tooltip-inner {
       white-space: nowrap; }
     body .scope-container .slider__track {
-      background: #e8eaeb;
+      background: #e9ebed;
       border-radius: 100px;
       cursor: pointer;
       position: absolute; }
@@ -3713,7 +3719,7 @@ body .scope-container {
     body .scope-container .slider__handle {
       background: white;
       border-radius: 50%;
-      box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
+      box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
       height: 24px;
       position: absolute;
       width: 24px; }
@@ -3753,11 +3759,11 @@ body .scope-container {
         margin-left: -8px;
         margin-top: -24px; }
   body .scope-container .tooltipster-default {
-    background: #384047;
+    background: #1C2833;
     border-radius: 3px;
     color: white; }
   body .scope-container .tooltipster-default .tooltipster-content {
-    background-color: #384047;
+    background-color: #1C2833;
     border-radius: 3px;
     font-family: ProximaNovaSoft;
     font-size: 14px;
@@ -4122,19 +4128,19 @@ body .scope-container {
             color: inherit; }
         @media (min-width: 1px) and (max-width: 768px) {
           body .scope-container .nav-bar__list-item:hover > a, body .scope-container .nav-bar__list-item:hover > .button-group {
-            background-color: #f5f6f7;
-            color: #8d9aa5;
+            background-color: #e9ebed;
+            color: #aab3bc;
             -webkit-transition: background 0.33s;
                     transition: background 0.33s; } }
         body .scope-container .nav-bar__list-item--active > *, body .scope-container .nav-bar__list-item--active > a, body .scope-container .nav-bar__list-item--active:hover > *, body .scope-container .nav-bar__list-item--active:hover > a {
-          background-color: #e8eaeb;
-          color: #686c70; }
+          background-color: #dadee2;
+          color: #9ca6b1; }
         body .scope-container .nav-bar__list-item .button {
           padding: .5em 0; }
           body .scope-container .nav-bar__list-item .button .button__content {
             background: transparent;
             box-shadow: none;
-            color: #384047;
+            color: #1C2833;
             line-height: 1;
             padding: 0 1em;
             vertical-align: top; }
@@ -4207,7 +4213,7 @@ body .scope-container {
           text-align: center;
           width: 24px; }
     body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage {
-      background-color: #f0f1f2;
+      background-color: #f7f8f9;
       display: block;
       max-height: 31.25em;
       min-height: 0;
@@ -4215,6 +4221,8 @@ body .scope-container {
       opacity: 100;
       -webkit-transition: 0.33s;
               transition: 0.33s; }
+      body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage textarea, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage input {
+        background: white; }
       body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 1000px;
@@ -4232,15 +4240,15 @@ body .scope-container {
         body .scope-container .nav-bar--default.outlined .nav-bar__appendage {
           box-shadow: inset -1px 0 0 #dadee2, inset 1px 0 0 #dadee2; }
       body .scope-container .nav-bar--default .nav-bar__list-item > a {
-        color: #384047; }
+        color: #1C2833; }
         body .scope-container .nav-bar--default .nav-bar__list-item > a.nav-bar__appendage-toggle {
-          color: #384047; }
+          color: #1C2833; }
       body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
-        background: #f5f6f7;
+        background: #f7f8f9;
         border-radius: 1000px;
-        box-shadow: 0 0 0 4px #f5f6f7; }
+        box-shadow: 0 0 0 4px #f7f8f9; }
       body .scope-container .nav-bar--default .nav-bar__top {
-        color: #384047; }
+        color: #1C2833; }
     body .scope-container .nav-bar--primary {
       background: #2a94d6; }
       body .scope-container .nav-bar--primary .nav-bar__list-item {
@@ -4269,8 +4277,6 @@ body .scope-container {
         color: white; }
       body .scope-container .nav-bar--primary .nav-bar__appendage {
         background: #2177ac; }
-        body .scope-container .nav-bar--primary .nav-bar__appendage textarea, body .scope-container .nav-bar--primary .nav-bar__appendage input {
-          background: white; }
       @media (min-width: 1px) and (max-width: 768px) {
         body .scope-container .nav-bar--primary .nav-bar__list-item:hover > a, body .scope-container .nav-bar--primary .nav-bar__list-item:hover > .button-group {
           background-color: #2585c1;
@@ -4304,9 +4310,9 @@ body .scope-container {
     padding: 0 1em;
     vertical-align: middle; }
   body .scope-container .button--flat .button__content {
-    color: #384047; }
+    color: #44617b; }
     body .scope-container .button--flat .button__content--default .icon, body .scope-container .button--flat .button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--flat .button__content--default .selectize-input:before, body .scope-container .button--flat .button__content--default .item .remove, body .scope-container .item .button--flat .button__content--default .remove, body .scope-container .button--flat .button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--flat .button__content--default .button__content:before, body .scope-container .button--flat .button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--flat .button__content--default .form-element__wrap:before {
-      color: #8d9aa5; }
+      color: #8d99a6; }
     body .scope-container .button--flat .button__content--primary {
       color: #2a94d6; }
     body .scope-container .button--flat .button__content--success {
@@ -4318,13 +4324,13 @@ body .scope-container {
     body .scope-container .button--flat .button__content--info {
       color: #47cfd2; }
   body .scope-container .button--flat:hover .button__content {
-    background-color: rgba(56, 64, 71, 0.1); }
+    background-color: rgba(28, 40, 51, 0.1); }
   body .scope-container .button--solid .button__content.button__content--default {
     background-color: white;
     box-shadow: inset 0 0 0 1px #dadee2;
-    color: #384047; }
+    color: #44617b; }
     body .scope-container .button--solid .button__content.button__content--default .icon, body .scope-container .button--solid .button__content.button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--solid .button__content.button__content--default .selectize-input:before, body .scope-container .button--solid .button__content.button__content--default .item .remove, body .scope-container .item .button--solid .button__content.button__content--default .remove, body .scope-container .button--solid .button__content.button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--solid .button__content.button__content--default .button__content:before, body .scope-container .button--solid .button__content.button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--solid .button__content.button__content--default .form-element__wrap:before {
-      color: #8d9aa5; }
+      color: #8d99a6; }
   body .scope-container .button--solid:hover .button__content.button__content--default {
     background-color: #f7f7f7; }
   body .scope-container .button--solid .button__content {
@@ -4380,7 +4386,7 @@ body .scope-container {
     position: relative; }
   body .scope-container .dropdown-box {
     background: white;
-    box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
+    box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
     list-style-type: none;
     margin-top: 0px;
     max-height: 0;
@@ -4407,7 +4413,7 @@ body .scope-container {
               transition: 0.33s;
       z-index: 1; }
       body .scope-container .dropdown-box--active .dropdown-box__item {
-        color: #686c70;
+        color: #44617b;
         margin-top: 0;
         -webkit-transition: 0.33s;
                 transition: 0.33s; }
@@ -4441,7 +4447,7 @@ body .scope-container {
         display: table; }
       body .scope-container .dropdown-box__item:hover {
         background-color: #f7f7f7;
-        color: #686c70; }
+        color: #8d99a6; }
       body .scope-container .dropdown-box__item-icon {
         float: right;
         line-height: 40px;
@@ -4454,7 +4460,7 @@ body .scope-container {
       margin-right: 0.25em;
       vertical-align: middle; }
     body .scope-container .dropdown-box__content {
-      color: #686c70;
+      color: #8d99a6;
       font-family: ProximaNovaSoft;
       line-height: 0;
       margin-top: -16px;
@@ -4475,7 +4481,7 @@ body .scope-container {
       background-image: none;
       background: transparent;
       border-width: 0;
-      color: #8d9aa5;
+      color: #8d99a6;
       height: 40px;
       outline: none;
       padding: 8px 16px;
@@ -4583,7 +4589,7 @@ body .scope-container {
     padding: 1.5em 3em 0 1.5em;
     position: relative; }
     body .scope-container .callout__top .callout__close-button {
-      color: #8d9aa5;
+      color: #8d99a6;
       font-size: 20px;
       line-height: 64px;
       position: absolute;
@@ -4594,7 +4600,7 @@ body .scope-container {
       body .scope-container .callout__top .callout__close-button .icon, body .scope-container .callout__top .callout__close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .callout__top .callout__close-button .selectize-input:before, body .scope-container .callout__top .callout__close-button .item .remove, body .scope-container .item .callout__top .callout__close-button .remove, body .scope-container .callout__top .callout__close-button .button.load-this .button__content:before, body .scope-container .button.load-this .callout__top .callout__close-button .button__content:before, body .scope-container .callout__top .callout__close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .callout__top .callout__close-button .form-element__wrap:before {
         line-height: 64px; }
   body .scope-container .callout__heading {
-    color: #384047;
+    color: #1C2833;
     display: inline-block;
     font-size: 1.5em;
     line-height: 32px; }
@@ -4609,7 +4615,7 @@ body .scope-container {
   .callout-is-active {
     overflow: hidden; }
     .callout-is-active .callout-backdrop {
-      background-color: rgba(56, 64, 71, 0.8);
+      background-color: rgba(28, 40, 51, 0.8);
       bottom: 0;
       left: 0;
       opacity: 0;
@@ -4628,7 +4634,7 @@ body .scope-container {
     -webkit-transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25);
             transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25); }
     body .scope-container .callout-stage.callout-is-active .callout {
-      box-shadow: 0 1px 6px rgba(56, 64, 71, 0.9);
+      box-shadow: 0 1px 6px rgba(28, 40, 51, 0.9);
       max-height: none;
       -webkit-transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25);
               transition: all 0.33s cubic-bezier(0.5, -0.25, 0.19, 1.25); }
@@ -4679,7 +4685,7 @@ body .scope-container {
     @media (min-width: 768px) {
       body .scope-container .card--actionable:hover {
         border-color: white;
-        box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4) !important;
+        box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4) !important;
         cursor: pointer;
         -webkit-transform: translateY(-2px);
             -ms-transform: translateY(-2px);
@@ -4709,7 +4715,7 @@ body .scope-container {
       white-space: nowrap;
       width: 100%; }
     body .scope-container .card__cap {
-      color: #8d9aa5;
+      color: #8d99a6;
       display: table-cell;
       line-height: 1.5;
       padding: 1em;
@@ -4764,11 +4770,11 @@ body .scope-container {
       body .scope-container .card__feature .icon, body .scope-container .card__feature .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__feature .selectize-input:before, body .scope-container .card__feature .item .remove, body .scope-container .item .card__feature .remove, body .scope-container .card__feature .button.load-this .button__content:before, body .scope-container .button.load-this .card__feature .button__content:before, body .scope-container .card__feature .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__feature .form-element__wrap:before {
         vertical-align: middle; }
     body .scope-container .card__heading {
-      color: #384047;
+      color: #1C2833;
       display: block;
       line-height: 1; }
     body .scope-container .card__subheading {
-      color: #8d9aa5;
+      color: #8d99a6;
       display: block;
       font-size: 0.875em;
       line-height: 1.14286em; }
@@ -4788,7 +4794,7 @@ body .scope-container {
       max-width: 25em; }
   body .scope-container .drawer {
     bottom: 0;
-    box-shadow: 0 1px 3px rgba(56, 64, 71, 0.4);
+    box-shadow: 0 1px 3px rgba(28, 40, 51, 0.4);
     left: 0;
     overflow: visible;
     position: fixed;
@@ -4810,7 +4816,7 @@ body .scope-container {
     body .scope-container .drawer__body {
       background: white;
       bottom: 0;
-      color: #686c70;
+      color: #44617b;
       line-height: 40px;
       overflow-x: hidden;
       overflow-y: auto;
@@ -4824,7 +4830,7 @@ body .scope-container {
       margin: 8px 0;
       padding: 0 0 8px 0; }
       body .scope-container .drawer__list-title {
-        color: #8d9aa5;
+        color: #8d99a6;
         font-size: 12px;
         line-height: 24px;
         margin: 0;
@@ -4859,16 +4865,16 @@ body .scope-container {
         body .scope-container .drawer__list-item-link {
           width: 100%; }
           body .scope-container .drawer__list-item-link > .drawer__list-item-content {
-            color: #686c70; }
+            color: #44617b; }
         body .scope-container .drawer__list-item-content {
-          color: #686c70;
+          color: #44617b;
           display: block;
           overflow: hidden;
           padding: .5em 1em;
           text-overflow: ellipsis;
           white-space: nowrap; }
         body .scope-container .drawer__list-item-icon {
-          color: #8d9aa5;
+          color: #8d99a6;
           height: 2.5em;
           line-height: 24px;
           min-width: 2.5em;
@@ -4960,7 +4966,7 @@ body .scope-container {
     padding-bottom: 1em;
     position: relative; }
     body .scope-container .form-element__label {
-      color: #686c70;
+      color: #1C2833;
       display: block;
       font-family: ProximaNovaSoft;
       font-size: 1em;
@@ -4969,10 +4975,10 @@ body .scope-container {
     border-radius: 3px;
     -webkit-transition: background-color 0.33s ease;
             transition: background-color 0.33s ease;
-    background-color: #e8eaeb;
+    background-color: #e9ebed;
     background-image: none;
     border: 1px solid #dadee2;
-    color: #686c70;
+    color: #44617b;
     display: block;
     font-family: ProximaNovaSoft;
     font-size: 1em;
@@ -4983,14 +4989,14 @@ body .scope-container {
     body .scope-container input[type="text"]:focus, body .scope-container input[type="password"]:focus, body .scope-container input[type="tel"]:focus, body .scope-container input[type="number"]:focus, body .scope-container input[type="email"]:focus, body .scope-container input[type="search"]:focus, body .scope-container input[type="url"]:focus, body .scope-container textarea:focus {
       background-color: white; }
     body .scope-container input[type="text"]:-moz-placeholder, body .scope-container input[type="password"]:-moz-placeholder, body .scope-container input[type="tel"]:-moz-placeholder, body .scope-container input[type="number"]:-moz-placeholder, body .scope-container input[type="email"]:-moz-placeholder, body .scope-container input[type="search"]:-moz-placeholder, body .scope-container input[type="url"]:-moz-placeholder, body .scope-container textarea:-moz-placeholder {
-      color: #8d9aa5; }
+      color: #8d99a6; }
     body .scope-container input[type="text"]::-moz-placeholder, body .scope-container input[type="password"]::-moz-placeholder, body .scope-container input[type="tel"]::-moz-placeholder, body .scope-container input[type="number"]::-moz-placeholder, body .scope-container input[type="email"]::-moz-placeholder, body .scope-container input[type="search"]::-moz-placeholder, body .scope-container input[type="url"]::-moz-placeholder, body .scope-container textarea::-moz-placeholder {
-      color: #8d9aa5;
+      color: #8d99a6;
       opacity: 1 !important; }
     body .scope-container input[type="text"]:-ms-input-placeholder, body .scope-container input[type="password"]:-ms-input-placeholder, body .scope-container input[type="tel"]:-ms-input-placeholder, body .scope-container input[type="number"]:-ms-input-placeholder, body .scope-container input[type="email"]:-ms-input-placeholder, body .scope-container input[type="search"]:-ms-input-placeholder, body .scope-container input[type="url"]:-ms-input-placeholder, body .scope-container textarea:-ms-input-placeholder {
-      color: #8d9aa5; }
+      color: #8d99a6; }
     body .scope-container input[type="text"]::-webkit-input-placeholder, body .scope-container input[type="password"]::-webkit-input-placeholder, body .scope-container input[type="tel"]::-webkit-input-placeholder, body .scope-container input[type="number"]::-webkit-input-placeholder, body .scope-container input[type="email"]::-webkit-input-placeholder, body .scope-container input[type="search"]::-webkit-input-placeholder, body .scope-container input[type="url"]::-webkit-input-placeholder, body .scope-container textarea::-webkit-input-placeholder {
-      color: #8d9aa5; }
+      color: #8d99a6; }
   body .scope-container input[type="text"], body .scope-container input[type="password"], body .scope-container input[type="tel"], body .scope-container input[type="number"], body .scope-container input[type="email"], body .scope-container input[type="search"], body .scope-container input[type="url"] {
     -webkit-appearance: none;
     height: 2.5em; }
@@ -5051,7 +5057,7 @@ body .scope-container {
     body .scope-container .form-element__wrap.has-icon input {
       padding-right: 3.25em; }
   body .scope-container .form-element__icon {
-    color: #8d9aa5;
+    color: #8d99a6;
     height: 2.375em;
     line-height: 1.5;
     padding: 0.5em 0.5em;
@@ -5071,7 +5077,7 @@ body .scope-container {
     body .scope-container .select-element:hover {
       background-color: #f7f7f7; }
     body .scope-container .select-element .select-element__icon {
-      color: #8d9aa5;
+      color: #8d99a6;
       cursor: pointer;
       height: 2.375em;
       line-height: 1.5;
@@ -5092,7 +5098,7 @@ body .scope-container {
       background-image: none;
       background: transparent;
       border: 0;
-      color: #686c70;
+      color: #44617b;
       cursor: pointer;
       font-family: ProximaNovaSoft;
       font-size: 1rem;
@@ -5157,7 +5163,7 @@ body .scope-container {
       top: 6px;
       width: 10px; }
   body .scope-container input[type="file"] {
-    color: #8d9aa5;
+    color: #8d99a6;
     display: block;
     font-family: ProximaNovaSoft;
     font-size: 0.875em; }
@@ -5229,15 +5235,15 @@ body .scope-container {
     body .scope-container .list__item-link {
       width: 100%; }
       body .scope-container .list__item-link > .list__item-content {
-        color: #686c70; }
+        color: #44617b; }
     body .scope-container .list__item-content {
-      color: #686c70;
+      color: #44617b;
       overflow: hidden;
       padding: .5em 1em;
       text-overflow: ellipsis;
       white-space: nowrap; }
     body .scope-container .list__item-icon {
-      color: #8d9aa5;
+      color: #8d99a6;
       height: 2.5em;
       line-height: 24px;
       min-width: 2.5em;
@@ -5351,7 +5357,7 @@ body .scope-container {
         padding: 1em 0;
         margin-bottom: 1em; } }
     body .scope-container .page-bar__title {
-      color: #384047;
+      color: #1C2833;
       display: block;
       font-size: 1em;
       font-weight: 500;
@@ -5368,7 +5374,7 @@ body .scope-container {
           padding: 0;
           text-align: left; } }
     body .scope-container .page-bar__subtitle {
-      color: #8d9aa5;
+      color: #8d99a6;
       display: block;
       font-size: 0.875em;
       font-weight: 400;
@@ -5463,25 +5469,25 @@ body .scope-container {
     body .scope-container .pebble--default {
       background-color: white;
       box-shadow: inset 0 0 0 1px #dadee2;
-      color: #686c70; }
+      color: #44617b; }
     body .scope-container .pebble--round {
       border-radius: 1000px; }
   body .scope-container .slate {
     background-color: white;
     border-radius: 3px;
-    color: #384047;
+    color: #1C2833;
     font-family: ProximaNovaSoft; }
     body .scope-container .slate--outlined {
       box-shadow: inset 0 0 0 1px #dadee2; }
       body .scope-container .slate--outlined table.table--outlined tr:hover td:first-of-type {
-        box-shadow: inset 0 1px 0 #e8eaeb, inset 1px 0 0 #dadee2; }
+        box-shadow: inset 0 1px 0 #e9ebed, inset 1px 0 0 #dadee2; }
       body .scope-container .slate--outlined table.table--outlined tr:hover td:last-of-type {
-        box-shadow: inset 0 1px 0 #e8eaeb, inset -1px 0 0 #dadee2; }
+        box-shadow: inset 0 1px 0 #e9ebed, inset -1px 0 0 #dadee2; }
       body .scope-container .slate--outlined table:last-child.table--outlined tr:last-of-type:hover td:first-of-type {
-        box-shadow: inset 0 1px 0 #e8eaeb, inset 1px 0 0 #dadee2, inset 0 -1px 0 #dadee2 !important;
+        box-shadow: inset 0 1px 0 #e9ebed, inset 1px 0 0 #dadee2, inset 0 -1px 0 #dadee2 !important;
         border-radius: 0 0 0 3px; }
       body .scope-container .slate--outlined table:last-child.table--outlined tr:last-of-type:hover td:last-of-type {
-        box-shadow: inset 0 1px 0 #e8eaeb, inset -1px 0 0 #dadee2, inset 0 -1px 0 #dadee2 !important;
+        box-shadow: inset 0 1px 0 #e9ebed, inset -1px 0 0 #dadee2, inset 0 -1px 0 #dadee2 !important;
         border-radius: 0 0 3px 0; }
     body .scope-container .slate__top {
       padding: 1em; }
@@ -5511,7 +5517,7 @@ body .scope-container {
           background-image: none;
           background: transparent;
           border-width: 0;
-          color: #8d9aa5;
+          color: #8d99a6;
           height: 40px;
           outline: none;
           padding: 8px 16px;
@@ -5537,7 +5543,7 @@ body .scope-container {
       body .scope-container .slate__bottom-main {
         padding-right: 1em; }
     body .scope-container .slate__title {
-      color: #384047;
+      color: #1C2833;
       display: block;
       font-size: 1.25em;
       font-weight: 500;
@@ -5546,11 +5552,11 @@ body .scope-container {
       text-overflow: ellipsis;
       white-space: nowrap; }
       body .scope-container .slate__title .icon, body .scope-container .slate__title .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__title .selectize-input:before, body .scope-container .slate__title .item .remove, body .scope-container .item .slate__title .remove, body .scope-container .slate__title .button.load-this .button__content:before, body .scope-container .button.load-this .slate__title .button__content:before, body .scope-container .slate__title .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__title .form-element__wrap:before {
-        color: #8d9aa5;
+        color: #aab3bc;
         line-height: 24px;
         margin-right: 16px; }
     body .scope-container .slate__subtitle {
-      color: #8d9aa5;
+      color: #8d99a6;
       display: block;
       font-size: 1em;
       font-weight: 400;
@@ -5559,7 +5565,7 @@ body .scope-container {
       text-overflow: ellipsis;
       white-space: nowrap; }
       body .scope-container .slate__subtitle .icon, body .scope-container .slate__subtitle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__subtitle .selectize-input:before, body .scope-container .slate__subtitle .item .remove, body .scope-container .item .slate__subtitle .remove, body .scope-container .slate__subtitle .button.load-this .button__content:before, body .scope-container .button.load-this .slate__subtitle .button__content:before, body .scope-container .slate__subtitle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__subtitle .form-element__wrap:before {
-        color: #8d9aa5;
+        color: #8d99a6;
         line-height: 1; }
     body .scope-container .slate--collapse {
       border-radius: 0; }
@@ -5570,6 +5576,8 @@ body .scope-container {
     border-radius: 3px 3px 0 0; }
     body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined {
       background-color: transparent; }
+      body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined .nav-bar__appendage {
+        box-shadow: inset -1px 0 0 #dadee2, inset 1px 0 0 #dadee2, inset 0 1px 0 #dadee2; }
       @media (max-width: 768px) {
         body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined .nav-bar__appendage, body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined .nav-bar__list-item:hover > a, body .scope-container .slate > .nav-bar.nav-bar--default.nav-bar--outlined .nav-bar__list-item:hover > .button-group {
           box-shadow: inset -1px 0 #dadee2, inset 1px 0 #dadee2; } }
@@ -5625,12 +5633,12 @@ body .scope-container {
       font-family: ProximaNovaSoft;
       font-weight: 400; }
     body .scope-container table.table--outlined td {
-      box-shadow: inset 0 1px 0 #e8eaeb;
-      color: #686c70; }
+      box-shadow: inset 0 1px 0 #dadee2;
+      color: #44617b; }
     body .scope-container table td {
-      color: #686c70; }
+      color: #44617b; }
     body .scope-container table th {
-      color: #384047; }
+      color: #1C2833; }
     body .scope-container table > thead > tr.tr--active > th,
     body .scope-container table > thead > tr.tr--active > td,
     body .scope-container table > tbody > tr.tr--active > th,
@@ -5669,7 +5677,7 @@ body .scope-container {
     body .scope-container table.vertical-align-middle td {
       vertical-align: middle; }
     body .scope-container table tbody tr:hover {
-      background-color: #f5f6f7;
+      background-color: #e9ebed;
       cursor: pointer;
       -webkit-transition: 0.33s;
               transition: 0.33s; }
@@ -5680,7 +5688,7 @@ body .scope-container {
     position: relative; }
   body .scope-container .sort-arrow {
     -webkit-transition-timing-function: ease-in-out;
-    color: #8d9aa5;
+    color: #8d99a6;
     cursor: pointer;
     float: right;
     padding: 4px;
@@ -5695,7 +5703,7 @@ body .scope-container {
           -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
   body .scope-container .blank-state {
-    color: #cfd0d2;
+    color: #c7ccd2;
     font-family: ProximaNovaSoft;
     font-size: 1em;
     line-height: 1.5;
@@ -5706,7 +5714,7 @@ body .scope-container {
        -moz-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
-    body .scope-container .blank-state > .juicon {
+    body .scope-container .blank-state > .icon, body .scope-container .selectize-control.single .blank-state > .selectize-input:before, body .scope-container .item .blank-state > .remove, body .scope-container .button.load-this .blank-state > .button__content:before, body .scope-container .form-element.load-this .blank-state > .form-element__wrap:before {
       display: block;
       font-size: 2em;
       line-height: 1;
@@ -5727,11 +5735,11 @@ body .scope-container {
       top: 0;
       width: 24px; }
     body .scope-container .button.load-this .button__content--default:before {
-      color: #8d9aa5; }
+      color: #aab3bc; }
   body .scope-container .form-element.load-this .form-element__wrap:before {
     -webkit-animation: spin-it 1s linear infinite;
             animation: spin-it 1s linear infinite;
-    color: #8d9aa5;
+    color: #aab3bc;
     height: 24px;
     line-height: 1.5;
     padding: 8px 16px;

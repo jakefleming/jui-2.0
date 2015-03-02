@@ -12,7 +12,7 @@
   left: 0;
   top: 0;
   &.dropdown-menu {
-    box-shadow: 0 1px 3px transparentize($color--black, .6);
+    box-shadow: 0 1px 3px transparentize($text-color-emphasized, .6);
     max-height: none;
     position: absolute;
     @media (min-width: 1px) and (max-width: $brkpoint-md) {
@@ -28,7 +28,7 @@
     width: 100%;
   }
   td, th {
-    border: 1px solid #f0f1f2 !important; //to look more like sf1
+    border: 1px solid $form-element-bg !important; //to look more like sf1
     font-size: em(14px, 16px);
     height: 20px;
     padding-left: 0;
@@ -38,22 +38,22 @@
   }
   td {
     background-color: $color--white;
-    color: $color--black;
+    color: $text-color-emphasized;
     padding: px(8) px(10);
     &.day {
       &:hover {
-        background: $color--gray--x-light;
+        background: $form-element-bg;
         cursor: pointer;
       }
       &.disabled {
-        color: $color--gray--x-light;
+        color: $component-border-color;
       }
       &.old, &.new {
-        background: $color--gray--xx-light;
+        background: $form-element-bg;
         color: $color--gray--dark;
       }
       &.old {
-        background: $color--gray--xx-light;
+        background: $form-element-bg;
         color: $color--gray--dark;
       }
       &.active, &.active:hover {
@@ -80,7 +80,7 @@
       margin: 2px;
       width: 52px;
       &:hover {
-        background: $color--gray--x-light;
+        background: $form-element-bg;
       }
       &.active {
         background-color: $color--primary;
@@ -96,8 +96,8 @@
         }
       }
       &.old {
-        background: $color--gray--xx-light;
-        color: $color--gray--dark;
+        background: $form-element-bg;
+        color: $text-color-normal;
       }
       &.datepicker th.switch {
         width: 145px;
@@ -109,10 +109,10 @@
       background-color: #f0f1f2;
       &:first-child {
         th {
-          color: $color--black;
+          color: $text-color-emphasized;
           cursor: pointer;
           &.next, &.prev {
-            color: $color--gray--dark;
+            color: $text-color-normal;
             font-size: 14px;
           }
         }

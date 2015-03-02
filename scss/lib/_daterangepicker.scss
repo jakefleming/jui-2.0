@@ -25,7 +25,7 @@
   }
   &.dropdown-menu {
     //border: 1px solid $component-border-color;
-    box-shadow: 0 1px 3px transparentize($color--black, .6);
+    box-shadow: 0 1px 3px transparentize($text-color-emphasized, .6);
     max-width: none;
     z-index: 3000;
   }
@@ -152,7 +152,7 @@
       padding: 0;
     }
     li {
-      border-bottom: 1px solid $color--gray--x-light;
+      border-bottom: 1px solid $component-border-color;
       cursor: pointer;
       padding: 8px 16px;
       &.active, &.active:hover {
@@ -160,7 +160,7 @@
         color: $color--white;
       }
       &:hover {
-        background: #f5f6f7;
+        background: $form-element-bg;
       }
       &:first-child {
         border-radius: $base--radius $base--radius 0 0;
@@ -197,7 +197,7 @@
     background: $color--white;
     thead {
       tr {
-        background-color: #f0f1f2;
+        background-color: $form-element-bg;
       }
     }
   }
@@ -211,7 +211,7 @@
     width: 100%;
   }
   td, th {
-    border: 1px solid #f0f1f2 !important;
+    border: 1px solid $form-element-bg !important;
     cursor: pointer;
     font-size: em(14px, 16px);
     height: 20px;
@@ -222,7 +222,7 @@
     width: 20px;
     &.available {
       &:hover {
-        background: $color--gray--x-light;
+        background: $form-element-bg;
       }
       &.active, &:active:hover {
         background-color: $color--primary;
@@ -246,22 +246,22 @@
   td {
     &.available {
       background-color: $color--white;
-      color: $color--black;
+      color: $text-color-emphasized;
     }
     &.off, &.disabled {
-      background: $color--gray--xx-light;
-      color: $color--gray--dark;
+      background: lighten($form-element-bg, 5%);
+      color: $text-color-deemphasized;
     }
   }
   th {
     &.month {
-      color: $color--black;
+      color: $text-color-emphasized;
       width: auto;
     }
   }
   option {
     &.disabled {
-      color: $color--gray;
+      color: $text-color-deemphasized;
     }
   }
   select {
@@ -310,7 +310,7 @@
   background-color: $color--white;
   border-radius: 3px!important; //scoping issues
   box-shadow: inset 0 0 0 1px $component-border-color;
-  color: $color--gray--dark;
+  color: $text-color-normal;
   display: inline-block;
   float: left;
   line-height: em(36);
@@ -326,4 +326,10 @@
   line-height: em(36);
   padding: 0 1em !important;
   vertical-align: middle;
+}
+
+th.next.available:active:hover,th.prev.available:active:hover {
+  background-color: $form-element-bg;
+  border-color: transparent!important;
+  color: $text-color-emphasized;
 }

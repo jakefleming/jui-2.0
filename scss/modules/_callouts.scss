@@ -48,7 +48,7 @@
   position: relative;
   .callout__close-button {
     @extend %close-button;
-    color: $color--gray;
+    color: $text-color-deemphasized;
     font-size: 20px;
     line-height: 64px;
     position: absolute;
@@ -63,7 +63,7 @@
 }
 //the title of the callout
 .callout__heading {
-  color: $color--black;
+  color: $text-color-emphasized;
   display: inline-block;
   font-size: em($font-size--2);
   line-height: 32px;

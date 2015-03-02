@@ -1,5 +1,4 @@
-//Forms are used to collect data from users
-$form-element-bg: #e8eaeb;
+
 
 //use form-element to wrap around things like labels with inputs
 .form-element {
@@ -7,7 +6,7 @@ $form-element-bg: #e8eaeb;
   position: relative;
   //labels for form elements
   &__label {
-    color: $color--gray--dark;
+    color: $text-color-emphasized;
     display: block;
     font-family: $font--1;
     font-size: 1em;
@@ -22,7 +21,7 @@ $form-element-bg: #e8eaeb;
   background-color: $form-element-bg;
   background-image: none;
   border: 1px solid $component-border-color;
-  color: $color--gray--dark;
+  color: $text-color-normal;
   display: block;
   font-family: $font--1;
   font-size: 1em;
@@ -35,17 +34,17 @@ $form-element-bg: #e8eaeb;
     background-color: $color--white;
   }
   &:-moz-placeholder {
-    color: $color--gray;
+    color: $text-color-deemphasized;
   }
   &::-moz-placeholder {
-    color: $color--gray;
+    color: $text-color-deemphasized;
     opacity: 1 !important;
   }
   &:-ms-input-placeholder {
-    color: $color--gray;
+    color: $text-color-deemphasized;
   }
   &::-webkit-input-placeholder {
-    color: $color--gray;
+    color: $text-color-deemphasized;
   }
 }
 
@@ -132,7 +131,7 @@ textarea {
 }
 //form element icons
 .form-element__icon {
-  color: $color--gray;
+  color: $text-color-deemphasized;
   height: em(38);
   line-height: 1.5;
   padding: em(8) em(8);
@@ -156,7 +155,7 @@ textarea {
   }
   //select-element__icon can be used to display a caret, or any icon you'd like for your select. will always be on the right.
   .select-element__icon {
-    color: $color--gray;
+    color: $text-color-deemphasized;
     cursor: pointer;
     height: em(38);
     line-height: 1.5;
@@ -179,7 +178,7 @@ textarea {
     background-image: none;
     background: transparent;
     border: 0;
-    color: $color--gray--dark;
+    color: $text-color-normal;
     cursor: pointer;
     font-family: $font--1;
     font-size: 1rem;
@@ -270,7 +269,7 @@ input[type=radio] {
 
 //file input can't be styled much
 input[type="file"] {
-  color: $color--gray;
+  color: $text-color-deemphasized;
   display: block;
   font-family: $font--1;
   font-size: em(14);

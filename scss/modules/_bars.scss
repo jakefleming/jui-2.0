@@ -1,5 +1,5 @@
 $nav-default-bg: $color--white;
-$nav-default-text: $color--black;
+$nav-default-text: $text-color-emphasized;
 
 //nav-bars
 .nav-bar {
@@ -106,7 +106,7 @@ $nav-default-text: $color--black;
       &:hover {
         > a, > .button-group {
           @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-            background-color: $color--gray--xx-light;
+            background-color: $form-element-bg;
             color: $color--gray;
             transition: background $trans-duration;
           }
@@ -115,7 +115,7 @@ $nav-default-text: $color--black;
       //active states of list items
       &--active, &--active:hover {
         > *, > a {
-          background-color: $color--gray--x-light;
+          background-color: $component-border-color;
           color: $color--gray--dark;
         }
       }
@@ -216,13 +216,17 @@ $nav-default-text: $color--black;
   //open up the appendage
   &.appendage-is-open {
     .nav-bar__appendage {
-      background-color: #f0f1f2;
+      background-color: $color--gray--xx-light;
       display: block;
       max-height: em(500);
       min-height: 0;
       min-width: 100%;
       opacity: 100;
       transition: $trans-duration;
+      //inputs bg
+      textarea, input {
+        background: $color--white;
+      }
       //button that closes the appendage
       &-toggle {
         .icon {
@@ -314,9 +318,6 @@ $nav-default-text: $color--black;
     }
     .nav-bar__appendage {
       background: $color--primary--x-dark;
-      textarea, input {
-        background: $color--white;
-      }
     }
     .nav-bar__list-item {
       &:hover {

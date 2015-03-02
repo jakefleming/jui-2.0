@@ -54,12 +54,12 @@ $list-icon-h: 40;
   &-link {
     width: 100%;
     > .list__item-content {
-      color: $color--gray--dark;
+      color: $text-color-normal;
     }
   }
   //the main content in the list__item
   &-content {
-    color: $color--gray--dark;
+    color: $text-color-normal;
     overflow: hidden;
     padding: .5em 1em;
     text-overflow: ellipsis;
@@ -67,7 +67,7 @@ $list-icon-h: 40;
   }
   //if your list item needs an icon
   &-icon {
-    color: $color--gray;
+    color: $text-color-deemphasized;
     height: em($list-icon-h);
     line-height: 24px;
     min-width: em($list-icon-w);

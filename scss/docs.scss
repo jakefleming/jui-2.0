@@ -85,7 +85,7 @@ body .scope-container {
     }
     //type
     h1, h2, h3, h4, h5, h6 {
-      color: $color--black;
+      color: $text-color-emphasized;
     }
     section + .doc-section-heading {
       margin-top: 96px;
@@ -102,7 +102,7 @@ body .scope-container {
       }
     }
     .doc-article-heading {
-      color: $color--gray--light;
+      color: $text-color-deemphasized;
       font-family: $font--2;
       font-size: em(14);
       font-weight: $font-weight--3;
@@ -195,7 +195,7 @@ body .scope-container {
       text-align: center;
     }
     .icon-example {
-      color: $color--gray;
+      color: $text-color-deemphasized;
       display: inline-block;
       font-size: 24px;
       height: 24px;
@@ -257,5 +257,37 @@ body .scope-container {
         margin-bottom: 16px;
       }
     }
+  }
+}
+
+//color swatches
+.color-swatches {
+  list-style-type: none;
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @for $i from 0 to length($primary-colors) {
+    li:nth-child(#{$i + 1}) {
+      background: nth($primary-colors, $i + 1);
+      &:after {
+        content: unquote('"' + nth($primary-colors, $i + 1) + '"');
+      }
+    }
+  }
+}
+.color-swatch {
+  height: 128px;
+  position: relative;
+  @include flex(0 0 14.2857143%);
+  &:after {
+    background: #fff;
+    display: block;
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
   }
 }

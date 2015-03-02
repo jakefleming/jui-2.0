@@ -19,7 +19,7 @@ $selectize-font-smoothing: inherit !default;
 $selectize-font-size: 1em;
 $selectize-line-height: 1.5;
 
-$selectize-color-text: $color--gray--dark !default;
+$selectize-color-text: $text-color-normal !default;
 $selectize-color-border: $component-border-color !default;
 $selectize-color-highlight: lighten($color--white, $lighten-p) !default;
 $selectize-color-input: $color--white !default;
@@ -35,7 +35,7 @@ $selectize-color-dropdown: $color--white !default;
 $selectize-color-dropdown-border: $component-border-color !default;
 $selectize-color-dropdown-border-top: $component-border-color !default;
 $selectize-color-dropdown-item-active: #f7f7f7 !default;
-$selectize-color-dropdown-item-active-text: $color--gray--dark !default;
+$selectize-color-dropdown-item-active-text: $text-color-normal !default;
 $selectize-color-dropdown-item-create-text: rgba(red($selectize-color-text), green($selectize-color-text), blue($selectize-color-text), 0.5) !default;
 $selectize-color-dropdown-item-create-active-text: $selectize-color-dropdown-item-active-text !default;
 $selectize-color-optgroup: $selectize-color-dropdown !default;
@@ -298,7 +298,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
     @extend .icon-caret-down;
     @extend .icon;
     box-sizing: border-box;
-    color: $color--gray;
+    color: $text-color-deemphasized;
     cursor: pointer;
     height: em(40);
     line-height: 1.5;
@@ -342,7 +342,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 
 .multi {
   .selectize-input {
-    background-color: $color--gray--x-light;
+    background-color: $form-element-bg;
     transition: background-color $trans-duration;
     &:focus {
       background-color: $color--white;
@@ -385,7 +385,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   vertical-align: middle;
   z-index: 1;
   .button__icon {
-    color: $color--gray;
+    color: $text-color-deemphasized;
   }
   .button__content {
     box-shadow: none !important;
@@ -403,7 +403,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 .item .remove {
   @extend .icon-x;
   @extend .icon;
-  color: $color--gray;
+  color: $text-color-deemphasized;
   font-size: .75em;
   line-height: 1.1;
   padding: 4px 4px 4px 8px;
@@ -412,7 +412,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 
 .input-group__element {
   .selectize-input {
-    background-color: $color--gray--x-light;
+    background-color: $form-element-bg;
     &:before {
       content: "" !important;
     }

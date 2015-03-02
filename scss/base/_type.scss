@@ -1,3 +1,8 @@
+//body stuff
+body {
+  color: $color--black--xx-light;
+}
+
 //reset margins padding and line-height
 %reset-type {
   line-height: 1;
@@ -13,7 +18,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 p {
-  color: $color--gray--dark;
+  color: $text-color-normal;
   font-size: 1em;
   /* 16px */
   font-weight: $font-weight--1;

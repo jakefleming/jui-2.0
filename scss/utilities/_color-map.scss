@@ -1,0 +1,64 @@
+$primary-colors : (
+        $color--primary--xx-light,
+        $color--primary--x-light,
+        $color--primary--light,
+        $color--primary,
+        $color--primary--dark,
+        $color--primary--x-dark,
+        $color--primary--xx-dark,
+        $color--success--xx-light,
+        $color--success--x-light,
+        $color--success--light,
+        $color--success,
+        $color--success--dark,
+        $color--success--x-dark,
+        $color--success--xx-dark,
+        $color--error--xx-light,
+        $color--error--x-light,
+        $color--error--light,
+        $color--error,
+        $color--error--dark,
+        $color--error--x-dark,
+        $color--error--xx-dark,
+        $color--warning--xx-light,
+        $color--warning--x-light,
+        $color--warning--light,
+        $color--warning,
+        $color--warning--dark,
+        $color--warning--x-dark,
+        $color--warning--xx-dark,
+        $color--info--xx-light,
+        $color--info--x-light,
+        $color--info--light,
+        $color--info,
+        $color--info--dark,
+        $color--info--x-dark,
+        $color--info--xx-dark,
+        $color--black--xx-light,
+        $color--black--x-light,
+        $color--black--light,
+        $color--black,
+        $color--black--dark,
+        $color--black--x-dark,
+        $color--black--xx-dark,
+        $color--gray--xx-light,
+        $color--gray--x-light,
+        $color--gray--light,
+        $color--gray,
+        $color--gray--dark,
+        $color--gray--x-dark,
+        $color--gray--xx-dark
+);
+
+$secondary-colors : (
+
+);
+
+//ui colors for looping through and generating selectors
+$ui-colors: (
+        primary: $color--primary,
+        success: $color--success,
+        error: $color--error,
+        warning: $color--warning,
+        info: $color--info
+);

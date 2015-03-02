@@ -45,10 +45,10 @@
 .button--flat {
   //what's inside the button
   .button__content {
-    color: $color--black;
+    color: $text-color-normal;
     &--default {
       .icon {
-        color: $color--gray;
+        color: $text-color-deemphasized;
       }
     }
     @each $theme, $color in $ui-colors {
@@ -60,7 +60,7 @@
   //hover over button makes contents background change
   &:hover {
     .button__content {
-      background-color: transparentize($color--black, 0.9);
+      background-color: transparentize($text-color-emphasized, 0.9);
     }
   }
 }
@@ -70,9 +70,9 @@
   .button__content.button__content--default {
     background-color: $color--white;
     box-shadow: inset 0 0 0 1px $component-border-color;
-    color: $color--black;
+    color: $text-color-normal;
     .icon {
-      color: $color--gray;
+      color: $text-color-deemphasized;
     }
   }
   &:hover {
@@ -144,7 +144,7 @@
 .dropdown-box {
   background: $color--white;
   //border: 1px solid $component-border-color;
-  box-shadow: 0 1px 3px transparentize($color--black, .6);
+  box-shadow: 0 1px 3px transparentize($text-color-emphasized, .6);
   list-style-type: none;
   margin-top: 0px;
   max-height: 0;
@@ -172,7 +172,7 @@
     z-index: 1;
     //items when the box is open
     .dropdown-box__item {
-      color: $color--gray--dark;
+      color: $text-color-normal;
       margin-top: 0;
       transition: $trans-duration;
     }
@@ -205,7 +205,7 @@
     @include clearfix();
     &:hover {
       background-color: darken($color--white, $darken-p);
-      color: $color--gray--dark;
+      color: $text-color-deemphasized;
     }
     &-icon {
       float: right;
@@ -228,7 +228,7 @@
   }
   //a container for any sort of content
   &__content {
-    color: $color--gray--dark;
+    color: $text-color-deemphasized;
     font-family: $font--1;
     line-height: 0;
     margin-top: -16px;
@@ -261,7 +261,7 @@
     // fixes salesforce button
     background: transparent;
     border-width: 0;
-    color: $color--gray;
+    color: $text-color-deemphasized;
     height: 40px;
     outline: none;
     padding: 8px 16px;

@@ -20,6 +20,7 @@ html {
 // Remove default margin.
 
 body {
+  color: $color--black--x-light;
   background-color: transparent;//resetting salesforce
   margin: 0;
 }
@@ -32,7 +33,6 @@ body {
 
 //type contains base styles for typography
 body {
-  color: $color--gray--dark;
   font-family: $font--1;
   font-size: px($base--num);
   hyphens: none;

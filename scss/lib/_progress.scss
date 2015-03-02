@@ -33,7 +33,7 @@
 // Outer container
 .progress {
   @include radius(100px);
-  background-color: $color--gray--x-light;
+  background-color: $form-element-bg;
   height: 16px;
   overflow: hidden;
   padding: 4px;

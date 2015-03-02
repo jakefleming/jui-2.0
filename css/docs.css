@@ -244,7 +244,7 @@ html {
   height: 100%; }
 
 .doc-bg-1 {
-  background-color: #e8eaeb; }
+  background-color: #e9ebed; }
 
 .doc-bg-transparent {
   background-color: transparent; }
@@ -318,7 +318,7 @@ body .scope-container #docs {
   margin: 0 auto;
   max-width: 48em; }
   body .scope-container #docs h1, body .scope-container #docs h2, body .scope-container #docs h3, body .scope-container #docs h4, body .scope-container #docs h5, body .scope-container #docs h6 {
-    color: #384047; }
+    color: #1C2833; }
   body .scope-container #docs section + .doc-section-heading {
     margin-top: 96px; }
   body .scope-container #docs .doc-section-heading {
@@ -332,7 +332,7 @@ body .scope-container #docs {
       body .scope-container #docs .doc-section-heading {
         margin-top: 96px; } }
   body .scope-container #docs .doc-article-heading {
-    color: #cfd0d2;
+    color: #8d99a6;
     font-family: ProximaNova;
     font-size: 0.875em;
     font-weight: 700;
@@ -373,7 +373,7 @@ body .scope-container #docs {
           -ms-flex-positive: 2;
               flex-grow: 2; }
   body .scope-container #docs .line-pre {
-    background-color: #f5f6f7;
+    background-color: #f7f8f9;
     font-size: 14px;
     line-height: 1;
     padding: 1.14286em; }
@@ -393,7 +393,7 @@ body .scope-container #docs {
   body .scope-container #docs h6 {
     margin: 2em 0 0 0; }
   body .scope-container #docs code {
-    background-color: #e8eaeb;
+    background-color: #e9ebed;
     border-radius: 3px;
     color: #c06057;
     font-size: ProximaNovaSoft;
@@ -409,13 +409,13 @@ body .scope-container #grid-examples {
   body .scope-container #grid-examples .grid {
     margin-bottom: 16px; }
   body .scope-container #grid-examples .grid__block {
-    background: #e8eaeb;
+    background: #e9ebed;
     border-left: 16px solid white;
     min-height: 48px; }
 body .scope-container #icons ul {
   text-align: center; }
 body .scope-container #icons .icon-example {
-  color: #8d9aa5;
+  color: #8d99a6;
   display: inline-block;
   font-size: 24px;
   height: 24px;
@@ -456,3 +456,233 @@ body .scope-container .template-link {
 @media (min-width: 768px) {
   body .scope-container .template-list li {
     margin-bottom: 16px; } }
+
+.color-swatches {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .color-swatches li:nth-child(1) {
+    background: #aad4ef; }
+    .color-swatches li:nth-child(1):after {
+      content: "#aad4ef"; }
+  .color-swatches li:nth-child(2) {
+    background: #80bfe6; }
+    .color-swatches li:nth-child(2):after {
+      content: "#80bfe6"; }
+  .color-swatches li:nth-child(3) {
+    background: #55a9de; }
+    .color-swatches li:nth-child(3):after {
+      content: "#55a9de"; }
+  .color-swatches li:nth-child(4) {
+    background: #2a94d6; }
+    .color-swatches li:nth-child(4):after {
+      content: "#2a94d6"; }
+  .color-swatches li:nth-child(5) {
+    background: #2585c1; }
+    .color-swatches li:nth-child(5):after {
+      content: "#2585c1"; }
+  .color-swatches li:nth-child(6) {
+    background: #2177ac; }
+    .color-swatches li:nth-child(6):after {
+      content: "#2177ac"; }
+  .color-swatches li:nth-child(7) {
+    background: #195981; }
+    .color-swatches li:nth-child(7):after {
+      content: "#195981"; }
+  .color-swatches li:nth-child(8) {
+    background: #b0e2c1; }
+    .color-swatches li:nth-child(8):after {
+      content: "#b0e2c1"; }
+  .color-swatches li:nth-child(9) {
+    background: #8bd4a4; }
+    .color-swatches li:nth-child(9):after {
+      content: "#8bd4a4"; }
+  .color-swatches li:nth-child(10) {
+    background: #66c686; }
+    .color-swatches li:nth-child(10):after {
+      content: "#66c686"; }
+  .color-swatches li:nth-child(11) {
+    background: #43b66a; }
+    .color-swatches li:nth-child(11):after {
+      content: "#43b66a"; }
+  .color-swatches li:nth-child(12) {
+    background: #3ca35f; }
+    .color-swatches li:nth-child(12):after {
+      content: "#3ca35f"; }
+  .color-swatches li:nth-child(13) {
+    background: #359154; }
+    .color-swatches li:nth-child(13):after {
+      content: "#359154"; }
+  .color-swatches li:nth-child(14) {
+    background: #286b3f; }
+    .color-swatches li:nth-child(14):after {
+      content: "#286b3f"; }
+  .color-swatches li:nth-child(15) {
+    background: #eac9c6; }
+    .color-swatches li:nth-child(15):after {
+      content: "#eac9c6"; }
+  .color-swatches li:nth-child(16) {
+    background: #dca6a1; }
+    .color-swatches li:nth-child(16):after {
+      content: "#dca6a1"; }
+  .color-swatches li:nth-child(17) {
+    background: #ce837c; }
+    .color-swatches li:nth-child(17):after {
+      content: "#ce837c"; }
+  .color-swatches li:nth-child(18) {
+    background: #c06057; }
+    .color-swatches li:nth-child(18):after {
+      content: "#c06057"; }
+  .color-swatches li:nth-child(19) {
+    background: #b84f45; }
+    .color-swatches li:nth-child(19):after {
+      content: "#b84f45"; }
+  .color-swatches li:nth-child(20) {
+    background: #a6473e; }
+    .color-swatches li:nth-child(20):after {
+      content: "#a6473e"; }
+  .color-swatches li:nth-child(21) {
+    background: #813730; }
+    .color-swatches li:nth-child(21):after {
+      content: "#813730"; }
+  .color-swatches li:nth-child(22) {
+    background: #f7e8c1; }
+    .color-swatches li:nth-child(22):after {
+      content: "#f7e8c1"; }
+  .color-swatches li:nth-child(23) {
+    background: #f1d894; }
+    .color-swatches li:nth-child(23):after {
+      content: "#f1d894"; }
+  .color-swatches li:nth-child(24) {
+    background: #ecc766; }
+    .color-swatches li:nth-child(24):after {
+      content: "#ecc766"; }
+  .color-swatches li:nth-child(25) {
+    background: #e6b739; }
+    .color-swatches li:nth-child(25):after {
+      content: "#e6b739"; }
+  .color-swatches li:nth-child(26) {
+    background: #e3af22; }
+    .color-swatches li:nth-child(26):after {
+      content: "#e3af22"; }
+  .color-swatches li:nth-child(27) {
+    background: #d2a01a; }
+    .color-swatches li:nth-child(27):after {
+      content: "#d2a01a"; }
+  .color-swatches li:nth-child(28) {
+    background: #a47d15; }
+    .color-swatches li:nth-child(28):after {
+      content: "#a47d15"; }
+  .color-swatches li:nth-child(29) {
+    background: #c2eff0; }
+    .color-swatches li:nth-child(29):after {
+      content: "#c2eff0"; }
+  .color-swatches li:nth-child(30) {
+    background: #99e4e6; }
+    .color-swatches li:nth-child(30):after {
+      content: "#99e4e6"; }
+  .color-swatches li:nth-child(31) {
+    background: #70dadc; }
+    .color-swatches li:nth-child(31):after {
+      content: "#70dadc"; }
+  .color-swatches li:nth-child(32) {
+    background: #47cfd2; }
+    .color-swatches li:nth-child(32):after {
+      content: "#47cfd2"; }
+  .color-swatches li:nth-child(33) {
+    background: #33cacd; }
+    .color-swatches li:nth-child(33):after {
+      content: "#33cacd"; }
+  .color-swatches li:nth-child(34) {
+    background: #2db6b9; }
+    .color-swatches li:nth-child(34):after {
+      content: "#2db6b9"; }
+  .color-swatches li:nth-child(35) {
+    background: #238d90; }
+    .color-swatches li:nth-child(35):after {
+      content: "#238d90"; }
+  .color-swatches li:nth-child(36) {
+    background: #4d6e8c; }
+    .color-swatches li:nth-child(36):after {
+      content: "#4d6e8c"; }
+  .color-swatches li:nth-child(37) {
+    background: #44617b; }
+    .color-swatches li:nth-child(37):after {
+      content: "#44617b"; }
+  .color-swatches li:nth-child(38) {
+    background: #2e4254; }
+    .color-swatches li:nth-child(38):after {
+      content: "#2e4254"; }
+  .color-swatches li:nth-child(39) {
+    background: #1C2833; }
+    .color-swatches li:nth-child(39):after {
+      content: "#1C2833"; }
+  .color-swatches li:nth-child(40) {
+    background: #131b23; }
+    .color-swatches li:nth-child(40):after {
+      content: "#131b23"; }
+  .color-swatches li:nth-child(41) {
+    background: #0a0e12; }
+    .color-swatches li:nth-child(41):after {
+      content: "#0a0e12"; }
+  .color-swatches li:nth-child(42) {
+    background: black; }
+    .color-swatches li:nth-child(42):after {
+      content: "black"; }
+  .color-swatches li:nth-child(43) {
+    background: #f7f8f9; }
+    .color-swatches li:nth-child(43):after {
+      content: "#f7f8f9"; }
+  .color-swatches li:nth-child(44) {
+    background: #e9ebed; }
+    .color-swatches li:nth-child(44):after {
+      content: "#e9ebed"; }
+  .color-swatches li:nth-child(45) {
+    background: #c7ccd2; }
+    .color-swatches li:nth-child(45):after {
+      content: "#c7ccd2"; }
+  .color-swatches li:nth-child(46) {
+    background: #aab3bc; }
+    .color-swatches li:nth-child(46):after {
+      content: "#aab3bc"; }
+  .color-swatches li:nth-child(47) {
+    background: #9ca6b1; }
+    .color-swatches li:nth-child(47):after {
+      content: "#9ca6b1"; }
+  .color-swatches li:nth-child(48) {
+    background: #8d99a6; }
+    .color-swatches li:nth-child(48):after {
+      content: "#8d99a6"; }
+  .color-swatches li:nth-child(49) {
+    background: #71808f; }
+    .color-swatches li:nth-child(49):after {
+      content: "#71808f"; }
+
+.color-swatch {
+  height: 128px;
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 14.28571%;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 14.28571%;
+          flex: 0 0 14.28571%; }
+  .color-swatch:after {
+    background: #fff;
+    display: block;
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px; }

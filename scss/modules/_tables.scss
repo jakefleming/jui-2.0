@@ -12,15 +12,15 @@ table {
   }
   &.table--outlined {
     td {
-      box-shadow: inset 0 1px 0 $color--gray--x-light;
-      color: $color--gray--dark;
+      box-shadow: inset 0 1px 0 $component-border-color;
+      color: $text-color-normal;
     }
   }
   td {
-    color: $color--gray--dark;
+    color: $text-color-normal;
   }
   th {
-    color: $color--black;
+    color: $text-color-emphasized;
   }
   // Cells
   > thead,
@@ -86,7 +86,7 @@ table {
   tbody {
     tr {
       &:hover {
-        background-color: $color--gray--xx-light;
+        background-color: $form-element-bg;
         cursor: pointer;
         transition: $trans-duration;
       }
@@ -105,7 +105,7 @@ table {
 
 .sort-arrow {
   -webkit-transition-timing-function: ease-in-out;
-  color: $color--gray;
+  color: $text-color-deemphasized;
   cursor: pointer;
   float: right;
   padding: 4px;
