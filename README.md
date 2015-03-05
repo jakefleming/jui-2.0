@@ -3,7 +3,7 @@ jui
 
 An ever-evolving UI kit created by [Jake Fleming](http://jakefleming.net) for [Appiphony](http://appiphony.com).
 
-[View the kit](http://appiphony.com/jui-2.0/)
+[View the kit](http://jakefleming.github.io/jui-2.0/)
 
 ===
 
