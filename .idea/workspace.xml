@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66cf635c-0c7d-4fd8-ad12-2c04805eae87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bathroom-sink.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/email.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/template__email-basic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/template__email-columns.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/template__email-pieces.html" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/scss/utilities/_colors.scss" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_bars.scssc" afterPath="$PROJECT_DIR$/.sass-cache/82a968729cefbd07207b23400b62a23c8e1ce437/_bars.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/4dba78a88d35909d491220c3e1ab330ebff3b0ad/_juicons.scssc" afterPath="$PROJECT_DIR$/.sass-cache/4dba78a88d35909d491220c3e1ab330ebff3b0ad/_juicons.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/illustrations/bathroom-sink.png" afterPath="$PROJECT_DIR$/assets/illustrations/bathroom-sink.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/docs.scssc" afterPath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/docs.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.eot" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.ttf" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.woff" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons.zip" afterPath="$PROJECT_DIR$/css/fonts/juicons.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/illustrations/templates.png" afterPath="$PROJECT_DIR$/assets/illustrations/templates.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_bars.scss" afterPath="$PROJECT_DIR$/scss/modules/_bars.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/utilities/_color-generator.scss" afterPath="$PROJECT_DIR$/scss/utilities/_color-generator.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/utilities/_color-map.scss" afterPath="$PROJECT_DIR$/scss/utilities/_color-map.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/utilities/_color-variables.scss" afterPath="$PROJECT_DIR$/scss/utilities/_color-variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/base/fonts/_juicons.scss" afterPath="$PROJECT_DIR$/scss/base/fonts/_juicons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_page.scss" afterPath="$PROJECT_DIR$/scss/modules/_page.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/layout/_space.scss" afterPath="$PROJECT_DIR$/scss/layout/_space.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/docs.css.map" afterPath="$PROJECT_DIR$/css/docs.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/docs.css" afterPath="$PROJECT_DIR$/css/docs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/docs.scss" afterPath="$PROJECT_DIR$/scss/docs.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.svg" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.html" afterPath="$PROJECT_DIR$/style.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles-scoped.css.map" afterPath="$PROJECT_DIR$/css/styles-scoped.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles-scoped.css" afterPath="$PROJECT_DIR$/css/styles-scoped.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css.map" afterPath="$PROJECT_DIR$/css/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jui-2.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -655,7 +621,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-236" width="2560" height="1440" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31236285" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -664,7 +630,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11992188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11992188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
