@@ -1,0 +1,177 @@
+/*Paste all this shit in a style tag in the html*/
+
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+body{
+  margin:0;
+  padding:0;
+}
+
+img{
+  border:0 none;
+  height:auto;
+  line-height:100%;
+  outline:none;
+  text-decoration:none;
+}
+
+a img{
+  border:0 none;
+}
+
+.imageFix{
+  display:block;
+}
+
+table, td{
+  border-collapse:collapse;
+}
+
+#bodyTable{
+  height:100% !important;
+  margin:0;
+  padding:0;
+  width:100% !important;
+}
+
+/* /\/\/\/\/\/\/\/\/ CLIENT SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+
+/*
+Outlook.com / Hotmail
+
+.ExternalClass Class Override
+
+When an email is pulled into Outlook.com / Hotmail, any style rules present
+ in the email are appended with .ExternalClass. Normalizing a few of these
+ can help create a baseline for you to work from.
+ */
+.ExternalClass{
+  width:100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div{
+  line-height: 100%;
+}
+
+/*
+<hX> Color Override
+
+Outlook.com / Hotmail sets its own (gross green) color on heading elements
+lower in level than an <h1> element. This means you need to account for
+headings <h2> through <h6>. Fortunately, it’s as easy as applying a !important
+declaration to the heading’s color property:
+*/
+h2{
+  color:#2a94d6 !important;
+}
+
+/*
+Outlook 2007 / 2010 / 2013
+
+“Read in Browser” Link
+
+It’s possible, in Outlook, to trigger the appearance of a fairly prominent
+“View this email in your browser” bar within the application, allowing you
+to drive people to view your email in a browser which will render it in a
+much better way than Outlook ever can.
+*/
+#outlook a{
+  padding:0;
+}
+
+/*
+<table> Element Spacing
+
+Outlook can sometimes add a bit of spacing on the left and right side of a
+<table> element that can cause some layout-related headaches. By using the
+vendor-specific mso-table-lspace and mso-table-rspace CSS properties, you
+can be rid of those spaces and continue on to tackle the million other
+problems caused by Outlook.
+*/
+table{
+  mso-table-lspace:0pt;
+  mso-table-rspace:0pt;
+}
+
+/*
+Image Resizing
+
+Using width or height tags to resize images in your markup can create a
+ problem in Internet Explorer browsers. If your reader is viewing an email
+ in-browser, and that email happens to have fluid images in it, they’ll look
+ pretty ugly as they resize. Using -ms-interpolation-mode:bicubic; ensures
+ that your images look a little better.
+*/
+img{
+  -ms-interpolation-mode:bicubic;
+}
+
+/*
+OSX / iOS
+
+WebKit Text Size Adjustment
+
+WebKit looks for any text that happens to be sized smaller than 13px and increases
+it to that number, which can sometimes cause design issues in places intended for
+small text. Setting -webkit-text-size-adjust to none will prevent iOS platforms
+from resizing the text, but this method also prevents OSX applications like Safari
+from bumping the text size up - something that can cause issues for people who need
+the text size to be large. Setting -webkit-text-size-adjust to 100% seems to be the
+best of both worlds.
+*/
+
+body{
+  -webkit-text-size-adjust:100%;
+}
+
+/*
+Phone Number, Address, & Date Link Colors
+
+When iOS detects a phone number, address, or calendar date, it oh-so-helpfully
+sets those items as links to make it easier to immediately call, map, or add
+an appointment within other apps. The trouble is the that link colors are the
+standard ‘internet blue’, or #0000FF. This color can be difficult to read on
+dark backgrounds, to say nothing of it not matching the style of your email’s
+design. Thankfully, there’s a workaround.
+
+First, for the phone number. In the <head> of your email, add this iOS-specific <meta> tag:
+
+<meta name="format-detection" content="telephone=no">
+
+Using that, iOS will no longer auto-detect and style phone numbers
+(Apple also lists its other tags here). You should, however, provide your own
+way to call from an email. You can do that by wrapping a phone number in a
+line and setting the href attribute with a tel value:
+
+<a href="tel:1-800-555-5555">1-808-555-5555</a>
+
+You can now style the link as you see fit. Addresses and dates work a little
+differently, and the solution is a little hacky, but that’s okay; it’s par
+for the course in HTML email. In order to override the blue link color, you
+wrap the links in an inline element like an <a>, then you apply your own color:
+
+Visit EmailCo. at <a href="#" style="color:#000000; text-decoration:none;">123 Atlantic Ave. &bull; Atlanta, GA 30318 USA</a>
+
+Be aware that, regardless of the fact that you changed the link colors, the iOS
+functionality isn’t disabled on any of these items. An errant tap of a date or
+address will still open up calendar and map applications, so it’s a good idea to
+make these links a little different than your other standard links, so folks avoid
+confusion or frustration.
+*/
+
+/*
+Windows Mobile
+
+Windows Mobile Text Size Adjustment
+
+Much like in OSX and iOS, small text is also resized on Windows Mobile.
+The same vendor-prefix-based CSS property is used here, just with the
+ms vendor prefix instead of the webkit one.
+*/
+body{
+  -ms-text-size-adjust:100%;
+}

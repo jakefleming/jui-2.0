@@ -244,6 +244,9 @@ html {
   height: 100%; }
 
 .doc-bg-1 {
+  background-color: #2585c1; }
+
+.doc-bg-2 {
   background-color: #e9ebed; }
 
 .doc-bg-transparent {
@@ -270,7 +273,7 @@ body .scope-container .doc-nav {
               flex: 0 0 25%; } }
 body .scope-container .doc-page-header {
   background-color: #2a94d6;
-  background-position: top right;
+  background-position: bottom right;
   background-repeat: no-repeat;
   background-size: auto 256px;
   min-height: 256px;
@@ -283,6 +286,12 @@ body .scope-container .doc-page-header {
   @media (min-width: 769px) {
     body .scope-container .doc-page-header {
       padding: 2em 0; } }
+  body .scope-container .doc-page-header--feature {
+    text-align: center; }
+    body .scope-container .doc-page-header--feature .doc-page-subheading {
+      margin: 0 auto; }
+    body .scope-container .doc-page-header--feature .button--solid .button__content--primary {
+      background-color: #2585c1; }
 body .scope-container .doc-page-header-inner {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -294,16 +303,25 @@ body .scope-container .doc-page-header-inner {
       -webkit-align-self: center;
           -ms-flex-item-align: center;
               align-self: center; } }
+body .scope-container #feature-header {
+  background: url("../assets/illustrations/feature.png") repeat bottom right;
+  background-size: auto 256px; }
 body .scope-container #bathroom-sink-header {
-  background-image: url("../assets/illustrations/bathroom-sink.png"); }
+  background: url("../assets/illustrations/bathroom-sink.png") no-repeat bottom right, url("../assets/illustrations/feature.png") repeat bottom right;
+  background-size: auto 256px; }
 body .scope-container #templates-header {
-  background-image: url("../assets/illustrations/templates.png"); }
+  background: url("../assets/illustrations/templates.png") no-repeat bottom right, url("../assets/illustrations/feature.png") repeat bottom right;
+  background-size: auto 256px; }
+body .scope-container #style-header {
+  background: url("../assets/illustrations/style.png") no-repeat bottom right, url("../assets/illustrations/feature.png") repeat bottom right;
+  background-size: auto 256px; }
 body .scope-container .doc-page-heading {
   color: white;
   font-family: ProximaNova;
   font-size: 2em;
   line-height: 1;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-bottom: 8px; }
   @media (min-width: 768px) {
     body .scope-container .doc-page-heading {
       font-size: 3em; } }
@@ -312,8 +330,11 @@ body .scope-container .doc-page-subheading {
   font-family: ProximaNova;
   font-weight: 100;
   font-size: 1em;
-  line-height: 1;
-  margin: 0; }
+  line-height: 1.5;
+  margin: 0;
+  max-width: 300px; }
+  body .scope-container .doc-page-subheading a, body .scope-container .doc-page-subheading a:link, body .scope-container .doc-page-subheading a:visited {
+    color: white; }
 body .scope-container #docs {
   margin: 0 auto;
   max-width: 48em; }
@@ -340,6 +361,8 @@ body .scope-container #docs {
     margin-bottom: 8px;
     margin-top: 0;
     text-transform: uppercase; }
+    body .scope-container #docs .doc-article-heading + p {
+      margin-top: 0; }
   body .scope-container #docs section {
     display: -webkit-box;
     display: -webkit-flex;
@@ -357,7 +380,7 @@ body .scope-container #docs {
           -ms-flex-flow: column nowrap;
               flex-flow: column nowrap; }
     body .scope-container #docs section:last-child {
-      margin-bottom: 15em; }
+      margin-bottom: 6em; }
   body .scope-container #docs article {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -456,6 +479,8 @@ body .scope-container .template-link {
 @media (min-width: 768px) {
   body .scope-container .template-list li {
     margin-bottom: 16px; } }
+body .scope-container > .nav-bar .nav-bar__top {
+  font-family: ProximaNova; }
 
 .color-swatches {
   list-style-type: none;
@@ -471,13 +496,13 @@ body .scope-container .template-link {
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap; }
   .color-swatches li:nth-child(1) {
-    background: #aad4ef; }
+    background: #9dceec; }
     .color-swatches li:nth-child(1):after {
-      content: "#aad4ef"; }
+      content: "#9dceec"; }
   .color-swatches li:nth-child(2) {
-    background: #80bfe6; }
+    background: #88c3e8; }
     .color-swatches li:nth-child(2):after {
-      content: "#80bfe6"; }
+      content: "#88c3e8"; }
   .color-swatches li:nth-child(3) {
     background: #55a9de; }
     .color-swatches li:nth-child(3):after {
@@ -499,13 +524,13 @@ body .scope-container .template-link {
     .color-swatches li:nth-child(7):after {
       content: "#195981"; }
   .color-swatches li:nth-child(8) {
-    background: #b0e2c1; }
+    background: #a5deb8; }
     .color-swatches li:nth-child(8):after {
-      content: "#b0e2c1"; }
+      content: "#a5deb8"; }
   .color-swatches li:nth-child(9) {
-    background: #8bd4a4; }
+    background: #92d7aa; }
     .color-swatches li:nth-child(9):after {
-      content: "#8bd4a4"; }
+      content: "#92d7aa"; }
   .color-swatches li:nth-child(10) {
     background: #66c686; }
     .color-swatches li:nth-child(10):after {
@@ -527,13 +552,13 @@ body .scope-container .template-link {
     .color-swatches li:nth-child(14):after {
       content: "#286b3f"; }
   .color-swatches li:nth-child(15) {
-    background: #eac9c6; }
+    background: #e6bfbb; }
     .color-swatches li:nth-child(15):after {
-      content: "#eac9c6"; }
+      content: "#e6bfbb"; }
   .color-swatches li:nth-child(16) {
-    background: #dca6a1; }
+    background: #dfada9; }
     .color-swatches li:nth-child(16):after {
-      content: "#dca6a1"; }
+      content: "#dfada9"; }
   .color-swatches li:nth-child(17) {
     background: #ce837c; }
     .color-swatches li:nth-child(17):after {
@@ -555,13 +580,13 @@ body .scope-container .template-link {
     .color-swatches li:nth-child(21):after {
       content: "#813730"; }
   .color-swatches li:nth-child(22) {
-    background: #f7e8c1; }
+    background: #f5e3b3; }
     .color-swatches li:nth-child(22):after {
-      content: "#f7e8c1"; }
+      content: "#f5e3b3"; }
   .color-swatches li:nth-child(23) {
-    background: #f1d894; }
+    background: #f3db9d; }
     .color-swatches li:nth-child(23):after {
-      content: "#f1d894"; }
+      content: "#f3db9d"; }
   .color-swatches li:nth-child(24) {
     background: #ecc766; }
     .color-swatches li:nth-child(24):after {
@@ -583,13 +608,13 @@ body .scope-container .template-link {
     .color-swatches li:nth-child(28):after {
       content: "#a47d15"; }
   .color-swatches li:nth-child(29) {
-    background: #c2eff0; }
+    background: #b6eced; }
     .color-swatches li:nth-child(29):after {
-      content: "#c2eff0"; }
+      content: "#b6eced"; }
   .color-swatches li:nth-child(30) {
-    background: #99e4e6; }
+    background: #a1e7e8; }
     .color-swatches li:nth-child(30):after {
-      content: "#99e4e6"; }
+      content: "#a1e7e8"; }
   .color-swatches li:nth-child(31) {
     background: #70dadc; }
     .color-swatches li:nth-child(31):after {
@@ -668,7 +693,9 @@ body .scope-container .template-link {
       content: "#71808f"; }
 
 .color-swatch {
+  box-shadow: inset -4px 0 0 0 white, inset 4px 0 0 0 white;
   height: 128px;
+  margin-bottom: 8px;
   position: relative;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 14.28571%;
@@ -676,7 +703,8 @@ body .scope-container .template-link {
       -ms-flex: 0 0 14.28571%;
           flex: 0 0 14.28571%; }
   .color-swatch:after {
-    background: #fff;
+    background: #e9ebed;
+    box-shadow: inset -4px 0 0 0 white, inset 4px 0 0 0 white;
     display: block;
     height: 32px;
     position: absolute;
@@ -686,3 +714,25 @@ body .scope-container .template-link {
     text-align: center;
     line-height: 32px;
     font-size: 14px; }
+
+.nav-bar__top .icon-jui-kit {
+  font-size: 32px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-right: 8px; }
+
+.article-icon {
+  display: block !important;
+  vertical-align: middle !important;
+  text-align: center;
+  font-size: 48px;
+  line-height: 128px !important;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: #e9ebed;
+  color: #aab3bc;
+  margin: 0 auto 16px auto; }
+  .article-icon + .doc-article-heading {
+    color: #2a94d6 !important;
+    text-align: center !important; }

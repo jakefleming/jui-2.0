@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="../css/styles-scoped.css"/>
     <script src="../js/modernizr.js"></script><!--detect if browser supports stuff like flexbox-->
     <!--<link rel="stylesheet" href="http://basehold.it/8">-->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <div class="scope-container">
@@ -16,14 +34,17 @@
                 <span class="icon icon-menu"></span>
             </div>
             <div class="nav-bar__top">
-                JUI
+                <a href="../"><span class="icon icon-jui-kit"></span>JUI</a>
             </div>
             <ul class="nav-bar__list nav-bar__list--right">
                 <li class="nav-bar__list-item">
-                    <a href="../">Bathroom Sink</a>
+                    <a href="../bathroom-sink.html">Bathroom Sink</a>
+                </li>
+                <li class="nav-bar__list-item">
+                    <a href="../style.html">Style</a>
                 </li>
                 <li class="nav-bar__list-item nav-bar__list-item--active">
-                    <a href="templates.html">Templates</a>
+                    <a href="./">Templates</a>
                 </li>
             </ul>
         </div>
@@ -35,76 +56,134 @@
         </div>
     </header>
     <div id="docs" class="has-md-padding-for-md">
+        <h1 class="doc-section-heading">Common layouts</h1>
+        <section>
+            <article>
+                <div class="constrained constrained--default">
+                    <ul class="card-list card-list--collapse-on-small-only template-list grid has-gutters orient--vertical-on-small holds-3-blocks-on-medium">
+                        <li class="grid__block">
+                            <div class="card card--outlined" >
+                                <a href="template__add-conditions.html" class="template-link"></a>
+                                <span class="card__feature">
+                                    <iframe class="template-iframe" src="template__add-conditions.html" scrolling="no" height="128px"></iframe>
+                                </span>
+                                <span class="card__body">
+                                    <span class="card__content">
+                                        <span class="card__heading">Add blocks</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid__block">
+                            <div class="card card--outlined" >
+                                <a href="template__dashboard.html" class="template-link"></a>
+                                <span class="card__feature">
+                                    <iframe class="template-iframe" src="template__dashboard.html" scrolling="no" height="128px"></iframe>
+                                </span>
+                                <span class="card__body">
+                                    <span class="card__content">
+                                        <span class="card__heading">Dashboard</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid__block">
+                            <div class="card card--outlined" >
+                                <a href="template__page-bar.html" class="template-link"></a>
+                                <span class="card__feature">
+                                    <iframe class="template-iframe" src="template__page-bar.html" scrolling="no" height="128px"></iframe>
+                                </span>
+                                <span class="card__body">
+                                    <span class="card__content">
+                                        <span class="card__heading">Page bar</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid__block">
+                            <div class="card card--outlined" >
+                                <a href="template__setup-tabs.html" class="template-link"></a>
+                                <span class="card__feature">
+                                    <iframe class="template-iframe" src="template__setup-tabs.html" scrolling="no" height="128px"></iframe>
+                                </span>
+                                <span class="card__body">
+                                    <span class="card__content">
+                                        <span class="card__heading">Setup tabs</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="grid__block">
+                            <div class="card card--outlined" >
+                                <a href="template__sign-in.html" class="template-link"></a>
+                                <span class="card__feature">
+                                    <iframe class="template-iframe" src="template__sign-in.html" scrolling="no" height="128px"></iframe>
+                                </span>
+                                <span class="card__body">
+                                    <span class="card__content">
+                                        <span class="card__heading">Sign in</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <h1 class="doc-section-heading">Email</h1>
+        <section>
+            <article>
+                <div class="constrained constrained--default">
+                    <ul class="card-list card-list--collapse-on-small-only template-list grid has-gutters orient--vertical-on-small holds-3-blocks-on-medium">
+                        <li class="grid__block">
+                            <div class="card card--outlined" >
+                                <a href="template__email-basic.html" class="template-link"></a>
+                                <span class="card__feature">
+                                    <iframe class="template-iframe" src="template__email-basic.html" scrolling="no" height="128px"></iframe>
+                                </span>
+                                <span class="card__body">
+                                    <span class="card__content">
+                                        <span class="card__heading">Basic Email Template</span>
+                                    </span>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer class="footer-bar">
         <div class="constrained constrained--default">
-            <ul class="card-list card-list--collapse-on-small-only template-list grid has-gutters orient--vertical-on-small holds-3-blocks-on-medium">
-                <li class="grid__block">
-                    <div class="card card--outlined" >
-                        <a href="template__add-conditions.html" class="template-link"></a>
-                        <span class="card__feature">
-                            <iframe class="template-iframe" src="template__add-conditions.html" scrolling="no" height="128px"></iframe>
-                        </span>
-                        <span class="card__body">
-                            <span class="card__content">
-                                <span class="card__heading">Add blocks</span>
-                            </span>
-                        </span>
-                    </div>
+            <div class="footer-bar__top">
+                <a href="./"><span class="icon icon-jui-kit"></span>JUI</a>
+            </div>
+            <ul class="footer-bar__list footer-bar__list--horizontal">
+                <li class="footer-bar__list-item">
+                    Currently v2.0
                 </li>
-                <li class="grid__block">
-                    <div class="card card--outlined" >
-                        <a href="template__dashboard.html" class="template-link"></a>
-                        <span class="card__feature">
-                            <iframe class="template-iframe" src="template__dashboard.html" scrolling="no" height="128px"></iframe>
-                        </span>
-                        <span class="card__body">
-                            <span class="card__content">
-                                <span class="card__heading">Dashboard</span>
-                            </span>
-                        </span>
-                    </div>
+                <li class="footer-bar__list-item">&bull;</li>
+                <li class="footer-bar__list-item">
+                    <a href="https://github.com/jakefleming/jui-2.0">GitHub</a>
                 </li>
-                <li class="grid__block">
-                    <div class="card card--outlined" >
-                        <a href="template__page-bar.html" class="template-link"></a>
-                        <span class="card__feature">
-                            <iframe class="template-iframe" src="template__page-bar.html" scrolling="no" height="128px"></iframe>
-                        </span>
-                        <span class="card__body">
-                            <span class="card__content">
-                                <span class="card__heading">Page bar</span>
-                            </span>
-                        </span>
-                    </div>
+                <li class="footer-bar__list-item">&bull;</li>
+                <li class="footer-bar__list-item">
+                    <a href="bathroom-sink.html">Bathroom Sink</a>
                 </li>
-                <li class="grid__block">
-                    <div class="card card--outlined" >
-                        <a href="template__setup-tabs.html" class="template-link"></a>
-                        <span class="card__feature">
-                            <iframe class="template-iframe" src="template__setup-tabs.html" scrolling="no" height="128px"></iframe>
-                        </span>
-                        <span class="card__body">
-                            <span class="card__content">
-                                <span class="card__heading">Setup tabs</span>
-                            </span>
-                        </span>
-                    </div>
+                <li class="footer-bar__list-item">&bull;</li>
+                <li class="footer-bar__list-item">
+                    <a href="bathroom-sink.html">Style</a>
                 </li>
-                <li class="grid__block">
-                    <div class="card card--outlined" >
-                        <a href="template__sign-in.html" class="template-link"></a>
-                        <span class="card__feature">
-                            <iframe class="template-iframe" src="template__sign-in.html" scrolling="no" height="128px"></iframe>
-                        </span>
-                        <span class="card__body">
-                            <span class="card__content">
-                                <span class="card__heading">Sign in</span>
-                            </span>
-                        </span>
-                    </div>
+                <li class="footer-bar__list-item">&bull;</li>
+                <li class="footer-bar__list-item">
+                    <a href="bathroom-sink.html">Templates</a>
                 </li>
             </ul>
+            <div class="footer-bar__block">
+                Made with <span class="icon icon-heart"></span> at <a href="http://www.appiphony.com">Appiphony</a>.
+            </div>
         </div>
-    </div>
+    </footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 

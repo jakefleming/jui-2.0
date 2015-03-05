@@ -12,6 +12,9 @@ $nav-default-text: $text-color-emphasized;
     height: em(56);
     line-height: 1.5;
     padding: 1em;
+    > a {
+      color: $color--white;
+    }
     @media (min-width: $brkpoint-md) {
       float: left;
     }
@@ -172,12 +175,15 @@ $nav-default-text: $text-color-emphasized;
   }
   //when the menu is opened, show the nav lists
   &.menu-is-open .nav-bar__list {
-    display: block;
-    max-height: em(500);
-    min-height: 0;
-    min-width: 100%;
-    opacity: 100;
-    transition: $trans-duration
+
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      display: block;
+      max-height: em(500);
+      min-height: 0;
+      min-width: 100%;
+      opacity: 100;
+      transition: $trans-duration;
+    }
   }
   //hidden pieces called 'appendages' can contain anything
   &__appendage {
@@ -330,5 +336,70 @@ $nav-default-text: $text-color-emphasized;
         }
       }
     }
+  }
+}
+
+//footer bar
+
+.footer-bar {
+  box-shadow: inset 0 1px 0 $color--gray--x-light;
+  padding: 2em 0;
+  &__top {
+    color: $text-color-deemphasized;
+    font-family: $font--2;
+    font-size: 16px;
+    padding: 0 1em;
+    text-align: center;
+    a{
+      color: $text-color-deemphasized;
+      > .icon {
+        color: $color--gray--light;
+        font-size: 32px;
+        line-height: 24px;
+        margin-right: 8px;
+      }
+    }
+    img {
+      height: 64px;
+      vertical-align: middle;
+      width: auto
+    }
+    + .footer-bar__list {
+      margin-top: 1em;
+    }
+  }
+  &__block {
+    color: $text-color-deemphasized;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em .75em;
+    text-align: center;
+    &-title {
+      color: $text-color-emphasized;
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 16px;
+    }
+    &-item {
+      color: $text-color-deemphasized;
+      line-height: 32px;
+      padding: 0 .25em;
+      > a {
+        display: block;
+      }
+    }
+  &--horizontal {
+    .footer-bar__list-item {
+      display: inline-block;
+      > a {
+        display: inline-block;
+      }
+    }
+  }
   }
 }

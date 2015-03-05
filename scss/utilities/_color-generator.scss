@@ -1,14 +1,21 @@
 //use this is in sassmeister.com to generate what you need and copy and paste
 //the values into color-variables and maps, while removing the unnecessary parts
 
-$colors: (
-  color--primary  : #388DE5,
-  color--success  : #48cc92,
-  color--error    : #cc554c,
-  color--warning  : #efbb18,
-  color--info     : #4accc2,
-  color--black    : #4b4b4f,
-  color--gray     : #a4a4a8,
+$color--blue      : #2a94d6;
+$color--green     : #43b66a;
+$color--red       : #c06057;
+$color--orange    : #f39e58;
+$color--gold      : #e6b739;
+$color--turquoise : #47cfd2;
+
+$primary-colors: (
+        color--primary  : $color--blue,
+        color--success  : $color--green,
+        color--error    : $color--red,
+        color--warning  : $color--gold,
+        color--info     : $color--turquoise,
+        color--black    : #384047,
+        color--gray     : #aab3bc
 );
 
 $xx-light         : 27%;
@@ -38,13 +45,13 @@ $xx-dark          : 20%;
   #{'$'+$name}--xx-dark: remove;
 }
 
-variables {
-  @each $theme, $color in $colors {
+primary-color-variables {
+  @each $theme, $color in $primary-colors {
     @include generate-colors($color, $theme);
   }
 }
-map {
-  @each $theme, $color in $colors {
+primary-colors {
+  @each $theme, $color in $primary-colors {
     @include generate-map($color, $theme);
   }
 }

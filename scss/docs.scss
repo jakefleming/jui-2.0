@@ -10,6 +10,9 @@ html {
 //}
 
 .doc-bg-1 {
+  background-color: $color--primary--dark;
+}
+.doc-bg-2 {
   background-color: $color--gray--x-light;
 }
 .doc-bg-transparent {
@@ -17,6 +20,13 @@ html {
 }
 
 body .scope-container {
+//  @include flexbox();
+//  @include flex-flow(row wrap);
+//  @include flex-just(stretch);
+//  @include align-content(flex-start);
+//  > * {
+//    @include flex(0 0 100%);
+//  }
   // nav
   .doc-nav {
     display: block;
@@ -36,7 +46,7 @@ body .scope-container {
   //page-headers
   .doc-page-header {
     background-color: $color--primary;
-    background-position: top right;
+    background-position: bottom right;
     background-repeat: no-repeat;
     background-size: auto 256px;
     min-height: 256px;
@@ -45,6 +55,17 @@ body .scope-container {
     @media (min-width: $brkpoint-md+1) {
       padding: 2em 0;
     }
+    &--feature {
+      text-align: center;
+      .doc-page-subheading {
+        margin: 0 auto;
+      }
+      .button--solid {
+        .button__content--primary {
+          background-color: $color--primary--dark;
+        }
+      }
+    }
   }
   .doc-page-header-inner {
     @include flex();
@@ -52,11 +73,21 @@ body .scope-container {
       @include align-self(center);
     }
   }
+  #feature-header {
+    background: url('../assets/illustrations/feature.png') repeat bottom right;
+    background-size: auto 256px;
+  }
   #bathroom-sink-header {
-    background-image: url('../assets/illustrations/bathroom-sink.png');
+    background: url('../assets/illustrations/bathroom-sink.png') no-repeat bottom right ,url('../assets/illustrations/feature.png') repeat bottom right;
+    background-size: auto 256px;
   }
   #templates-header {
-    background-image: url('../assets/illustrations/templates.png');
+    background: url('../assets/illustrations/templates.png') no-repeat bottom right ,url('../assets/illustrations/feature.png') repeat bottom right;
+    background-size: auto 256px;
+  }
+  #style-header {
+    background: url('../assets/illustrations/style.png') no-repeat bottom right ,url('../assets/illustrations/feature.png') repeat bottom right;
+    background-size: auto 256px;
   }
   .doc-page-heading {
     color: $color--white;
@@ -64,6 +95,7 @@ body .scope-container {
     font-size: 2em;
     line-height: 1;
     margin-top: 0;
+    margin-bottom: 8px;
     @media (min-width: $brkpoint-md) {
       font-size: 3em;
     }
@@ -73,8 +105,12 @@ body .scope-container {
     font-family: $font--2;
     font-weight: 100;
     font-size: 1em;
-    line-height: 1;
+    line-height: 1.5;
     margin: 0;
+    max-width: 300px;
+    a, a:link, a:visited {
+      color: $color--white;
+    }
   }
   //layout
   #docs {
@@ -110,6 +146,9 @@ body .scope-container {
       margin-bottom: 8px;
       margin-top: 0;
       text-transform: uppercase;
+      + p {
+        margin-top: 0;
+      }
     }
     section {
       @include flexbox;
@@ -121,7 +160,7 @@ body .scope-container {
         @include flex-flow(column nowrap);
       }
       &:last-child {
-        margin-bottom: em(240);
+        margin-bottom: em(96);
       }
     }
     article {
@@ -258,6 +297,9 @@ body .scope-container {
       }
     }
   }
+  > .nav-bar .nav-bar__top{
+    font-family: $font--2;
+  }
 }
 
 //color swatches
@@ -275,11 +317,14 @@ body .scope-container {
   }
 }
 .color-swatch {
+  box-shadow: inset -4px 0 0 0 $color--white, inset 4px 0 0 0 $color--white;
   height: 128px;
+  margin-bottom: 8px;
   position: relative;
   @include flex(0 0 14.2857143%);
   &:after {
-    background: #fff;
+    background: $form-element-bg;
+    box-shadow: inset -4px 0 0 0 $color--white, inset 4px 0 0 0 $color--white;
     display: block;
     height: 32px;
     position: absolute;
@@ -289,5 +334,34 @@ body .scope-container {
     text-align: center;
     line-height: 32px;
     font-size: 14px;
+  }
+}
+
+.nav-bar__top .icon-jui-kit {
+  font-size: 32px;
+  line-height: 24px;
+  color: rgba(255,255,255,.4);
+  margin-right: 8px;
+}
+
+.article-feature {
+  //text-align: center;
+}
+
+.article-icon {
+  display: block!important;
+  vertical-align: middle!important;
+  text-align: center;
+  font-size: 48px;
+  line-height: 128px!important;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: $color--gray--x-light;
+  color: $color--gray;
+  margin: 0 auto 16px auto;
+  + .doc-article-heading {
+    color: $color--primary!important;
+    text-align: center!important;
   }
 }

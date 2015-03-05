@@ -2,23 +2,23 @@
   @if $only == null {
     @each $size, $value in $layout-space {
       &-#{$size}-#{$type} {
-        #{$type}: em($value);
+        #{$type}: em($value)!important;
       }
       @each $media-size, $media-value in $media-size {
         @media (min-width: $media-value){
           &-#{$size}-#{$type}-for-#{$media-size} {
-            #{$type}: em($value);
+            #{$type}: em($value)!important;
           }
         }
       }
       @each $position in $layout-positions {
         &-#{$size}-#{$type}-on-#{$position} {
-          #{$type}-#{$position}: em($value);
+          #{$type}-#{$position}: em($value)!important;
         }
         @each $media-size, $media-value in $media-size {
           @media (min-width: $media-value){
             &-#{$size}-#{$type}-on-#{$position}-for-#{$media-size} {
-              #{$type}-#{$position}: em($value);
+              #{$type}-#{$position}: em($value)!important;
             }
           }
         }
@@ -29,79 +29,79 @@
     //xs
     &-xs-#{$type}-for-xs-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}: px(map-get($layout-space, xs));
+        #{$type}: px(map-get($layout-space, xs))!important;
       }
     }
     &-xs-#{$type}-on-top-for-xs-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-top: px(map-get($layout-space, xs));
+        #{$type}-top: px(map-get($layout-space, xs))!important;
       }
     }
     &-xs-#{$type}-on-right-for-xs-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-right: px(map-get($layout-space, xs));
+        #{$type}-right: px(map-get($layout-space, xs))!important;
       }
     }
     &-xs-#{$type}-on-bottom-for-xs-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-bottom: px(map-get($layout-space, xs));
+        #{$type}-bottom: px(map-get($layout-space, xs))!important;
       }
     }
     &-xs-#{$type}-on-left-for-xs-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-left: px(map-get($layout-space, xs));
+        #{$type}-left: px(map-get($layout-space, xs))!important;
       }
     }
     //sm
     &-sm-#{$type}-for-sm-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}: px(map-get($layout-space, sm));
+        #{$type}: px(map-get($layout-space, sm))!important;
       }
     }
     &-sm-#{$type}-on-top-for-sm-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-top: px(map-get($layout-space, sm));
+        #{$type}-top: px(map-get($layout-space, sm))!important;
       }
     }
     &-sm-#{$type}-on-right-for-sm-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-right: px(map-get($layout-space, sm));
+        #{$type}-right: px(map-get($layout-space, sm))!important;
       }
     }
     &-sm-#{$type}-on-bottom-for-sm-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-bottom: px(map-get($layout-space, sm));
+        #{$type}-bottom: px(map-get($layout-space, sm))!important;
       }
     }
     &-sm-#{$type}-on-left-for-sm-only {
       @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-left: px(map-get($layout-space, sm));
+        #{$type}-left: px(map-get($layout-space, sm))!important;
       }
     }
     //md
     &-md-#{$type}-for-md-only {
       @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}: px(map-get($layout-space, md));
+        #{$type}: px(map-get($layout-space, md))!important;
       }
     }
     &-md-#{$type}-on-top-for-md-only {
       @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-top: px(map-get($layout-space, md));
+        #{$type}-top: px(map-get($layout-space, md))!important;
       }
     }
     &-md-#{$type}-on-right-for-md-only {
       @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-right: px(map-get($layout-space, md));
+        #{$type}-right: px(map-get($layout-space, md))!important;
       }
     }
     &-md-#{$type}-on-bottom-for-md-only {
       @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-bottom: px(map-get($layout-space, md));
+        #{$type}-bottom: px(map-get($layout-space, md))!important;
       }
     }
     &-md-#{$type}-on-left-for-md-only {
       @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-left: px(map-get($layout-space, md));
+        #{$type}-left: px(map-get($layout-space, md))!important;
       }
     }
   }
