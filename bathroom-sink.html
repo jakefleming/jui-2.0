@@ -1728,7 +1728,6 @@
     $('audio, video').mediaelementplayer({
         success: function(player, node){
             $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
-            player.hideControls();
         },
         // force iPad's native controls
         iPadUseNativeControls: true,

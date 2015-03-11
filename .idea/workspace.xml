@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66cf635c-0c7d-4fd8-ad12-2c04805eae87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/lib/_mejs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/vid/captions/doc.vtt" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/scss/utilities/_colors.scss" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/4dba78a88d35909d491220c3e1ab330ebff3b0ad/_juicons.scssc" afterPath="$PROJECT_DIR$/.sass-cache/4dba78a88d35909d491220c3e1ab330ebff3b0ad/_juicons.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.eot" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.ttf" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.woff" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/styles-scoped.scssc" afterPath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/styles-scoped.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/styles.scssc" afterPath="$PROJECT_DIR$/.sass-cache/03d17bbfbca006ed71ae47a0aa2481dff1b1fddc/styles.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/base/fonts/_juicons.scss" afterPath="$PROJECT_DIR$/scss/base/fonts/_juicons.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bathroom-sink.html" afterPath="$PROJECT_DIR$/bathroom-sink.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/fonts/juicons/juicons.svg" afterPath="$PROJECT_DIR$/css/fonts/juicons/juicons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.html" afterPath="$PROJECT_DIR$/style.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles-scoped.css.map" afterPath="$PROJECT_DIR$/css/styles-scoped.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles-scoped.css" afterPath="$PROJECT_DIR$/css/styles-scoped.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/styles-scoped.scss" afterPath="$PROJECT_DIR$/scss/styles-scoped.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css.map" afterPath="$PROJECT_DIR$/css/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/styles.scss" afterPath="$PROJECT_DIR$/scss/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jui-2.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,8 +63,8 @@
           <file leaf-file-name="_mejs.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scss/lib/_mejs.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.42044136" vertical-offset="15403" max-vertical-offset="19965">
-                  <caret line="1051" column="6" selection-start-line="1051" selection-start-column="6" selection-end-line="1051" selection-end-column="6" />
+                <state vertical-scroll-proportion="-0.9512195" vertical-offset="16494" max-vertical-offset="19965">
+                  <caret line="1045" column="3" selection-start-line="1045" selection-start-column="3" selection-end-line="1045" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -163,11 +144,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.47635135" vertical-offset="612" max-vertical-offset="2160">
-                  <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
+                <state vertical-scroll-proportion="-42.625" vertical-offset="927" max-vertical-offset="2160">
+                  <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
@@ -196,13 +177,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="bathroom-sink.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="bathroom-sink.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bathroom-sink.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-20.125" vertical-offset="25392" max-vertical-offset="27270">
-                  <caret line="1725" column="31" selection-start-line="1725" selection-start-column="31" selection-end-line="1725" selection-end-column="31" />
+                <state vertical-scroll-proportion="0.6283784" vertical-offset="25377" max-vertical-offset="27255">
+                  <caret line="1729" column="74" selection-start-line="1729" selection-start-column="74" selection-end-line="1729" selection-end-column="74" />
                   <folding>
-                    <marker date="1426091702000" expanded="true" signature="102225:102241" placeholder="..." />
+                    <marker date="1426092255000" expanded="true" signature="102190:102206" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -289,8 +270,8 @@
         <option value="$PROJECT_DIR$/scss/base/fonts/_juicons.scss" />
         <option value="$PROJECT_DIR$/style.html" />
         <option value="$PROJECT_DIR$/scss/lib/_mejs.scss" />
-        <option value="$PROJECT_DIR$/bathroom-sink.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/bathroom-sink.html" />
       </list>
     </option>
   </component>
@@ -1230,29 +1211,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-42.625" vertical-offset="927" max-vertical-offset="2160">
+          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scss/lib/_mejs.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42044136" vertical-offset="15403" max-vertical-offset="19965">
-          <caret line="1051" column="6" selection-start-line="1051" selection-start-column="6" selection-end-line="1051" selection-end-column="6" />
+        <state vertical-scroll-proportion="-0.9512195" vertical-offset="16494" max-vertical-offset="19965">
+          <caret line="1045" column="3" selection-start-line="1045" selection-start-column="3" selection-end-line="1045" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bathroom-sink.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.125" vertical-offset="25392" max-vertical-offset="27270">
-          <caret line="1725" column="31" selection-start-line="1725" selection-start-column="31" selection-end-line="1725" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.6283784" vertical-offset="25377" max-vertical-offset="27255">
+          <caret line="1729" column="74" selection-start-line="1729" selection-start-column="74" selection-end-line="1729" selection-end-column="74" />
           <folding>
-            <marker date="1426091702000" expanded="true" signature="102225:102241" placeholder="..." />
+            <marker date="1426092255000" expanded="true" signature="102190:102206" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47635135" vertical-offset="612" max-vertical-offset="2160">
-          <caret line="69" column="66" selection-start-line="69" selection-start-column="66" selection-end-line="69" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
