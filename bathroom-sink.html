@@ -28,6 +28,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+
+    <script type="text/javascript" src="lib/mejs/build/mediaelement-and-player.min.js"></script>
+
 </head>
 <body>
 <div class="scope-container">
@@ -1661,6 +1667,19 @@
                 </div>
             </article>
         </section>
+        <h1 class="doc-section-heading">
+            Video
+        </h1>
+        <p>For custom video, we use <a href="http://mediaelementjs.com/">Mediaelement.js</a>.</p>
+        <section id="video">
+            <article>
+                <video class="mejs-jui" controls width="100%" height="100%">
+                    <source src="assets/vid/big_buck_bunny.mp4" type="video/mp4"/>
+                    <source src="assets/vid/big_buck_bunny.ogv" type="video/ogv"/>
+                    <track label="English" kind="subtitles" srclang="en" src="assets/vid/captions/doc.vtt"/>
+                </video>
+            </article>
+        </section>
     </div>
     <footer class="footer-bar">
         <div class="constrained constrained--default">
@@ -1694,8 +1713,7 @@
         </div>
     </footer>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/jquery.mobile.custom.min.js"></script>
+
 
 <script type="text/javascript" src="lib/selectize/selectize.js"></script>
 <script type="text/javascript" src="lib/tooltipster-master/js/jquery.tooltipster.js"></script>
@@ -1706,6 +1724,23 @@
 <script type="text/javascript" src="js/jui-app.js"></script>
 
 <script type="text/javascript">
+    //mejs
+    $('audio, video').mediaelementplayer({
+        success: function(player, node){
+            $('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+            player.hideControls();
+        },
+        // force iPad's native controls
+        iPadUseNativeControls: true,
+        // force iPhone's native controls
+        iPhoneUseNativeControls: true,
+        // force Android's native controls
+        AndroidUseNativeControls: true,
+        startLanguage: 'en',
+        pauseOtherPlayers: true,
+        translationSelector: true
+    });
+
     //selectize
     $(function() {
         $('#select-state2, #select-state4, #select-thing').selectize({

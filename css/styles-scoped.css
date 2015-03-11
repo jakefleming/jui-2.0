@@ -174,7 +174,7 @@
   src: url("fonts/juicons/juicons.eot?#iefix-m8mnji") format("embedded-opentype"), url("fonts/juicons/juicons.ttf?-m8mnji") format("truetype"), url("fonts/juicons/juicons.svg?-m8mnji#juicons") format("svg"), url("fonts/juicons/juicons.woff?-m8mnji") format("woff");
   font-weight: normal;
   font-style: normal; }
-.icon, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
+.icon, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove, body .scope-container .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .mejs-button, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
   font-family: juicons;
   speak: none;
   font-style: normal;
@@ -188,9 +188,27 @@
   display: inline-block;
   line-height: 1.5;
   vertical-align: top; }
-  .icon:before, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
+  .icon:before, body .scope-container .selectize-control.single .selectize-input:before, body .scope-container .item .remove:before, body .scope-container .mejs-jui .mejs-overlay-button:before, body .scope-container .mejs-jui .mejs-overlay-loading:before, body .scope-container .mejs-jui .mejs-controls .mejs-captions-button:before, body .scope-container .mejs-jui .mejs-controls .mejs-button:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
     display: inline-block;
     vertical-align: top; }
+
+.icon-media-captions:before, body .scope-container .mejs-jui .mejs-controls .mejs-captions-button:before {
+  content: "\e6b8"; }
+
+.icon-media-pause:before, body .scope-container .mejs-jui .mejs-controls .mejs-button.mejs-pause:before {
+  content: "\e6b3"; }
+
+.icon-media-play:before, body .scope-container .mejs-jui .mejs-overlay-button:before, body .scope-container .mejs-jui .mejs-controls .mejs-button.mejs-play:before {
+  content: "\e6b4"; }
+
+.icon-media-stop:before {
+  content: "\e6b5"; }
+
+.icon-media-volume-mute:before, body .scope-container .mejs-jui .mejs-controls .mejs-button.mejs-unmute:before {
+  content: "\e6b6"; }
+
+.icon-media-volume:before, body .scope-container .mejs-jui .mejs-controls .mejs-button.mejs-mute:before {
+  content: "\e6b7"; }
 
 .icon-skull:before {
   content: "\e6b2"; }
@@ -327,7 +345,7 @@
 .icon-contacts:before {
   content: "\e62b"; }
 
-.icon-contract:before {
+.icon-contract:before, body .scope-container .mejs-jui .mejs-controls .mejs-button.mejs-fullscreen-button.mejs-unfullscreen:before {
   content: "\e62c"; }
 
 .icon-credit-card:before {
@@ -387,7 +405,7 @@
 .icon-exclamation:before {
   content: "\e63f"; }
 
-.icon-expand:before {
+.icon-expand:before, body .scope-container .mejs-jui .mejs-controls .mejs-button.mejs-fullscreen-button:before {
   content: "\e640"; }
 
 .icon-eye:before {
@@ -510,7 +528,7 @@
 .icon-list:before {
   content: "\e668"; }
 
-.icon-loading:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
+.icon-loading:before, body .scope-container .mejs-jui .mejs-overlay-loading:before, body .scope-container .button.load-this .button__content:before, body .scope-container .form-element.load-this .form-element__wrap:before {
   content: "\e669"; }
 
 .icon-location:before {
@@ -3210,7 +3228,58 @@ body .scope-container {
   /* This is the base styling required to make all Tooltipsters work */
   /* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
   /* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
-  /* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */ }
+  /* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */
+  /* Start: LAYERS */
+  /* End: LAYERS */
+  /* Start: CONTROL BAR */
+  /* :focus for accessibility */
+  /* End: CONTROL BAR */
+  /* Start: Time (Current / Duration) */
+  /* End: Time (Current / Duration) */
+  /* Start: Play/Pause/Stop */
+  /* Start: Play/Pause/Stop */
+  /* Start: Progress Bar */
+  /*
+  .mejs-controls .mejs-time-rail:hover .mejs-time-handle {
+  	visibility:visible;
+  }
+  */
+  /* End: Progress Bar */
+  /* Start: Fullscreen */
+  /* End: Fullscreen */
+  /* Start: Mute/Volume */
+  /*
+  .mejs-controls .mejs-volume-button:hover .mejs-volume-slider {
+  	display: block;
+  }
+  */
+  /* horizontal version */
+  /* End: Mute/Volume */
+  /* Start: Track (Captions and Chapters) */
+  /*
+  .mejs-controls .mejs-captions-button:hover  .mejs-captions-selector {
+  	visibility: visible;
+  }
+  */
+  /* End: Track (Captions and Chapters) */
+  /* Start: Error */
+  /* End: Error */
+  /* Start: Loop */
+  /* End: Loop */
+  /* Start: backlight */
+  /* End: backlight */
+  /* Start: Picture Controls */
+  /* End: Picture Controls */
+  /* context menu */
+  /* Start: Source Chooser */
+  /* End: Source Chooser */
+  /* Start: Postroll */
+  /* End: Postroll */
+  /* Start: Speed */
+  /* End: Speed */
+  /* Start: Skip Back */
+  /* End: Skip Back */
+  /*JUI SKIN*/ }
   body .scope-container body {
     color: #768593; }
   body .scope-container h1, body .scope-container h2, body .scope-container h3, body .scope-container h4, body .scope-container h5, body .scope-container h6, body .scope-container p {
@@ -4073,6 +4142,929 @@ body .scope-container {
     -webkit-transform: scale(1.1, 1.1);
         -ms-transform: scale(1.1, 1.1);
             transform: scale(1.1, 1.1); }
+  body .scope-container .mejs-offscreen {
+    /* Accessibility: hide screen reader texts (and prefer "top" for RTL languages). */
+    position: absolute !important;
+    top: -10000px;
+    left: -10000px;
+    overflow: hidden;
+    width: 1px;
+    height: 1px; }
+  body .scope-container .mejs-container {
+    position: relative;
+    background: #000;
+    font-family: Helvetica, Arial;
+    text-align: left;
+    vertical-align: top;
+    text-indent: 0; }
+  body .scope-container .me-plugin {
+    position: absolute; }
+  body .scope-container .mejs-embed, body .scope-container .mejs-embed body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden; }
+  body .scope-container .mejs-fullscreen {
+    /* set it to not show scroll bars so 100% will work */
+    overflow: hidden !important; }
+  body .scope-container .mejs-container-fullscreen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1000; }
+  body .scope-container .mejs-container-fullscreen .mejs-mediaelement,
+  body .scope-container .mejs-container-fullscreen video {
+    width: 100%;
+    height: 100%; }
+  body .scope-container .mejs-clear {
+    clear: both; }
+  body .scope-container .mejs-background {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  body .scope-container .mejs-mediaelement {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  body .scope-container .mejs-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; }
+  body .scope-container :root .mejs-poster img {
+    display: none; }
+  body .scope-container .mejs-poster img {
+    border: 0;
+    padding: 0;
+    border: 0; }
+  body .scope-container .mejs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  body .scope-container .mejs-overlay-play {
+    cursor: pointer; }
+  body .scope-container .mejs-overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    background: url(../lib/mejs/build/bigplay.svg) no-repeat; }
+  body .scope-container .no-svg .mejs-overlay-button {
+    background-image: url(../lib/mejs/build/bigplay.png); }
+  body .scope-container .mejs-overlay:hover .mejs-overlay-button {
+    background-position: 0 -100px; }
+  body .scope-container .mejs-overlay-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin: -40px 0 0 -40px;
+    background: #333;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(0, 0, 0, 0.9);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.9)), to(rgba(0, 0, 0, 0.9)));
+    background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+    background: -webkit-linear-gradient(rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9)); }
+  body .scope-container .mejs-overlay-loading span {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: transparent url(../lib/mejs/build/loading.gif) 50% 50% no-repeat; }
+  body .scope-container .mejs-container .mejs-controls {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(0, 0, 0, 0.7);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.7)), to(rgba(0, 0, 0, 0.7)));
+    background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+    background: -webkit-linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+    height: 30px;
+    width: 100%; }
+  body .scope-container .mejs-container .mejs-controls div {
+    list-style-type: none;
+    background-image: none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+    line-height: 11px;
+    font-family: Helvetica, Arial;
+    border: 0; }
+  body .scope-container .mejs-controls .mejs-button button {
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    text-decoration: none;
+    margin: 7px 5px;
+    padding: 0;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    border: 0;
+    background: transparent url(../lib/mejs/build/controls.svg) no-repeat; }
+  body .scope-container .no-svg .mejs-controls .mejs-button button {
+    background-image: url(../lib/mejs/build/controls.png); }
+  body .scope-container .mejs-controls .mejs-button button:focus {
+    outline: dotted 1px #999; }
+  body .scope-container .mejs-container .mejs-controls .mejs-time {
+    color: #fff;
+    display: block;
+    height: 17px;
+    width: auto;
+    padding: 10px 3px 0 3px;
+    overflow: hidden;
+    text-align: center;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box; }
+  body .scope-container .mejs-container .mejs-controls .mejs-time a {
+    color: #fff;
+    font-size: 11px;
+    line-height: 12px;
+    display: block;
+    float: left;
+    margin: 1px 2px 0 0;
+    width: auto; }
+  body .scope-container .mejs-controls .mejs-play button {
+    background-position: 0 0; }
+  body .scope-container .mejs-controls .mejs-pause button {
+    background-position: 0 -16px; }
+  body .scope-container .mejs-controls .mejs-stop button {
+    background-position: -112px 0; }
+  body .scope-container .mejs-controls div.mejs-time-rail {
+    direction: ltr;
+    width: 200px;
+    padding-top: 5px; }
+  body .scope-container .mejs-controls .mejs-time-rail span, body .scope-container .mejs-controls .mejs-time-rail a {
+    display: block;
+    position: absolute;
+    width: 180px;
+    height: 10px;
+    border-radius: 2px;
+    cursor: pointer; }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-total {
+    margin: 5px;
+    background: #333;
+    background: rgba(50, 50, 50, 0.8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(60, 60, 60, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+    background: -webkit-linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+    background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8)); }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-buffering {
+    width: 100%;
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #4e5a64), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #4e5a64), color-stop(0.75, #4e5a64), color-stop(0.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(-45deg, #4e5a64 25%, transparent 25%, transparent 50%, #4e5a64 50%, #4e5a64 75%, transparent 75%, transparent);
+    background-image: -webkit-linear-gradient(135deg, #4e5a64 25%, transparent 25%, transparent 50%, #4e5a64 50%, #4e5a64 75%, transparent 75%, transparent);
+    background-image: linear-gradient(-45deg, #4e5a64 25%, transparent 25%, transparent 50%, #4e5a64 50%, #4e5a64 75%, transparent 75%, transparent);
+    background-size: 15px 15px;
+    -webkit-animation: buffering-stripes 2s linear infinite;
+    -ms-animation: buffering-stripes 2s linear infinite;
+    animation: buffering-stripes 2s linear infinite; }
+@-webkit-keyframes buffering-stripes {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 30px 0; } }
+@-ms-keyframes buffering-stripes {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 30px 0; } }
+@keyframes buffering-stripes {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 30px 0; } }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background: #3caac8;
+    background: rgba(60, 170, 200, 0.8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(44, 124, 145, 0.8)), to(rgba(78, 183, 212, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+    background: -webkit-linear-gradient(rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+    background: linear-gradient(rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8));
+    width: 0; }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-current {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.9)), to(rgba(200, 200, 200, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+    width: 0; }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-handle {
+    display: none;
+    position: absolute;
+    margin: 0;
+    width: 10px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 2px #333;
+    top: -2px;
+    text-align: center; }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-float {
+    position: absolute;
+    display: none;
+    background: #eee;
+    width: 36px;
+    height: 17px;
+    border: solid 1px #333;
+    top: -26px;
+    margin-left: -18px;
+    text-align: center;
+    color: #111; }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-float-current {
+    margin: 2px;
+    width: 30px;
+    display: block;
+    text-align: center;
+    left: 0; }
+  body .scope-container .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: solid 5px #eee;
+    border-color: #eee transparent transparent transparent;
+    border-radius: 0;
+    top: 15px;
+    left: 13px; }
+  body .scope-container .mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float {
+    width: 48px; }
+  body .scope-container .mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current {
+    width: 44px; }
+  body .scope-container .mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+    left: 18px; }
+  body .scope-container .mejs-controls .mejs-fullscreen-button button {
+    background-position: -32px 0; }
+  body .scope-container .mejs-controls .mejs-unfullscreen button {
+    background-position: -32px -16px; }
+  body .scope-container .mejs-controls .mejs-mute button {
+    background-position: -16px -16px; }
+  body .scope-container .mejs-controls .mejs-unmute button {
+    background-position: -16px 0; }
+  body .scope-container .mejs-controls .mejs-volume-button {
+    position: relative; }
+  body .scope-container .mejs-controls .mejs-volume-button .mejs-volume-slider {
+    display: none;
+    height: 115px;
+    width: 25px;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(50, 50, 50, 0.7);
+    border-radius: 0;
+    top: -115px;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    margin: 0; }
+  body .scope-container .mejs-controls .mejs-volume-button:hover {
+    border-radius: 0 0 4px 4px; }
+  body .scope-container .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+    position: absolute;
+    left: 11px;
+    top: 8px;
+    width: 2px;
+    height: 100px;
+    background: #ddd;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0; }
+  body .scope-container .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+    position: absolute;
+    left: 11px;
+    top: 8px;
+    width: 2px;
+    height: 100px;
+    background: #ddd;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0; }
+  body .scope-container .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+    position: absolute;
+    left: 4px;
+    top: -3px;
+    width: 16px;
+    height: 6px;
+    background: #ddd;
+    background: rgba(255, 255, 255, 0.9);
+    cursor: N-resize;
+    border-radius: 1px;
+    margin: 0; }
+  body .scope-container .mejs-controls a.mejs-horizontal-volume-slider {
+    height: 26px;
+    width: 56px;
+    position: relative;
+    display: block;
+    float: left;
+    vertical-align: middle; }
+  body .scope-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 50px;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    border-radius: 2px;
+    background: #333;
+    background: rgba(50, 50, 50, 0.8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30, 30, 30, 0.8)), to(rgba(60, 60, 60, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+    background: -webkit-linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8));
+    background: linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8)); }
+  body .scope-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 50px;
+    height: 8px;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    border-radius: 2px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.9)), to(rgba(200, 200, 200, 0.8)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8));
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8)); }
+  body .scope-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+    display: none; }
+  body .scope-container .mejs-controls .mejs-captions-button {
+    position: relative; }
+  body .scope-container .mejs-controls .mejs-captions-button button {
+    background-position: -48px 0; }
+  body .scope-container .mejs-controls .mejs-captions-button .mejs-captions-selector {
+    visibility: hidden;
+    position: absolute;
+    bottom: 26px;
+    right: -51px;
+    width: 85px;
+    height: 100px;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(50, 50, 50, 0.7);
+    border: solid 1px transparent;
+    padding: 10px 10px 0 10px;
+    overflow: hidden;
+    border-radius: 0; }
+  body .scope-container .mejs-controls .mejs-captions-button .mejs-captions-selector ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-type: none !important;
+    overflow: hidden; }
+  body .scope-container .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
+    margin: 0 0 6px 0;
+    padding: 0;
+    list-style-type: none !important;
+    display: block;
+    color: #fff;
+    overflow: hidden; }
+  body .scope-container .mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
+    clear: both;
+    float: left;
+    margin: 3px 3px 0 5px; }
+  body .scope-container .mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
+    width: 55px;
+    float: left;
+    padding: 4px 0 0 0;
+    line-height: 15px;
+    font-family: helvetica, arial;
+    font-size: 10px; }
+  body .scope-container .mejs-controls .mejs-captions-button .mejs-captions-translations {
+    font-size: 10px;
+    margin: 0 0 5px 0; }
+  body .scope-container .mejs-chapters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -xborder-right: solid 1px #fff;
+    width: 10000px;
+    z-index: 1; }
+  body .scope-container .mejs-chapters .mejs-chapter {
+    position: absolute;
+    float: left;
+    background: #222;
+    background: rgba(0, 0, 0, 0.7);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50, 50, 50, 0.7)), to(rgba(0, 0, 0, 0.7)));
+    background: -webkit-linear-gradient(top, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+    background: -webkit-linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7));
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232,endColorstr=#000000);
+    overflow: hidden;
+    border: 0; }
+  body .scope-container .mejs-chapters .mejs-chapter .mejs-chapter-block {
+    font-size: 11px;
+    color: #fff;
+    padding: 5px;
+    display: block;
+    border-right: solid 1px #333;
+    border-bottom: solid 1px #333;
+    cursor: pointer; }
+  body .scope-container .mejs-chapters .mejs-chapter .mejs-chapter-block-last {
+    border-right: none; }
+  body .scope-container .mejs-chapters .mejs-chapter .mejs-chapter-block:hover {
+    background: #666;
+    background: rgba(102, 102, 102, 0.7);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(102, 102, 102, 0.7)), to(rgba(50, 50, 50, 0.6)));
+    background: -webkit-linear-gradient(top, rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+    background: -webkit-linear-gradient(rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+    background: linear-gradient(rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6));
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232); }
+  body .scope-container .mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 0 3px 0;
+    line-height: 12px; }
+  body .scope-container .mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan {
+    font-size: 12px;
+    line-height: 12px;
+    margin: 3px 0 4px 0;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  body .scope-container .mejs-captions-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    color: #fff; }
+  body .scope-container .mejs-captions-layer a {
+    color: #fff;
+    text-decoration: underline; }
+  body .scope-container .mejs-captions-layer[lang=ar] {
+    font-size: 20px;
+    font-weight: normal; }
+  body .scope-container .mejs-captions-position {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    left: 0; }
+  body .scope-container .mejs-captions-position-hover {
+    bottom: 35px; }
+  body .scope-container .mejs-captions-text {
+    padding: 3px 5px;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(20, 20, 20, 0.5);
+    white-space: pre-wrap; }
+  body .scope-container .me-cannotplay a {
+    color: #fff;
+    font-weight: bold; }
+  body .scope-container .me-cannotplay span {
+    padding: 15px;
+    display: block; }
+  body .scope-container .mejs-controls .mejs-loop-off button {
+    background-position: -64px -16px; }
+  body .scope-container .mejs-controls .mejs-loop-on button {
+    background-position: -64px 0; }
+  body .scope-container .mejs-controls .mejs-backlight-off button {
+    background-position: -80px -16px; }
+  body .scope-container .mejs-controls .mejs-backlight-on button {
+    background-position: -80px 0; }
+  body .scope-container .mejs-controls .mejs-picturecontrols-button {
+    background-position: -96px 0; }
+  body .scope-container .mejs-contextmenu {
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    border-radius: 4px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border: solid 1px #999;
+    z-index: 1001;
+    /* make sure it shows on fullscreen */ }
+  body .scope-container .mejs-contextmenu .mejs-contextmenu-separator {
+    height: 1px;
+    font-size: 0;
+    margin: 5px 6px;
+    background: #333; }
+  body .scope-container .mejs-contextmenu .mejs-contextmenu-item {
+    font-family: Helvetica, Arial;
+    font-size: 12px;
+    padding: 4px 6px;
+    cursor: pointer;
+    color: #333; }
+  body .scope-container .mejs-contextmenu .mejs-contextmenu-item:hover {
+    background: #2C7C91;
+    color: #fff; }
+  body .scope-container .mejs-controls .mejs-sourcechooser-button {
+    position: relative; }
+  body .scope-container .mejs-controls .mejs-sourcechooser-button button {
+    background-position: -128px 0; }
+  body .scope-container .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector {
+    visibility: hidden;
+    position: absolute;
+    bottom: 26px;
+    right: -10px;
+    width: 130px;
+    height: 100px;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(50, 50, 50, 0.7);
+    border: solid 1px transparent;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 0; }
+  body .scope-container .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-type: none !important;
+    overflow: hidden; }
+  body .scope-container .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li {
+    margin: 0 0 6px 0;
+    padding: 0;
+    list-style-type: none !important;
+    display: block;
+    color: #fff;
+    overflow: hidden; }
+  body .scope-container .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input {
+    clear: both;
+    float: left;
+    margin: 3px 3px 0 5px; }
+  body .scope-container .mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label {
+    width: 100px;
+    float: left;
+    padding: 4px 0 0 0;
+    line-height: 15px;
+    font-family: helvetica, arial;
+    font-size: 10px; }
+  body .scope-container .mejs-postroll-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(50, 50, 50, 0.7);
+    z-index: 1000;
+    overflow: hidden; }
+  body .scope-container .mejs-postroll-layer-content {
+    width: 100%;
+    height: 100%; }
+  body .scope-container .mejs-postroll-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(50, 50, 50, 0.7);
+    color: #fff;
+    padding: 4px;
+    z-index: 100;
+    cursor: pointer; }
+  body .scope-container div.mejs-speed-button {
+    width: 46px !important;
+    position: relative; }
+  body .scope-container .mejs-controls .mejs-button.mejs-speed-button button {
+    background: transparent;
+    width: 36px;
+    font-size: 11px;
+    line-height: normal;
+    color: #ffffff; }
+  body .scope-container .mejs-controls .mejs-speed-button .mejs-speed-selector {
+    visibility: hidden;
+    position: absolute;
+    top: -100px;
+    left: -10px;
+    width: 60px;
+    height: 100px;
+    background: url(../lib/mejs/build/background.png);
+    background: rgba(50, 50, 50, 0.7);
+    border: solid 1px transparent;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0; }
+  body .scope-container .mejs-controls .mejs-speed-button:hover > .mejs-speed-selector {
+    visibility: visible; }
+  body .scope-container .mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected {
+    color: #21f8f8; }
+  body .scope-container .mejs-controls .mejs-speed-button .mejs-speed-selector ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-type: none !important;
+    overflow: hidden; }
+  body .scope-container .mejs-controls .mejs-speed-button .mejs-speed-selector ul li {
+    margin: 0 0 6px 0;
+    padding: 0 10px;
+    list-style-type: none !important;
+    display: block;
+    color: #fff;
+    overflow: hidden; }
+  body .scope-container .mejs-controls .mejs-speed-button .mejs-speed-selector ul li input {
+    clear: both;
+    float: left;
+    margin: 3px 3px 0 5px;
+    display: none; }
+  body .scope-container .mejs-controls .mejs-speed-button .mejs-speed-selector ul li label {
+    width: 60px;
+    float: left;
+    padding: 4px 0 0 0;
+    line-height: 15px;
+    font-family: helvetica, arial;
+    font-size: 11.5px;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer; }
+  body .scope-container .mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover {
+    background-color: #c8c8c8 !important;
+    background-color: rgba(255, 255, 255, 0.4) !important; }
+  body .scope-container .mejs-controls .mejs-button.mejs-skip-back-button {
+    background: transparent url(../lib/mejs/build/skipback.png) no-repeat;
+    background-position: 3px 3px; }
+  body .scope-container .mejs-controls .mejs-button.mejs-skip-back-button button {
+    background: transparent;
+    font-size: 9px;
+    line-height: normal;
+    color: #ffffff; }
+  body .scope-container .mejs-jui {
+    outline: none;
+    height: 100%;
+    width: 100%; }
+    body .scope-container .mejs-jui * {
+      outline: none; }
+    body .scope-container .mejs-jui .mejs-overlay-button {
+      background: rgba(42, 148, 214, 0.84);
+      border-radius: 50%;
+      color: white;
+      font-size: 32px;
+      height: 80px;
+      line-height: 80px;
+      margin: -40px 0 0 -40px;
+      text-align: center;
+      width: 80px; }
+      body .scope-container .mejs-jui .mejs-overlay-button:before {
+        margin-right: -4px; }
+    body .scope-container .mejs-jui .mejs-overlay-loading {
+      -webkit-animation: spin-it 1s linear infinite;
+              animation: spin-it 1s linear infinite;
+      background: rgba(42, 148, 214, 0.84);
+      border-radius: 50%;
+      color: white;
+      font-size: 32px;
+      height: 80px;
+      line-height: 80px;
+      margin: -40px 0 0 -40px;
+      text-align: center;
+      width: 80px; }
+      body .scope-container .mejs-jui .mejs-overlay-loading span {
+        display: none; }
+    body .scope-container .mejs-jui .mejs-captions-position {
+      bottom: 36px;
+      display: block;
+      height: auto;
+      line-height: 24px; }
+      body .scope-container .mejs-jui .mejs-captions-position-hover {
+        bottom: 68px; }
+    body .scope-container .mejs-jui .mejs-captions-text {
+      padding: 16px;
+      background: rgba(56, 64, 71, 0.84);
+      white-space: pre-wrap;
+      border-radius: 3px;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: ProximaNovaSoft; }
+    body .scope-container .mejs-jui .mejs-controls {
+      background: #384047;
+      height: 56px;
+      font-family: ProximaNovaSoft; }
+      @media (min-width: 1px) and (max-width: 768px) {
+        body .scope-container .mejs-jui .mejs-controls {
+          height: 40px; } }
+      body .scope-container .mejs-jui .mejs-controls .mejs-time-rail .mejs-time-buffering {
+        width: 100%;
+        background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #4e5a64), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #4e5a64), color-stop(0.75, #4e5a64), color-stop(0.75, transparent), to(transparent));
+        background-image: -webkit-linear-gradient(-45deg, #4e5a64 25%, transparent 25%, transparent 50%, #4e5a64 50%, #4e5a64 75%, transparent 75%, transparent);
+        background-image: -webkit-linear-gradient(135deg, #4e5a64 25%, transparent 25%, transparent 50%, #4e5a64 50%, #4e5a64 75%, transparent 75%, transparent);
+        background-image: linear-gradient(-45deg, #4e5a64 25%, transparent 25%, transparent 50%, #4e5a64 50%, #4e5a64 75%, transparent 75%, transparent);
+        left: 0;
+        right: 0;
+        border-left: 4px solid #2d3339;
+        border-right: 4px solid #2d3339; }
+      body .scope-container .mejs-jui .mejs-controls .mejs-captions-button .mejs-captions-selector {
+        background: #2d3339 !important;
+        width: 128px !important;
+        border-radius: 3px 3px 0 0;
+        bottom: 56px;
+        padding: 16px;
+        right: 0;
+        left: auto; }
+        @media (min-width: 1px) and (max-width: 768px) {
+          body .scope-container .mejs-jui .mejs-controls .mejs-captions-button .mejs-captions-selector {
+            bottom: 40px; } }
+        body .scope-container .mejs-jui .mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
+          margin-bottom: 8px; }
+          body .scope-container .mejs-jui .mejs-controls .mejs-captions-button .mejs-captions-selector ul li:last-child {
+            margin-bottom: 0; }
+          body .scope-container .mejs-jui .mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
+            font-family: ProximaNovaSoft;
+            font-size: 12px;
+            line-height: 16px;
+            display: inline-block;
+            float: none;
+            text-align: center;
+            text-transform: uppercase;
+            margin-left: 8px;
+            width: auto; }
+          body .scope-container .mejs-jui .mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
+            display: inline-block;
+            margin: 0; }
+      body .scope-container .mejs-jui .mejs-controls .mejs-volume-button .mejs-volume-slider {
+        background: #2d3339;
+        width: 56px;
+        border-radius: 3px 3px 0 0; }
+        @media (min-width: 1px) and (max-width: 768px) {
+          body .scope-container .mejs-jui .mejs-controls .mejs-volume-button .mejs-volume-slider {
+            width: 40px; } }
+        body .scope-container .mejs-jui .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+          position: absolute;
+          left: 4px;
+          top: -3px;
+          width: 16px;
+          height: 6px;
+          background: #ddd;
+          background: rgba(255, 255, 255, 0.9);
+          cursor: N-resize;
+          border-radius: 1px;
+          margin: 0;
+          display: none; }
+        body .scope-container .mejs-jui .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+          border-radius: 3px;
+          position: absolute;
+          left: 16px;
+          top: 16px;
+          bottom: 20px;
+          width: 24px;
+          height: 100px;
+          background: #2a94d6; }
+          @media (min-width: 1px) and (max-width: 768px) {
+            body .scope-container .mejs-jui .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+              left: 8px;
+              top: 8px;
+              bottom: 24px;
+              width: 24px;
+              height: 99px; } }
+        body .scope-container .mejs-jui .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+          border-radius: 3px;
+          position: absolute;
+          left: 16px;
+          top: 16px;
+          width: 24px;
+          height: 84px;
+          background: #22262a;
+          margin: 0; }
+          @media (min-width: 1px) and (max-width: 768px) {
+            body .scope-container .mejs-jui .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+              left: 8px;
+              top: 8px;
+              bottom: 24px;
+              width: 24px;
+              height: 99px; } }
+      body .scope-container .mejs-jui .mejs-controls .mejs-time {
+        height: auto;
+        line-height: 56px;
+        font-size: 16px;
+        color: #4e5a64;
+        padding: 0 16px; }
+        @media (min-width: 1px) and (max-width: 768px) {
+          body .scope-container .mejs-jui .mejs-controls .mejs-time {
+            line-height: 40px; } }
+      body .scope-container .mejs-jui .mejs-controls div {
+        padding: 0;
+        height: 56px;
+        width: 56px; }
+        @media (min-width: 1px) and (max-width: 768px) {
+          body .scope-container .mejs-jui .mejs-controls div {
+            width: 40px;
+            height: 40px; } }
+      body .scope-container .mejs-jui .mejs-controls .mejs-button {
+        background: none;
+        cursor: pointer;
+        position: relative;
+        -webkit-transition: background 0.33s;
+                transition: background 0.33s; }
+        body .scope-container .mejs-jui .mejs-controls .mejs-button:hover {
+          background: #2d3339 !important; }
+          body .scope-container .mejs-jui .mejs-controls .mejs-button:hover:before {
+            color: white; }
+        body .scope-container .mejs-jui .mejs-controls .mejs-button:before {
+          color: #4e5a64;
+          width: 56px;
+          height: 56px;
+          line-height: 56px;
+          text-align: center;
+          font-size: 24px;
+          -webkit-transition: color 0.33s;
+                  transition: color 0.33s; }
+          @media (min-width: 1px) and (max-width: 768px) {
+            body .scope-container .mejs-jui .mejs-controls .mejs-button:before {
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              font-size: 16px; } }
+        body .scope-container .mejs-jui .mejs-controls .mejs-button button {
+          background: none !important;
+          outline: none;
+          font-family: juicons;
+          font-size: 32px;
+          line-height: 56px;
+          margin: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: auto; }
+          @media (min-width: 1px) and (max-width: 768px) {
+            body .scope-container .mejs-jui .mejs-controls .mejs-button button {
+              line-height: 40px; } }
+      body .scope-container .mejs-jui .mejs-controls .mejs-captions-selector {
+        background: transparent;
+        width: 100px;
+        right: auto; }
+      body .scope-container .mejs-jui .mejs-controls .mejs-time-rail {
+        padding: 16px 0;
+        height: 56px; }
+        @media (min-width: 1px) and (max-width: 768px) {
+          body .scope-container .mejs-jui .mejs-controls .mejs-time-rail {
+            height: 40px;
+            padding: 8px 0; } }
+        body .scope-container .mejs-jui .mejs-controls .mejs-time-rail span {
+          border-radius: 1.5px;
+          height: 16px; }
+        body .scope-container .mejs-jui .mejs-controls .mejs-time-rail .mejs-time-total {
+          background: #2d3339;
+          border-radius: 3px;
+          height: 24px;
+          padding: 4px;
+          margin: 0 8px; }
+          body .scope-container .mejs-jui .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-loaded {
+            background: #384047; }
+          body .scope-container .mejs-jui .mejs-controls .mejs-time-rail .mejs-time-total .mejs-time-current {
+            background: #2a94d6; }
+        body .scope-container .mejs-jui .mejs-controls .mejs-time-rail .mejs-time-float {
+          border-radius: 3px;
+          position: absolute;
+          display: none;
+          background: #2d3339;
+          width: 64px;
+          height: 40px;
+          border: none;
+          top: -48px;
+          margin-left: -32px;
+          text-align: center;
+          color: white;
+          padding: 8px; }
+        body .scope-container .mejs-jui .mejs-controls .mejs-time-rail .mejs-time-float-current {
+          margin: 0;
+          width: 100%;
+          display: block;
+          text-align: center;
+          left: 0;
+          font-family: ProximaNovaSoft;
+          font-size: 14px;
+          display: block;
+          line-height: 40px;
+          height: auto;
+          top: 0; }
+        body .scope-container .mejs-jui .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          line-height: 0;
+          border: solid 8px #2d3339;
+          border-color: #2d3339 transparent transparent transparent;
+          border-radius: 0;
+          top: 40px;
+          left: 24px; }
   body .scope-container .alert {
     border-radius: 3px;
     font-family: ProximaNovaSoft;
@@ -4262,7 +5254,7 @@ body .scope-container {
       line-height: 1.75em;
       text-align: center;
       width: 1.75em; }
-      body .scope-container .nav-bar__menu-toggle .icon, body .scope-container .nav-bar__menu-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__menu-toggle .selectize-input:before, body .scope-container .nav-bar__menu-toggle .item .remove, body .scope-container .item .nav-bar__menu-toggle .remove, body .scope-container .nav-bar__menu-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__menu-toggle .button__content:before, body .scope-container .nav-bar__menu-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__menu-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar__menu-toggle .icon, body .scope-container .nav-bar__menu-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__menu-toggle .selectize-input:before, body .scope-container .nav-bar__menu-toggle .item .remove, body .scope-container .item .nav-bar__menu-toggle .remove, body .scope-container .nav-bar__menu-toggle .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .nav-bar__menu-toggle .mejs-overlay-button, body .scope-container .nav-bar__menu-toggle .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .nav-bar__menu-toggle .mejs-overlay-loading, body .scope-container .nav-bar__menu-toggle .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .nav-bar__menu-toggle .mejs-captions-button, body .scope-container .nav-bar__menu-toggle .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .nav-bar__menu-toggle .mejs-button, body .scope-container .nav-bar__menu-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__menu-toggle .button__content:before, body .scope-container .nav-bar__menu-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__menu-toggle .form-element__wrap:before {
         line-height: inherit; }
       @media (min-width: 1px) and (max-width: 768px) {
         body .scope-container .nav-bar__menu-toggle {
@@ -4294,7 +5286,7 @@ body .scope-container {
         padding-top: 1em; }
     body .scope-container .nav-bar__appendage-toggle {
       line-height: 1.5 !important; }
-      body .scope-container .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .nav-bar__appendage-toggle .mejs-overlay-button, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .nav-bar__appendage-toggle .mejs-overlay-loading, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .nav-bar__appendage-toggle .mejs-captions-button, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .nav-bar__appendage-toggle .mejs-button, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
         height: 24px;
         line-height: 24px;
         -webkit-transition: 0.33s;
@@ -4302,9 +5294,9 @@ body .scope-container {
         vertical-align: top;
         width: 24px; }
         @media (min-width: 768px) {
-          body .scope-container .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
+          body .scope-container .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .nav-bar__appendage-toggle .mejs-overlay-button, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .nav-bar__appendage-toggle .mejs-overlay-loading, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .nav-bar__appendage-toggle .mejs-captions-button, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .nav-bar__appendage-toggle .mejs-button, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
             text-align: center; } }
-        body .scope-container .nav-bar__appendage-toggle .icon:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove:before, body .scope-container .item .nav-bar__appendage-toggle .remove:before, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
+        body .scope-container .nav-bar__appendage-toggle .icon:before, body .scope-container .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar__appendage-toggle .item .remove:before, body .scope-container .item .nav-bar__appendage-toggle .remove:before, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-button:before, body .scope-container .mejs-jui .nav-bar__appendage-toggle .mejs-overlay-button:before, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-loading:before, body .scope-container .mejs-jui .nav-bar__appendage-toggle .mejs-overlay-loading:before, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-captions-button:before, body .scope-container .mejs-jui .mejs-controls .nav-bar__appendage-toggle .mejs-captions-button:before, body .scope-container .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-button:before, body .scope-container .mejs-jui .mejs-controls .nav-bar__appendage-toggle .mejs-button:before, body .scope-container .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar__appendage-toggle .form-element__wrap:before {
           height: 24px;
           text-align: center;
           width: 24px; }
@@ -4319,7 +5311,7 @@ body .scope-container {
               transition: 0.33s; }
       body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage textarea, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage input {
         background: white; }
-      body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-overlay-button, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-overlay-loading, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-captions-button, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .nav-bar.appendage-is-open .nav-bar__appendage-toggle .mejs-button, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 1000px;
         box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
@@ -4339,7 +5331,7 @@ body .scope-container {
         color: #384047; }
         body .scope-container .nav-bar--default .nav-bar__list-item > a.nav-bar__appendage-toggle {
           color: #384047; }
-      body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
+      body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-overlay-button, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-overlay-loading, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-captions-button, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .mejs-button, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--default.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
         background: #f7f8f9;
         border-radius: 1000px;
         box-shadow: 0 0 0 4px #f7f8f9; }
@@ -4363,7 +5355,7 @@ body .scope-container {
               background-color: #2585c1; } }
       body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage {
         background-color: #2585c1; }
-        body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
+        body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .icon, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .selectize-input:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .item .remove, body .scope-container .item .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .remove, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-overlay-button, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-overlay-loading, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-captions-button, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .mejs-button, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button.load-this .button__content:before, body .scope-container .button.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .button__content:before, body .scope-container .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .nav-bar--primary.appendage-is-open .nav-bar__appendage-toggle .form-element__wrap:before {
           background: rgba(255, 255, 255, 0.1);
           border-radius: 1000px;
           box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1); }
@@ -4390,7 +5382,7 @@ body .scope-container {
       text-align: center; }
       body .scope-container .footer-bar__top a {
         color: #8d99a6; }
-        body .scope-container .footer-bar__top a > .icon, body .scope-container .footer-bar__top .selectize-control.single a > .selectize-input:before, body .scope-container .selectize-control.single .footer-bar__top a > .selectize-input:before, body .scope-container .footer-bar__top .item a > .remove, body .scope-container .item .footer-bar__top a > .remove, body .scope-container .footer-bar__top .button.load-this a > .button__content:before, body .scope-container .button.load-this .footer-bar__top a > .button__content:before, body .scope-container .footer-bar__top .form-element.load-this a > .form-element__wrap:before, body .scope-container .form-element.load-this .footer-bar__top a > .form-element__wrap:before {
+        body .scope-container .footer-bar__top a > .icon, body .scope-container .footer-bar__top .selectize-control.single a > .selectize-input:before, body .scope-container .selectize-control.single .footer-bar__top a > .selectize-input:before, body .scope-container .footer-bar__top .item a > .remove, body .scope-container .item .footer-bar__top a > .remove, body .scope-container .footer-bar__top .mejs-jui a > .mejs-overlay-button, body .scope-container .mejs-jui .footer-bar__top a > .mejs-overlay-button, body .scope-container .footer-bar__top .mejs-jui a > .mejs-overlay-loading, body .scope-container .mejs-jui .footer-bar__top a > .mejs-overlay-loading, body .scope-container .footer-bar__top .mejs-jui .mejs-controls a > .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .footer-bar__top a > .mejs-captions-button, body .scope-container .footer-bar__top .mejs-jui .mejs-controls a > .mejs-button, body .scope-container .mejs-jui .mejs-controls .footer-bar__top a > .mejs-button, body .scope-container .footer-bar__top .button.load-this a > .button__content:before, body .scope-container .button.load-this .footer-bar__top a > .button__content:before, body .scope-container .footer-bar__top .form-element.load-this a > .form-element__wrap:before, body .scope-container .form-element.load-this .footer-bar__top a > .form-element__wrap:before {
           color: #c7ccd2;
           font-size: 32px;
           line-height: 24px;
@@ -4454,7 +5446,7 @@ body .scope-container {
     vertical-align: middle; }
   body .scope-container .button--flat .button__content {
     color: #697986; }
-    body .scope-container .button--flat .button__content--default .icon, body .scope-container .button--flat .button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--flat .button__content--default .selectize-input:before, body .scope-container .button--flat .button__content--default .item .remove, body .scope-container .item .button--flat .button__content--default .remove, body .scope-container .button--flat .button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--flat .button__content--default .button__content:before, body .scope-container .button--flat .button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--flat .button__content--default .form-element__wrap:before {
+    body .scope-container .button--flat .button__content--default .icon, body .scope-container .button--flat .button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--flat .button__content--default .selectize-input:before, body .scope-container .button--flat .button__content--default .item .remove, body .scope-container .item .button--flat .button__content--default .remove, body .scope-container .button--flat .button__content--default .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .button--flat .button__content--default .mejs-overlay-button, body .scope-container .button--flat .button__content--default .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .button--flat .button__content--default .mejs-overlay-loading, body .scope-container .button--flat .button__content--default .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .button--flat .button__content--default .mejs-captions-button, body .scope-container .button--flat .button__content--default .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .button--flat .button__content--default .mejs-button, body .scope-container .button--flat .button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--flat .button__content--default .button__content:before, body .scope-container .button--flat .button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--flat .button__content--default .form-element__wrap:before {
       color: #8d99a6; }
     body .scope-container .button--flat .button__content--primary {
       color: #2a94d6; }
@@ -4472,7 +5464,7 @@ body .scope-container {
     background-color: white;
     box-shadow: inset 0 0 0 1px #dadee2;
     color: #697986; }
-    body .scope-container .button--solid .button__content.button__content--default .icon, body .scope-container .button--solid .button__content.button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--solid .button__content.button__content--default .selectize-input:before, body .scope-container .button--solid .button__content.button__content--default .item .remove, body .scope-container .item .button--solid .button__content.button__content--default .remove, body .scope-container .button--solid .button__content.button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--solid .button__content.button__content--default .button__content:before, body .scope-container .button--solid .button__content.button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--solid .button__content.button__content--default .form-element__wrap:before {
+    body .scope-container .button--solid .button__content.button__content--default .icon, body .scope-container .button--solid .button__content.button__content--default .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .button--solid .button__content.button__content--default .selectize-input:before, body .scope-container .button--solid .button__content.button__content--default .item .remove, body .scope-container .item .button--solid .button__content.button__content--default .remove, body .scope-container .button--solid .button__content.button__content--default .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .button--solid .button__content.button__content--default .mejs-overlay-button, body .scope-container .button--solid .button__content.button__content--default .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .button--solid .button__content.button__content--default .mejs-overlay-loading, body .scope-container .button--solid .button__content.button__content--default .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .button--solid .button__content.button__content--default .mejs-captions-button, body .scope-container .button--solid .button__content.button__content--default .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .button--solid .button__content.button__content--default .mejs-button, body .scope-container .button--solid .button__content.button__content--default .button.load-this .button__content:before, body .scope-container .button.load-this .button--solid .button__content.button__content--default .button__content:before, body .scope-container .button--solid .button__content.button__content--default .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .button--solid .button__content.button__content--default .form-element__wrap:before {
       color: #8d99a6; }
   body .scope-container .button--solid:hover .button__content.button__content--default {
     background-color: #f7f7f7; }
@@ -4740,7 +5732,7 @@ body .scope-container {
       top: 0;
       vertical-align: middle;
       width: 64px; }
-      body .scope-container .callout__top .callout__close-button .icon, body .scope-container .callout__top .callout__close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .callout__top .callout__close-button .selectize-input:before, body .scope-container .callout__top .callout__close-button .item .remove, body .scope-container .item .callout__top .callout__close-button .remove, body .scope-container .callout__top .callout__close-button .button.load-this .button__content:before, body .scope-container .button.load-this .callout__top .callout__close-button .button__content:before, body .scope-container .callout__top .callout__close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .callout__top .callout__close-button .form-element__wrap:before {
+      body .scope-container .callout__top .callout__close-button .icon, body .scope-container .callout__top .callout__close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .callout__top .callout__close-button .selectize-input:before, body .scope-container .callout__top .callout__close-button .item .remove, body .scope-container .item .callout__top .callout__close-button .remove, body .scope-container .callout__top .callout__close-button .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .callout__top .callout__close-button .mejs-overlay-button, body .scope-container .callout__top .callout__close-button .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .callout__top .callout__close-button .mejs-overlay-loading, body .scope-container .callout__top .callout__close-button .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .callout__top .callout__close-button .mejs-captions-button, body .scope-container .callout__top .callout__close-button .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .callout__top .callout__close-button .mejs-button, body .scope-container .callout__top .callout__close-button .button.load-this .button__content:before, body .scope-container .button.load-this .callout__top .callout__close-button .button__content:before, body .scope-container .callout__top .callout__close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .callout__top .callout__close-button .form-element__wrap:before {
         line-height: 64px; }
   body .scope-container .callout__heading {
     color: #384047;
@@ -4889,9 +5881,9 @@ body .scope-container {
         body .scope-container .card__cap--icon.card__cap--solid {
           background: transparent;
           vertical-align: top; }
-          body .scope-container .card__cap--icon.card__cap--solid .icon, body .scope-container .card__cap--icon.card__cap--solid .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon.card__cap--solid .selectize-input:before, body .scope-container .card__cap--icon.card__cap--solid .item .remove, body .scope-container .item .card__cap--icon.card__cap--solid .remove, body .scope-container .card__cap--icon.card__cap--solid .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon.card__cap--solid .button__content:before, body .scope-container .card__cap--icon.card__cap--solid .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon.card__cap--solid .form-element__wrap:before {
+          body .scope-container .card__cap--icon.card__cap--solid .icon, body .scope-container .card__cap--icon.card__cap--solid .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon.card__cap--solid .selectize-input:before, body .scope-container .card__cap--icon.card__cap--solid .item .remove, body .scope-container .item .card__cap--icon.card__cap--solid .remove, body .scope-container .card__cap--icon.card__cap--solid .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .card__cap--icon.card__cap--solid .mejs-overlay-button, body .scope-container .card__cap--icon.card__cap--solid .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .card__cap--icon.card__cap--solid .mejs-overlay-loading, body .scope-container .card__cap--icon.card__cap--solid .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .card__cap--icon.card__cap--solid .mejs-captions-button, body .scope-container .card__cap--icon.card__cap--solid .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .card__cap--icon.card__cap--solid .mejs-button, body .scope-container .card__cap--icon.card__cap--solid .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon.card__cap--solid .button__content:before, body .scope-container .card__cap--icon.card__cap--solid .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon.card__cap--solid .form-element__wrap:before {
             background-color: #2a94d6; }
-        body .scope-container .card__cap--icon .icon, body .scope-container .card__cap--icon .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon .selectize-input:before, body .scope-container .card__cap--icon .item .remove, body .scope-container .item .card__cap--icon .remove, body .scope-container .card__cap--icon .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon .button__content:before, body .scope-container .card__cap--icon .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon .form-element__wrap:before {
+        body .scope-container .card__cap--icon .icon, body .scope-container .card__cap--icon .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__cap--icon .selectize-input:before, body .scope-container .card__cap--icon .item .remove, body .scope-container .item .card__cap--icon .remove, body .scope-container .card__cap--icon .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .card__cap--icon .mejs-overlay-button, body .scope-container .card__cap--icon .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .card__cap--icon .mejs-overlay-loading, body .scope-container .card__cap--icon .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .card__cap--icon .mejs-captions-button, body .scope-container .card__cap--icon .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .card__cap--icon .mejs-button, body .scope-container .card__cap--icon .button.load-this .button__content:before, body .scope-container .button.load-this .card__cap--icon .button__content:before, body .scope-container .card__cap--icon .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__cap--icon .form-element__wrap:before {
           border-radius: 3px;
           height: 2em;
           line-height: 2;
@@ -4910,7 +5902,7 @@ body .scope-container {
       body .scope-container .card__feature--solid {
         background-color: #2a94d6;
         color: white; }
-      body .scope-container .card__feature .icon, body .scope-container .card__feature .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__feature .selectize-input:before, body .scope-container .card__feature .item .remove, body .scope-container .item .card__feature .remove, body .scope-container .card__feature .button.load-this .button__content:before, body .scope-container .button.load-this .card__feature .button__content:before, body .scope-container .card__feature .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__feature .form-element__wrap:before {
+      body .scope-container .card__feature .icon, body .scope-container .card__feature .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .card__feature .selectize-input:before, body .scope-container .card__feature .item .remove, body .scope-container .item .card__feature .remove, body .scope-container .card__feature .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .card__feature .mejs-overlay-button, body .scope-container .card__feature .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .card__feature .mejs-overlay-loading, body .scope-container .card__feature .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .card__feature .mejs-captions-button, body .scope-container .card__feature .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .card__feature .mejs-button, body .scope-container .card__feature .button.load-this .button__content:before, body .scope-container .button.load-this .card__feature .button__content:before, body .scope-container .card__feature .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .card__feature .form-element__wrap:before {
         vertical-align: middle; }
     body .scope-container .card__heading {
       color: #384047;
@@ -5046,7 +6038,7 @@ body .scope-container {
             min-width: 20px;
             padding: 0 4px;
             vertical-align: top; }
-            body .scope-container .drawer__list-item-alert-content .icon, body .scope-container .drawer__list-item-alert-content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .drawer__list-item-alert-content .selectize-input:before, body .scope-container .drawer__list-item-alert-content .item .remove, body .scope-container .item .drawer__list-item-alert-content .remove, body .scope-container .drawer__list-item-alert-content .button.load-this .button__content:before, body .scope-container .button.load-this .drawer__list-item-alert-content .button__content:before, body .scope-container .drawer__list-item-alert-content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .drawer__list-item-alert-content .form-element__wrap:before {
+            body .scope-container .drawer__list-item-alert-content .icon, body .scope-container .drawer__list-item-alert-content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .drawer__list-item-alert-content .selectize-input:before, body .scope-container .drawer__list-item-alert-content .item .remove, body .scope-container .item .drawer__list-item-alert-content .remove, body .scope-container .drawer__list-item-alert-content .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .drawer__list-item-alert-content .mejs-overlay-button, body .scope-container .drawer__list-item-alert-content .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .drawer__list-item-alert-content .mejs-overlay-loading, body .scope-container .drawer__list-item-alert-content .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .drawer__list-item-alert-content .mejs-captions-button, body .scope-container .drawer__list-item-alert-content .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .drawer__list-item-alert-content .mejs-button, body .scope-container .drawer__list-item-alert-content .button.load-this .button__content:before, body .scope-container .button.load-this .drawer__list-item-alert-content .button__content:before, body .scope-container .drawer__list-item-alert-content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .drawer__list-item-alert-content .form-element__wrap:before {
               line-height: 20px; }
             body .scope-container .drawer__list-item-alert-content.default {
               background-color: white;
@@ -5415,7 +6407,7 @@ body .scope-container {
         min-width: 20px;
         padding: 0 4px;
         vertical-align: top; }
-        body .scope-container .list__item-alert-content .icon, body .scope-container .list__item-alert-content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .list__item-alert-content .selectize-input:before, body .scope-container .list__item-alert-content .item .remove, body .scope-container .item .list__item-alert-content .remove, body .scope-container .list__item-alert-content .button.load-this .button__content:before, body .scope-container .button.load-this .list__item-alert-content .button__content:before, body .scope-container .list__item-alert-content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .list__item-alert-content .form-element__wrap:before {
+        body .scope-container .list__item-alert-content .icon, body .scope-container .list__item-alert-content .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .list__item-alert-content .selectize-input:before, body .scope-container .list__item-alert-content .item .remove, body .scope-container .item .list__item-alert-content .remove, body .scope-container .list__item-alert-content .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .list__item-alert-content .mejs-overlay-button, body .scope-container .list__item-alert-content .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .list__item-alert-content .mejs-overlay-loading, body .scope-container .list__item-alert-content .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .list__item-alert-content .mejs-captions-button, body .scope-container .list__item-alert-content .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .list__item-alert-content .mejs-button, body .scope-container .list__item-alert-content .button.load-this .button__content:before, body .scope-container .button.load-this .list__item-alert-content .button__content:before, body .scope-container .list__item-alert-content .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .list__item-alert-content .form-element__wrap:before {
           line-height: 20px; }
         body .scope-container .list__item-alert-content.default {
           background-color: white;
@@ -5702,7 +6694,7 @@ body .scope-container {
           -webkit-transition: 0.33s;
                   transition: 0.33s;
           width: 56px; }
-          body .scope-container .slate__block--removable > .slate__block-close-button .icon, body .scope-container .slate__block--removable > .slate__block-close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__block--removable > .slate__block-close-button .selectize-input:before, body .scope-container .slate__block--removable > .slate__block-close-button .item .remove, body .scope-container .item .slate__block--removable > .slate__block-close-button .remove, body .scope-container .slate__block--removable > .slate__block-close-button .button.load-this .button__content:before, body .scope-container .button.load-this .slate__block--removable > .slate__block-close-button .button__content:before, body .scope-container .slate__block--removable > .slate__block-close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__block--removable > .slate__block-close-button .form-element__wrap:before {
+          body .scope-container .slate__block--removable > .slate__block-close-button .icon, body .scope-container .slate__block--removable > .slate__block-close-button .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__block--removable > .slate__block-close-button .selectize-input:before, body .scope-container .slate__block--removable > .slate__block-close-button .item .remove, body .scope-container .item .slate__block--removable > .slate__block-close-button .remove, body .scope-container .slate__block--removable > .slate__block-close-button .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .slate__block--removable > .slate__block-close-button .mejs-overlay-button, body .scope-container .slate__block--removable > .slate__block-close-button .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .slate__block--removable > .slate__block-close-button .mejs-overlay-loading, body .scope-container .slate__block--removable > .slate__block-close-button .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .slate__block--removable > .slate__block-close-button .mejs-captions-button, body .scope-container .slate__block--removable > .slate__block-close-button .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .slate__block--removable > .slate__block-close-button .mejs-button, body .scope-container .slate__block--removable > .slate__block-close-button .button.load-this .button__content:before, body .scope-container .button.load-this .slate__block--removable > .slate__block-close-button .button__content:before, body .scope-container .slate__block--removable > .slate__block-close-button .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__block--removable > .slate__block-close-button .form-element__wrap:before {
             vertical-align: top; }
           body .scope-container .slate__block--removable > .slate__block-close-button:hover {
             color: #2a94d6; }
@@ -5723,7 +6715,7 @@ body .scope-container {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
-      body .scope-container .slate__title .icon, body .scope-container .slate__title .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__title .selectize-input:before, body .scope-container .slate__title .item .remove, body .scope-container .item .slate__title .remove, body .scope-container .slate__title .button.load-this .button__content:before, body .scope-container .button.load-this .slate__title .button__content:before, body .scope-container .slate__title .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__title .form-element__wrap:before {
+      body .scope-container .slate__title .icon, body .scope-container .slate__title .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__title .selectize-input:before, body .scope-container .slate__title .item .remove, body .scope-container .item .slate__title .remove, body .scope-container .slate__title .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .slate__title .mejs-overlay-button, body .scope-container .slate__title .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .slate__title .mejs-overlay-loading, body .scope-container .slate__title .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .slate__title .mejs-captions-button, body .scope-container .slate__title .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .slate__title .mejs-button, body .scope-container .slate__title .button.load-this .button__content:before, body .scope-container .button.load-this .slate__title .button__content:before, body .scope-container .slate__title .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__title .form-element__wrap:before {
         color: #aab3bc;
         line-height: 24px;
         margin-right: 16px; }
@@ -5736,7 +6728,7 @@ body .scope-container {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
-      body .scope-container .slate__subtitle .icon, body .scope-container .slate__subtitle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__subtitle .selectize-input:before, body .scope-container .slate__subtitle .item .remove, body .scope-container .item .slate__subtitle .remove, body .scope-container .slate__subtitle .button.load-this .button__content:before, body .scope-container .button.load-this .slate__subtitle .button__content:before, body .scope-container .slate__subtitle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__subtitle .form-element__wrap:before {
+      body .scope-container .slate__subtitle .icon, body .scope-container .slate__subtitle .selectize-control.single .selectize-input:before, body .scope-container .selectize-control.single .slate__subtitle .selectize-input:before, body .scope-container .slate__subtitle .item .remove, body .scope-container .item .slate__subtitle .remove, body .scope-container .slate__subtitle .mejs-jui .mejs-overlay-button, body .scope-container .mejs-jui .slate__subtitle .mejs-overlay-button, body .scope-container .slate__subtitle .mejs-jui .mejs-overlay-loading, body .scope-container .mejs-jui .slate__subtitle .mejs-overlay-loading, body .scope-container .slate__subtitle .mejs-jui .mejs-controls .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .slate__subtitle .mejs-captions-button, body .scope-container .slate__subtitle .mejs-jui .mejs-controls .mejs-button, body .scope-container .mejs-jui .mejs-controls .slate__subtitle .mejs-button, body .scope-container .slate__subtitle .button.load-this .button__content:before, body .scope-container .button.load-this .slate__subtitle .button__content:before, body .scope-container .slate__subtitle .form-element.load-this .form-element__wrap:before, body .scope-container .form-element.load-this .slate__subtitle .form-element__wrap:before {
         color: #8d99a6;
         line-height: 1; }
     body .scope-container .slate--collapse {
@@ -5886,7 +6878,7 @@ body .scope-container {
        -moz-box-flex: 1;
         -ms-flex: 1;
             flex: 1; }
-    body .scope-container .blank-state > .icon, body .scope-container .selectize-control.single .blank-state > .selectize-input:before, body .scope-container .item .blank-state > .remove, body .scope-container .button.load-this .blank-state > .button__content:before, body .scope-container .form-element.load-this .blank-state > .form-element__wrap:before {
+    body .scope-container .blank-state > .icon, body .scope-container .selectize-control.single .blank-state > .selectize-input:before, body .scope-container .item .blank-state > .remove, body .scope-container .mejs-jui .blank-state > .mejs-overlay-button, body .scope-container .mejs-jui .blank-state > .mejs-overlay-loading, body .scope-container .mejs-jui .mejs-controls .blank-state > .mejs-captions-button, body .scope-container .mejs-jui .mejs-controls .blank-state > .mejs-button, body .scope-container .button.load-this .blank-state > .button__content:before, body .scope-container .form-element.load-this .blank-state > .form-element__wrap:before {
       display: block;
       font-size: 2em;
       line-height: 1;
