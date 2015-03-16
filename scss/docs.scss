@@ -60,8 +60,8 @@ body .scope-container {
       .doc-page-subheading {
         margin: 0 auto;
       }
-      .button--solid {
-        .button__content--primary {
+      .button--solid.button--primary {
+        .button__content{
           background-color: $color--primary--dark;
         }
       }
@@ -173,9 +173,28 @@ body .scope-container {
     }
     .line-pre {
       background-color: $color--gray--xx-light;
-      font-size: 14px;
-      line-height: 1;
+      border-radius: $base--radius;
+      font-size: 12px;
+      line-height: 16/12;
+      margin-bottom: 4em;
+      margin-top: 2em;
+      max-height: 512px;
       padding: em(16, 14);
+      .pl-ent {
+        color: $color--success;
+      }
+      .pl-e {
+        color: $color--primary;
+      }
+      .pl-s3 {
+        color: $color--info;
+      }
+      .pl-s1 {
+        color: $color--error;
+      }
+      .pl-st {
+        color: $color--orange;
+      }
     }
     p {
       margin: 1.5em 0 0 0;
@@ -233,7 +252,7 @@ body .scope-container {
     ul {
       text-align: center;
     }
-    .icon-example {
+    .icon--example {
       color: $text-color-deemphasized;
       display: inline-block;
       font-size: 24px;
@@ -337,7 +356,7 @@ body .scope-container {
   }
 }
 
-.nav-bar__top .icon-jui-kit {
+.nav-bar__top .icon--jui-kit {
   font-size: 32px;
   line-height: 24px;
   color: rgba(255,255,255,.4);

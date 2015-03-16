@@ -14,6 +14,13 @@ $list-icon-h: 40;
       }
     }
   }
+  &--multi-line {
+    .list__item {
+      .list__item-content {
+        white-space: normal;
+      }
+    }
+  }
 }
 
 //the list items
@@ -83,7 +90,7 @@ $list-icon-h: 40;
       border-radius: $base--radius;
     }
   }
-  //a cap can containt an image or something else, but you might wanna make sure it's 24px X 24px unless you don't mind the content not lining up
+  //a cap can contain an image or something else, but you might wanna make sure it's 24px X 24px unless you don't mind the content not lining up
   &-cap {
     line-height: 0;
     padding: em(8);
@@ -127,16 +134,16 @@ $list-icon-h: 40;
   box-shadow: inset 0 0 0 1px $component-border-color;
   .list__item {
     border-radius: 0;
-    box-shadow: inset 0 -1px $component-border-color;
+    box-shadow: inset 1px 0 $component-border-color, inset -1px 0 $component-border-color, inset 0 -1px $component-border-color;
     &:first-child {
       border-radius: $base--radius $base--radius 0 0;
     }
     &:last-child {
       border-radius: 0 0 $base--radius $base--radius;
-      box-shadow: none;
     }
     &.list__item--active {
       border-color: $color--primary;
+      box-shadow: inset 1px 0 $color--primary, inset -1px 0 $color--primary, inset 0 -1px $color--primary;
       &:hover {
         box-shadow: inset 1px 0 $color--primary, inset -1px 0 $color--primary, inset 0 -1px $color--primary;
       }

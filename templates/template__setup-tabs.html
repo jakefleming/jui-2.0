@@ -10,26 +10,26 @@
 </head>
 <body>
 <div class="scope-container">
-    <div class="constrained constrained--default has-md-padding-for-md">
+    <div class="constrained constrained--default u-md-padding-for-md">
         <!--template-->
-        <div class="grid has-gutters orient--vertical-on-small">
+        <div class="grid grid--gutters grid--orient-vertical-on-small">
             <aside class="grid__block--4-on-medium">
                 <ul class="list list--collapse-on-small-only" id="setupNav">
                     <li class="list__item list__item--active">
                         <a href="#setup" class="list__item-link">
-                            <span class="list__item-icon icon icon-flag"></span>
+                            <span class="list__item-icon icon icon--flag"></span>
                             <span class="list__item-content">Setup</span>
                         </a>
                     </li>
                     <li class="list__item">
                         <a href="#key" class="list__item-link">
-                            <span class="list__item-icon icon icon-lock"></span>
+                            <span class="list__item-icon icon icon--lock"></span>
                             <span class="list__item-content">API Key</span>
                         </a>
                     </li>
                     <li class="list__item active">
                         <a href="#messages" class="list__item-link">
-                            <span class="list__item-icon icon icon-chat"></span>
+                            <span class="list__item-icon icon icon--chat"></span>
                             <span class="list__item-content">Messages</span>
                             <span class="list__item-alert">
                             <span class="list__item-alert-content list__item-alert-content--error">
@@ -46,21 +46,21 @@
                         <div class="slate__top slate__top--outlined">
                             <div class="slate__top-main">
                                 <div class="slate__title">
-                                    <span class="icon icon-flag"></span>Setup
+                                    <span class="icon icon--flag"></span>Setup
                                 </div>
                             </div>
                         </div>
-                        <div class="slate__block slate__block--outlined slate__block--has-no-bottom-pad">
+                        <div class="slate__block slate__block--outlined slate__block-grid--gutters-no-bottom-pad">
                             <ul class="form-list">
                                 <li class="form-element">
                                     <div class="form-element__wrap">
-                                        <div class="form-element__icon icon icon-person"></div>
+                                        <div class="form-element__icon icon icon--person"></div>
                                         <input type="text" placeholder="User name"/>
                                     </div>
                                 </li>
                                 <li class="form-element">
                                     <div class="form-element__wrap">
-                                        <div class="form-element__icon icon icon-lock"></div>
+                                        <div class="form-element__icon icon icon--lock"></div>
                                         <input type="text" placeholder="Password"/>
                                     </div>
                                 </li>
@@ -68,8 +68,8 @@
                         </div>
                         <div class="slate__bottom slate__bottom--outlined">
                             <div class="slate__bottom-main">
-                                <button class="button button--solid">
-                                    <span class="button__content button__content--primary">
+                                <button class="button button--solid button--primary">
+                                    <span class="button__content">
                                         <span class="button__text">
                                             Save
                                         </span>
@@ -79,24 +79,24 @@
                         </div>
                     </div>
                 </section>
-                <section id="key" class="hide">
+                <section id="key" class="is-hidden">
                     <div class="alert alert--warning alert--dismissable alert--active">
-                        <button type="button" class="alert__close-button icon icon-x"></button>
+                        <button type="button" class="alert__close-button icon icon--x"></button>
                         Connection not established.
                     </div>
                     <div class="slate slate--outlined slate--collapse-on-small-only">
                         <div class="slate__top slate__top--outlined">
                             <div class="slate__top-main">
                                 <div class="slate__title">
-                                    <span class="icon icon-lock"></span>API Key
+                                    <span class="icon icon--lock"></span>API Key
                                 </div>
                             </div>
                         </div>
-                        <div class="slate__block slate__block--outlined slate__block--has-no-bottom-pad">
+                        <div class="slate__block slate__block--outlined slate__block-grid--gutters-no-bottom-pad">
                             <ul class="form-list">
                                 <li class="form-element">
                                     <div class="form-element__wrap">
-                                        <div class="form-element__icon icon icon-lock"></div>
+                                        <div class="form-element__icon icon icon--lock"></div>
                                         <input type="text" placeholder="API Key"/>
                                     </div>
                                 </li>
@@ -104,8 +104,8 @@
                         </div>
                         <div class="slate__bottom slate__bottom--outlined">
                             <div class="slate__bottom-main">
-                                <button class="button button--solid">
-                                    <span class="button__content button__content--primary">
+                                <button class="button button--solid button--primary">
+                                    <span class="button__content">
                                         <span class="button__text">
                                             Save
                                         </span>
@@ -115,12 +115,12 @@
                         </div>
                     </div>
                 </section>
-                <section id="messages" class="hide">
+                <section id="messages" class="is-hidden">
                     <div class="slate slate--outlined slate--collapse-on-small-only">
                         <div class="slate__top slate__top--outlined">
                             <div class="slate__top-main">
                                 <div class="slate__title">
-                                    <span class="icon icon-chat"></span>Messages
+                                    <span class="icon icon--chat"></span>Messages
                                 </div>
                             </div>
                         </div>
@@ -156,8 +156,8 @@
                         </ul>
                         <div class="slate__bottom slate__bottom--outlined">
                             <div class="slate__bottom-control">
-                                <button class="button button--solid">
-                                    <span class="button__content button__content--primary">
+                                <button class="button button--solid button--primary">
+                                    <span class="button__content">
                                         <span class="button__text">
                                             Save
                                         </span>
@@ -196,9 +196,9 @@
             //get displaying tab content jQuery selector
             var active_tab_selector = $('#setupNav > li.list__item--active > a').attr('href');
 
-            //hide displaying tab content
+            //is-hidden displaying tab content
             $(active_tab_selector).removeClass('list__item--active');
-            $(active_tab_selector).addClass('hide');
+            $(active_tab_selector).addClass('is-hidden');
 
             //find active navigation and remove 'active' css
             var actived_nav = $('#setupNav > li.list__item--active');
@@ -208,7 +208,7 @@
             $(this).parents('li').addClass('list__item--active');
 
             var target_tab_selector = $(this).attr('href');
-            $(target_tab_selector).removeClass('hide');
+            $(target_tab_selector).removeClass('is-hidden');
         })
 
     });

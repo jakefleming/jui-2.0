@@ -1,20 +1,16 @@
 //Tables should only be used to display data
 
 table {
+  //setting up the basics
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 0;
   max-width: 100%;
   width: 100%;
+  // Cells
   td, th {
     font-family: $font--1;
     font-weight: $font-weight--1;
-  }
-  &.table--outlined {
-    td {
-      box-shadow: inset 0 1px 0 $component-border-color;
-      color: $text-color-normal;
-    }
   }
   td {
     color: $text-color-normal;
@@ -22,7 +18,6 @@ table {
   th {
     color: $text-color-emphasized;
   }
-  // Cells
   > thead,
   > tbody,
   > tfoot {
@@ -45,6 +40,13 @@ table {
       > th {
         font-weight: $font-weight--2;
       }
+    }
+  }
+  //outlined tables
+  &.table--outlined {
+    td {
+      box-shadow: inset 0 1px 0 $component-border-color;
+      color: $text-color-normal;
     }
   }
   // Bottom align for column headings
@@ -86,7 +88,7 @@ table {
   tbody {
     tr {
       &:hover {
-        background-color: $form-element-bg;
+        background-color: darken($color--white, $darken-p);
         cursor: pointer;
         transition: $trans-duration;
       }

@@ -290,7 +290,7 @@ body .scope-container .doc-page-header {
     text-align: center; }
     body .scope-container .doc-page-header--feature .doc-page-subheading {
       margin: 0 auto; }
-    body .scope-container .doc-page-header--feature .button--solid .button__content--primary {
+    body .scope-container .doc-page-header--feature .button--solid.button--primary .button__content {
       background-color: #2585c1; }
 body .scope-container .doc-page-header-inner {
   -webkit-box-flex: 1;
@@ -397,9 +397,23 @@ body .scope-container #docs {
               flex-grow: 2; }
   body .scope-container #docs .line-pre {
     background-color: #f7f8f9;
-    font-size: 14px;
-    line-height: 1;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 16/12;
+    margin-bottom: 4em;
+    margin-top: 2em;
+    max-height: 512px;
     padding: 1.14286em; }
+    body .scope-container #docs .line-pre .pl-ent {
+      color: #43b66a; }
+    body .scope-container #docs .line-pre .pl-e {
+      color: #2a94d6; }
+    body .scope-container #docs .line-pre .pl-s3 {
+      color: #47cfd2; }
+    body .scope-container #docs .line-pre .pl-s1 {
+      color: #c06057; }
+    body .scope-container #docs .line-pre .pl-st {
+      color: #f39e58; }
   body .scope-container #docs p {
     margin: 1.5em 0 0 0;
     max-width: 27.5em; }
@@ -437,7 +451,7 @@ body .scope-container #grid-examples {
     min-height: 48px; }
 body .scope-container #icons ul {
   text-align: center; }
-body .scope-container #icons .icon-example {
+body .scope-container #icons .icon--example {
   color: #8d99a6;
   display: inline-block;
   font-size: 24px;
@@ -715,7 +729,7 @@ body .scope-container > .nav-bar .nav-bar__top {
     line-height: 32px;
     font-size: 14px; }
 
-.nav-bar__top .icon-jui-kit {
+.nav-bar__top .icon--jui-kit {
   font-size: 32px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.4);

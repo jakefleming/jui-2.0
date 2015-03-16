@@ -5,12 +5,12 @@
     @include clearfix;
     display: block;
     min-height: 1px;
-    &.has-gutters {
+    &--gutters {
       margin-left: -(em(16));
     }
     //define the width of grid blocks once on the grid itself
     @for $i from 1 through $column-count {
-      &.holds-#{$i}-blocks {
+      &--#{$i}-blocks {
         > .grid__block {
           float: left;
           width: percentage(1 / $i);
@@ -50,8 +50,8 @@
       }
     }
     //switch to vertical on certain sizes
-    &.orient {
-      &--vertical {
+    &--orient {
+      &-vertical {
         @include flex-flow(column nowrap);
         &-on-xsmall {
           @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
@@ -78,7 +78,7 @@
     min-height: 1px;
     position: relative;
   }
-  .grid.has-gutters {
+  .grid--gutters {
     > [class*="grid__"] {
       padding-left: px($base--num);
     }

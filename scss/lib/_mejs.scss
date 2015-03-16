@@ -995,7 +995,7 @@ div.mejs-speed-button {
   }
   .mejs-overlay-button {
     @extend .icon;
-    @extend .icon-media-play;
+    @extend .icon--media-play;
     background: transparentize($color--primary, .16);
     border-radius: 50%;
     color: $color--white;
@@ -1011,7 +1011,7 @@ div.mejs-speed-button {
   }
   .mejs-overlay-loading {
     @extend .icon;
-    @extend .icon-loading;
+    @extend .icon--loading;
     animation: spin-it 1s linear infinite;
     background: transparentize($color--primary, .16);
     border-radius: 50%;
@@ -1070,7 +1070,7 @@ div.mejs-speed-button {
     }
       .mejs-captions-button {
       @extend .icon;
-      @extend .icon-media-captions;
+      @extend .icon--media-captions;
       .mejs-captions-selector {
         background: $color--black--dark!important;
         width: 128px!important;
@@ -1213,22 +1213,22 @@ div.mejs-speed-button {
       }
       @extend .icon;
       &.mejs-play {
-        @extend .icon-media-play;
+        @extend .icon--media-play;
       }
       &.mejs-pause {
-        @extend .icon-media-pause;
+        @extend .icon--media-pause;
       }
       &.mejs-fullscreen-button {
-        @extend .icon-expand;
+        @extend .icon--expand;
         &.mejs-unfullscreen {
-          @extend .icon-contract;
+          @extend .icon--contract;
         }
       }
       &.mejs-mute {
-        @extend .icon-media-volume;
+        @extend .icon--media-volume;
       }
       &.mejs-unmute {
-        @extend .icon-media-volume-mute;
+        @extend .icon--media-volume-mute;
       }
       button {
         background: none!important;

@@ -1,5 +1,6 @@
 //mostly hiding and showing with js
-.hide {
+//these selectors should be prefixed with "is"
+.is-hidden {
   width: 0;
   height: 0;
   opacity: 0;

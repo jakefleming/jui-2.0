@@ -57,7 +57,32 @@ $page-bar-subheading-size: $font-size--4;
   font-size: 0;
   list-style-type: none;
   @include clearfix();
+  ul {
+    display: inline;
+  }
   &__item {
+    @extend %button-core;
+    box-shadow: inset 0 0 0 1px $component-border-color;
+    color: $color--primary;
+    line-height: 24px;
+    min-width: 40px;
+    padding: 8px;
+    transition: background-color $trans-duration;
+    &:hover {
+      background-color: darken($color--white, $darken-p);
+    }
+    &--active, &--active:hover {
+      background-color: $color--primary;
+      box-shadow: inset 0 0 0 1px $color--primary;
+      color: $color--white;
+    }
+    &--disabled, &--disabled:hover {
+      background-color: $form-element-bg;
+      color: $text-color-deemphasized;
+      cursor: not-allowed;
+    }
+  }
+  &__control {
     @extend %button-core;
     box-shadow: inset 0 0 0 1px $component-border-color;
     color: $color--primary;

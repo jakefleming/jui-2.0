@@ -1,5 +1,70 @@
 //Buttons are what the user will interact with to perform actions
 
+
+/*
+Buttons
+
+(possible modifiers for button are [solid,flat])
+(possible modifiers for button__content are [default,primary,success,error,warning,info])
+
+<button type="button" class="button button--solid button--primary">
+  <div class="button__content">Button</div>
+  <div class="button__icon icon icon--heart"></div>
+</button>
+
+*/
+
+/*
+
+Button Groups
+
+(optional modifier to make button group span 100% width is [stretch])
+
+<div class="button-group" style="margin-bottom: 16px;">
+  <button type="button" class="button button--solid button--default">
+      <div class="button__content">
+          <div class="button__icon icon icon--grid"></div>
+      </div>
+  </button>
+  <button type="button" class="button button--solid button--default">
+      <div class="button__content">
+          <div class="button__icon icon icon--blocks"></div>
+      </div>
+  </button>
+  <button type="button" class="button button--solid button--default">
+      <div class="button__content">
+          <div class="button__icon icon icon--dashboard"></div>
+      </div>
+  </button>
+</div>
+
+*/
+
+/*
+
+Button Dropdowns
+
+<div class="button-group" style="margin-bottom: 16px;">
+    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
+      <div class="button__content">
+          <div class="button__icon icon icon--grid"></div>
+      </div>
+    </button>
+    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
+      <div class="button__content">
+          <div class="button__icon icon icon--blocks"></div>
+      </div>
+    </button>
+    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
+      <div class="button__content">
+          <div class="button__icon icon icon--dashboard"></div>
+      </div>
+    </button>
+</div>
+
+*/
+
+
 //attributes shared by all buttons
 %button-core {
   background-image: none; // fixes salesforce button
@@ -44,17 +109,17 @@
 //defining flat buttons
 .button--flat {
   //what's inside the button
-  .button__content {
-    color: $text-color-normal;
-    &--default {
+  &.button--default {
+    .button__content {
+      color: $text-color-normal;
       .icon {
         color: $text-color-deemphasized;
       }
     }
-    @each $theme, $color in $ui-colors {
-      &--#{$theme} {
-        color: $color;
-      }
+  }
+  @each $theme, $color in $ui-colors {
+    &.button--#{$theme} {
+      color: $color;
     }
   }
   //hover over button makes contents background change
@@ -67,17 +132,22 @@
 
 //defining default solid buttons
 .button--solid {
-  .button__content.button__content--default {
-    background-color: $color--white;
-    box-shadow: inset 0 0 0 1px $component-border-color;
+  &.button--default {
+    color: $text-color-normal;
+    .button__content {
+      background-color: $color--white;
+      box-shadow: inset 0 0 0 1px $component-border-color;
+    }
+  }
+  &.button--default {
     color: $text-color-normal;
     .icon {
       color: $text-color-deemphasized;
     }
-  }
-  &:hover {
-    .button__content.button__content--default {
-      background-color: darken($color--white, $darken-p);
+    &:hover {
+      .button__content {
+        background-color: darken($color--white, $darken-p);
+      }
     }
   }
 }
@@ -86,17 +156,21 @@
 .button--solid {
   //what's inside the button
   @each $theme, $color in $ui-colors {
-    .button__content {
-      color: $color--white;
+    &.button{
       &--#{$theme} {
-        background-color: $color;
+        .button__content {
+          background-color: $color;
+          color: $color--white;
+        }
       }
     }
     //hover over button makes contents background change
     &:hover {
-      .button__content {
+      &.button {
         &--#{$theme} {
-          background-color: darken($color, $darken-p);
+          .button__content {
+            background-color: darken($color, $darken-p);
+          }
         }
       }
     }
@@ -105,7 +179,7 @@
 
 //button width
 .button, .button--flat {
-  &.stretch {
+  &.button--stretch {
     width: 100%;
     .button__content {
       width: 100%;
@@ -315,7 +389,7 @@
 @at-root {
   .flexbox {
     .button-group {
-      &.stretch {
+      &.button-group--stretch {
         @include flexbox;
         .button {
           @include flex;
@@ -328,7 +402,7 @@
   }
   .no-flexbox {
     .button-group {
-      &.stretch {
+      &.button-group--stretch {
         border-collapse: separate;
         display: table;
         table-layout: fixed;

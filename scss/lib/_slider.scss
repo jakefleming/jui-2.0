@@ -17,21 +17,32 @@
     font-family: $font--1;
     font-size: 14px;
     line-height: em(16, 14);
-    margin-top: -10px;
+    opacity: 0;
     padding: em($base--num) em($base--num);
     position: absolute;
+    transition: opacity $trans-duration, margin $trans-duration;
+    &.in {
+      margin-top: -10px;
+      opacity: 1;
+      transition: opacity $trans-duration, margin $trans-duration;
+      .tooltip-arrow {
+        bottom: -7px;
+        transition: $trans-duration;
+      }
+    }
   }
   .tooltip-arrow {
     border-color: $color--black;
     border-left: 9px solid transparent !important;
     border-right: 9px solid transparent !important;
     border-top: 9px solid $color--black;
-    bottom: -7px;
+    bottom: 0px;
     display: block;
     left: 50%;
     margin-left: -9px;
     position: absolute;
     text-align: center;
+    transition: $trans-duration;
     z-index: -1;
   }
   input {

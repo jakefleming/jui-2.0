@@ -15,10 +15,10 @@ $slate-subheading-size: $font-size--4;
     table.table--outlined {
       tr:hover {
         td:first-of-type {
-          box-shadow: inset 0 1px 0 $color--gray--x-light, inset 1px 0 0 $component-border-color;
+          box-shadow: inset 0 1px 0 $component-border-color, inset 1px 0 0 $component-border-color;
         }
         td:last-of-type {
-          box-shadow: inset 0 1px 0 $color--gray--x-light, inset -1px 0 0 $component-border-color;
+          box-shadow: inset 0 1px 0 $component-border-color, inset -1px 0 0 $component-border-color;
         }
       }
     }
@@ -27,12 +27,15 @@ $slate-subheading-size: $font-size--4;
       &.table--outlined {
         tr:last-of-type {
           &:hover {
+            td {
+              box-shadow: inset 0 1px 0 $component-border-color, inset 0 -1px 0 $component-border-color!important;
+            }
             td:first-of-type {
-              box-shadow: inset 0 1px 0 $color--gray--x-light, inset 1px 0 0 $component-border-color, inset 0 -1px 0 $component-border-color!important;
+              box-shadow: inset 0 1px 0 $component-border-color, inset 1px 0 0 $component-border-color, inset 0 -1px 0 $component-border-color!important;
               border-radius: 0 0 0 $base--radius;
             }
             td:last-of-type {
-              box-shadow: inset 0 1px 0 $color--gray--x-light, inset -1px 0 0 $component-border-color, inset 0 -1px 0 $component-border-color!important;
+              box-shadow: inset 0 1px 0 $component-border-color, inset -1px 0 0 $component-border-color, inset 0 -1px 0 $component-border-color!important;
               border-radius: 0 0 $base--radius 0;
             }
           }
@@ -46,7 +49,7 @@ $slate-subheading-size: $font-size--4;
     &--outlined {
       box-shadow: inset 0 -1px 0 $component-border-color;
     }
-    &--has-no-bottom-pad {
+    &--no-bottom-pad {
       padding-bottom: 0;
     }
     &-main {
@@ -64,12 +67,12 @@ $slate-subheading-size: $font-size--4;
       }
     }
     //account for padding when elements inside block have space below them that would push the padding out alignment
-    &--has-no-bottom-pad {
+    &--no-bottom-pad {
       padding-bottom: 0;
     }
     //when the block can be removed by a user apply this selector
     &--removable {
-      padding-right: em(56);
+      padding-right: em(72);
       position: relative;
       > .slate__block-close-button {
         @extend %close-button;
@@ -79,7 +82,7 @@ $slate-subheading-size: $font-size--4;
         background: transparent;
         border-width: 0;
         color: $text-color-deemphasized;
-        height: 40px;
+        height: 100%;
         outline: none;
         padding: 8px 16px;
         position: absolute;
@@ -88,10 +91,13 @@ $slate-subheading-size: $font-size--4;
         transform: translateY(-50%);
         transition: $trans-duration;
         width: 56px;
+        box-shadow: inset 1px 0px $component-border-color;
         .icon {
           vertical-align: top;
         }
         &:hover {
+          background: darken($color--white, $darken-p);
+          box-shadow: inset 1px 0px $component-border-color, inset -1px 0 $component-border-color;
           color: $color--primary;
         }
       }
@@ -100,7 +106,7 @@ $slate-subheading-size: $font-size--4;
   //put buttons here
   &__bottom {
     padding: 1em;
-    &--has-no-bottom-pad {
+    &--no-bottom-pad {
       padding-bottom: 0;
     }
     &--outlined {
@@ -182,6 +188,10 @@ $slate-subheading-size: $font-size--4;
       &-control {
         @include flex(initial);
         align-self: center;
+        > * {
+          display: inline-block;
+          vertical-align: top;
+        }
       }
     }
   }
@@ -191,6 +201,10 @@ $slate-subheading-size: $font-size--4;
       &-control {
         float: right;
         padding-left: 8px;
+        > * {
+          display: inline-block;
+          vertical-align: top;
+        }
       }
     }
   }

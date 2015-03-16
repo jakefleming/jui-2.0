@@ -1,11 +1,17 @@
 @mixin generate-space($type, $only: null) {
   @if $only == null {
     @each $size, $value in $layout-space {
+      &-no-#{$type} {
+        #{$type}: 0!important;
+      }
       &-#{$size}-#{$type} {
         #{$type}: em($value)!important;
       }
       @each $media-size, $media-value in $media-size {
         @media (min-width: $media-value){
+          &-no-#{$type}-for-#{$media-size} {
+            #{$type}: 0!important;
+          }
           &-#{$size}-#{$type}-for-#{$media-size} {
             #{$type}: em($value)!important;
           }
@@ -15,10 +21,16 @@
         &-#{$size}-#{$type}-on-#{$position} {
           #{$type}-#{$position}: em($value)!important;
         }
+        &-no-#{$type}-on-#{$position} {
+          #{$type}-#{$position}: 0!important;
+        }
         @each $media-size, $media-value in $media-size {
           @media (min-width: $media-value){
             &-#{$size}-#{$type}-on-#{$position}-for-#{$media-size} {
               #{$type}-#{$position}: em($value)!important;
+            }
+            &-no-#{$type}-on-#{$position}-for-#{$media-size} {
+              #{$type}-#{$position}: 0!important;
             }
           }
         }
@@ -107,7 +119,7 @@
   }
 }
 
-.has {
+.u {
   @include generate-space(margin);
   @include generate-space(margin, true);
   @include generate-space(padding);

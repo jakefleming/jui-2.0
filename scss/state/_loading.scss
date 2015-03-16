@@ -6,7 +6,7 @@
     padding-right: 48px;
     position: relative;
     &:before {
-      @extend .icon-loading;
+      @extend .icon--loading;
       @extend .icon;
       animation: spin-it 1s linear infinite;
       height: 24px;
@@ -28,7 +28,7 @@
 .form-element.load-this {
   .form-element__wrap {
     &:before {
-      @extend .icon-loading;
+      @extend .icon--loading;
       @extend .icon;
       animation: spin-it 1s linear infinite;
       color: $color--gray;

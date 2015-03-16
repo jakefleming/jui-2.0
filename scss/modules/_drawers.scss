@@ -4,17 +4,27 @@ $list-icon-h: 40;
 //drawers are hidden containers like menus
 
 .drawer {
-  bottom: 0;
   box-shadow: 0 1px 3px transparentize($color--black, .6);
-  left: 0;
   overflow: visible;
   position: fixed;
-  width: 232px;
-  top: 0;
   z-index: 4;
-  transform: translateX(-242px);
   transition: transform .15s ease-in-out;
-  will-change: top,left;
+  &--left {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    transform: translateX(-242px);
+    width: 232px;
+    will-change: top,left;
+  }
+  &--right {
+    bottom: 0;
+    right: 0;
+    top: 0;
+    transform: translateX(242px);
+    width: 232px;
+    will-change: top,right;
+  }
   &--active {
     transform: translateX(0px);
     transition: all $trans-duration;

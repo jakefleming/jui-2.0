@@ -125,7 +125,7 @@ textarea {
 //when you need an icon for a form element use a wrap
 .form-element__wrap {
   position: relative;
-  &.has-icon input {
+  input {
     padding-right: em(52);
   }
 }
@@ -276,7 +276,7 @@ input[type="file"] {
 }
 
 //errors for form elements
-.form-element.form-element--has-error {
+.form-element.has-error {
   //button errors
   .button__content {
     box-shadow: inset 0 0 0 1px $color--error;
@@ -305,7 +305,7 @@ input[type="file"] {
   display: none;
   font-family: $font--1;
   font-size: em($font-size--6);
-  line-height: 1.339;
+  line-height: 24/$font-size--6;
 }
 
 //labels for inputs

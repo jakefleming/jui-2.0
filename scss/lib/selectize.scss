@@ -295,7 +295,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
     cursor: text;
   }
   &:before {
-    @extend .icon-caret-down;
+    @extend .icon--caret-down;
     @extend .icon;
     box-sizing: border-box;
     color: $text-color-deemphasized;
@@ -360,7 +360,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   }
 }
 
-.form-element--has-error .selectize-input {
+.form-element.has-error .selectize-input {
   border-color: $color--error;
 }
 
@@ -401,7 +401,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 }
 
 .item .remove {
-  @extend .icon-x;
+  @extend .icon--x;
   @extend .icon;
   color: $text-color-deemphasized;
   font-size: .75em;
