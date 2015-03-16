@@ -1,69 +1,15 @@
 //Buttons are what the user will interact with to perform actions
 
-
 /*
 Buttons
 
-(possible modifiers for button are [solid,flat])
-(possible modifiers for button__content are [default,primary,success,error,warning,info])
+(possible modifiers for button are [solid,flat,stretch,default,primary,error,warning,success,info])
 
-<button type="button" class="button button--solid button--primary">
+<button type="button" class="button button--solid button--default">
   <div class="button__content">Button</div>
   <div class="button__icon icon icon--heart"></div>
 </button>
-
 */
-
-/*
-
-Button Groups
-
-(optional modifier to make button group span 100% width is [stretch])
-
-<div class="button-group" style="margin-bottom: 16px;">
-  <button type="button" class="button button--solid button--default">
-      <div class="button__content">
-          <div class="button__icon icon icon--grid"></div>
-      </div>
-  </button>
-  <button type="button" class="button button--solid button--default">
-      <div class="button__content">
-          <div class="button__icon icon icon--blocks"></div>
-      </div>
-  </button>
-  <button type="button" class="button button--solid button--default">
-      <div class="button__content">
-          <div class="button__icon icon icon--dashboard"></div>
-      </div>
-  </button>
-</div>
-
-*/
-
-/*
-
-Button Dropdowns
-
-<div class="button-group" style="margin-bottom: 16px;">
-    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
-      <div class="button__content">
-          <div class="button__icon icon icon--grid"></div>
-      </div>
-    </button>
-    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
-      <div class="button__content">
-          <div class="button__icon icon icon--blocks"></div>
-      </div>
-    </button>
-    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
-      <div class="button__content">
-          <div class="button__icon icon icon--dashboard"></div>
-      </div>
-    </button>
-</div>
-
-*/
-
 
 //attributes shared by all buttons
 %button-core {
@@ -156,7 +102,7 @@ Button Dropdowns
 .button--solid {
   //what's inside the button
   @each $theme, $color in $ui-colors {
-    &.button{
+    &.button {
       &--#{$theme} {
         .button__content {
           background-color: $color;
@@ -347,6 +293,51 @@ Button Dropdowns
 }
 
 //button groups can contain multiple buttons for a long strip of buttons, or creating split buttons, and also dropdowns
+
+/*
+Button Groups
+
+(optional modifier to make button group span 100% width is [stretch])
+
+<div class="button-group" style="margin-bottom: 16px;">
+  <button type="button" class="button button--solid button--default">
+      <div class="button__content">
+          <div class="button__icon icon icon--grid"></div>
+      </div>
+  </button>
+  <button type="button" class="button button--solid button--default">
+      <div class="button__content">
+          <div class="button__icon icon icon--blocks"></div>
+      </div>
+  </button>
+  <button type="button" class="button button--solid button--default">
+      <div class="button__content">
+          <div class="button__icon icon icon--dashboard"></div>
+      </div>
+  </button>
+</div>
+
+Button Dropdowns
+
+<div class="button-group" style="margin-bottom: 16px;">
+    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
+      <div class="button__content">
+          <div class="button__icon icon icon--grid"></div>
+      </div>
+    </button>
+    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
+      <div class="button__content">
+          <div class="button__icon icon icon--blocks"></div>
+      </div>
+    </button>
+    <button type="button" class="button button--solid button--default" data-toggle="dropdown">
+      <div class="button__content">
+          <div class="button__icon icon icon--dashboard"></div>
+      </div>
+    </button>
+</div>
+
+*/
 .button-group {
   font-size: 0;
   vertical-align: top;
@@ -400,6 +391,7 @@ Button Dropdowns
       }
     }
   }
+
   .no-flexbox {
     .button-group {
       &.button-group--stretch {
@@ -419,6 +411,7 @@ Button Dropdowns
     }
   }
 }
+
 //general styles used across the app for the various close buttons
 %close-button {
   @extend %button-core;

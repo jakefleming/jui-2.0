@@ -1,5 +1,34 @@
 //Callouts are prompts the user needs to acknowledge or interact with to accomplish an action. They take up the majority of the viewing area.
 
+/*
+<button type="button" class="button button--solid button--primary" data-toggle="callout" data-target="myCallout">
+  <span class="button__content">Callout</span>
+</button>
+
+Give the "callout-state" the ID of your button's "data-target" attribute
+<div class="callout-stage" id="myCallout">
+	<div class="callout">
+		<div class="callout__top">
+			<button type="button" class="callout__close-button" data-dismiss="callout">
+			<span class="icon icon--x"></span>
+			</button>
+			<span class="callout__heading">Hey there!</span>
+		</div>
+		<div class="callout__content">
+			[content here]
+		</div>
+		<div class="callout__bottom flat">
+			<button type="button" class="button button--flat button--default" data-dismiss="callout">
+			<span class="button__content">Option 1</span>
+			</button>
+			<button type="button" class="button button--flat button--primary" data-dismiss="callout">
+			<span class="button__content">Option 2</span>
+			</button>
+		</div>
+	</div>
+</div>
+*/
+
 //the container for the modal to sit in
 .callout-stage {
   -webkit-overflow-scrolling: touch;

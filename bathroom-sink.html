@@ -1383,28 +1383,26 @@
                 </div>
             </article>
         </section>
-        <pre class="line-pre u-md-margin-on-bottom"><div class="line" id="file-gistfile1-html-LC1">&lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button button--solid launch-datepicker button--default<span class="pl-pds">"</span></span> <span class="pl-e">data-date-format</span>=<span class="pl-s1"><span class="pl-pds">"</span>yyyy-mm-dd<span class="pl-pds">"</span></span> <span class="pl-e">data-date</span>=<span class="pl-s1"><span class="pl-pds">"</span>2012-02-20<span class="pl-pds">"</span></span>&gt;
-        </div><div class="line" id="file-gistfile1-html-LC2">    &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button__content<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button__icon icon icon--calendar<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">span</span>&gt;&lt;/<span class="pl-ent">span</span>&gt;
-        </div><div class="line" id="file-gistfile1-html-LC3">&lt;/<span class="pl-ent">button</span>&gt;
-        </div></pre>
-        <pre class="line-pre u-md-margin-on-top"><div class="line" id="file-gistfile1-js-LC1"><span class="pl-c">//datepicker</span>
-        </div><div class="line" id="file-gistfile1-js-LC2">$(<span class="pl-s1"><span class="pl-pds">'</span>.launch-datepicker<span class="pl-pds">'</span></span>).daterangepicker({
-        </div><div class="line" id="file-gistfile1-js-LC3">    singleDatePicker<span class="pl-k">:</span> <span class="pl-c1">true</span>,
-        </div><div class="line" id="file-gistfile1-js-LC4">    opens<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>left<span class="pl-pds">'</span></span>
-        </div><div class="line" id="file-gistfile1-js-LC5">})
-        </div><div class="line" id="file-gistfile1-js-LC6">&nbsp;
-        </div><div class="line" id="file-gistfile1-js-LC7"><span class="pl-c">//daterange</span>
-        </div><div class="line" id="file-gistfile1-js-LC8">$(<span class="pl-s1"><span class="pl-pds">'</span>.launch-daterange<span class="pl-pds">'</span></span>).daterangepicker(
-        </div><div class="line" id="file-gistfile1-js-LC9">    {
-        </div><div class="line" id="file-gistfile1-js-LC10">        ranges<span class="pl-k">:</span> {
-        </div><div class="line" id="file-gistfile1-js-LC11">            <span class="pl-s1"><span class="pl-pds">'</span>Today<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment(), moment()],
-        </div><div class="line" id="file-gistfile1-js-LC12">            <span class="pl-s1"><span class="pl-pds">'</span>Yesterday<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>), moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>)],
-        </div><div class="line" id="file-gistfile1-js-LC13">            <span class="pl-s1"><span class="pl-pds">'</span>Last 7 Days<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">6</span>), moment()],
-        </div><div class="line" id="file-gistfile1-js-LC14">            <span class="pl-s1"><span class="pl-pds">'</span>Last 30 Days<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">29</span>), moment()]
-        </div><div class="line" id="file-gistfile1-js-LC15">        },
-        </div><div class="line" id="file-gistfile1-js-LC16">        opens<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>left<span class="pl-pds">'</span></span>
-        </div><div class="line" id="file-gistfile1-js-LC17">    }
-        </div><div class="line" id="file-gistfile1-js-LC18">);
+        <pre class="line-pre"><div class="line" id="file-gistfile1-js-LC1"><span class="pl-c">//datepicker</span>
+        </div><div class="line" id="file-gistfile1-js-LC2">&nbsp;
+        </div><div class="line" id="file-gistfile1-js-LC3">$(<span class="pl-s1"><span class="pl-pds">'</span>.launch-datepicker<span class="pl-pds">'</span></span>).daterangepicker({
+        </div><div class="line" id="file-gistfile1-js-LC5">    singleDatePicker<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        </div><div class="line" id="file-gistfile1-js-LC7">    opens<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>left<span class="pl-pds">'</span></span>
+        </div><div class="line" id="file-gistfile1-js-LC9">})
+        </div><div class="line" id="file-gistfile1-js-LC12">
+        </div><div class="line" id="file-gistfile1-js-LC13"><span class="pl-c">//daterange</span>
+        </div><div class="line" id="file-gistfile1-js-LC14">
+        </div><div class="line" id="file-gistfile1-js-LC15">$(<span class="pl-s1"><span class="pl-pds">'</span>.launch-daterange<span class="pl-pds">'</span></span>).daterangepicker(
+        </div><div class="line" id="file-gistfile1-js-LC17">    {
+        </div><div class="line" id="file-gistfile1-js-LC19">        ranges<span class="pl-k">:</span> {
+        </div><div class="line" id="file-gistfile1-js-LC21">            <span class="pl-s1"><span class="pl-pds">'</span>Today<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment(), moment()],
+        </div><div class="line" id="file-gistfile1-js-LC23">            <span class="pl-s1"><span class="pl-pds">'</span>Yesterday<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>), moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">1</span>)],
+        </div><div class="line" id="file-gistfile1-js-LC25">            <span class="pl-s1"><span class="pl-pds">'</span>Last 7 Days<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">6</span>), moment()],
+        </div><div class="line" id="file-gistfile1-js-LC27">            <span class="pl-s1"><span class="pl-pds">'</span>Last 30 Days<span class="pl-pds">'</span></span><span class="pl-k">:</span> [moment().subtract(<span class="pl-s1"><span class="pl-pds">'</span>days<span class="pl-pds">'</span></span>, <span class="pl-c1">29</span>), moment()]
+        </div><div class="line" id="file-gistfile1-js-LC29">        },
+        </div><div class="line" id="file-gistfile1-js-LC31">        opens<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>left<span class="pl-pds">'</span></span>
+        </div><div class="line" id="file-gistfile1-js-LC33">    }
+        </div><div class="line" id="file-gistfile1-js-LC35">);
         </div></pre>
         <h1 class="doc-section-heading">Progress</h1>
         <p>When you need to show progress of something, like the amount of data that has been uploaded, use a progress bar.</p>
@@ -1975,10 +1973,43 @@
                 </div>
             </article>
         </section>
+        <pre class="line-pre"><div class="line" id="file-gistfile1-html-LC1">&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate slate--outlined<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC2">    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate__top slate__top--outlined<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC3">        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate__top-main<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC4">            &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate__subtitle<span class="pl-pds">"</span></span>&gt;Welcome&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC5">            &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate__title<span class="pl-pds">"</span></span>&gt;Sign in&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC6">&nbsp;
+        </div><div class="line" id="file-gistfile1-html-LC7">        &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC8">    &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC9">    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate__block slate__block--outlined slate__block--no-bottom-pad<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC10">        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-element<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC11">            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-element__wrap<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC12">                &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-element__icon icon icon--person<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC13">                &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s1"><span class="pl-pds">"</span>User name<span class="pl-pds">"</span></span>/&gt;
+        </div><div class="line" id="file-gistfile1-html-LC14">            &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC15">        &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC16">        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-element<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC17">            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-element__wrap<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC18">                &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-element__icon icon icon--lock<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC19">                &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>password<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s1"><span class="pl-pds">"</span>Password<span class="pl-pds">"</span></span>/&gt;
+        </div><div class="line" id="file-gistfile1-html-LC20">            &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC21">        &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC22">    &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC23">    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate__bottom slate__bottom--outlined<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC24">        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>slate__bottom-control<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC25">            &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button button--solid button--primary button--stretch<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC26">                &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button__content<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC27">                    &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button__text<span class="pl-pds">"</span></span>&gt;Sign in&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC28">                &lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC29">            &lt;/<span class="pl-ent">button</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC30">        &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC31">    &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC32">&lt;/<span class="pl-ent">div</span>&gt;
+        </div></pre>
         <h1 class="doc-section-heading">
             Drawers
         </h1>
-        <p>When you need some content to come in from off the screen, use a drawer!</p>
+        <p>When you need some content to come in from off the screen, use a <code>drawer</code> ! Drawers look pretty much like a <code>callout</code> would.</p>
         <section id="drawers">
             <article id="drawer-example">
                 <!--drawer left-->
@@ -2039,10 +2070,41 @@
                 </div>
             </article>
         </section>
+        <pre class="line-pre"><div class="line" id="file-gistfile1-html-LC1">The data-target value of the button must equal the drawer's Id.
+        </div><div class="line" id="file-gistfile1-html-LC2">&nbsp;
+        </div><div class="line" id="file-gistfile1-html-LC3">&lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button button--solid button--primary<span class="pl-pds">"</span></span> <span class="pl-e">data-toggle</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer<span class="pl-pds">"</span></span> <span class="pl-e">data-target</span>=<span class="pl-s1"><span class="pl-pds">"</span>myDrawer--left<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC4">    &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button__content<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC5">        &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>button__text<span class="pl-pds">"</span></span>&gt;Open left&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC6">    &lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC7">&lt;/<span class="pl-ent">button</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC8">&nbsp;
+        </div><div class="line" id="file-gistfile1-html-LC9">&lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s1"><span class="pl-pds">"</span>myDrawer--left<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer drawer--left<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC10">    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__body<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC11">        &lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC12">            &lt;<span class="pl-ent">li</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-title<span class="pl-pds">"</span></span>&gt;Dumb stuff&lt;/<span class="pl-ent">li</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC13">            &lt;<span class="pl-ent">li</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item active<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC14">                &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item-icon icon icon--envelope<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC15">                &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item-content<span class="pl-pds">"</span></span>&gt;Inbox&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC16">            &lt;/<span class="pl-ent">li</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC17">            &lt;<span class="pl-ent">li</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item active<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC18">                &lt;<span class="pl-ent">a</span> <span class="pl-e">href</span>=<span class="pl-s1"><span class="pl-pds">"</span><span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item-link<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC19">                    &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item-icon icon icon--chat<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC20">                    &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item-content<span class="pl-pds">"</span></span>&gt;Chats&lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC21">                    &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item-alert<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC22">                    &lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>drawer__list-item-alert-content drawer__list-item-alert-content--error<span class="pl-pds">"</span></span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC23">                        2
+        </div><div class="line" id="file-gistfile1-html-LC24">                    &lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC25">                    &lt;/<span class="pl-ent">span</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC26">                &lt;/<span class="pl-ent">a</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC27">            &lt;/<span class="pl-ent">li</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC28">        &lt;/<span class="pl-ent">ul</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC29">    &lt;/<span class="pl-ent">div</span>&gt;
+        </div><div class="line" id="file-gistfile1-html-LC30">&lt;/<span class="pl-ent">div</span>&gt;
+        </div></pre>
         <h1 class="doc-section-heading">
             Video
         </h1>
-        <p>For custom video, we use <a href="http://mediaelementjs.com/">Mediaelement.js</a>.</p>
+        <p>For custom video, we use <a href="http://mediaelementjs.com/">Mediaelement.js</a>. So check out those docs for all the available options.</p>
         <section id="video">
             <article>
                 <video class="mejs-jui" controls width="100%" height="100%">
@@ -2050,6 +2112,12 @@
                     <source src="assets/vid/big_buck_bunny.ogv" type="video/ogv"/>
                     <track label="English" kind="subtitles" srclang="en" src="assets/vid/captions/doc.vtt"/>
                 </video>
+                <pre class="line-pre"><div class="line" id="file-gistfile1-html-LC1">&lt;<span class="pl-ent">video</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>mejs-jui<span class="pl-pds">"</span></span> <span class="pl-e">controls</span> <span class="pl-e">width</span>=<span class="pl-s1"><span class="pl-pds">"</span>100%<span class="pl-pds">"</span></span> <span class="pl-e">height</span>=<span class="pl-s1"><span class="pl-pds">"</span>100%<span class="pl-pds">"</span></span>&gt;
+                </div><div class="line" id="file-gistfile1-html-LC2">    &lt;<span class="pl-ent">source</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>assets/vid/big_buck_bunny.mp4<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>video/mp4<span class="pl-pds">"</span></span>/&gt;
+                </div><div class="line" id="file-gistfile1-html-LC3">    &lt;<span class="pl-ent">source</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>assets/vid/big_buck_bunny.ogv<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>video/ogv<span class="pl-pds">"</span></span>/&gt;
+                </div><div class="line" id="file-gistfile1-html-LC4">    &lt;<span class="pl-ent">track</span> <span class="pl-e">label</span>=<span class="pl-s1"><span class="pl-pds">"</span>English<span class="pl-pds">"</span></span> <span class="pl-e">kind</span>=<span class="pl-s1"><span class="pl-pds">"</span>subtitles<span class="pl-pds">"</span></span> <span class="pl-e">srclang</span>=<span class="pl-s1"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>assets/vid/captions/doc.vtt<span class="pl-pds">"</span></span>/&gt;
+                </div><div class="line" id="file-gistfile1-html-LC5">&lt;/<span class="pl-ent">video</span>&gt;
+                </div></pre>
             </article>
         </section>
     </div>

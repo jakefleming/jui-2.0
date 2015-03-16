@@ -1,3 +1,74 @@
+/*
+(possible modifiers for nav-bar are [nav-bar--primary, nav-bar--default])
+<nav class="nav-bar nav-bar--default">
+	<div class="nav-bar__menu-toggle">
+		<span class="icon icon--menu"></span>
+	</div>
+	<div class="nav-bar__top">
+		NavBar
+	</div>
+	<ul class="nav-bar__list nav-bar__list--right ">
+		<li class="nav-bar__list-item">
+			<a href="index.html">
+			Link 1
+			</a>
+		</li>
+		<li class="nav-bar__list-item">
+			<div class="button-group">
+				<button type="button" class="button button--solid" data-toggle="dropdown">
+				<span class="button__content">
+				<span class="button__text">Button dropdown</span>
+				<span class="button__icon icon icon--caret-down"></span>
+				</span>
+				</button>
+				<ul class="dropdown-box">
+					<li>
+						<a class="dropdown-box__item">Button dropdown</a>
+					</li>
+					<li>
+						<label class="dropdown-box__item dropdown-box__item--static">
+						<input type="checkbox"/> Derp
+						</label>
+					</li>
+					<li>
+						<a class="dropdown-box__item">Dropdown Menu</a>
+					</li>
+					<li>
+						<a class="dropdown-box__item">Dropdown Menu</a>
+					</li>
+					<li>
+						<a class="dropdown-box__item">Dropdown Menu</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li class="nav-bar__list-item">
+			<a class="nav-bar__appendage-toggle"><span class="icon icon--gear"></span></a>
+		</li>
+	</ul>
+	<div class="nav-bar__appendage">
+		<div class="grid grid--gutters nav-bar__appendage-inner">
+			<div class="grid__block">
+				<div class="form-element">
+					<textarea placeholder="Textareas are fun"></textarea>
+					<small class="form-element__error-text">Your typing is puny. Pump it up.</small>
+				</div>
+			</div>
+			<div class="grid__block">
+				<div class="form-element">
+					<input type="email" placeholder="Enter email"/>
+					<small class="form-element__error-text">Your password isn't manly enough.</small>
+				</div>
+				<div class="form-element">
+					<input type="email" placeholder="Enter email"/>
+					<small class="form-element__error-text">Your password isn't manly enough.</small>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+*/
+
 $nav-default-bg: $color--white;
 $nav-default-text: $text-color-emphasized;
 

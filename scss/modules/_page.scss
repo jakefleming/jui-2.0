@@ -53,6 +53,26 @@ $page-bar-subheading-size: $font-size--4;
 
 //pagination
 
+/*
+<ul class="pagination-list">
+	<li class="pagination-list__control pagination-list__prev">
+		<span class="icon icon--chevron-left"></span>
+	</li>
+	<li class="pagination-list__item">
+		1
+	</li>
+	<li class="pagination-list__item">
+		2
+	</li>
+	<li class="pagination-list__item pagination-list__item--active">
+		3
+	</li>
+	<li class="pagination-list__control pagination-list__next pagination-list__control--disabled">
+		<span class="icon icon--chevron-right"></span>
+	</li>
+</ul>
+*/
+
 .pagination-list {
   font-size: 0;
   list-style-type: none;

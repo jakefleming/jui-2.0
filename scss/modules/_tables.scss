@@ -1,5 +1,35 @@
 //Tables should only be used to display data
 
+/*
+You can wrap your table in a "table-wrap" if you're worried about the content spilling off of the screen.
+<div class="table-wrap">
+	<table class="table--outlined">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Sex</th>
+				<th>Location</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Jake Fleming</td>
+				<td>27</td>
+				<td>M</td>
+				<td>Chicago, IL</td>
+			</tr>
+			<tr class="tr--active">
+				<td>Jake Fleming</td>
+				<td>27</td>
+				<td>M</td>
+				<td>Chicago, IL</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+*/
+
 table {
   //setting up the basics
   border-collapse: collapse;

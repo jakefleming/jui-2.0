@@ -1,5 +1,41 @@
 //mixins for flex grid can be found in the "mixins" scss file, since they might be used for things other than the main grid
 
+/*
+Grids can be arranged 2 different ways:
+
+
+
+1) Add a "{n}-blocks" modifier to the "grid" and the children "grid__block" elements will all be affected.
+
+(additional modifiers are available as well, such as "{n}-blocks-on-medium" and "grid--orient-vertical-on-small
+
+
+
+<div class="grid grid--2-blocks">
+
+    <div class="grid__block"></div>
+
+    <div class="grid__block"></div>
+
+</div>
+
+
+
+2) Add a "{n}-block" modifier to each "grid__block" element inside of the "grid" element.
+
+(additional modifiers are available as well, such as "{n}-block-on-medium"
+
+
+
+<div class="grid">
+
+    <div class="grid__block grid__block--6"></div>
+
+    <div class="grid__block grid__block--6"></div>
+
+</div>
+*/
+
 .flexbox {
   //this is a class put on HTML by Modernizr. Remove this scope if you don't care about IE
   //grid definitions

@@ -1,5 +1,13 @@
 //Alerts grab the user's attention, whether its to point out a general error, or to provide passive inactionable content
 
+/*
+(possible alert modifiers [active, dismissable, primary, success, error, warning, info])
+<div class="alert alert--active alert--dismissable alert--success">
+	<button type="button" class="alert__close-button icon icon--x"></button>
+	Something pretty cool just happened
+</div>
+*/
+
 .alert {
   border-radius: $base--radius;
   font-family: $font--1;

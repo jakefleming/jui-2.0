@@ -953,6 +953,41 @@ ul, ol, li {
 a {
   text-decoration: none; }
 
+/*
+Grids can be arranged 2 different ways:
+
+
+
+1) Add a "{n}-blocks" modifier to the "grid" and the children "grid__block" elements will all be affected.
+
+(additional modifiers are available as well, such as "{n}-blocks-on-medium" and "grid--orient-vertical-on-small
+
+
+
+<div class="grid grid--2-blocks">
+
+    <div class="grid__block"></div>
+
+    <div class="grid__block"></div>
+
+</div>
+
+
+
+2) Add a "{n}-block" modifier to each "grid__block" element inside of the "grid" element.
+
+(additional modifiers are available as well, such as "{n}-block-on-medium"
+
+
+
+<div class="grid">
+
+    <div class="grid__block grid__block--6"></div>
+
+    <div class="grid__block grid__block--6"></div>
+
+</div>
+*/
 .no-flexbox .grid {
   display: block;
   min-height: 1px; }
@@ -1527,6 +1562,41 @@ a {
     .no-flexbox .offset--left--12 {
       right: auto; } }
 
+/*
+Grids can be arranged 2 different ways:
+
+
+
+1) Add a "{n}-blocks" modifier to the "grid" and the children "grid__block" elements will all be affected.
+
+(additional modifiers are available as well, such as "{n}-blocks-on-medium" and "grid--orient-vertical-on-small
+
+
+
+<div class="grid grid--2-blocks">
+
+    <div class="grid__block"></div>
+
+    <div class="grid__block"></div>
+
+</div>
+
+
+
+2) Add a "{n}-block" modifier to each "grid__block" element inside of the "grid" element.
+
+(additional modifiers are available as well, such as "{n}-block-on-medium"
+
+
+
+<div class="grid">
+
+    <div class="grid__block grid__block--6"></div>
+
+    <div class="grid__block grid__block--6"></div>
+
+</div>
+*/
 .flexbox .grid {
   -moz-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
@@ -3706,6 +3776,13 @@ body .scope-container {
    *
    * Built for http://www.improvely.com
    */
+  /*
+  <div class="progress">
+  
+      <div class="progress__bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+  
+  </div>
+  */
   /**
    * selectize.scss (v0.8.7)
    * Copyright (c) 2014 Emanuel Kluge
@@ -3729,6 +3806,13 @@ body .scope-container {
   /* These next classes handle the styles for the little arrow attached to the tooltip. By default, the arrow will inherit the same colors and border as what is set on the main tooltip itself. */
   /* Some CSS magic for the awesome animations - feel free to make your own custom animations and reference it in your Tooltipster settings! */
   /* CSS transition for when contenting is changing in a tooltip that is still open. The only properties that will NOT transition are: width, height, top, and left */
+  /*
+  <video class="mejs-jui" controls width="100%" height="100%">
+      <source src="assets/vid/big_buck_bunny.mp4" type="video/mp4"/>
+      <source src="assets/vid/big_buck_bunny.ogv" type="video/ogv"/>
+      <track label="English" kind="subtitles" srclang="en" src="assets/vid/captions/doc.vtt"/>
+  </video>
+  */
   /* Start: LAYERS */
   /* End: LAYERS */
   /* Start: CONTROL BAR */
@@ -3781,19 +3865,93 @@ body .scope-container {
   /* End: Skip Back */
   /*JUI SKIN*/
   /*
+  (possible alert modifiers [active, dismissable, primary, success, error, warning, info])
+  <div class="alert alert--active alert--dismissable alert--success">
+  	<button type="button" class="alert__close-button icon icon--x"></button>
+  	Something pretty cool just happened
+  </div>
+  */
+  /*
+  (possible modifiers for nav-bar are [nav-bar--primary, nav-bar--default])
+  <nav class="nav-bar nav-bar--default">
+  	<div class="nav-bar__menu-toggle">
+  		<span class="icon icon--menu"></span>
+  	</div>
+  	<div class="nav-bar__top">
+  		NavBar
+  	</div>
+  	<ul class="nav-bar__list nav-bar__list--right ">
+  		<li class="nav-bar__list-item">
+  			<a href="index.html">
+  			Link 1
+  			</a>
+  		</li>
+  		<li class="nav-bar__list-item">
+  			<div class="button-group">
+  				<button type="button" class="button button--solid" data-toggle="dropdown">
+  				<span class="button__content">
+  				<span class="button__text">Button dropdown</span>
+  				<span class="button__icon icon icon--caret-down"></span>
+  				</span>
+  				</button>
+  				<ul class="dropdown-box">
+  					<li>
+  						<a class="dropdown-box__item">Button dropdown</a>
+  					</li>
+  					<li>
+  						<label class="dropdown-box__item dropdown-box__item--static">
+  						<input type="checkbox"/> Derp
+  						</label>
+  					</li>
+  					<li>
+  						<a class="dropdown-box__item">Dropdown Menu</a>
+  					</li>
+  					<li>
+  						<a class="dropdown-box__item">Dropdown Menu</a>
+  					</li>
+  					<li>
+  						<a class="dropdown-box__item">Dropdown Menu</a>
+  					</li>
+  				</ul>
+  			</div>
+  		</li>
+  		<li class="nav-bar__list-item">
+  			<a class="nav-bar__appendage-toggle"><span class="icon icon--gear"></span></a>
+  		</li>
+  	</ul>
+  	<div class="nav-bar__appendage">
+  		<div class="grid grid--gutters nav-bar__appendage-inner">
+  			<div class="grid__block">
+  				<div class="form-element">
+  					<textarea placeholder="Textareas are fun"></textarea>
+  					<small class="form-element__error-text">Your typing is puny. Pump it up.</small>
+  				</div>
+  			</div>
+  			<div class="grid__block">
+  				<div class="form-element">
+  					<input type="email" placeholder="Enter email"/>
+  					<small class="form-element__error-text">Your password isn't manly enough.</small>
+  				</div>
+  				<div class="form-element">
+  					<input type="email" placeholder="Enter email"/>
+  					<small class="form-element__error-text">Your password isn't manly enough.</small>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </nav>
+  */
+  /*
   Buttons
   
-  (possible modifiers for button are [solid,flat])
-  (possible modifiers for button__content are [default,primary,success,error,warning,info])
+  (possible modifiers for button are [solid,flat,stretch,default,primary,error,warning,success,info])
   
-  <button type="button" class="button button--solid button--primary">
+  <button type="button" class="button button--solid button--default">
     <div class="button__content">Button</div>
     <div class="button__icon icon icon--heart"></div>
   </button>
-  
   */
   /*
-  
   Button Groups
   
   (optional modifier to make button group span 100% width is [stretch])
@@ -3816,9 +3974,6 @@ body .scope-container {
     </button>
   </div>
   
-  */
-  /*
-  
   Button Dropdowns
   
   <div class="button-group" style="margin-bottom: 16px;">
@@ -3839,6 +3994,309 @@ body .scope-container {
       </button>
   </div>
   
+  */
+  /*
+  <button type="button" class="button button--solid button--primary" data-toggle="callout" data-target="myCallout">
+    <span class="button__content">Callout</span>
+  </button>
+  
+  Give the "callout-state" the ID of your button's "data-target" attribute
+  <div class="callout-stage" id="myCallout">
+  	<div class="callout">
+  		<div class="callout__top">
+  			<button type="button" class="callout__close-button" data-dismiss="callout">
+  			<span class="icon icon--x"></span>
+  			</button>
+  			<span class="callout__heading">Hey there!</span>
+  		</div>
+  		<div class="callout__content">
+  			[content here]
+  		</div>
+  		<div class="callout__bottom flat">
+  			<button type="button" class="button button--flat button--default" data-dismiss="callout">
+  			<span class="button__content">Option 1</span>
+  			</button>
+  			<button type="button" class="button button--flat button--primary" data-dismiss="callout">
+  			<span class="button__content">Option 2</span>
+  			</button>
+  		</div>
+  	</div>
+  </div>
+  */
+  /*
+  Typical Card
+  <li class="card card--outlined">
+  	<span class="card__body">
+  	<span class="card__cap card__cap--icon card__cap--solid">
+  	<span class="icon icon--image"></span>
+  	</span>
+  	<span class="card__content">
+  	<span class="card__heading">Jake Fleming</span>
+  	<span class="card__subheading">Visual Designer</span>
+  	</span>
+  	</span>
+  </li>
+  
+  Multiline Card
+  <li class="card card--outlined card--multi-line">
+  	<span class="card__body">
+  	<span class="card__cap card__cap--icon card__cap--solid">
+  	<span class="icon icon--image"></span>
+  	</span>
+  	<span class="card__content">
+  	Spans multiple lines and doesn't get cut off by an ellipsis.
+  	</span>
+  	</span>
+  </li>
+  
+  Feature Card
+  <li class="card card--outlined">
+  	<span class="card__feature" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
+  	</span>
+  	<span class="card__body">
+  	<span class="card__content">
+  	<span class="card__heading">Jake Fleming</span>
+  	<span class="card__subheading">Visual Designer</span>
+  	</span>
+  	</span>
+  </li>
+  */
+  /*
+  The data-target value of the button must equal the drawer's Id.
+  <button type="button" class="button button--solid button--primary" data-toggle="drawer" data-target="myDrawer--left">
+  <span class="button__content">
+  <span class="button__text">Open left</span>
+  </span>
+  </button>
+  <div id="myDrawer--left" class="drawer drawer--left">
+  	<div class="drawer__body">
+  		<ul class="drawer__list">
+  			<li class="drawer__list-title">Dumb stuff</li>
+  			<li class="drawer__list-item active">
+  				<span class="drawer__list-item-icon icon icon--envelope"></span>
+  				<span class="drawer__list-item-content">Inbox</span>
+  			</li>
+  			<li class="drawer__list-item active">
+  				<a href="" class="drawer__list-item-link">
+  				<span class="drawer__list-item-icon icon icon--chat"></span>
+  				<span class="drawer__list-item-content">Chats</span>
+  				<span class="drawer__list-item-alert">
+  				<span class="drawer__list-item-alert-content drawer__list-item-alert-content--error">
+  				2
+  				</span>
+  				</span>
+  				</a>
+  			</li>
+  		</ul>
+  	</div>
+  </div>
+  */
+  /*
+  Text,password,tel, etc... input
+  <div class="form-element">
+  	<label class="form-element__label">Text input</label>
+  	<input type="text" placeholder="Empty input text"/>
+  	<span class="form-element__error-text">Error Text</span>
+  </div>
+  
+  Textarea
+  <div class="form-element">
+  	<label class="form-element__label">Textarea</label>
+  	<textarea placeholder="Empty textarea text"></textarea>
+  	<span class="form-element__error-text">Error Text</span>
+  </div>
+  
+  Input with a button cap
+  <div class="form-element">
+  	<label class="form-element__label">Input group</label>
+  	<div class="input-group">
+  		<div class="input-group__element">
+  			<input type="text" placeholder="Search"/>
+  		</div>
+  		<div class="input-group__action">
+  			<button type="button" class="button button--solid button--default">
+  			<span class="button__content button__content--default"><span class="button__icon icon icon--search"></span></span>
+  			</button>
+  		</div>
+  	</div>
+  	<span class="form-element__error-text">Error Text</span>
+  </div>
+  
+  Input with an icon must have a "form-element__wrap" inside the "form-element" that holds the input and the icon
+  <div class="form-element">
+  	<label class="form-element__label">Text input</label>
+  	<div class="form-element__wrap">
+  		<div class="form-element__icon icon icon--search"></div>
+  		<input type="text" placeholder="Empty input text"/>
+  	</div>
+  	<span class="form-element__error-text">Error Text</span>
+  </div>
+  
+  Selects should be wrapped inside a "select-element" that holds the select and the caret icon
+  <div class="form-element">
+  	<label class="form-element__label">Select</label>
+  	<div class="select-element">
+  		<div class="select-element__icon icon icon--caret-down"></div>
+  		<select>
+  			<option>derp</option>
+  		</select>
+  	</div>
+  	<span class="form-element__error-text">Error Text</span>
+  </div>
+  
+  Form lists can hold any type of form element, typically used to hold checkboxes or radios
+  <ul class="form-list form-list--collapse">
+  	<li class="form-element has-error">
+  		<label class="form-element__label input-size">
+  		<input type="checkbox"/> Derp
+  		</label>
+  	</li>
+  	<li class="form-element has-error">
+  		<label class="form-element__label input-size">
+  		<input type="radio"/> Derp
+  		</label>
+  	</li>
+  </ul>
+  
+  */
+  /*
+  <ul class="list">
+  	<li class="list__item list__item--active">
+  		<span class="list__item-content">An active item with an icon on the right</span>
+  		<span class="list__item-icon icon icon--image"></span>
+  	</li>
+  	<li class="list__item">
+  		<span class="list__item-content">An item with an icon on the right</span>
+  		<span class="list__item-icon icon icon--image"></span>
+  	</li>
+  	<li class="list__item">
+  		<span class="list__item-icon icon icon--image"></span>
+  		<span class="list__item-content">An item with an icon on the left</span>
+  	</li>
+  	<li class="list__item">
+  		<span class="list__item-content">An item with a cap on the right with an image inside</span>
+  		<span class="list__item-cap">
+  		<img class="square--xsmall" src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568"/>
+  		</span>
+  	</li>
+  	<li class="list__item">
+  		<span class="list__item-cap">
+  		<img class="square--xsmall" src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568"/>
+  		</span>
+  		<span class="list__item-content">An item with a cap on the left with an image inside n item with a cap on the left with an image inside n item with a cap on the left with an image inside n item with a cap on the left with an image inside</span>
+  	</li>
+  </ul>
+  */
+  /*
+  <ul class="pagination-list">
+  	<li class="pagination-list__control pagination-list__prev">
+  		<span class="icon icon--chevron-left"></span>
+  	</li>
+  	<li class="pagination-list__item">
+  		1
+  	</li>
+  	<li class="pagination-list__item">
+  		2
+  	</li>
+  	<li class="pagination-list__item pagination-list__item--active">
+  		3
+  	</li>
+  	<li class="pagination-list__control pagination-list__next pagination-list__control--disabled">
+  		<span class="icon icon--chevron-right"></span>
+  	</li>
+  </ul>
+  */
+  /*
+  (possible modifiers for pebbles [default, primary, success, error, warning, info, round])
+  <span class="pebble pebble--default">
+    <span class="pebble__content">
+      <span class="pebble__text">
+        default
+      </span>
+    </span>
+  </span>
+  
+  Pebble with an icon
+  <span class="pebble pebble--default pebble--round">
+    <span class="pebble__content">
+    <span class="pebble__icon icon icon--check"></span>
+  </span>
+  */
+  /*
+  <div class="slate slate--outlined">
+  	<div class="slate__top slate__top--outlined">
+  		<div class="slate__top-main">
+  			<span class="slate__subtitle">Welcome</span>
+  			<span class="slate__title">Sign in</span>
+  		</div>
+  	</div>
+  	<div class="slate__block slate__block--outlined slate__block--no-bottom-pad">
+  		<div class="form-element">
+  			<div class="form-element__wrap">
+  				<div class="form-element__icon icon icon--person"></div>
+  				<input type="text" placeholder="User name"/>
+  			</div>
+  		</div>
+  		<div class="form-element">
+  			<div class="form-element__wrap">
+  				<div class="form-element__icon icon icon--lock"></div>
+  				<input type="password" placeholder="Password"/>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="slate__bottom slate__bottom--outlined">
+  		<div class="slate__bottom-control">
+  			<button type="button" class="button button--solid button--primary button--stretch">
+  			<span class="button__content">
+  			<span class="button__text">Sign in</span>
+  			</span>
+  			</button>
+  		</div>
+  	</div>
+  </div>
+  */
+  /*
+  You can wrap your table in a "table-wrap" if you're worried about the content spilling off of the screen.
+  <div class="table-wrap">
+  	<table class="table--outlined">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Age</th>
+  				<th>Sex</th>
+  				<th>Location</th>
+  			</tr>
+  		</thead>
+  		<tbody>
+  			<tr>
+  				<td>Jake Fleming</td>
+  				<td>27</td>
+  				<td>M</td>
+  				<td>Chicago, IL</td>
+  			</tr>
+  			<tr class="tr--active">
+  				<td>Jake Fleming</td>
+  				<td>27</td>
+  				<td>M</td>
+  				<td>Chicago, IL</td>
+  			</tr>
+  		</tbody>
+  	</table>
+  </div>
+  */
+  /*
+  Button
+  <button type="button" class="button button--solid load-this button--default">
+    <span class="button__content">Button</span>
+  </button>
+  
+  Form element
+  <div class="form-element load-this">
+  	<div class="form-element__wrap">
+  		<div class="form-element__icon icon icon--search"></div>
+  		<input type="text" placeholder="Empty input text"/>
+  	</div>
+  </div>
   */ }
   body .scope-container body {
     color: #768593; }

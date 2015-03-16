@@ -1,4 +1,20 @@
 //Pebbles are colored labels or highlights used to call attention to certain pieces of text
+/*
+(possible modifiers for pebbles [default, primary, success, error, warning, info, round])
+<span class="pebble pebble--default">
+  <span class="pebble__content">
+    <span class="pebble__text">
+      default
+    </span>
+  </span>
+</span>
+
+Pebble with an icon
+<span class="pebble pebble--default pebble--round">
+  <span class="pebble__content">
+  <span class="pebble__icon icon icon--check"></span>
+</span>
+*/
 .pebble {
   @include radius;
   color: #fff;

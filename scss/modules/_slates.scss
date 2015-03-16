@@ -1,5 +1,39 @@
 //slates are boxes for content to go into (panels)
 
+/*
+<div class="slate slate--outlined">
+	<div class="slate__top slate__top--outlined">
+		<div class="slate__top-main">
+			<span class="slate__subtitle">Welcome</span>
+			<span class="slate__title">Sign in</span>
+		</div>
+	</div>
+	<div class="slate__block slate__block--outlined slate__block--no-bottom-pad">
+		<div class="form-element">
+			<div class="form-element__wrap">
+				<div class="form-element__icon icon icon--person"></div>
+				<input type="text" placeholder="User name"/>
+			</div>
+		</div>
+		<div class="form-element">
+			<div class="form-element__wrap">
+				<div class="form-element__icon icon icon--lock"></div>
+				<input type="password" placeholder="Password"/>
+			</div>
+		</div>
+	</div>
+	<div class="slate__bottom slate__bottom--outlined">
+		<div class="slate__bottom-control">
+			<button type="button" class="button button--solid button--primary button--stretch">
+			<span class="button__content">
+			<span class="button__text">Sign in</span>
+			</span>
+			</button>
+		</div>
+	</div>
+</div>
+*/
+
 $slate-heading-size: $font-size--3;
 $slate-subheading-size: $font-size--4;
 
