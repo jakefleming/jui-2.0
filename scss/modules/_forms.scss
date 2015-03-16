@@ -1,4 +1,71 @@
+/*
+Text,password,tel, etc... input
+<div class="form-element">
+	<label class="form-element__label">Text input</label>
+	<input type="text" placeholder="Empty input text"/>
+	<span class="form-element__error-text">Error Text</span>
+</div>
 
+Textarea
+<div class="form-element">
+	<label class="form-element__label">Textarea</label>
+	<textarea placeholder="Empty textarea text"></textarea>
+	<span class="form-element__error-text">Error Text</span>
+</div>
+
+Input with a button cap
+<div class="form-element">
+	<label class="form-element__label">Input group</label>
+	<div class="input-group">
+		<div class="input-group__element">
+			<input type="text" placeholder="Search"/>
+		</div>
+		<div class="input-group__action">
+			<button type="button" class="button button--solid button--default">
+			<span class="button__content button__content--default"><span class="button__icon icon icon--search"></span></span>
+			</button>
+		</div>
+	</div>
+	<span class="form-element__error-text">Error Text</span>
+</div>
+
+Input with an icon must have a "form-element__wrap" inside the "form-element" that holds the input and the icon
+<div class="form-element">
+	<label class="form-element__label">Text input</label>
+	<div class="form-element__wrap">
+		<div class="form-element__icon icon icon--search"></div>
+		<input type="text" placeholder="Empty input text"/>
+	</div>
+	<span class="form-element__error-text">Error Text</span>
+</div>
+
+Selects should be wrapped inside a "select-element" that holds the select and the caret icon
+<div class="form-element">
+	<label class="form-element__label">Select</label>
+	<div class="select-element">
+		<div class="select-element__icon icon icon--caret-down"></div>
+		<select>
+			<option>derp</option>
+		</select>
+	</div>
+	<span class="form-element__error-text">Error Text</span>
+</div>
+
+Form lists can hold any type of form element, typically used to hold checkboxes or radios
+<ul class="form-list form-list--collapse">
+	<li class="form-element has-error">
+		<label class="form-element__label input-size">
+		<input type="checkbox"/> Derp
+		</label>
+	</li>
+	<li class="form-element has-error">
+		<label class="form-element__label input-size">
+		<input type="radio"/> Derp
+		</label>
+	</li>
+</ul>
+
+*/
 
 //use form-element to wrap around things like labels with inputs
 .form-element {

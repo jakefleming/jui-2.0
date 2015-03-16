@@ -1,3 +1,32 @@
+/*
+<ul class="list">
+	<li class="list__item list__item--active">
+		<span class="list__item-content">An active item with an icon on the right</span>
+		<span class="list__item-icon icon icon--image"></span>
+	</li>
+	<li class="list__item">
+		<span class="list__item-content">An item with an icon on the right</span>
+		<span class="list__item-icon icon icon--image"></span>
+	</li>
+	<li class="list__item">
+		<span class="list__item-icon icon icon--image"></span>
+		<span class="list__item-content">An item with an icon on the left</span>
+	</li>
+	<li class="list__item">
+		<span class="list__item-content">An item with a cap on the right with an image inside</span>
+		<span class="list__item-cap">
+		<img class="square--xsmall" src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568"/>
+		</span>
+	</li>
+	<li class="list__item">
+		<span class="list__item-cap">
+		<img class="square--xsmall" src="https://d13yacurqjgara.cloudfront.net/users/3460/avatars/normal/f6debbb5044f838dcf78bc3299172657.jpg?1421783568"/>
+		</span>
+		<span class="list__item-content">An item with a cap on the left with an image inside n item with a cap on the left with an image inside n item with a cap on the left with an image inside n item with a cap on the left with an image inside</span>
+	</li>
+</ul>
+*/
+
 $list-icon-w: 40;
 $list-icon-h: 40;
 

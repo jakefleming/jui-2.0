@@ -1,5 +1,44 @@
 //Cards should be used in conjunction with other cards. Usually not by themselves.
 
+/*
+Typical Card
+<li class="card card--outlined">
+	<span class="card__body">
+	<span class="card__cap card__cap--icon card__cap--solid">
+	<span class="icon icon--image"></span>
+	</span>
+	<span class="card__content">
+	<span class="card__heading">Jake Fleming</span>
+	<span class="card__subheading">Visual Designer</span>
+	</span>
+	</span>
+</li>
+
+Multiline Card
+<li class="card card--outlined card--multi-line">
+	<span class="card__body">
+	<span class="card__cap card__cap--icon card__cap--solid">
+	<span class="icon icon--image"></span>
+	</span>
+	<span class="card__content">
+	Spans multiple lines and doesn't get cut off by an ellipsis.
+	</span>
+	</span>
+</li>
+
+Feature Card
+<li class="card card--outlined">
+	<span class="card__feature" style="background: url('http://4.bp.blogspot.com/_G6RHYafwM-E/SuVIAJLkFNI/AAAAAAAAALY/H9WGFPQBhvo/s320/meninja.png')">
+	</span>
+	<span class="card__body">
+	<span class="card__content">
+	<span class="card__heading">Jake Fleming</span>
+	<span class="card__subheading">Visual Designer</span>
+	</span>
+	</span>
+</li>
+*/
+
 //A list of cards
 .card-list {
   list-style-type: none;

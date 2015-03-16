@@ -1,3 +1,18 @@
+/*
+Button
+<button type="button" class="button button--solid load-this button--default">
+  <span class="button__content">Button</span>
+</button>
+
+Form element
+<div class="form-element load-this">
+	<div class="form-element__wrap">
+		<div class="form-element__icon icon icon--search"></div>
+		<input type="text" placeholder="Empty input text"/>
+	</div>
+</div>
+*/
+
 .button.load-this {
   .button__icon {
     display: none;

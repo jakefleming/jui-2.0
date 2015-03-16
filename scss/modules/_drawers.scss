@@ -1,3 +1,34 @@
+/*
+The data-target value of the button must equal the drawer's Id.
+<button type="button" class="button button--solid button--primary" data-toggle="drawer" data-target="myDrawer--left">
+<span class="button__content">
+<span class="button__text">Open left</span>
+</span>
+</button>
+<div id="myDrawer--left" class="drawer drawer--left">
+	<div class="drawer__body">
+		<ul class="drawer__list">
+			<li class="drawer__list-title">Dumb stuff</li>
+			<li class="drawer__list-item active">
+				<span class="drawer__list-item-icon icon icon--envelope"></span>
+				<span class="drawer__list-item-content">Inbox</span>
+			</li>
+			<li class="drawer__list-item active">
+				<a href="" class="drawer__list-item-link">
+				<span class="drawer__list-item-icon icon icon--chat"></span>
+				<span class="drawer__list-item-content">Chats</span>
+				<span class="drawer__list-item-alert">
+				<span class="drawer__list-item-alert-content drawer__list-item-alert-content--error">
+				2
+				</span>
+				</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+*/
+
 $list-icon-w: 40;
 $list-icon-h: 40;
 
