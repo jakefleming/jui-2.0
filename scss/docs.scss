@@ -384,3 +384,18 @@ body .scope-container {
     text-align: center!important;
   }
 }
+
+.bs-nav {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  li a{
+    line-height: 24px;
+  }
+  @media (min-width: $brkpoint-md) {
+    margin-top: 64px;
+    height: auto;
+    overflow: auto;
+    visibility: visible;
+  }
+}

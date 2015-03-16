@@ -750,3 +750,16 @@ body .scope-container > .nav-bar .nav-bar__top {
   .article-icon + .doc-article-heading {
     color: #2a94d6 !important;
     text-align: center !important; }
+
+.bs-nav {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0; }
+  .bs-nav li a {
+    line-height: 24px; }
+  @media (min-width: 768px) {
+    .bs-nav {
+      margin-top: 64px;
+      height: auto;
+      overflow: auto;
+      visibility: visible; } }
