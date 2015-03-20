@@ -763,3 +763,8 @@ body .scope-container > .nav-bar .nav-bar__top {
       height: auto;
       overflow: auto;
       visibility: visible; } }
+
+.test {
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3; }

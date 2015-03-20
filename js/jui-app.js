@@ -1,14 +1,13 @@
+(function ( $ ) {
+
 //handle touch
 $.fn.click = function(listener) {
-
     return this.each(function() {
 
         var $this = $( this );
 
         $this.on('vclick', listener);
-
     });
-
 };
 
 $(document).ready(function() {
@@ -52,8 +51,6 @@ $(document).ready(function() {
     $('body').on('click', '.dropdown-box__item--static, .dropdown-box__content', function(e){
         e.stopPropagation();
     });
-
-
 
       // // // // //
      // Callouts //
@@ -202,3 +199,4 @@ $(document).ready(function() {
 
 
 });
+}( jQuery ));
