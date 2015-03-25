@@ -7137,6 +7137,10 @@ body .scope-container {
         float: right;
         line-height: 40px;
         margin-left: 16px; }
+      body .scope-container .dropdown-box__item-icon {
+        float: right;
+        line-height: 40px;
+        margin-left: 16px; }
     body .scope-container .dropdown-box__item--static:hover {
       background: transparent; }
     body .scope-container .dropdown-box__item--static input {

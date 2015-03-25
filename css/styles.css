@@ -4964,6 +4964,10 @@ Buttons
       float: right;
       line-height: 40px;
       margin-left: 16px; }
+    .dropdown-box__item-icon {
+      float: right;
+      line-height: 40px;
+      margin-left: 16px; }
   .dropdown-box__item--static:hover {
     background: transparent; }
   .dropdown-box__item--static input {
