@@ -39,11 +39,14 @@ $list-icon-h: 40;
   overflow: visible;
   position: fixed;
   z-index: 4;
+  top: 0;
   transition: transform .15s ease-in-out;
+  &--dodge-nav {
+    top: 56px;
+  }
   &--left {
     bottom: 0;
     left: 0;
-    top: 0;
     transform: translateX(-242px);
     width: 232px;
     will-change: top,left;
@@ -51,7 +54,6 @@ $list-icon-h: 40;
   &--right {
     bottom: 0;
     right: 0;
-    top: 0;
     transform: translateX(242px);
     width: 232px;
     will-change: top,right;
@@ -234,6 +236,344 @@ $list-icon-h: 40;
         width: auto;
         + .drawer__list-item-content {
           padding-left: 48px !important;
+        }
+      }
+    }
+  }
+}
+
+//drawer in a nav-bar
+.nav-bar {
+  &__drawer {
+    list-style-type: none;
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      background: $color--white;
+      padding: .5em 0;
+      position: fixed;
+      transition: transform .15s ease-in-out;
+      width: 232px;
+      &--right {
+        bottom: 0;
+        right: 0;
+        top: 0;
+        transform: translateX(242px);
+        will-change: top, right;
+      }
+      &--left {
+        bottom: 0;
+        left: 0;
+        top: 56px;
+        transform: translateX(-242px);
+        will-change: top, left;
+      }
+      &--active {
+        box-shadow: 0 3px 3px transparentize($color--black, .6);
+        z-index: 1;
+        transition: transform .15s ease-in-out;
+        transform: translateX(0px);
+        //this is the inside of the drawer -- handles overflow and stuff
+        &.nav-bar__drawer-body {
+          background: $color--white;
+          bottom: 0;
+          color: $text-color-normal;
+          line-height: 40px;
+          overflow-x: hidden;
+          overflow-y: auto;
+          position: absolute;
+          white-space: nowrap;
+          width: 232px;
+          top: 0
+        }
+        //put any content here
+        &.nav-bar__drawer-block {
+
+        }
+      }
+      .nav-bar__drawer-list {
+        box-shadow: 0 1px 0 $component-border-color;
+        list-style-type: none;
+        margin: 8px 0;
+        padding: 0 0 8px 0;
+        &-title {
+          color: $text-color-deemphasized;
+          font-size: 12px;
+          line-height: 24px;
+          margin: 0;
+          padding: 0 16px;
+        }
+        &-item {
+          cursor: pointer;
+          font-family: $font--1;
+          font-size: 1em;
+          line-height: 1.5;
+          margin-left: 0;
+          padding: 0 8px;
+          transition: background-color $trans-duration;
+          &:hover {
+            background-color: darken($color--white, $darken-p);
+            transition: background-color $trans-duration;
+          }
+          &--active {
+            background-color: $color--primary;
+            color: $color--white;
+            &:hover {
+              background-color: $color--primary;
+              color: $color--white;
+            }
+            .drawer__list-item-icon {
+              color: $color--white;
+              &.solid {
+                background-color: transparent;
+              }
+            }
+            .drawer__list-item-link {
+              > .drawer__list-item-content {
+                color: $color--white;
+              }
+            }
+            .drawer__list-item-content {
+              color: $color--white;
+            }
+          }
+          &-link {
+            width: 100%;
+            > .drawer__list-item-content {
+              color: $text-color-normal;
+            }
+          }
+          //the main content in the list__item
+          &-content {
+            color: $text-color-normal;
+            display: block;
+            overflow: hidden;
+            padding: .5em 1em;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          //if your list item needs an icon
+          &-icon {
+            color: $text-color-deemphasized;
+            height: em($list-icon-h);
+            line-height: 24px;
+            min-width: em($list-icon-w);
+            padding: em(8);
+            text-align: center;
+            width: em($list-icon-w);
+            + .nav-bar__drawer-list-item-content {
+              padding-left: em(8);
+            }
+            //give it a background
+            &.solid {
+              background-color: darken($color--white, $darken-p);
+              border-radius: $base--radius;
+            }
+          }
+          //a cap can containt an image or something else, but you might wanna make sure it's 24px X 24px unless you don't mind the content not lining up
+          &-cap {
+            line-height: 0;
+            padding: em(8);
+            + .drawer__list-item-content {
+              padding-left: em(8);
+            }
+          }
+          //if you need an alert indicator for your list item
+          &-alert {
+            height: 40px;
+            text-align: center;
+            padding: 10px;
+            &-content {
+              border-radius: 12px;
+              display: inline-block;
+              font-size: 12px;
+              line-height: 20px;
+              min-width: 20px;
+              padding: 0 4px;
+              vertical-align: top;
+              .icon {
+                line-height: 20px;
+              }
+              &.default {
+                background-color: $color--white;
+                box-shadow: inset 0 0 0 1px $component-border-color;
+              }
+              @each $theme, $color in $ui-colors {
+                &--#{$theme} {
+                  background: $color;
+                  color: $color--white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: $brkpoint-md+1) {
+      &--right {
+        float: right;
+      }
+      &--left {
+        float: left;
+      }
+
+      li {
+        float: left;
+
+      }
+      &-list-item, &-list-item:hover, &-list-item:visited, &-list-item:link {
+        color: $color--white;
+        cursor: pointer;
+        display: inline-block;
+        line-height: 1.5;
+        min-width: 3.5em;
+        padding: 1em;
+        a, a:hover, a:visited, a:link {
+          color: $color--white;
+        }
+      }
+      &-list-title {
+        display: none;
+      }
+      &-list-item {
+        font-weight: $font-weight--1;
+        margin: 0;
+        position: relative;
+        //on medium screens stack up left
+        @media (min-width: $brkpoint-md+1) {
+          float: left;
+        }
+        //on small screens make the dropdown menu part of the list instead of floating outside of it
+        .button-group {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+            width: 100%;
+            .button {
+              width: 100%;
+              text-align: left;
+            }
+            .dropdown-box {
+              border: 0;
+              border-radius: 0;
+              box-shadow: inset 0 0 0 1px $component-border-color;
+              position: static;
+              .dropdown-box__item {
+                &:hover {
+                  box-shadow: inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+                  transition: background $trans-duration;
+                }
+              }
+              li:first-child {
+                .dropdown-box__item {
+                  &:hover {
+                    box-shadow: inset 0 1px $component-border-color, inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+                  }
+                }
+              }
+              li:last-child {
+                .dropdown-box__item {
+                  &:hover {
+                    box-shadow: inset 0 -1px $component-border-color, inset 1px 0 $component-border-color, inset -1px 0 $component-border-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+        //links inside of items
+        > a {
+          cursor: pointer;
+          display: block;
+          line-height: 1.5;
+          min-width: em(56);
+          padding: 1em;
+          @media (min-width: $brkpoint-md+1) {
+            text-align: center;
+          }
+          //links that are also buttons
+          &.button {
+            background: transparent;
+            border-radius: 0;
+            border: 0;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+  &--primary {
+    .nav-bar__drawer {
+      &-list-item {
+        color: $color--white;
+        &--active {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md){
+            .nav-bar__drawer-list-item-content, .nav-bar__drawer-list-item-icon {
+              color: $color--white;
+            }
+          }
+        }
+      }
+    }
+  }
+  &--default {
+    .nav-bar__drawer {
+      &-list-item {
+        color: $text-color-normal;
+        &--active {
+          @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md){
+            .nav-bar__drawer-list-item-content, .nav-bar__drawer-list-item-icon {
+              color: $color--white;
+            }
+          }
+        }
+      }
+    }
+  }
+  &--fixed {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      .nav-bar__drawer--left, .nav-bar__drawer--right {
+        top: 56px;
+      }
+    }
+  }
+  //when scoped this must be at the root instead of nesting in the scope
+  @at-root {
+    //with flexbox
+    .flexbox {
+      .nav-bar__drawer-list-item, .nav-bar__drawer-list-item-link {
+        @include flexbox;
+        &-content {
+          //fix for firefox
+          @include flex;
+          width: 0;
+        }
+        &-icon, &-cap, &-alert {
+          @include flex(initial);
+        }
+      }
+    }
+
+    //without flexbox | not quite the same. We use display: table, display: table-cell.
+    .no-flexbox {
+      .nav-bar__drawer-list-item, .nav-bar__drawer-list-item-link {
+        border-collapse: separate;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        &-content {
+          display: table-cell;
+          line-height: 1.5;
+          padding-right: 48px !important;
+          vertical-align: middle;
+          width: 100%;
+          + .nav-bar__drawer-list-item-icon, + .nav-bar__drawer-list-item-cap, + .nav-bar__drawer-list-item-alert {
+            float: right;
+          }
+        }
+        &-icon, &-cap, &-label {
+          display: block;
+          float: left;
+          width: auto;
+          + .nav-bar__drawer-list-item-content {
+            padding-left: 48px !important;
+          }
         }
       }
     }

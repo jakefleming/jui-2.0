@@ -10,13 +10,7 @@ body {
   padding: 0;
 }
 
-//headings
-h1, h2, h3, h4, h5, h6, p {
-  @extend %reset-type;
-  display: block;
-  font-family: $font--1;
-}
-
+//paragraphs
 p {
   color: $text-color-normal;
   font-size: 1em;
@@ -24,6 +18,13 @@ p {
   font-weight: $font-weight--1;
   line-height: 1.5000em;
   /* 24px */
+}
+
+//headings
+h1, h2, h3, h4, h5, h6, p {
+  @extend %reset-type;
+  display: block;
+  font-family: $font--1;
 }
 
 h1, h2, h3, h4 {
@@ -62,6 +63,10 @@ h6 {
   line-height: em($base--num, $font-size--6);
 }
 
+.heading {
+  color: $color--black;
+}
+
 //links
 a {
   color: $color--primary;
@@ -79,4 +84,32 @@ a {
 .srt-only {
   height: 0 !important;
   overflow: hidden;
+}
+
+.u {
+  //alignment
+  &-text-align-center {
+    text-align: center;
+  }
+  //sizes
+  &-font-size {
+    &-xsmall {
+      font-size: em($font-size--6);
+    }
+    &-small {
+      font-size: em($font-size--5);
+    }
+    &-medium {
+      font-size: em($font-size--4);
+    }
+    &-large {
+      font-size: em($font-size--3);
+    }
+    &-xlarge {
+      font-size: em($font-size--2);
+    }
+    &-xxlarge {
+      font-size: em($font-size--1);
+    }
+  }
 }

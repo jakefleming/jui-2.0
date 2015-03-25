@@ -226,18 +226,27 @@ $nav-default-text: $text-color-emphasized;
       }
     }
   }
+  &--fixed {
+    box-shadow: 0 1px 3px transparentize($color--black, .6)!important;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+  }
   //the button you click to show and hide the contents of the nav on smaller screens
-  &__menu-toggle {
+  &__menu-toggle, &__drawer-toggle {
     cursor: pointer;
     display: none;
     float: right;
-    font-size: em(32);
-    height: em(56, 32);
-    line-height: em(56, 32);
+    font-size: 1em;
+    height: em(56);
+    line-height: em(56);
     text-align: center;
-    width: em(56, 32);
+    width: em(56);
     .icon {
       line-height: inherit;
+    }
+    &--left {
+      float: left;
     }
     //shows the menu-toggle button on small screens
     @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
@@ -387,7 +396,7 @@ $nav-default-text: $text-color-emphasized;
         }
       }
     }
-    .nav-bar__menu-toggle {
+    .nav-bar__menu-toggle, .nav-bar__drawer-toggle {
       color: $color--white;
     }
     .nav-bar__top {
@@ -472,5 +481,31 @@ $nav-default-text: $text-color-emphasized;
       }
     }
   }
+  }
+}
+
+//special buttons
+.nav-bar {
+  .nav-bar__action {
+    padding: .5em 0;
+    transition: background $trans-duration;
+    &--active {
+      background: $color--gray--xx-light;
+      transition: background $trans-duration;
+    }
+  }
+  &--primary {
+    .nav-bar__action {
+      color: $color--white;
+      &--active {
+        background: rgba(255,255,255,.1);
+      }
+    }
+  }
+  .nav-bar__action--right {
+    float: right;
+  }
+  .nav-bar__action--left {
+    float: left;
   }
 }

@@ -1,6 +1,7 @@
 //@import "scope-test/index"; //for testing sf scope
 @import "utilities/index";
 @import "base/fonts/jui-lettering-medium";
+@import "base/fonts/juicons";
 
 html {
   height: 100%
@@ -331,6 +332,18 @@ body .scope-container {
       background: nth($primary-colors, $i + 1);
       &:after {
         content: unquote('"' + nth($primary-colors, $i + 1) + '"');
+      }
+    }
+    li:nth-child(7n + 4) {
+      @extend .icon;
+      &:before {
+        @extend .icon--star;
+        width: 100%;
+        text-align: center;
+        height: 96px;
+        line-height: 96px;
+        font-size: 32px;
+        color: rgba(255,255,255,.1);
       }
     }
   }

@@ -1,0 +1,44 @@
+.structure {
+  &__cap {
+    &--left {
+      padding-right: 1em;
+    }
+    &--right {
+      padding-left: 1em;
+    }
+  }
+}
+
+.flexbox {
+  .structure {
+    @include flexbox;
+    &__content {
+      //fix for firefox
+      @include flex;
+    }
+    &__cap {
+      @include flex(initial);
+    }
+  }
+}
+//without flexbox | not quite the same. We use display: table, display: table-cell.
+.no-flexbox {
+  .structure {
+    border-collapse: separate;
+    display: table;
+    width: 100%;
+    &__content {
+      display: table-cell;
+      line-height: 1.5;
+      vertical-align: middle;
+      width: 100%;
+      + .list__item-cap {
+        float: right;
+      }
+    }
+    &__cap {
+      display: table-cell;
+      width: 1%;
+    }
+  }
+}

@@ -29,9 +29,54 @@
 </head>
 <body>
 <div class="scope-container">
-    <div class="constrained constrained--large has-md-padding">
-        <!--template-->
-
+    <nav class="nav-bar nav-bar--primary nav-bar--fixed">
+        <div class="nav-bar__drawer-toggle">
+            <span class="icon icon--dots"></span>
+        </div>
+        <ul class="nav-bar__drawer nav-bar__drawer--right">
+            <li class="nav-bar__drawer-list-title">
+                Dumb stuff
+            </li>
+            <li>
+                <a href="#" class="nav-bar__drawer-list-item nav-bar__drawer-list-item--active">
+                    <span class="nav-bar__drawer-list-item-icon icon icon--envelope"></span>
+                    <span class="nav-bar__drawer-list-item-content">Inbox</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-bar__drawer-list-item">
+                    <span class="nav-bar__drawer-list-item-icon icon icon--chat"></span>
+                    <span class="nav-bar__drawer-list-item-content">Messages</span>
+                </a>
+            </li>
+        </ul>
+        <button type="button" class="button nav-bar__action nav-bar__action--left" data-toggle="drawer" data-target="myDrawer--left">
+            <div class="button__content">
+                <div class="button__icon icon icon--menu"></div>
+            </div>
+        </button>
+    </nav>
+    <div id="myDrawer--left" class="drawer drawer--left drawer--dodge-nav">
+        <div class="drawer__body">
+            <ul class="drawer__list">
+                <li class="drawer__list-title">Dumb stuff</li>
+                <li class="drawer__list-item active">
+                    <span class="drawer__list-item-icon icon icon--envelope"></span>
+                    <span class="drawer__list-item-content">Inbox</span>
+                </li>
+                <li class="drawer__list-item active">
+                    <a href="" class="drawer__list-item-link">
+                        <span class="drawer__list-item-icon icon icon--chat"></span>
+                        <span class="drawer__list-item-content">Chats</span>
+				<span class="drawer__list-item-alert">
+				<span class="drawer__list-item-alert-content drawer__list-item-alert-content--error">
+				2
+				</span>
+				</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

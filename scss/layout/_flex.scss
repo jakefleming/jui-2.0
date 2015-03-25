@@ -163,8 +163,17 @@ Grids can be arranged 2 different ways:
       }
     }
   }
-  .u-shrink {
-    flex: initial;
+  .u {
+    &-shrink {
+      flex: initial;
+    }
+    &-center-content {
+      justify-content: center;
+      align-items: stretch;
+    }
+    &-align-self-center {
+      align-self: center;
+    }
   }
 }
 

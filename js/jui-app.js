@@ -140,16 +140,15 @@ $(document).ready(function() {
     // // // // //
 
     // navbar menu toggling
-    $(".nav-bar__menu-toggle").click(function(e){
+    $("body").on('click', '.nav-bar__menu-toggle', function(e){
         $(e.target).closest('.nav-bar').toggleClass("menu-is-open");
-        $(e.target).closest('.nav-bar--solo').toggleClass("menu-is-open");
         $("body").toggleClass("nav-bar__menu--open");
+        $(this).toggleClass('nav-bar__action--active');
     });
 
     // navbar appendage toggling
-    $(".nav-bar__appendage-toggle").click(function(e){
+    $("body").on('click', '.nav-bar__appendage-toggle', function(e){
         $(e.target).closest('.nav-bar').toggleClass("appendage-is-open");
-        $(e.target).closest('.nav-bar--solo').toggleClass("appendage-is-open");
     });
 
       // // // // // // //
@@ -186,9 +185,9 @@ $(document).ready(function() {
     });
 
     //when backdrop is clicked, close callout and remove class from body
-    $('body').on('click', function () {
-        closeDrawer();
-    });
+    //$('body').on('click', function () {
+    //    closeDrawer();
+    //});
     $('.drawer').on('click', '[data-dismiss="drawer"]', function () {
         closeDrawer();
     });
@@ -196,6 +195,16 @@ $(document).ready(function() {
     $('body').on('click', '.drawer, [data-toggle="drawer"]', function(e){
         e.stopPropagation();
     });
+
+    //nav drawer
+    $('body').on('click', '.nav-bar__drawer-toggle', function(){
+        $(this).closest('.nav-bar').find('.nav-bar__drawer').toggleClass('nav-bar__drawer--active');
+        $(this).toggleClass('nav-bar__action--active');
+    })
+
+    $('body').on('click', '.nav-bar__action', function(){
+        $(this).toggleClass('nav-bar__action--active');
+    })
 
 
 });

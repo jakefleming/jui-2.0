@@ -130,8 +130,7 @@ $slate-subheading-size: $font-size--4;
           vertical-align: top;
         }
         &:hover {
-          background: darken($color--white, $darken-p);
-          box-shadow: inset 1px 0px $component-border-color, inset -1px 0 $component-border-color;
+          //background: darken($color--white, $darken-p);
           color: $color--primary;
         }
       }

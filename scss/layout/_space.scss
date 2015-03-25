@@ -1,129 +1,438 @@
-@mixin generate-space($type, $only: null) {
-  @if $only == null {
-    @each $size, $value in $layout-space {
-      &-no-#{$type} {
-        #{$type}: 0!important;
+@mixin generate-space($type) {
+  @each $size, $value in $layout-space {
+    &-no-#{$type} {
+      #{$type}: 0 !important;
+    }
+    &-#{$size}-#{$type} {
+      #{$type}: em($value) !important;
+    }
+    @each $media-size, $media-value in $media-size {
+      @media (min-width: $media-value) {
+        &-no-#{$type}-for-#{$media-size} {
+          #{$type}: 0 !important;
+        }
+        &-#{$size}-#{$type}-for-#{$media-size} {
+          #{$type}: em($value) !important;
+        }
       }
-      &-#{$size}-#{$type} {
-        #{$type}: em($value)!important;
+    }
+    @each $position in $layout-positions {
+      &-#{$size}-#{$type}-on-#{$position} {
+        #{$type}-#{$position}: em($value) !important;
+      }
+      &-no-#{$type}-on-#{$position} {
+        #{$type}-#{$position}: 0 !important;
       }
       @each $media-size, $media-value in $media-size {
-        @media (min-width: $media-value){
-          &-no-#{$type}-for-#{$media-size} {
-            #{$type}: 0!important;
+        @media (min-width: $media-value) {
+          &-#{$size}-#{$type}-on-#{$position}-for-#{$media-size} {
+            #{$type}-#{$position}: em($value) !important;
           }
-          &-#{$size}-#{$type}-for-#{$media-size} {
-            #{$type}: em($value)!important;
-          }
-        }
-      }
-      @each $position in $layout-positions {
-        &-#{$size}-#{$type}-on-#{$position} {
-          #{$type}-#{$position}: em($value)!important;
-        }
-        &-no-#{$type}-on-#{$position} {
-          #{$type}-#{$position}: 0!important;
-        }
-        @each $media-size, $media-value in $media-size {
-          @media (min-width: $media-value){
-            &-#{$size}-#{$type}-on-#{$position}-for-#{$media-size} {
-              #{$type}-#{$position}: em($value)!important;
-            }
-            &-no-#{$type}-on-#{$position}-for-#{$media-size} {
-              #{$type}-#{$position}: 0!important;
-            }
+          &-no-#{$type}-on-#{$position}-for-#{$media-size} {
+            #{$type}-#{$position}: 0 !important;
           }
         }
       }
+    }
+  }
+  //xs
+  &-xs-#{$type}-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}: px(map-get($layout-space, xs))!important;
+    }
+  }
+  &-xs-#{$type}-on-top-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-top: px(map-get($layout-space, xs))!important;
+    }
+  }
+  &-xs-#{$type}-on-right-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-right: px(map-get($layout-space, xs))!important;
+    }
+  }
+  &-xs-#{$type}-on-bottom-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-bottom: px(map-get($layout-space, xs))!important;
+    }
+  }
+  &-xs-#{$type}-on-left-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-left: px(map-get($layout-space, xs))!important;
+    }
+  }
 
+  &-xs-#{$type}-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}: px(map-get($layout-space, xs))!important;
     }
-  } @else {
-    //xs
-    &-xs-#{$type}-for-xs-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}: px(map-get($layout-space, xs))!important;
-      }
+  }
+  &-xs-#{$type}-on-top-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-top: px(map-get($layout-space, xs))!important;
     }
-    &-xs-#{$type}-on-top-for-xs-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-top: px(map-get($layout-space, xs))!important;
-      }
+  }
+  &-xs-#{$type}-on-right-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-right: px(map-get($layout-space, xs))!important;
     }
-    &-xs-#{$type}-on-right-for-xs-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-right: px(map-get($layout-space, xs))!important;
-      }
+  }
+  &-xs-#{$type}-on-bottom-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-bottom: px(map-get($layout-space, xs))!important;
     }
-    &-xs-#{$type}-on-bottom-for-xs-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-bottom: px(map-get($layout-space, xs))!important;
-      }
+  }
+  &-xs-#{$type}-on-left-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-left: px(map-get($layout-space, xs))!important;
     }
-    &-xs-#{$type}-on-left-for-xs-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
-        #{$type}-left: px(map-get($layout-space, xs))!important;
-      }
+  }
+
+  &-xs-#{$type}-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}: px(map-get($layout-space, xs))!important;
     }
-    //sm
-    &-sm-#{$type}-for-sm-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}: px(map-get($layout-space, sm))!important;
-      }
+  }
+  &-xs-#{$type}-on-top-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-top: px(map-get($layout-space, xs))!important;
     }
-    &-sm-#{$type}-on-top-for-sm-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-top: px(map-get($layout-space, sm))!important;
-      }
+  }
+  &-xs-#{$type}-on-right-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-right: px(map-get($layout-space, xs))!important;
     }
-    &-sm-#{$type}-on-right-for-sm-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-right: px(map-get($layout-space, sm))!important;
-      }
+  }
+  &-xs-#{$type}-on-bottom-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-bottom: px(map-get($layout-space, xs))!important;
     }
-    &-sm-#{$type}-on-bottom-for-sm-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-bottom: px(map-get($layout-space, sm))!important;
-      }
+  }
+  &-xs-#{$type}-on-left-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-left: px(map-get($layout-space, xs))!important;
     }
-    &-sm-#{$type}-on-left-for-sm-only {
-      @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
-        #{$type}-left: px(map-get($layout-space, sm))!important;
-      }
+  }
+
+  //sm
+  &-sm-#{$type}-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}: px(map-get($layout-space, sm))!important;
     }
-    //md
-    &-md-#{$type}-for-md-only {
-      @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}: px(map-get($layout-space, md))!important;
-      }
+  }
+  &-sm-#{$type}-on-top-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-top: px(map-get($layout-space, sm))!important;
     }
-    &-md-#{$type}-on-top-for-md-only {
-      @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-top: px(map-get($layout-space, md))!important;
-      }
+  }
+  &-sm-#{$type}-on-right-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-right: px(map-get($layout-space, sm))!important;
     }
-    &-md-#{$type}-on-right-for-md-only {
-      @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-right: px(map-get($layout-space, md))!important;
-      }
+  }
+  &-sm-#{$type}-on-bottom-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-bottom: px(map-get($layout-space, sm))!important;
     }
-    &-md-#{$type}-on-bottom-for-md-only {
-      @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-bottom: px(map-get($layout-space, md))!important;
-      }
+  }
+  &-sm-#{$type}-on-left-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-left: px(map-get($layout-space, sm))!important;
     }
-    &-md-#{$type}-on-left-for-md-only {
-      @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
-        #{$type}-left: px(map-get($layout-space, md))!important;
-      }
+  }
+
+  &-sm-#{$type}-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-top-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-top: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-right-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-right: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-bottom-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-bottom: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-left-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-left: px(map-get($layout-space, sm))!important;
+    }
+  }
+
+  &-sm-#{$type}-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-top-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-top: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-right-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-right: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-bottom-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-bottom: px(map-get($layout-space, sm))!important;
+    }
+  }
+  &-sm-#{$type}-on-left-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-left: px(map-get($layout-space, sm))!important;
+    }
+  }
+  //md
+  &-md-#{$type}-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-top-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-top: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-right-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-right: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-bottom-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-bottom: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-left-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-left: px(map-get($layout-space, md))!important;
+    }
+  }
+
+  &-md-#{$type}-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-top-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-top: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-right-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-right: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-bottom-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-bottom: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-left-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-left: px(map-get($layout-space, md))!important;
+    }
+  }
+
+  &-md-#{$type}-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-top-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-top: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-right-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-right: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-bottom-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-bottom: px(map-get($layout-space, md))!important;
+    }
+  }
+  &-md-#{$type}-on-left-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-left: px(map-get($layout-space, md))!important;
+    }
+  }
+
+  //lg
+  &-lg-#{$type}-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-top-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-top: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-right-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-right: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-bottom-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-bottom: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-left-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-left: px(map-get($layout-space, lg))!important;
+    }
+  }
+
+  &-lg-#{$type}-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-top-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-top: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-right-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-right: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-bottom-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-bottom: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-left-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-left: px(map-get($layout-space, lg))!important;
+    }
+  }
+
+  &-lg-#{$type}-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-top-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-top: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-right-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-right: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-bottom-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-bottom: px(map-get($layout-space, lg))!important;
+    }
+  }
+  &-lg-#{$type}-on-left-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-left: px(map-get($layout-space, lg))!important;
+    }
+  }
+
+  //xl
+  &-xl-#{$type}-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-top-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-top: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-right-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-right: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-bottom-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-bottom: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-left-for-xs-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-sm) {
+      #{$type}-left: px(map-get($layout-space, xl))!important;
+    }
+  }
+
+  &-xl-#{$type}-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-top-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-top: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-right-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-right: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-bottom-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-bottom: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-left-for-sm-only {
+    @media (min-width: $brkpoint-xs) and (max-width: $brkpoint-md) {
+      #{$type}-left: px(map-get($layout-space, xl))!important;
+    }
+  }
+
+  &-xl-#{$type}-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-top-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-top: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-right-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-right: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-bottom-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-bottom: px(map-get($layout-space, xl))!important;
+    }
+  }
+  &-xl-#{$type}-on-left-for-md-only {
+    @media (min-width: $brkpoint-md) and (max-width: $brkpoint-lg) {
+      #{$type}-left: px(map-get($layout-space, xl))!important;
     }
   }
 }
 
 .u {
   @include generate-space(margin);
-  @include generate-space(margin, true);
   @include generate-space(padding);
-  @include generate-space(padding, true);
 }
 
 //give grid bottom margin to separate rows

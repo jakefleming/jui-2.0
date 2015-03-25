@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="no-js doc-bg-transparent">
+<head>
+    <title>JUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../css/docs.css"/><!--takes place of styles.scss for docs-->
+    <link rel="stylesheet" href="../css/styles-scoped.css"/>
+    <script src="../js/modernizr.js"></script><!--detect if browser supports stuff like flexbox-->
+    <!--<link rel="stylesheet" href="http://basehold.it/8">-->
+
+    <!--favicons-->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon--57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon--60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon--72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon--76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon--114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon--120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon--144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon--152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon--180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon--192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon--32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon--96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon--16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicons/ms-icon--144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<div class="scope-container u-full-height-for-md">
+    <div class="page">
+        <!--template-->
+        <div class="doc-bg-2" style="background: url('../assets/illustrations/feature.png') repeat bottom right;background-size: auto 256px;">
+            <div class="constrained constrained--default">
+                <div class="grid grid--gutters u-full-height-for-md grid--orient-vertical-on-small u-md-padding-for-xs">
+                    <div class="grid__block--6-on-medium u-center-content">
+                            <!--headings paired with paragraphs-->
+                        <article>
+                            <h1 class="doc-page-heading">Split it!</h1>
+                            <p class="u-md-margin-on-bottom doc-page-subheading">
+                                Below are a few different ways to split your page and take advantage of the entire screen.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="grid__block--6-on-medium u-center-content">
+                        <div class="slate">
+                            <div class="slate__top slate__top--outlined">
+                                <div class="slate__top-main">
+                                    <div class="slate__title">
+                                        Sign in
+                                    </div>
+                                </div>
+                            </div>
+                            <form action="#">
+                                <div class="slate__block slate__block--no-bottom-pad">
+                                    <div class="form-element">
+                                        <div class="form-element__wrap">
+                                            <div class="form-element__icon icon icon--person"></div>
+                                            <input id="userName" type="text" placeholder="User name"/>
+                                            <span class="form-element__error-text">Error Text</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-element">
+                                        <div class="form-element__wrap">
+                                            <div class="form-element__icon icon icon--lock"></div>
+                                            <input id="password" type="password" placeholder="Password"/>
+                                            <span class="form-element__error-text">Error Text</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-element">
+                                        <label class="input-size">
+                                            <input type="checkbox" checked/> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="slate__bottom slate__bottom--outlined">
+                                    <div class="slate__bottom-control">
+                                        <button type="submit" class="button button--solid button--primary">
+                            <span class="button__content">
+                                <span class="button__text">Sign in</span>
+                                <span class="button__icon icon icon--arrow-right"></span>
+                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="slate__bottom-main">
+                                        <button type="button" class="button button--flat button--primary">
+                            <span class="button__content">
+                                <span class="button__text">Create account</span>
+                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid u-full-height-for-md grid--orient-vertical-on-small">
+            <div class="grid__block--6-on-medium u-center-content">
+                <div class="constrained constrained--x-small u-xl-padding">
+                    <!--headings paired with paragraphs-->
+                    <h1 class="heading u-md-margin-on-bottom">Vertical Rhythm</h1>
+                    <p class="u-md-margin-on-bottom">
+                        Both paragraphs and headings will line up on a vertical baseline. They will fall either directly on a line or perfectly in-between lines. All other elements, like buttons, should align to the grid too.
+                    </p>
+                    <p class="">
+                        If your elements aren't aligning to the page correctly, check your math! Make sure your calculations always equal a multiple of 8.
+                    </p>
+                </div>
+            </div>
+            <div class="grid__block--6-on-medium u-center-content doc-bg-1">
+                <div class="constrained constrained--x-small u-xl-padding">
+                    <img style="background-color:#2a94d6;background: url('../assets/illustrations/feature.png') repeat bottom right; padding: 1em 1em 0 1em;background-size: auto 256px;" class="u-md-margin-on-bottom u-max-width-full" src="../assets/illustrations/templates.png">
+                    <img style="background-color:#2a94d6;background: url('../assets/illustrations/feature.png') repeat bottom right; padding: 1em 1em 0 1em;background-size: auto 256px;" class="u-md-margin-on-bottom u-max-width-full" src="../assets/illustrations/style.png">
+                </div>
+            </div>
+        </div>
+        <div class="grid u-half-height grid--orient-vertical-on-small">
+            <div class="grid__block--6-on-medium u-center-content">
+                <div class="constrained constrained--x-small u-xl-padding">
+                    <p class="">
+                        If your elements aren't aligning to the page correctly, check your math! Make sure your calculations always equal a multiple of 8.
+                    </p>
+                </div>
+            </div>
+            <div class="grid__block--6-on-medium u-center-content u-pinned-on-medium doc-bg-1">
+                <div class="constrained constrained--x-small u-xl-padding">
+                    <img style="background-color:#2a94d6;background: url('../assets/illustrations/feature.png') repeat bottom right; padding: 1em 1em 0 1em;background-size: auto 256px;" class="u-md-margin-on-bottom u-max-width-full" src="../assets/illustrations/templates.png">
+                </div>
+            </div>
+        </div>
+        <div class="grid u-half-height grid--orient-vertical-on-small">
+            <div class="grid__block--6-on-medium u-center-content">
+                <div class="constrained constrained--x-small u-xl-padding">
+                    <p class="">
+                        If your elements aren't aligning to the page correctly, check your math! Make sure your calculations always equal a multiple of 8.
+                    </p>
+                </div>
+            </div>
+            <div class="grid__block--6-on-medium u-center-content  doc-bg-1">
+                <div class="constrained constrained--x-small u-xl-padding">
+                    <img style="background-color:#2a94d6;background: url('../assets/illustrations/feature.png') repeat bottom right; padding: 1em 1em 0 1em;background-size: auto 256px;" class="u-md-margin-on-bottom u-max-width-full" src="../assets/illustrations/templates.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="../lib/selectize/selectize.js"></script>
+<script type="text/javascript" src="../lib/tooltipster-master/js/jquery.tooltipster.js"></script>
+<script type="text/javascript" src="../js/jui-app.js"></script>
+
+<script>
+    $(function() {
+        $('#select-thing').selectize({
+
+        });
+    });
+
+</script>
+</body>
+</html>

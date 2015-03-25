@@ -2,6 +2,10 @@
 
 $base--img-unit: 16;
 
+//img {
+//  max-width: 100%;
+//}
+
 .square {
   &--xsmall {
     height: px($base--img-unit * 1.5);
@@ -18,5 +22,104 @@ $base--img-unit: 16;
   &--large {
     height: px($base--img-unit * 3.5);
     width: px($base--img-unit * 3.5);
+  }
+}
+
+@mixin height-100(){
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+@mixin height-50(){
+  min-height: 50%;
+  min-height: 50vh;
+}
+
+@mixin full-height(){
+  &-full-height {
+    @include height-100();
+    &-for-xs {
+      @media (min-width: $brkpoint-xs) {
+        @include height-100();
+      }
+      &-only {
+        @media (min-width: $brkpoint-xs) and (min-width: $brkpoint-sm) {
+          @include height-100();
+        }
+      }
+    }
+    &-for-sm {
+      @media (min-width: $brkpoint-xs) {
+        @include height-100();
+      }
+      &-only {
+        @media (min-width: $brkpoint-xs) and (min-width: $brkpoint-md) {
+          @include height-100();
+        }
+      }
+    }
+    &-for-md {
+      @media (min-width: $brkpoint-md) {
+        @include height-100();
+      }
+      &-only {
+        @media (min-width: $brkpoint-md) and (min-width: $brkpoint-lg) {
+          @include height-100();
+        }
+      }
+    }
+    &-for-lg {
+      @media (min-width: $brkpoint-lg) {
+        @include height-100();
+      }
+    }
+  }
+}
+@mixin half-height(){
+  &-half-height {
+    @include height-50();
+    &-for-xs {
+      @media (min-width: $brkpoint-xs) {
+        @include height-50();
+      }
+      &-only {
+        @media (min-width: $brkpoint-xs) and (min-width: $brkpoint-sm) {
+          @include height-50();
+        }
+      }
+    }
+    &-for-sm {
+      @media (min-width: $brkpoint-xs) {
+        @include height-50();
+      }
+      &-only {
+        @media (min-width: $brkpoint-xs) and (min-width: $brkpoint-md) {
+          @include height-50();
+        }
+      }
+    }
+    &-for-md {
+      @media (min-width: $brkpoint-md) {
+        @include height-50();
+      }
+      &-only {
+        @media (min-width: $brkpoint-md) and (min-width: $brkpoint-lg) {
+          @include height-50();
+        }
+      }
+    }
+    &-for-lg {
+      @media (min-width: $brkpoint-lg) {
+        @include height-50();
+      }
+    }
+  }
+}
+
+.u {
+  @include full-height();
+  @include half-height();
+  &-max-width-full {
+    max-width: 100%;
   }
 }
