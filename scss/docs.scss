@@ -1,6 +1,5 @@
 //@import "scope-test/index"; //for testing sf scope
 @import "utilities/index";
-@import "base/fonts/jui-lettering-medium";
 @import "base/fonts/juicons";
 
 html {
@@ -40,7 +39,7 @@ body .scope-container {
     }
     > li {
       @media (min-width: $brkpoint-md) {
-        @include flex(0 0 25%);
+        @include flex(0 0 25%); 
       }
     }
   }
