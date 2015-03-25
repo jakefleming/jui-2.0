@@ -39,7 +39,7 @@ body .scope-container {
     }
     > li {
       @media (min-width: $brkpoint-md) {
-        @include flex(0 0 25%);
+        @include flex(0 0 25%); 
       }
     }
   }
