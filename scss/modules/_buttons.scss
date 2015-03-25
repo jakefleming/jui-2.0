@@ -237,6 +237,11 @@ Buttons
       line-height: 40px;
       margin-left: 16px;
     }
+    &-icon {
+      float: right;
+      line-height: 40px;
+      margin-left: 16px;
+    }
   }
   //this is an item that doesn't close the dropdown when you click it
   &__item--static {
